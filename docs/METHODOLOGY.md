@@ -119,3 +119,30 @@ The initial CMake 4.4.3 experiments are retained locally but excluded from pinne
 statistics. Their CPU-utility samples mixed build/clean/install and are not used as
 build-only utilization. An experimental `TrackFileAccess=false` run triggered a large
 rebuild during installation; it is not recommended as a measured end-to-end improvement.
+
+## Matched Ninja worker-count follow-up
+
+The initial generator comparison used 12 jobs as one explicit setting, not as a proven
+optimum. A subsequent study compares that setting with **no parallel option**. The
+configured Ninja 1.12.0 executable reports a default of **14 jobs** on this machine.
+
+`run_parallelism_study.ps1` uses one configured Ninja tree and the unchanged measured
+`run.ps1`. It records the Ninja binary/build-graph hashes and checks that neither
+changes between runs. It uses four repetitions of each condition in **ABBA BAAB**
+order (A = explicit 12, B = implicit default 14), always with 30 seconds of rest before
+each run. Adjacent pairs therefore have AB, BA, BA, AB ordering; both conditions have
+the same mean position in the sequence. This balances simple time/order trends but
+does not eliminate thermal or cache carryover.
+There was no separately discarded warm-up run or continuous thermal measurement;
+the first sample remains part of the primary results.
+
+The report gives both group mean/median/range/standard deviation and adjacent paired
+time differences. Negative `default_minus_fixed_seconds` means the default was faster.
+Ninja log interval overlap checks the observed peak command concurrency; it is not a
+CPU-utilization measurement. The toolchain, definitions, runner hash, command count
+and actual command-line arguments are verified for every successful run.
+
+Keep this series separate from the earlier generator comparison. The hypothesis is
+that 12 jobs takes less wall time than the default 14; it is not an assumption or a
+claim about energy use. With four observations per condition and an uncontrolled
+normal-use machine, conclusions remain workload- and machine-specific.

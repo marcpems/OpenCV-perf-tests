@@ -6,6 +6,7 @@ with local measurements and build-cost analysis. This compiles **OpenCV 4.10.0**
 HOBL intentionally sets `BUILD_PERF_TESTS=OFF`.
 
 **[Timing results and recommendations](docs/ANALYSIS.md)** |
+**[Matched 12 vs default 14 jobs study](docs/NINJA_PARALLELISM.md)** |
 **[HOBL survey, equivalence and measurement methodology](docs/METHODOLOGY.md)**
 
 The baseline preserves HOBL's clean -> timed Release build -> install -> version-check
@@ -89,6 +90,26 @@ pwsh -NoProfile -File scripts\run.ps1 -Label baseline_profile -Profile
 Ninja uses its own `build_hobl_ninja` tree. Both generators clean outside the timer,
 build, install and validate the installed executable. The default `-Parallel 0`
 means **do not pass a parallelism argument**, not zero workers.
+
+### Compare an explicit job count with Ninja's default
+
+On the measured 12-core machine, Ninja 1.12.0 defaults to **14 jobs**, not 12.
+Choosing 12 for the initial generator comparison did not establish it as optimal.
+The [matched follow-up](docs/NINJA_PARALLELISM.md) found only a 0.59% median advantage
+for 12, with much larger run variation: **no reliable advantage over 14 was established**.
+Run a matched comparison without changing the source, compiler or build tree:
+
+```powershell
+pwsh -NoProfile -File scripts\run_parallelism_study.ps1 -FixedJobs 12
+python scripts\compare_parallelism.py results\local\ninja-job-study
+```
+
+The study runs four clean builds per setting in balanced **12/default/default/12,
+default/12/12/default** order, with 30 seconds between builds. It records the actual
+Ninja default and verifies that the executable and generated build graph stay
+unchanged. The comparison checks run arguments, setup equality, compile counts,
+and observed command concurrency. This measures **wall time**, not power or energy.
+Use a new `-ResultsDir` for another study; existing data is never overwritten.
 
 ## Results and analysis
 

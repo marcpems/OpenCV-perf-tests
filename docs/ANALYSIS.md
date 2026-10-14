@@ -5,6 +5,10 @@ Measured locally on **14 October 2026**. The HOBL-equivalent baseline took
 **Ninja with 12 jobs: 192.99 seconds median**, a **16.2% reduction** in this small
 sample. It is an alternative-generator experiment, not the HOBL baseline score.
 
+**Worker-count follow-up:** the later [matched 12 versus default 14 study](NINJA_PARALLELISM.md)
+did **not establish a reliable advantage for 12 jobs**. This initial table compared
+build-system configurations; it did not identify an optimal Ninja worker count.
+
 **Compilation dominates. DNN is the largest module cost; linking and installation
 are comparatively small.** Prioritize build scheduling and expensive translation
 units rather than linker replacement.
@@ -139,7 +143,7 @@ Per-run details:
 
 | Priority | Recommendation | Evidence and qualification |
 |---|---|---|
-| 1 | **Use Ninja for day-to-day clean builds**, starting with 12 jobs. | Largest measured reduction: 37.35 s / 16.2% median here. Keep the original MSBuild command as the HOBL reference; do not silently substitute this score. Explore 8/12/14 jobs in a larger repeated study before choosing a permanent setting. |
+| 1 | **Use Ninja for day-to-day clean builds**, without assuming 12 jobs is optimal. | Largest measured reduction: 37.35 s / 16.2% median here. Keep the original MSBuild command as the HOBL reference; do not silently substitute this score. The later [12-vs-default-14 comparison](NINJA_PARALLELISM.md) did not establish a reliable worker-count advantage; use 12 to reproduce this table, not as a universal tuning rule. |
 | 2 | If VS/MSBuild must remain, try **`--parallel 12`**. | 11.10 s / 4.8% median reduction, with substantial run variation. Avoid assuming more workers always help: `/m` and compiler `/MP` are separate concurrency layers and can oversubscribe resources. |
 | 3 | Profile **DNN importers/generated code, core/imgproc, and the large solver translation units** using MSVC Build Insights/compiler timing. | They dominate the detailed command timings. Determine frontend/header parsing versus optimizer/backend cost before changing source. The current data does not distinguish those causes. |
 | 4 | Investigate shared-header/precompiled-header improvements in a separate source branch. | The configured build reports precompiled headers **OFF**. A modern PCH experiment may reduce repeated parsing, but simply assuming an old CMake toggle enables it is unsafe. Measure clean and incremental builds and validate binary behavior. No PCH improvement was measured here. |

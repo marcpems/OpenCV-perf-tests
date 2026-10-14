@@ -30,6 +30,12 @@ def redact(text):
 def export(source, destination):
     if destination.exists():
         raise ValueError("Destination already exists; choose a new snapshot directory")
+    study_file = source / "study.json"
+    study = None
+    if study_file.is_file():
+        study = json.loads(study_file.read_text(encoding="utf-8-sig"))
+        if "finished_at" not in study:
+            raise ValueError("Cannot export an incomplete study")
     runs = []
     for directory in sorted(source.iterdir()):
         metadata_file = directory / "metadata.json"
@@ -49,6 +55,8 @@ def export(source, destination):
         runs.append((directory, metadata))
     if not runs:
         raise ValueError("No successful validated runs to export")
+    if study and len(runs) != len(study["order"]):
+        raise ValueError("Study run count does not match its manifest")
     destination.mkdir(parents=True)
     groups = {}
     for directory, metadata in runs:
@@ -83,6 +91,9 @@ def export(source, destination):
             "min_seconds": min(times), "max_seconds": max(times), "runs": values,
         }
     (destination / "summary.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
+    if study:
+        (destination / "study.json").write_text(
+            redact(json.dumps(study, indent=2)), encoding="utf-8")
     return report
 
 

@@ -33,6 +33,15 @@ class ExportTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "already exists"):
                 export(Path(directory), Path(directory))
 
+    def test_rejects_incomplete_study(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "local"
+            source.mkdir()
+            (source / "study.json").write_text('{"order": ["fixed"]}', encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "incomplete study"):
+                export(source, root / "public")
+
     def test_successful_run_is_validated_and_aggregated(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
