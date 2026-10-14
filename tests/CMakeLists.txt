@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(opencv_smoke LANGUAGES CXX)
+find_package(OpenCV 4.10.0 EXACT CONFIG REQUIRED COMPONENTS core imgproc)
+add_executable(opencv_smoke opencv_smoke.cpp)
+target_compile_features(opencv_smoke PRIVATE cxx_std_14)
+target_link_libraries(opencv_smoke PRIVATE ${OpenCV_LIBS})

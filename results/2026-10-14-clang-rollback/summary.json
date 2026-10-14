@@ -1,0 +1,16 @@
+{
+  "msvc_restored": {
+    "count": 1,
+    "median_seconds": 223.4481,
+    "min_seconds": 223.4481,
+    "max_seconds": 223.4481,
+    "runs": [
+      {
+        "directory": "20261014_204146_566_msvc_restored",
+        "build_seconds": 223.4481,
+        "clean_seconds": 0.8491,
+        "install_seconds": 2.0352
+      }
+    ]
+  }
+}

@@ -7,7 +7,7 @@ param(
 )
 . "$PSScriptRoot\common.ps1"
 $Root = Get-SourceRoot $Root
-$ResultsDir = [IO.Path]::GetFullPath($ResultsDir)
+$ResultsDir = [IO.Path]::GetFullPath($ResultsDir, (Get-Location).ProviderPath)
 if (Test-Path $ResultsDir) { throw ' ERROR - Study directory already exists; choose a fresh -ResultsDir.' }
 $buildDir = Get-BuildDirectory $Root 'Ninja'
 if (-not (Test-Path "$buildDir\benchmark-setup.json")) { throw ' ERROR - Configure the Ninja variant first.' }

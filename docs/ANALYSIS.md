@@ -1,13 +1,18 @@
 # Initial OpenCV build performance analysis
 
 Measured locally on **14 October 2026**. The HOBL-equivalent baseline took
-**230.34 seconds median (3 min 50 s)**. The fastest tested configuration was
+**230.34 seconds median (3 min 50 s)**. The fastest configuration in this initial MSVC-only series was
 **Ninja with 12 jobs: 192.99 seconds median**, a **16.2% reduction** in this small
 sample. It is an alternative-generator experiment, not the HOBL baseline score.
 
 **Worker-count follow-up:** the later [matched 12 versus default 14 study](NINJA_PARALLELISM.md)
 did **not establish a reliable advantage for 12 jobs**. This initial table compared
 build-system configurations; it did not identify an optimal Ninja worker count.
+
+**Toolchain follow-up:** the later [native ARM64 Clang experiment](CLANG_EXPERIMENT.md)
+measured **103.02 s for Clang versus 172.75 s for MSVC**, both with Ninja and 12 jobs:
+40.36% less median build time in that separate, matched series. Clang is opt-in;
+do not compare its time directly with the older table below to isolate compiler effects.
 
 **Compilation dominates. DNN is the largest module cost; linking and installation
 are comparatively small.** Prioritize build scheduling and expensive translation
@@ -140,6 +145,10 @@ Per-run details:
 [Ninja run 2 analysis](../results/2026-10-14-snapdragon-x2/20261014_175841_121_ninja12_2/analysis.json).
 
 ## Recommended improvements
+
+These recommendations describe the initial MSVC-only series. The subsequent
+[Clang report](CLANG_EXPERIMENT.md#where-the-build-time-goes) adds a faster measured
+toolchain candidate and updated cost breakdown, without replacing the HOBL baseline.
 
 | Priority | Recommendation | Evidence and qualification |
 |---|---|---|

@@ -1,0 +1,17 @@
+{
+  "scope": "Untimed functional smoke, not the full correctness suite",
+  "architecture": "ARM64",
+  "source_sha256": "524734311ec3a1f52b3a3acfbc35a3b26c40cbe747ad79013edbdef69f3b379f",
+  "checks": {
+    "Clang": {
+      "smoke_output": "OpenCV 4.10.0: image and matrix smoke checks passed",
+      "smoke_executable_sha256": "11b270c198685fa75941b5f5618d935488a905ddc5dcf0d1792cecea3d9850b6",
+      "installed_world_dll_sha256": "f01c17bd05a9d02293c469328655593d3ea0742fc28298b2b08d63926e07b918"
+    },
+    "MSVC": {
+      "smoke_output": "OpenCV 4.10.0: image and matrix smoke checks passed",
+      "smoke_executable_sha256": "4f6bff362fb1ab5bedc2945bdb5de6b1aaf9f2cf71517e688ce998dcb2a6cafe",
+      "installed_world_dll_sha256": "3c984aa16b5e0c625aca5479c4cb8847abc9b9f6dc99c555f22a8ff345304860"
+    }
+  }
+}

@@ -4,15 +4,20 @@ param(
     [string]$ResultsDir = "$PSScriptRoot\..\results\local",
     [ValidatePattern('^[A-Za-z0-9_-]+$')][string]$Label = 'hobl_baseline',
     [ValidateSet('MSBuild', 'Ninja')][string]$Generator = 'MSBuild',
+    [ValidateSet('MSVC', 'Clang')][string]$Toolchain = 'MSVC',
     [ValidateRange(0, 256)][int]$Parallel = 0,
     [switch]$Profile
 )
 . "$PSScriptRoot\common.ps1"
+if ($Toolchain -eq 'Clang' -and -not $PSBoundParameters.ContainsKey('Label')) { $Label = 'clang_experiment' }
 $Root = Get-SourceRoot $Root
+$Generator = Get-EffectiveGenerator $Generator $Toolchain ($PSBoundParameters.ContainsKey('Generator'))
 Assert-Source $Root
-$buildDir = Get-BuildDirectory $Root $Generator
+$buildDir = Get-BuildDirectory $Root $Generator $Toolchain
 if (-not (Test-Path "$buildDir\benchmark-setup.json")) { throw ' ERROR - Run setup.ps1 for this generator first.' }
 $receipt = Get-Content "$buildDir\benchmark-setup.json" -Raw | ConvertFrom-Json
+$receiptToolchain = if ($receipt.PSObject.Properties.Name -contains 'toolchain') { $receipt.toolchain } else { 'MSVC' }
+if ($receiptToolchain -ne $Toolchain) { throw ' ERROR - Toolchain does not match the configured build directory.' }
 if ($receipt.config_sha256 -ne (Get-FileHash "$PSScriptRoot\..\benchmark.json").Hash) {
     throw ' ERROR - Benchmark configuration changed; rerun setup.'
 }
@@ -26,8 +31,17 @@ $cmakeExe = Get-CMake $receipt.cmake
 if ($Generator -eq 'Ninja') {
     if ($Profile) { throw ' ERROR - Profile uses MSBuild PerformanceSummary; Ninja already records per-step timings.' }
     Set-NativeToolchain $receipt.visual_studio
+    if ($Toolchain -eq 'Clang') {
+        foreach ($name in @('c', 'cxx', 'linker', 'ar', 'ranlib')) {
+            Assert-NativeExecutable $receipt.llvm.$name $receipt.architecture
+            if ((Get-FileHash $receipt.llvm.$name).Hash -ne $receipt.llvm."${name}_sha256") {
+                throw " ERROR - Clang tool changed since setup: $name"
+            }
+        }
+        $env:PATH = "$($receipt.llvm.root)\bin;$env:PATH"
+    }
 }
-$ResultsDir = [IO.Path]::GetFullPath($ResultsDir)
+$ResultsDir = [IO.Path]::GetFullPath($ResultsDir, (Get-Location).ProviderPath)
 $runDir = Join-Path $ResultsDir ("{0}_{1}" -f (Get-Date -Format 'yyyyMMdd_HHmmss_fff'), $Label)
 New-Item -ItemType Directory -Force $runDir | Out-Null
 $metadata = [ordered]@{
@@ -35,6 +49,7 @@ $metadata = [ordered]@{
     label = $Label
     started_at = (Get-Date).ToString('o')
     generator = $Generator
+    toolchain = $Toolchain
     parallel = $Parallel
     profile = [bool]$Profile
     setup = $receipt
@@ -66,6 +81,7 @@ try {
         $install = Invoke-Logged $cmakeExe @('--build', '.', '--target', $installTarget, '--config', 'Release') "$runDir\install.log"
         $versions = @(Get-ChildItem "$buildDir\install" -Recurse -Filter opencv_version.exe)
         if ($versions.Count -ne 1) { throw " ERROR - Expected one installed opencv_version.exe; found $($versions.Count)." }
+        Assert-NativeExecutable $versions[0].FullName $receipt.architecture
         $version = & $versions[0].FullName
         if ($LASTEXITCODE -ne 0 -or "$version".Trim() -ne $script:Config.opencv_tag) {
             throw " ERROR - Installed executable validation failed: $version"

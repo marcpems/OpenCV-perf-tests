@@ -7,6 +7,7 @@ HOBL intentionally sets `BUILD_PERF_TESTS=OFF`.
 
 **[Timing results and recommendations](docs/ANALYSIS.md)** |
 **[Matched 12 vs default 14 jobs study](docs/NINJA_PARALLELISM.md)** |
+**[Native ARM64 Clang experiment](docs/CLANG_EXPERIMENT.md)** |
 **[HOBL survey, equivalence and measurement methodology](docs/METHODOLOGY.md)**
 
 The baseline preserves HOBL's clean -> timed Release build -> install -> version-check
@@ -111,7 +112,61 @@ unchanged. The comparison checks run arguments, setup equality, compile counts,
 and observed command concurrency. This measures **wall time**, not power or energy.
 Use a new `-ResultsDir` for another study; existing data is never overwritten.
 
-## Results and analysis
+## Optional native ARM64 Clang toolchain
+
+This is a reversible Windows experiment, **not an official HOBL score or a macOS
+build**. It uses the GNU-style `clang` / `clang++` drivers, CMake + Ninja, and LLVM
+LLD instead of MSVC/MSBuild. The Windows SDK and MSVC headers/runtime are still
+required. The default remains MSVC + MSBuild.
+
+With the prerequisites above plus `7z` (7-Zip) on PATH:
+
+```powershell
+# Portable LLVM 23.1.3, latest stable when checked on 2026-10-14.
+pwsh -NoProfile -File scripts\install_clang.ps1
+pwsh -NoProfile -File scripts\setup.ps1 -Toolchain Clang
+pwsh -NoProfile -File scripts\run.ps1 -Toolchain Clang -Parallel 12
+
+# Switch back: no toolchain flag means the original MSVC + MSBuild setup.
+pwsh -NoProfile -File scripts\setup.ps1
+pwsh -NoProfile -File scripts\run.ps1 -Label baseline_restored
+```
+
+Clang automatically selects Ninja; explicitly combining it with MSBuild is rejected.
+Its isolated `build_hobl_clang_ninja` directory does not overwrite either MSVC build
+tree. The checksum-pinned LLVM distribution lives under `.tools`; neither the global
+LLVM installation nor the persistent PATH is changed. To deliberately use another
+native Windows LLVM distribution, pass `-LLVMRoot <directory>` to Clang setup.
+
+The [experiment report](docs/CLANG_EXPERIMENT.md) explains the Clang-only
+`-fno-delayed-template-parsing` compatibility flag, optimization/CPU-dispatch
+differences, and why this is not an Apple Clang comparison.
+
+For a balanced comparison against MSVC using the **same Ninja and job limit**:
+
+```powershell
+pwsh -NoProfile -File scripts\setup.ps1 -Generator Ninja
+pwsh -NoProfile -File scripts\setup.ps1 -Toolchain Clang
+pwsh -NoProfile -File scripts\run_toolchain_study.ps1 -Parallel 12
+python scripts\export_results.py results\local\clang-comparison results\<new-snapshot>
+```
+
+The study uses MSVC/Clang/Clang/MSVC order, fresh child shells, and 30-second rests.
+Choose a fresh `-ResultsDir` for each repeat. Do not pool its timings with the earlier
+generator or worker-count studies.
+
+After successful installation, these small functional checks compile a native client
+with CMake and exercise image conversion, filtering, resizing and matrix multiplication.
+They are outside all benchmark timers and are not the full OpenCV test suite:
+
+```powershell
+pwsh -NoProfile -File tests\smoke_opencv.ps1 -Toolchain Clang
+pwsh -NoProfile -File tests\smoke_opencv.ps1 -Toolchain MSVC
+```
+
+Both checks use the corresponding **Ninja** build's installed package.
+
+## Result artifacts
 
 Raw local outputs go to `results\local\<timestamp>_<label>` (ignored by Git).
 Each completed run contains:

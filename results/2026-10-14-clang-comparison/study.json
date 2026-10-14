@@ -1,0 +1,21 @@
+{
+  "started_at": "2026-10-14T20:29:53.0751223+01:00",
+  "order": [
+    "MSVC",
+    "Clang",
+    "Clang",
+    "MSVC"
+  ],
+  "generator": "Ninja",
+  "parallel": 12,
+  "pause_seconds": 30,
+  "ninja": "C:\\Strawberry\\c\\bin\\ninja.exe",
+  "ninja_version": "1.12.0",
+  "ninja_sha256": "442ADBDC1906DA39ACD56D1A3B5B9AAFFB01EDA5EB55A6882A3651B8F9FF09B0",
+  "build_graph_sha256": {
+    "D:\\opencv\\build_hobl_clang_ninja\\build.ninja": "7956C48990F88A4714A8E6A044B0FBDCE93B2061FF72127EAEFEFA479CC93037",
+    "D:\\opencv\\build_hobl_ninja\\build.ninja": "ED2D40C9CC6E804EA52396B0B8EC29D304D3C89BC78CFC1C1FB953D47EE2F3A3"
+  },
+  "runner_sha256": "79970354950356586C634D3525F0B16B41CF2E3803098B2F3AA87A61A4533DA5",
+  "finished_at": "2026-10-14T20:41:15.4389710+01:00"
+}

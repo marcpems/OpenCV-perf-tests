@@ -146,3 +146,24 @@ Keep this series separate from the earlier generator comparison. The hypothesis 
 that 12 jobs takes less wall time than the default 14; it is not an assumption or a
 claim about energy use. With four observations per condition and an uncontrolled
 normal-use machine, conclusions remain workload- and machine-specific.
+
+## Optional native Clang experiment
+
+`-Toolchain Clang` selects a separate CMake/Ninja tree with native Windows ARM64
+LLVM tools and GNU-style compiler drivers. It retains the pinned source, all 23
+Windows HOBL definitions, and the same clean/build/install timing boundaries.
+The default MSVC/MSBuild path is unchanged. Compiler/linker/archiver executable
+architectures and hashes are checked, and installed executables must be native.
+
+The toolchain study runs **MSVC/Clang/Clang/MSVC**, both with Ninja and 12 explicit
+jobs on the measured machine, and 30-second rests. Runner, Ninja and per-toolchain
+build-graph hashes must remain stable. The two configured build graphs need not be
+identical: Clang's detected instruction support and generated flags differ from
+MSVC's. This compares toolchain configurations, not just compiler executables.
+The pilot and the separate return-to-default MSBuild run are excluded from the
+matched comparison. These are warm-cache clean builds, not cold-machine tests.
+
+Clang uses LLVM LLD and standard template parsing, but still targets the Windows
+MSVC ABI, SDK, headers and runtime. HOBL's macOS scenario uses Make and normally
+Apple Clang, and has different OpenCV options. No macOS hardware or Apple SDK is
+used here. See [the experiment report](CLANG_EXPERIMENT.md) for results and limits.
