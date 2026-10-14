@@ -1,0 +1,76 @@
+{
+  "baseline": {
+    "count": 2,
+    "median_seconds": 230.34435,
+    "min_seconds": 230.0373,
+    "max_seconds": 230.6514,
+    "runs": [
+      {
+        "directory": "20261014_174137_516_baseline_1",
+        "build_seconds": 230.0373,
+        "clean_seconds": 0.8355,
+        "install_seconds": 2.0545
+      },
+      {
+        "directory": "20261014_180218_372_baseline_2",
+        "build_seconds": 230.6514,
+        "clean_seconds": 0.9077,
+        "install_seconds": 1.9385
+      }
+    ]
+  },
+  "ninja12": {
+    "count": 2,
+    "median_seconds": 192.99455,
+    "min_seconds": 184.7035,
+    "max_seconds": 201.2856,
+    "runs": [
+      {
+        "directory": "20261014_174618_755_ninja12_1",
+        "build_seconds": 201.2856,
+        "clean_seconds": 0.1177,
+        "install_seconds": 0.8165
+      },
+      {
+        "directory": "20261014_175841_121_ninja12_2",
+        "build_seconds": 184.7035,
+        "clean_seconds": 0.2637,
+        "install_seconds": 0.2989
+      }
+    ]
+  },
+  "msbuild12": {
+    "count": 2,
+    "median_seconds": 219.2397,
+    "min_seconds": 211.5981,
+    "max_seconds": 226.8813,
+    "runs": [
+      {
+        "directory": "20261014_175013_061_msbuild12_1",
+        "build_seconds": 226.8813,
+        "clean_seconds": 0.9156,
+        "install_seconds": 1.9633
+      },
+      {
+        "directory": "20261014_175434_741_msbuild12_2",
+        "build_seconds": 211.5981,
+        "clean_seconds": 0.8358,
+        "install_seconds": 1.9956
+      }
+    ]
+  },
+  "baseline_profile": {
+    "count": 1,
+    "median_seconds": 327.3044,
+    "min_seconds": 327.3044,
+    "max_seconds": 327.3044,
+    "runs": [
+      {
+        "directory": "20261014_180643_788_baseline_profile",
+        "build_seconds": 327.3044,
+        "clean_seconds": 0.8437,
+        "install_seconds": 3.1494
+      }
+    ]
+  }
+}
