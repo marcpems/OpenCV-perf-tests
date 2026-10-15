@@ -1,0 +1,117 @@
+{
+  "original": {
+    "count": 2,
+    "median_seconds": 215.1173,
+    "min_seconds": 204.8833,
+    "max_seconds": 225.3513,
+    "runs": [
+      {
+        "directory": "20261015_182410_828_original_1",
+        "build_seconds": 204.8833,
+        "clean_seconds": 1.1186,
+        "install_seconds": 2.3832,
+        "cpu_seconds": 1580.859375
+      },
+      {
+        "directory": "20261015_185444_865_original_2",
+        "build_seconds": 225.3513,
+        "clean_seconds": 1.0367,
+        "install_seconds": 2.3669,
+        "cpu_seconds": 1736.5625
+      }
+    ],
+    "median_cpu_seconds": 1658.7109375
+  },
+  "multitool": {
+    "count": 2,
+    "median_seconds": 195.2902,
+    "min_seconds": 191.339,
+    "max_seconds": 199.2414,
+    "runs": [
+      {
+        "directory": "20261015_182812_639_multitool_1",
+        "build_seconds": 191.339,
+        "clean_seconds": 0.9859,
+        "install_seconds": 3.7036,
+        "cpu_seconds": 1730.234375
+      },
+      {
+        "directory": "20261015_185049_419_multitool_2",
+        "build_seconds": 199.2414,
+        "clean_seconds": 0.9956,
+        "install_seconds": 2.5525,
+        "cpu_seconds": 1830.0625
+      }
+    ],
+    "median_cpu_seconds": 1780.1484375
+  },
+  "shared": {
+    "count": 2,
+    "median_seconds": 187.67435,
+    "min_seconds": 185.8985,
+    "max_seconds": 189.4502,
+    "runs": [
+      {
+        "directory": "20261015_183201_435_shared_1",
+        "build_seconds": 185.8985,
+        "clean_seconds": 1.0487,
+        "install_seconds": 2.8077,
+        "cpu_seconds": 1812.453125
+      },
+      {
+        "directory": "20261015_184703_404_shared_2",
+        "build_seconds": 189.4502,
+        "clean_seconds": 1.1232,
+        "install_seconds": 2.8483,
+        "cpu_seconds": 1839.984375
+      }
+    ],
+    "median_cpu_seconds": 1826.21875
+  },
+  "ninja": {
+    "count": 2,
+    "median_seconds": 173.00485,
+    "min_seconds": 170.291,
+    "max_seconds": 175.7187,
+    "runs": [
+      {
+        "directory": "20261015_183543_828_ninja_1",
+        "build_seconds": 170.291,
+        "clean_seconds": 0.3056,
+        "install_seconds": 0.3313,
+        "cpu_seconds": 1747.34375
+      },
+      {
+        "directory": "20261015_184333_262_ninja_2",
+        "build_seconds": 175.7187,
+        "clean_seconds": 0.3244,
+        "install_seconds": 1.3843,
+        "cpu_seconds": 1812.078125
+      }
+    ],
+    "median_cpu_seconds": 1779.7109375
+  },
+  "clang": {
+    "count": 2,
+    "median_seconds": 99.37445,
+    "min_seconds": 96.7034,
+    "max_seconds": 102.0455,
+    "runs": [
+      {
+        "directory": "20261015_183907_803_clang_1",
+        "build_seconds": 96.7034,
+        "clean_seconds": 0.2798,
+        "install_seconds": 0.3192,
+        "cpu_seconds": 920.9375
+      },
+      {
+        "directory": "20261015_184118_172_clang_2",
+        "build_seconds": 102.0455,
+        "clean_seconds": 0.2504,
+        "install_seconds": 0.2669,
+        "cpu_seconds": 943.921875
+      }
+    ],
+    "median_cpu_seconds": 932.4296875
+  }
+}

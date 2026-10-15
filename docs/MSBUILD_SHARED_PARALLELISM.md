@@ -1,5 +1,10 @@
 # Full-build MSBuild experiment: project parallelism with a shared compiler limit
 
+**Later rerun:** the [fresh five-configuration comparison](FIVE_CONFIGURATION_RERUN.md)
+after a reported device configuration change measured **187.67 s** for this
+shared-parallel configuration and **173.00 s** for MSVC/Ninja. Those are separate
+measurements; the original experiment below is preserved unchanged.
+
 Measured on **15 October 2026**, using the original VS 2022/MSVC ARM64 stack.
 The new configuration reached **180.94 seconds median**, compared with
 **176.75 seconds for a fresh MSVC/Ninja control** and **205.36 seconds for a fresh
@@ -164,6 +169,10 @@ pwsh -NoProfile -File scripts\run_msbuild_parallelism_study.ps1 `
     -ResultsDir results\local\fresh-shared-study -Jobs 12
 python scripts\export_results.py results\local\fresh-shared-study results\fresh-shared-export
 
+# Rerun all five configurations, including original MSBuild and LLVM/Ninja.
+pwsh -NoProfile -File scripts\run_msbuild_parallelism_study.ps1 `
+    -AllConfigurations -ResultsDir results\local\fresh-five-study -Jobs 12
+
 # Return to the unchanged original HOBL-equivalent command.
 pwsh -NoProfile -File scripts\run.ps1 -Label original_default
 ```
@@ -173,6 +182,13 @@ pwsh -NoProfile -File scripts\run.ps1 -Label original_default
 budget. They are deliberately separate. Scheduler properties and disabled node
 reuse also apply to cleaning and installation, but project-level parallelism
 is only needed on the timed build command.
+
+`-AllConfigurations` runs ten builds in original / MultiToolTask / shared /
+MSVC-Ninja / LLVM-Ninja / reverse order. Configure the Clang tree first with
+`scripts\setup.ps1 -Toolchain Clang` if it does not already exist. The original
+MSBuild condition retains its default parallelism; both Ninja conditions and
+the experimental compiler limits use `-Jobs`. Without this switch, the existing
+three-condition, six-build protocol is unchanged.
 
 For a diagnostic repeat, add `-Trace -BinaryLog` in an elevated shell. Extract
 process lifetimes, precise/sample CPU and binary-log events as described in the

@@ -3,7 +3,8 @@ param(
     [string]$Root = '',
     [string]$ResultsDir = "$PSScriptRoot\..\results\local\msbuild-shared-study",
     [ValidateRange(1, 256)][int]$Jobs = 12,
-    [ValidateRange(0, 3600)][int]$PauseSeconds = 30
+    [ValidateRange(0, 3600)][int]$PauseSeconds = 30,
+    [switch]$AllConfigurations
 )
 . "$PSScriptRoot\common.ps1"
 Assert-NoPendingToolchainRestart
@@ -17,9 +18,16 @@ foreach ($name in @('run.ps1', 'common.ps1', 'measure_build.ps1', 'BuildAccounti
     $path = [IO.Path]::GetFullPath("$PSScriptRoot\$name")
     $frozen[$path] = (Get-FileHash $path).Hash
 }
-foreach ($generator in @('MSBuild', 'Ninja')) {
-    $build = Get-BuildDirectory $Root $generator 'MSVC'
-    if (-not (Test-Path "$build\benchmark-setup.json")) { throw " ERROR - Configure MSVC/$generator first." }
+$buildConfigurations = @(
+    @{ Generator = 'MSBuild'; Toolchain = 'MSVC' },
+    @{ Generator = 'Ninja'; Toolchain = 'MSVC' }
+)
+if ($AllConfigurations) { $buildConfigurations += @{ Generator = 'Ninja'; Toolchain = 'Clang' } }
+foreach ($configuration in $buildConfigurations) {
+    $generator = $configuration.Generator
+    $toolchain = $configuration.Toolchain
+    $build = Get-BuildDirectory $Root $generator $toolchain
+    if (-not (Test-Path "$build\benchmark-setup.json")) { throw " ERROR - Configure $toolchain/$generator first." }
     foreach ($name in @('benchmark-setup.json', 'CMakeCache.txt')) {
         $frozen["$build\$name"] = (Get-FileHash "$build\$name").Hash
     }
@@ -38,17 +46,26 @@ foreach ($generator in @('MSBuild', 'Ninja')) {
     }
 }
 $variants = @{
-    multitool = @('-Generator', 'MSBuild', '-MSBuildScheduler', 'MultiToolTask', '-CompilerJobs', "$Jobs")
-    ninja = @('-Generator', 'Ninja', '-Parallel', "$Jobs")
-    shared = @('-Generator', 'MSBuild', '-MSBuildScheduler', 'MultiToolTask', '-CompilerJobs', "$Jobs",
+    multitool = @('-Toolchain', 'MSVC', '-Generator', 'MSBuild',
+        '-MSBuildScheduler', 'MultiToolTask', '-CompilerJobs', "$Jobs")
+    ninja = @('-Toolchain', 'MSVC', '-Generator', 'Ninja', '-Parallel', "$Jobs")
+    shared = @('-Toolchain', 'MSVC', '-Generator', 'MSBuild',
+        '-MSBuildScheduler', 'MultiToolTask', '-CompilerJobs', "$Jobs",
         '-SharedCompilerLimit', '-Parallel', "$Jobs")
 }
 $order = @('multitool', 'ninja', 'shared', 'shared', 'ninja', 'multitool')
+if ($AllConfigurations) {
+    $variants.original = @('-Toolchain', 'MSVC', '-Generator', 'MSBuild')
+    $variants.clang = @('-Toolchain', 'Clang', '-Generator', 'Ninja', '-Parallel', "$Jobs")
+    $order = @('original', 'multitool', 'shared', 'ninja', 'clang',
+        'clang', 'ninja', 'shared', 'multitool', 'original')
+}
 $manifest = [ordered]@{
     status = 'running'
     started_at = [datetimeoffset]::Now.ToString('o')
     order = $order
     jobs = $Jobs
+    all_configurations = [bool]$AllConfigurations
     pause_seconds = $PauseSeconds
     variants = $variants
     frozen_sha256 = $frozen
@@ -57,7 +74,8 @@ $manifest = [ordered]@{
 New-Item -ItemType Directory $ResultsDir | Out-Null
 $manifest | ConvertTo-Json -Depth 5 | Set-Content "$ResultsDir\study.json"
 $shell = (Get-Process -Id $PID).Path
-$counts = @{ multitool = 0; ninja = 0; shared = 0 }
+$counts = @{}
+foreach ($variant in $variants.Keys) { $counts[$variant] = 0 }
 try {
     foreach ($variant in $order) {
         foreach ($path in $frozen.Keys) {
@@ -69,7 +87,7 @@ try {
         Start-Sleep -Seconds $PauseSeconds
         $options = $variants[$variant]
         & $shell -NoProfile -File "$PSScriptRoot\run.ps1" -Root $Root -ResultsDir $ResultsDir `
-            -Toolchain MSVC -MeasureCpu -Label $label @options
+            -MeasureCpu -Label $label @options
         if ($LASTEXITCODE -ne 0) { throw " ERROR - Study stopped after failed run: $label" }
         foreach ($path in $frozen.Keys) {
             if ((Get-FileHash $path).Hash -ne $frozen[$path]) { throw " ERROR - Frozen input changed: $path" }

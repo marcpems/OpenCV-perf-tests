@@ -237,3 +237,11 @@ six-build sequence compares compiler-only MSBuild, MSVC-Ninja and shared-paralle
 MSBuild in forward/reverse order, with CPU accounting and 30-second rests.
 The single WPR/binlog pilot verifies the global compiler-process peak and is
 excluded from primary timings. Historical measurements are contextual only.
+
+For a fresh comparison of all five configurations, the same study runner's
+`-AllConfigurations` option adds original MSBuild and LLVM/Ninja, freezes all
+three build trees, and runs each condition twice in forward/reverse order.
+All ten builds use CPU accounting without WPR or binary logging. The original
+condition keeps the HOBL defaults; the other four retain their explicit
+compiler/project job settings. Results after a device configuration change
+belong in a new snapshot, not pooled with earlier runs.

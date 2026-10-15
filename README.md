@@ -13,12 +13,20 @@ HOBL intentionally sets `BUILD_PERF_TESTS=OFF`.
 **[LLVM vs MSVC: CPU time and WPR/ETL investigation](docs/CPU_ETL_ANALYSIS.md)** |
 **[MSBuild serial-tail investigation and scheduler experiment](docs/MSBUILD_SERIAL_TAIL.md)** |
 **[MSBuild project + shared-compiler parallelism](docs/MSBUILD_SHARED_PARALLELISM.md)** |
+**[Fresh five-configuration rerun after device change](docs/FIVE_CONFIGURATION_RERUN.md)** |
 **[HOBL survey, equivalence and measurement methodology](docs/METHODOLOGY.md)**
 
 The baseline preserves HOBL's clean -> timed Release build -> install -> version-check
 sequence and all 23 CMake definitions. `scenario_runtime` and `build_time` are the
 build-only wall time in seconds; configuration, cleaning and installation are excluded.
 The source revision and HOBL reference are pinned in [`benchmark.json`](benchmark.json).
+
+The **latest five-configuration rerun** measured medians of **215.12 s** for
+original MSBuild, **195.29 s** for compiler-only MultiToolTask, **187.67 s** for
+shared-parallel MSBuild, **173.00 s** for MSVC/Ninja and **99.37 s** for LLVM/Ninja.
+Each configuration ran twice after a reported device configuration change.
+These are a separate snapshot; older results below remain historical.
+See the [fresh comparison and reproduction command](docs/FIVE_CONFIGURATION_RERUN.md).
 
 ## Prerequisites
 
