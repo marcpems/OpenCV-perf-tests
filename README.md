@@ -174,15 +174,23 @@ Both checks use the corresponding **Ninja** build's installed package.
 18.11.0, MSVC 19.51.36260.0 (toolset 14.51.36231), MSBuild 18.11.0.47511, and
 native ARM64 CMake 4.4.4. The baseline remains VS 2022 with CMake 4.1.1.
 
-**Current local status:** tools are installed and both configurations generate
-successfully, but the VS installer requested a Windows restart (exit 3010).
-No VS 2026 OpenCV timing results have been collected. The runner blocks measurement
-until that restart; it never restarts the computer automatically.
+The matched local series measured **226.22 s median for VS 2026 versus 226.68 s
+for VS 2022**. The 0.20% difference was much smaller than run variation, so
+**no reliable build-time improvement was established**. Both variants built,
+installed and passed functional smoke checks.
+
+The installer returned 3010, but investigation showed Microsoft's runtime wrapper
+had classified this as a **soft reboot recommendation**, with updated files and
+a consistent installation. VS reported no required reboot. Fresh-process builds
+were therefore allowed after recording and checking that evidence; see the
+[report](docs/VS2026_EXPERIMENT.md) for the measured machine state and results.
+Unverified restart requests still block measurement. The scripts never restart
+the computer automatically.
 
 ```powershell
 # Elevated native ARM64 PowerShell; preserves the separate VS 2022 installation.
 pwsh -NoProfile -File scripts\install_vs2026.ps1
-# Restart Windows if the installer requests it, then:
+# Resolve any required restart before benchmarking, then:
 pwsh -NoProfile -File scripts\setup.ps1
 pwsh -NoProfile -File scripts\setup.ps1 -Toolchain MSVC2026
 pwsh -NoProfile -File scripts\run_toolchain_study.ps1 -CandidateToolchain MSVC2026
@@ -197,7 +205,7 @@ for the VS 2026 generator, so this compares **build stacks**, not the compiler a
 Use a fresh `-ResultsDir` for a repeat. The Clang study retains its previous
 Ninja/explicit-job defaults.
 
-After restart, run only the new variant with `run.ps1 -Toolchain MSVC2026`.
+Run only the new variant with `run.ps1 -Toolchain MSVC2026`.
 Omit the toolchain option to return to the original VS 2022/MSBuild baseline.
 See [release provenance, compatibility caveats and status](docs/VS2026_EXPERIMENT.md).
 

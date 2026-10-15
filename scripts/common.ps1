@@ -23,6 +23,22 @@ function Assert-NoPendingToolchainRestart([string]$Receipt = "$PSScriptRoot\..\.
     if ($installation.exit_code -eq 3010) {
         $boot = (Get-CimInstance Win32_OperatingSystem).LastBootUpTime.ToUniversalTime().ToString('o')
         if ([datetimeoffset]$installation.boot_time -eq [datetimeoffset]$boot) {
+            if ($installation.PSObject.Properties.Name -contains 'restart_assessment' -and
+                $installation.restart_assessment.kind -eq 'verified-soft-reboot') {
+                $assessment = $installation.restart_assessment
+                $vs = Get-VisualStudio 18
+                if (-not $vs.complete -or $vs.reboot_required -or $vs.version -ne $assessment.visual_studio_build) {
+                    throw ' ERROR - Visual Studio no longer matches the verified soft-reboot assessment.'
+                }
+                if (-not $assessment.runtime_files.Count) { throw ' ERROR - Soft-reboot assessment has no runtime evidence.' }
+                foreach ($runtime in $assessment.runtime_files) {
+                    if ((Get-FileHash -LiteralPath $runtime.path).Hash -ne $runtime.sha256) {
+                        throw ' ERROR - Runtime changed after soft-reboot verification; review installation before benchmarking.'
+                    }
+                }
+                Write-Warning 'Measuring before the recommended restart: verified soft-reboot assessment and runtime hashes match.'
+                return
+            }
             throw ' ERROR - Restart Windows to finish VS 2026 installation before benchmarking.'
         }
     }
@@ -71,6 +87,8 @@ function Get-VisualStudio([ValidateSet(17, 18)][int]$MajorVersion = 17) {
                 version = $instance.installationVersion
                 tools = $tools
                 toolset = $toolset
+                complete = [bool]$instance.isComplete
+                reboot_required = [bool]$instance.isRebootRequired
             }
         }
     }

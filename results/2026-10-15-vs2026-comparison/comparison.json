@@ -1,0 +1,91 @@
+{
+  "metric": "Clean Release build wall seconds; clean/configure/install excluded",
+  "runs": [
+    {
+      "sequence": 1,
+      "toolchain": "MSVC",
+      "directory": "20261015_101004_090_msvc_1",
+      "build_seconds": 247.8424,
+      "clean_seconds": 0.9355,
+      "install_seconds": 2.3262
+    },
+    {
+      "sequence": 2,
+      "toolchain": "MSVC2026",
+      "directory": "20261015_101447_467_msvc2026_1",
+      "build_seconds": 230.124,
+      "clean_seconds": 1.6986,
+      "install_seconds": 2.5878
+    },
+    {
+      "sequence": 3,
+      "toolchain": "MSVC2026",
+      "directory": "20261015_101914_512_msvc2026_2",
+      "build_seconds": 222.3236,
+      "clean_seconds": 1.6238,
+      "install_seconds": 2.5405
+    },
+    {
+      "sequence": 4,
+      "toolchain": "MSVC",
+      "directory": "20261015_102333_288_msvc_2",
+      "build_seconds": 205.5254,
+      "clean_seconds": 0.8645,
+      "install_seconds": 1.9652
+    }
+  ],
+  "groups": {
+    "MSVC": {
+      "count": 2,
+      "median_seconds": 226.6839,
+      "min_seconds": 205.5254,
+      "max_seconds": 247.8424
+    },
+    "MSVC2026": {
+      "count": 2,
+      "median_seconds": 226.22379999999998,
+      "min_seconds": 222.3236,
+      "max_seconds": 230.124
+    }
+  },
+  "median_time_reduction_percent": 0.2029698624384049,
+  "median_seconds_saved": 0.4601000000000113,
+  "adjacent_pairs": [
+    {
+      "original_seconds": 247.8424,
+      "vs2026_seconds": 230.124,
+      "vs2026_minus_original_seconds": -17.718400000000003
+    },
+    {
+      "original_seconds": 205.5254,
+      "vs2026_seconds": 222.3236,
+      "vs2026_minus_original_seconds": 16.79820000000001
+    }
+  ],
+  "common_build_features": {
+    "Baseline": "NEON",
+    "Dispatched code generation": "NEON_DOTPROD NEON_FP16",
+    "C++ flags (Release)": "/DWIN32 /D_WINDOWS /W4 /GR /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /D _ARM64_DISTINCT_NEON_TYPES /Oi /fp:precise /EHa /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /MP /O2 /Ob2 /DNDEBUG",
+    "To be built": "calib3d core dnn features2d flann highgui imgcodecs imgproc ml objdetect photo stitching video videoio world",
+    "Parallel framework": "Concurrency"
+  },
+  "project_inventory": {
+    "MSVC": {
+      "solution_project_count": 37,
+      "compile_source_entries": 1015,
+      "normalized_source_multiset_sha256": "e01e165454ea7992d58015d4a4e552a9db01ff37a5118bf830ff440d964cc59b",
+      "solution": "OpenCV.sln",
+      "solution_sha256": "29241cd7041b5310a036ae3eaac3092ce0cc9bbc057682c6d934f3c30942ce4f"
+    },
+    "MSVC2026": {
+      "solution_project_count": 37,
+      "compile_source_entries": 1015,
+      "normalized_source_multiset_sha256": "e01e165454ea7992d58015d4a4e552a9db01ff37a5118bf830ff440d964cc59b",
+      "solution": "OpenCV.slnx",
+      "solution_sha256": "99864cab61d4157c3119481837d2f7946970ebcbc24013573b80aac1d0cde549"
+    }
+  },
+  "equal_compile_item_multisets": true,
+  "pre_restart": true,
+  "measured_study_script_sha256": "f366b319ec7caf2a619bc17bf71eb6826856bf827098f3abf6cf7238e4c0e8eb"
+}

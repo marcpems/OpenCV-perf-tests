@@ -1,0 +1,40 @@
+[0f58:0005][2026-10-15T09:43:04] END: Installing "Microsoft.VisualCpp.Redist.14.Latest,version=14.51.36247,chip=x86"
+[0f58:0005][2026-10-15T09:43:04] BEGIN: Caching package 'Microsoft.VisualCpp.Redist.14.Latest,version=14.51.36247,chip=x86'
+[0f58:0005][2026-10-15T09:43:04] END: Caching package 'Microsoft.VisualCpp.Redist.14.Latest,version=14.51.36247,chip=x86'
+[0f58:0005][2026-10-15T09:43:04] BEGIN: Installing "Microsoft.VisualCpp.Redist.14.Latest,version=14.51.36247,chip=x64"
+[0f58:0005][2026-10-15T09:43:04] Started: Installing Microsoft.VisualCpp.Redist.14.Latest
+[0f58:0005][2026-10-15T09:43:04] Package Log: <USERPROFILE>\AppData\Local\Temp\dd_setup_20261015094100_101_Microsoft.VisualCpp.Redist.14.Latest.log
+[0f58:0005][2026-10-15T09:43:04] Executing: "c:\windows\syswow64\\windowspowershell\v1.0\powershell.exe" -NoLogo -NoProfile -Noninteractive -ExecutionPolicy Unrestricted -InputFormat None -Command "& """C:\ProgramData\Microsoft\VisualStudio\Packages\Microsoft.VisualCpp.Redist.14.Latest,version=14.51.36247,chip=x64\VCRedistInstall.ps1""" -PayloadDirectory """C:\ProgramData\Microsoft\VisualStudio\Packages\Microsoft.VisualCpp.Redist.14.Latest,version=14.51.36247,chip=x64""" -Architecture x64 -Logfile """<USERPROFILE>\AppData\Local\Temp\dd_setup_20261015094100_101_Microsoft.VisualCpp.Redist.14.Latest.log"""; exit $LastExitCode"
+[0f58:0005][2026-10-15T09:43:48] Transcript started, output file is <USERPROFILE>\AppData\Local\Temp\dd_vcredist_wrapper_x64_20261015094307.log
+Installing Visual C++ Redist
+Inputs:
+  PayloadDirectory: C:\ProgramData\Microsoft\VisualStudio\Packages\Microsoft.VisualCpp.Redist.14.Latest,version=14.51.36247,chip=x64
+  Architecture:     x64
+  LogFile:          <USERPROFILE>\AppData\Local\Temp\dd_setup_20261015094100_101_Microsoft.VisualCpp.Redist.14.Latest.log
+  VersionToInstall: 
+Environment:
+  WINDIR:           C:\Windows
+  TEMP:             <USERPROFILE>\AppData\Local\Temp
+  system directory: C:\Windows\Sysnative
+  native reg. key:  HKLM:\Software\Microsoft\VisualStudio\14.0\VC\Runtimes\x64
+  WOW64 reg. key:   HKLM:\Software\WOW6432Node\Microsoft\VisualStudio\14.0\VC\Runtimes\x64
+Installing x64 Visual C++ Runtime on ARM64 system
+Initial registered version: 14.50.35719.0
+Initial file version: 14.50.35719.0
+Redist Installer Version: 14.51.36247.0
+Redist Exit Code:   3010
+Updated registered version: 14.51.36247.0
+Updated file version: 14.51.36247.0
+Soft-reboot conditions detected, changing exit code from 3010 to 862968
+Wrapper Exit Code:  862968
+Transcript stopped, output file is <USERPROFILE>\AppData\Local\Temp\dd_vcredist_wrapper_x64_20261015094307.log
+
+[0f58:0005][2026-10-15T09:43:48] Completed: Installing Microsoft.VisualCpp.Redist.14.Latest
+[0f58:0005][2026-10-15T09:43:48] Package executed successfully. Return code: 862968
+[0f58:0005][2026-10-15T09:43:48] Updating instance state that a reboot is required.
+[0f58:0005][2026-10-15T09:43:48] Updating instance state that a reboot is required.
+[0f58:0005][2026-10-15T09:43:48] Updating instance state that a reboot is required.
+[0f58:0005][2026-10-15T09:43:48] Updating instance state that a reboot is required.
+[0f58:0005][2026-10-15T09:43:48] Updating instance state that a reboot is required.
+[0f58:0005][2026-10-15T09:43:48] Updating instance state that a reboot is required.
+[0f58:0005][2026-10-15T09:43:48] END: Installing "Microsoft.VisualCpp.Redist.14.Latest,version=14.51.36247,chip=x64"

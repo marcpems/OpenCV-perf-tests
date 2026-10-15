@@ -1,0 +1,61 @@
+[
+  {
+    "process": "cl",
+    "exe": "C:\\Program Files\\Microsoft Visual Studio\\2026\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostArm64\\arm64\\CL.exe",
+    "version": "19.51.36260.0",
+    "modules": [
+      {
+        "version": "10.0.28000.3231 (WinBuild.160101.0800)",
+        "name": "msvcp_win.dll",
+        "path": "C:\\Windows\\System32\\msvcp_win.dll"
+      },
+      {
+        "version": "14.51.36260.0",
+        "name": "VCRUNTIME140.dll",
+        "path": "C:\\Program Files\\Microsoft Visual Studio\\2026\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostArm64\\arm64\\VCRUNTIME140.dll"
+      },
+      {
+        "version": "14.51.36260.0",
+        "name": "MSVCP140.dll",
+        "path": "C:\\Program Files\\Microsoft Visual Studio\\2026\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostArm64\\arm64\\MSVCP140.dll"
+      },
+      {
+        "version": "19.51.36260.0",
+        "name": "c1xx.dll",
+        "path": "C:\\Program Files\\Microsoft Visual Studio\\2026\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostArm64\\arm64\\c1xx.dll"
+      },
+      {
+        "version": "14.51.36260.0",
+        "name": "MSVCP140_1.dll",
+        "path": "C:\\Program Files\\Microsoft Visual Studio\\2026\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostArm64\\arm64\\MSVCP140_1.dll"
+      },
+      {
+        "version": "19.51.36260.0",
+        "name": "c2.dll",
+        "path": "C:\\Program Files\\Microsoft Visual Studio\\2026\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostArm64\\arm64\\c2.dll"
+      },
+      {
+        "version": "14.51.36260.0",
+        "name": "MSVCP140_ATOMIC_WAIT.dll",
+        "path": "C:\\Program Files\\Microsoft Visual Studio\\2026\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostArm64\\arm64\\MSVCP140_ATOMIC_WAIT.dll"
+      }
+    ]
+  },
+  {
+    "process": "MSBuild",
+    "exe": "C:\\Program Files\\Microsoft Visual Studio\\2026\\BuildTools\\MSBuild\\Current\\Bin\\arm64\\MSBuild.exe",
+    "version": "18.11.0.47511",
+    "modules": [
+      {
+        "version": "14.29.30154.0 built by: cloudtest",
+        "name": "VCRUNTIME140_CLR0400.dll",
+        "path": "C:\\Windows\\SYSTEM32\\VCRUNTIME140_CLR0400.dll"
+      },
+      {
+        "version": "10.0.28000.3231 (WinBuild.160101.0800)",
+        "name": "msvcp_win.dll",
+        "path": "C:\\Windows\\System32\\msvcp_win.dll"
+      }
+    ]
+  }
+]

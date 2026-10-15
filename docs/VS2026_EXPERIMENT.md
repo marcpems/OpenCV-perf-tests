@@ -1,9 +1,55 @@
 # VS 2026 / latest Microsoft tools experiment
 
-**Status, 2026-10-15: preparation complete; performance measurements blocked by
-the installer's required Windows restart. No VS 2026 OpenCV build timings or
-speedup claims are available yet.** A full build/install and new-library smoke
-check remain to be performed after restart.
+This compares the original VS 2022/MSBuild configuration with the released
+VS 2026/MSBuild stack on the same Windows ARM64 machine. The original default is
+preserved. The source, HOBL definitions and timing boundaries remain unchanged;
+the compiler, build engine and CMake versions change together.
+
+## Results: no reliable build-time improvement established
+
+Measured on **2026-10-15**, on the same 12-core Snapdragon X2 Elite, 63.48 GiB RAM,
+Windows 11 Pro build 28000 machine, with its High performance power scheme unchanged.
+
+| Sequence | Microsoft build stack | Clean Release build |
+|---|---|---:|
+| 1 | Original VS 2022 | 247.8424 s |
+| 2 | VS 2026 | 230.1240 s |
+| 3 | VS 2026 | 222.3236 s |
+| 4 | Original VS 2022 | 205.5254 s |
+| Median | Original VS 2022 | **226.6839 s** |
+| Median | VS 2026 | **226.2238 s** |
+
+The updated stack's median was **0.4601 s / 0.20% lower**. That difference is tiny
+relative to the observed variation: the original stack ranged over **42.3170 s**.
+VS 2026 won the first adjacent pair by 17.7184 s but lost the second by 16.7982 s.
+There is **no reliable speedup established**, and these two observations per
+condition do not prove population equivalence either.
+
+Both generated solutions contain **37 projects and 1,015 compile-source entries**,
+with identical normalized source-entry multisets. These are source items, not
+1,015 separate MSBuild command invocations. The installed build information also
+matched on enabled OpenCV modules, NEON baseline, NEON_DOTPROD/NEON_FP16 dispatch,
+Concurrency parallel framework and normalized Release C++ flags, including
+`/MP /O2 /Ob2 /DNDEBUG`.
+
+Both variants completed clean/build/install, returned OpenCV **4.10.0** from native
+ARM64 executables, and passed the untimed image/matrix smoke checks. The final
+VS 2022 run demonstrates switching back to the original stack.
+
+The VS 2026 compatibility pilot took **276.3678 s** and is deliberately excluded.
+It also supplied the live-process module evidence below. There was no separate
+matched discarded warm-up for VS 2022. The runs use warm OS caches, not cold-machine
+conditions; background activity and temperature were not continuously controlled.
+
+Cleaning took 0.8645-0.9355 s for VS 2022 and 1.6238-1.6986 s for VS 2026.
+Installation took 1.9652-2.3262 s and 2.5405-2.5878 s respectively. These phases
+are **excluded** from the build metric.
+
+Evidence: [summary and raw runs](../results/2026-10-15-vs2026-comparison/summary.json),
+[comparison/workload checks](../results/2026-10-15-vs2026-comparison/comparison.json),
+and [functional validation](../results/2026-10-15-vs2026-comparison/validation.json).
+Keep the original default: this experiment supports VS 2026 as a working,
+reversible option, not a demonstrated build-throughput optimization.
 
 ## Released tools installed
 
@@ -54,16 +100,45 @@ The build tree is `build_hobl_msvc2026`, separate from all three existing trees.
 `-Toolchain MSVC2026` requires MSBuild and rejects an explicit Ninja generator.
 Omitting the option still selects VS 2022/MSBuild. The Microsoft installer may
 update shared setup/runtime components even though the VS instances are separate;
-the new comparison therefore needs fresh control measurements after restart.
+the comparison therefore uses fresh control measurements rather than yesterday's
+baseline numbers.
 
-The installer exited **3010**, meaning installation succeeded but Windows must
-restart to finish it. No automatic restart was attempted. A local installation
-receipt records that requirement and the current boot timestamp; benchmark entry
-points reject measurements until a subsequent boot. `vswhere` reported the
-instance complete and did not flag a reboot, so the bootstrapper's explicit 3010
-result is retained rather than silently ignored.
+### Resolving the installer restart warning
 
-## Workload and planned measurement
+The bootstrapper exited **3010**. Initially this was treated as a hard measurement
+block, but the package logs established a more specific result:
+
+- The x64 VC redistributable returned 3010, but Microsoft's own wrapper verified
+  updated files and a consistent installation, then converted it to
+  **862968 (`NS_S_REBOOT_RECOMMENDED`)**.
+- That was the only nonzero package-success return code; the others were zero.
+- `vswhere` reported the instance complete, with `isRebootRequired=false`.
+- System `vcruntime140.dll`, `msvcp140.dll` and `concrt140.dll` were already
+  **14.51.36247.0** on disk.
+- During the pilot, actual native compiler processes loaded **cl/c1xx/c2
+  19.51.36260.0** and the compiler's own **14.51.36260.0** runtime libraries
+  from the new toolset directory. Native MSBuild identified as **18.11.0.47511**.
+
+The snapshot includes a [redacted installer excerpt](../results/2026-10-15-vs2026-comparison/restart_installer_excerpt.log)
+and [captured process/module versions](../results/2026-10-15-vs2026-comparison/active_process_modules.json).
+MSBuild's CLR-specific runtime is separate from the compiler's bundled VC runtime;
+no claim is made that every loaded system DLL has the VC redistributable's version.
+
+Thus this was a verified **soft reboot recommendation**, not missing compiler
+files or an incomplete VS instance. No reboot, process termination or system
+restart-flag modification was performed. All measured builds start fresh child
+processes; existing applications may still benefit from the recommended restart.
+These are explicitly **pre-restart measurements**, not post-restart confirmation.
+
+The runner retains a conservative default for unresolved 3010 requests. This
+installation has a reviewed `verified-soft-reboot` assessment in its local receipt.
+Before each run, it verifies the VS instance/version and the assessed runtime
+hashes, warns explicitly, and records the assessment and reboot state in metadata.
+Runtime drift or an incomplete/reboot-required VS instance invalidates that exception.
+The assessment receipt is also frozen by the study's hash checks. There is no
+unconditional "ignore reboot" switch or automatic assumption that every 3010 is soft.
+
+## Workload and measurement
 
 Keep the same pinned OpenCV 4.10.0 source and all 23 Windows HOBL definitions.
 Do not upgrade OpenCV, remove modules, change optimization settings manually,
@@ -83,10 +158,17 @@ use `/MP`; neither condition should be described as single-threaded.
 
 `run_toolchain_study.ps1 -CandidateToolchain MSVC2026` schedules
 **VS 2022 / VS 2026 / VS 2026 / VS 2022**, in fresh child shells with 30-second
-rests. Runner/helper hashes, setup receipts and generated solution/project hashes
+rests. Runner/helper hashes, setup receipts and generated project hashes
 must remain unchanged. Compiler, linker, MSBuild and CMake hashes are checked by
 the runner when recorded in the receipt. Output runs retain the same HOBL timing
 semantics, install/version/native-PE checks and failure handling as other variants.
+
+CMake 4.4.4 generates **`OpenCV.slnx`**, whereas the original generates `OpenCV.sln`.
+The measured script hashed all generated C++ projects and the original `.sln`;
+the `.slnx` solution and both source inventories were inspected separately after
+the study. The current runner additionally hashes `.slnx` files, with regression
+coverage for that format. The exact [measured study script](../results/2026-10-15-vs2026-comparison/measured_study.ps1)
+is retained rather than retroactively claiming the extra guard was used.
 
 This is an **original-versus-updated Microsoft build-stack comparison**. CMake,
 MSBuild, compiler and compiler-generated flags may all differ. It will not isolate
@@ -98,19 +180,20 @@ as a matched comparison against these new runs.
 Both MSBuild configurations generated successfully. CMake's untimed MSBuild
 version probe matched the selected native build engine for each installation.
 The PowerShell checks cover generator defaults/rejections, four-way build-tree
-isolation, version pins, native PE checks and the restart guard; Python regression
-tests passed. Existing MSVC/Ninja and Clang libraries still passed their untimed
-functional smoke checks after the script changes.
+isolation, version pins, native PE checks, unresolved-restart blocking and verified
+soft-reboot/runtime-drift handling. Mock-build protocol tests exercise both study
+orders and default job settings. Python regression tests passed. Existing
+MSVC/Ninja and Clang libraries also passed their untimed functional smoke checks.
 
 OpenCV 4.10 emits a configuration warning that it does not recognize
 `MSVC_VERSION 1951` and cannot assign its historical `OpenCV_RUNTIME` folder label.
-It also emits newer-CMake developer warnings. Configuration succeeds, but a complete
-new-toolchain build and runtime validation have **not** yet been established.
-No OpenCV source patch or warning-suppression workaround was added. The smoke
-script discovers the concrete installed CMake package instead of assuming a
-`vc17`/`vc18` installation folder.
+It also emits newer-CMake developer warnings. These did not prevent the full
+build, installation, native version check or image/matrix smoke test. No OpenCV
+source patch or warning-suppression workaround was added. The smoke script
+discovers the concrete installed CMake package instead of assuming a `vc17`/`vc18`
+installation folder.
 
-## Run after restarting Windows
+## Reproduce
 
 From the repository root:
 

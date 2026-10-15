@@ -20,6 +20,10 @@ if (-not $PSBoundParameters.ContainsKey('Parallel') -and $CandidateToolchain -eq
 $ResultsDir = [IO.Path]::GetFullPath($ResultsDir, (Get-Location).ProviderPath)
 if (Test-Path $ResultsDir) { throw ' ERROR - Study directory already exists; choose a fresh -ResultsDir.' }
 $graphs = @{}
+$installationReceipt = "$PSScriptRoot\..\.tools\vs2026-installation.json"
+if (Test-Path $installationReceipt) {
+    $graphs[$installationReceipt] = (Get-FileHash $installationReceipt).Hash
+}
 $ninjaPaths = @()
 foreach ($toolchain in @('MSVC', $CandidateToolchain)) {
     $buildDir = Get-BuildDirectory $Root $generator $toolchain
@@ -30,7 +34,7 @@ foreach ($toolchain in @('MSVC', $CandidateToolchain)) {
         if (-not $entry) { throw " ERROR - Configured Ninja executable not found for $toolchain." }
         $ninjaPaths += [IO.Path]::GetFullPath($entry.Matches[0].Groups[1].Value)
     } else {
-        $projects = @(Get-ChildItem $buildDir -Recurse -File -Include *.sln,*.vcxproj,*.props,*.targets)
+        $projects = @(Get-ChildItem $buildDir -Recurse -File -Include *.sln,*.slnx,*.vcxproj,*.props,*.targets)
         if (-not $projects.Count) { throw " ERROR - No generated MSBuild projects found for $toolchain." }
         foreach ($project in $projects) { $graphs[$project.FullName] = (Get-FileHash $project.FullName).Hash }
     }

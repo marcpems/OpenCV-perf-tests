@@ -22,6 +22,8 @@ param($Root, $ResultsDir, $Generator, $Toolchain, [int]$Parallel, $Label)
                 "CMAKE_MAKE_PROGRAM:FILEPATH=$((Get-Process -Id $PID).Path)" | Set-Content "$build\CMakeCache.txt"
             } else {
                 '<Project />' | Set-Content "$build\fixture.vcxproj"
+                $extension = if ($toolchain -eq 'MSVC2026') { 'slnx' } else { 'sln' }
+                'fixture solution' | Set-Content "$build\fixture.$extension"
             }
         }
         $results = "$temp\results_$candidate"
@@ -41,6 +43,10 @@ param($Root, $ResultsDir, $Generator, $Toolchain, [int]$Parallel, $Label)
         $manifest = Get-Content "$results\study.json" -Raw | ConvertFrom-Json
         if (-not $manifest.finished_at -or $manifest.generator -ne $generator) {
             throw ' ERROR - Completed study manifest is incorrect.'
+        }
+        if ($generator -eq 'MSBuild' -and
+            -not ($manifest.build_graph_sha256.PSObject.Properties.Name -match '\.slnx$')) {
+            throw ' ERROR - VS 2026 SLNX solution hash is missing.'
         }
         $failed = $false
         try {

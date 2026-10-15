@@ -1,0 +1,14 @@
+{
+  "scope": "Untimed native image/matrix smoke checks, not full OpenCV correctness/performance suite",
+  "client_source_sha256": "524734311ec3a1f52b3a3acfbc35a3b26c40cbe747ad79013edbdef69f3b379f",
+  "checks": {
+    "MSVC": {
+      "smoke_output": "OpenCV 4.10.0: image and matrix smoke checks passed",
+      "client_executable_sha256": "0ba83fb5ecaea2ad51758e7419deecb8d8253ec8069516bb3eeef1e0e8cca4bd"
+    },
+    "MSVC2026": {
+      "smoke_output": "OpenCV 4.10.0: image and matrix smoke checks passed",
+      "client_executable_sha256": "7baf67a887372029a8f6c94386b439754601d0476594ba4a116dc49e6a024266"
+    }
+  }
+}

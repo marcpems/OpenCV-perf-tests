@@ -1,0 +1,42 @@
+{
+  "msvc": {
+    "count": 2,
+    "median_seconds": 226.6839,
+    "min_seconds": 205.5254,
+    "max_seconds": 247.8424,
+    "runs": [
+      {
+        "directory": "20261015_101004_090_msvc_1",
+        "build_seconds": 247.8424,
+        "clean_seconds": 0.9355,
+        "install_seconds": 2.3262
+      },
+      {
+        "directory": "20261015_102333_288_msvc_2",
+        "build_seconds": 205.5254,
+        "clean_seconds": 0.8645,
+        "install_seconds": 1.9652
+      }
+    ]
+  },
+  "msvc2026": {
+    "count": 2,
+    "median_seconds": 226.22379999999998,
+    "min_seconds": 222.3236,
+    "max_seconds": 230.124,
+    "runs": [
+      {
+        "directory": "20261015_101447_467_msvc2026_1",
+        "build_seconds": 230.124,
+        "clean_seconds": 1.6986,
+        "install_seconds": 2.5878
+      },
+      {
+        "directory": "20261015_101914_512_msvc2026_2",
+        "build_seconds": 222.3236,
+        "clean_seconds": 1.6238,
+        "install_seconds": 2.5405
+      }
+    ]
+  }
+}

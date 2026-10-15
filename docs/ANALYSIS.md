@@ -14,6 +14,11 @@ measured **103.02 s for Clang versus 172.75 s for MSVC**, both with Ninja and 12
 40.36% less median build time in that separate, matched series. Clang is opt-in;
 do not compare its time directly with the older table below to isolate compiler effects.
 
+**Latest Microsoft tools follow-up:** the [VS 2026/MSBuild study](VS2026_EXPERIMENT.md)
+measured **226.22 s versus 226.68 s** for a fresh VS 2022 control. The 0.20%
+median difference was overwhelmed by run variation; no reliable build-throughput
+benefit was established. The original default remains unchanged.
+
 **Compilation dominates. DNN is the largest module cost; linking and installation
 are comparatively small.** Prioritize build scheduling and expensive translation
 units rather than linker replacement.

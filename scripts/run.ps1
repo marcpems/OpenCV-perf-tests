@@ -80,6 +80,13 @@ $metadata = [ordered]@{
     power_scheme = (& powercfg /getactivescheme | Out-String).Trim()
     runner_sha256 = (Get-FileHash $PSCommandPath).Hash
 }
+$installationReceipt = "$PSScriptRoot\..\.tools\vs2026-installation.json"
+if (Test-Path $installationReceipt) {
+    $metadata['tool_installation'] = Get-Content $installationReceipt -Raw | ConvertFrom-Json
+    $boot = (Get-CimInstance Win32_OperatingSystem).LastBootUpTime.ToUniversalTime()
+    $metadata['rebooted_since_tool_installation'] =
+        [datetimeoffset]$boot -ne [datetimeoffset]$metadata.tool_installation.boot_time
+}
 $metadata | ConvertTo-Json -Depth 8 | Set-Content "$runDir\metadata.json"
 $lock = $null
 try {

@@ -1,0 +1,6 @@
+MSBuild version 18.11.0-1.26475.11+3cde5c8ec for .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule D:/copilot/opencv-perf-tests/tests/CMakeLists.txt
+  opencv_smoke.vcxproj -> D:\copilot\opencv-perf-tests\.work\smoke_MSVC2026_MSBuild\Release\opencv_smoke.exe
+  Building Custom Rule D:/copilot/opencv-perf-tests/tests/CMakeLists.txt

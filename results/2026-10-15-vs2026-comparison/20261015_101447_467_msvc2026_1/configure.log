@@ -1,0 +1,267 @@
+CMake Warning (deprecated) at CMakeLists.txt:25 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at CMakeLists.txt:84 (cmake_policy):
+  The OLD behavior for policy CMP0146 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (deprecated) at CMakeLists.txt:88 (cmake_policy):
+  The OLD behavior for policy CMP0148 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+CMake Warning (author) at CMakeLists.txt:127 (enable_language):
+  project() should be called prior to this enable_language() call.
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.28000.
+CMake Warning (author) at D:/copilot/opencv-perf-tests/.tools/cmake-4.4.4-windows-arm64/share/cmake-4.4/Modules/Platform/Windows-MSVC.cmake:592 (enable_language):
+  project() should be called prior to this enable_language() call.
+Call Stack (most recent call first):
+  D:/copilot/opencv-perf-tests/.tools/cmake-4.4.4-windows-arm64/share/cmake-4.4/Modules/Platform/Windows-MSVC.cmake:565 (__windows_compiler_msvc_enable_rc)
+  D:/copilot/opencv-perf-tests/.tools/cmake-4.4.4-windows-arm64/share/cmake-4.4/Modules/Platform/Windows-MSVC-CXX.cmake:6 (__windows_compiler_msvc)
+  D:/copilot/opencv-perf-tests/.tools/cmake-4.4.4-windows-arm64/share/cmake-4.4/Modules/CMakeCXXInformation.cmake:48 (include)
+  CMakeLists.txt:127 (enable_language)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+CMake Warning (author) at D:/copilot/opencv-perf-tests/.tools/cmake-4.4.4-windows-arm64/share/cmake-4.4/Modules/Platform/Windows-MSVC.cmake:592 (enable_language):
+  project() should be called prior to this enable_language() call.
+Call Stack (most recent call first):
+  D:/copilot/opencv-perf-tests/.tools/cmake-4.4.4-windows-arm64/share/cmake-4.4/Modules/Platform/Windows-MSVC.cmake:565 (__windows_compiler_msvc_enable_rc)
+  D:/copilot/opencv-perf-tests/.tools/cmake-4.4.4-windows-arm64/share/cmake-4.4/Modules/Platform/Windows-MSVC-C.cmake:5 (__windows_compiler_msvc)
+  D:/copilot/opencv-perf-tests/.tools/cmake-4.4.4-windows-arm64/share/cmake-4.4/Modules/CMakeCInformation.cmake:48 (include)
+  CMakeLists.txt:127 (enable_language)
+This warning is for project developers.  Use -Wno-author to suppress it.
+
+-- Detected processor: ARM64
+CMake Warning at cmake/OpenCVDetectCXXCompiler.cmake:182 (message):
+  OpenCV does not recognize MSVC_VERSION "1951".  Cannot set OpenCV_RUNTIME
+Call Stack (most recent call first):
+  CMakeLists.txt:181 (include)
+
+
+-- Can't detect runtime and/or arch
+-- FP16 is not supported by C++ compiler
+-- NEON_BF16 is not supported by C++ compiler
+-- Optimization FP16 is not available, skipped
+-- Dispatch optimization NEON_BF16 is not available, skipped
+-- libjpeg-turbo: VERSION = 3.0.3, BUILD = opencv-4.10.0-libjpeg-turbo
+-- Use full Neon SIMD intrinsics implementation (NEON_INTRINSICS = ON)
+-- SIMD extensions: arm64 (WITH_SIMD = 1)
+-- Could NOT find OpenJPEG (minimal suitable version: 2.0, recommended version >= 2.3.1). OpenJPEG will be built from sources
+-- OpenJPEG: VERSION = 2.5.0, BUILD = opencv-4.10.0-openjp2-2.5.0
+-- OpenJPEG libraries will be built from sources: libopenjp2 (version "2.5.0")
+-- Could not find OpenBLAS include. Turning OpenBLAS_FOUND off
+-- Could not find OpenBLAS lib. Turning OpenBLAS_FOUND off
+-- Could NOT find BLAS (missing: BLAS_LIBRARIES) 
+-- Could NOT find LAPACK (missing: LAPACK_LIBRARIES) 
+    Reason given by package: LAPACK could not be found because dependency BLAS could not be found.
+
+-- Could NOT find Java (missing: Java_JAVA_EXECUTABLE Java_JAR_EXECUTABLE Java_JAVAC_EXECUTABLE Java_JAVAH_EXECUTABLE Java_JAVADOC_EXECUTABLE) 
+-- Could NOT find JNI (missing: JAVA_INCLUDE_PATH JAVA_INCLUDE_PATH2 AWT JVM) 
+-- VTK is not found. Please set -DVTK_DIR in CMake to VTK build directory, or to VTK install subdirectory with VTKConfig.cmake file
+-- Processing WORLD modules...
+--     module opencv_core...
+-- Allocator metrics storage type: 'int'
+--     module opencv_flann...
+--     module opencv_imgproc...
+--     module opencv_ml...
+--     module opencv_photo...
+--     module opencv_dnn...
+-- Registering hook 'INIT_MODULE_SOURCES_opencv_dnn': D:/opencv/modules/dnn/cmake/hooks/INIT_MODULE_SOURCES_opencv_dnn.cmake
+-- opencv_dnn: filter out ocl4dnn source code
+-- opencv_dnn: filter out cuda4dnn source code
+--     module opencv_features2d...
+--     module opencv_imgcodecs...
+-- imgcodecs: OpenEXR codec is disabled in runtime. Details: https://github.com/opencv/opencv/issues/21326
+--     module opencv_videoio...
+--     module opencv_calib3d...
+--     module opencv_highgui...
+-- highgui: using builtin backend: WIN32UI
+--     module opencv_objdetect...
+--     module opencv_stitching...
+--     module opencv_video...
+-- Processing WORLD modules... DONE
+-- Excluding from source files list: modules/imgproc/src/corner.avx.cpp
+-- Excluding from source files list: modules/imgproc/src/imgwarp.avx2.cpp
+-- Excluding from source files list: modules/imgproc/src/imgwarp.lasx.cpp
+-- Excluding from source files list: modules/imgproc/src/imgwarp.sse4_1.cpp
+-- Excluding from source files list: modules/imgproc/src/resize.avx2.cpp
+-- Excluding from source files list: modules/imgproc/src/resize.lasx.cpp
+-- Excluding from source files list: modules/imgproc/src/resize.sse4_1.cpp
+-- Excluding from source files list: <BUILD>/modules/world/layers/layers_common.avx.cpp
+-- Excluding from source files list: <BUILD>/modules/world/layers/layers_common.avx2.cpp
+-- Excluding from source files list: <BUILD>/modules/world/layers/layers_common.avx512_skx.cpp
+-- Excluding from source files list: <BUILD>/modules/world/layers/layers_common.rvv.cpp
+-- Excluding from source files list: <BUILD>/modules/world/layers/layers_common.lasx.cpp
+-- Excluding from source files list: <BUILD>/modules/world/int8layers/layers_common.avx2.cpp
+-- Excluding from source files list: <BUILD>/modules/world/int8layers/layers_common.avx512_skx.cpp
+-- Excluding from source files list: <BUILD>/modules/world/int8layers/layers_common.rvv.cpp
+-- Excluding from source files list: <BUILD>/modules/world/int8layers/layers_common.lasx.cpp
+-- Excluding from source files list: <BUILD>/modules/world/layers/cpu_kernels/conv_block.avx.cpp
+-- Excluding from source files list: <BUILD>/modules/world/layers/cpu_kernels/conv_block.avx2.cpp
+-- Excluding from source files list: <BUILD>/modules/world/layers/cpu_kernels/conv_depthwise.avx.cpp
+-- Excluding from source files list: <BUILD>/modules/world/layers/cpu_kernels/conv_depthwise.avx2.cpp
+-- Excluding from source files list: <BUILD>/modules/world/layers/cpu_kernels/conv_depthwise.rvv.cpp
+-- Excluding from source files list: <BUILD>/modules/world/layers/cpu_kernels/conv_depthwise.lasx.cpp
+-- Excluding from source files list: <BUILD>/modules/world/layers/cpu_kernels/conv_winograd_f63.avx.cpp
+-- Excluding from source files list: <BUILD>/modules/world/layers/cpu_kernels/conv_winograd_f63.avx2.cpp
+-- Excluding from source files list: <BUILD>/modules/world/layers/cpu_kernels/fast_gemm_kernels.avx.cpp
+-- Excluding from source files list: <BUILD>/modules/world/layers/cpu_kernels/fast_gemm_kernels.avx2.cpp
+-- Excluding from source files list: <BUILD>/modules/world/layers/cpu_kernels/fast_gemm_kernels.lasx.cpp
+-- Excluding from source files list: modules/features2d/src/fast.avx2.cpp
+CMake Warning (policy) at CMakeLists.txt:1155 (install):
+  Policy CMP0177 is not set: install() DESTINATION paths are normalized.  Run
+  "cmake --help-policy CMP0177" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+This warning is for project developers.  Use -Wno-author or -Wno-policy to
+suppress it.
+
+-- 
+-- General configuration for OpenCV 4.10.0 =====================================
+--   Version control:               4.10.0
+-- 
+--   Platform:
+--     Timestamp:                   2026-10-15T08:50:11Z
+--     Host:                        Windows 10.0.28000 ARM64
+--     CMake:                       4.4.4
+--     CMake generator:             Visual Studio 18 2026
+--     CMake build tool:            C:/Program Files/Microsoft Visual Studio/2026/BuildTools/MSBuild/Current/Bin/arm64/MSBuild.exe
+--     MSVC:                        1951
+--     Configuration:               Debug Release
+-- 
+--   CPU/HW features:
+--     Baseline:                    NEON
+--       requested:                 NEON FP16
+--     Dispatched code generation:  NEON_DOTPROD NEON_FP16
+--       requested:                 NEON_FP16 NEON_BF16 NEON_DOTPROD
+--       NEON_DOTPROD (1 files):    + NEON_DOTPROD
+--       NEON_FP16 (2 files):       + NEON_FP16
+-- 
+--   C/C++:
+--     Built as dynamic libs?:      YES
+--     C++ standard:                11
+--     C++ Compiler:                C:/Program Files/Microsoft Visual Studio/2026/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostarm64/arm64/cl.exe  (ver 19.51.36260.0)
+--     C++ flags (Release):         /DWIN32 /D_WINDOWS /W4 /GR  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /D _ARM64_DISTINCT_NEON_TYPES /Oi  /fp:precise   /EHa /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /MP  /O2 /Ob2 /DNDEBUG 
+--     C++ flags (Debug):           /DWIN32 /D_WINDOWS /W4 /GR  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /D _ARM64_DISTINCT_NEON_TYPES /Oi  /fp:precise   /EHa /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /MP  /Zi /Ob0 /Od /RTC1 
+--     C Compiler:                  C:/Program Files/Microsoft Visual Studio/2026/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostarm64/arm64/cl.exe
+--     C flags (Release):           /DWIN32 /D_WINDOWS /W3  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /D _ARM64_DISTINCT_NEON_TYPES /Oi  /fp:precise   /MP   /O2 /Ob2 /DNDEBUG 
+--     C flags (Debug):             /DWIN32 /D_WINDOWS /W3  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /D _ARM64_DISTINCT_NEON_TYPES /Oi  /fp:precise   /MP /Zi /Ob0 /Od /RTC1 
+--     Linker flags (Release):      /machine:ARM64  /INCREMENTAL:NO 
+--     Linker flags (Debug):        /machine:ARM64  /debug /INCREMENTAL 
+--     ccache:                      NO
+--     Precompiled headers:         NO
+--     Extra dependencies:
+--     3rdparty dependencies:
+-- 
+--   OpenCV modules:
+--     To be built:                 calib3d core dnn features2d flann highgui imgcodecs imgproc ml objdetect photo stitching video videoio world
+--     Disabled:                    python_bindings_generator python_tests
+--     Disabled by dependency:      -
+--     Unavailable:                 gapi java python2 python3 ts
+--     Applications:                apps
+--     Documentation:               NO
+--     Non-free algorithms:         NO
+-- 
+--   Windows RT support:            NO
+-- 
+--   GUI: 
+--     Win32 UI:                    YES
+--     VTK support:                 NO
+-- 
+--   Media I/O: 
+--     ZLib:                        build (ver 1.3.1)
+--     JPEG:                        build-libjpeg-turbo (ver 3.0.3-70)
+--       SIMD Support Request:      YES
+--       SIMD Support:              YES
+--     WEBP:                        build (ver encoder: 0x020f)
+--     PNG:                         build (ver 1.6.43)
+--       SIMD Support Request:      YES
+--       SIMD Support:              YES (Arm NEON)
+--     TIFF:                        build (ver 42 - 4.6.0)
+--     JPEG 2000:                   build (ver 2.5.0)
+--     OpenEXR:                     build (ver 2.3.0)
+--     HDR:                         YES
+--     SUNRASTER:                   YES
+--     PXM:                         YES
+--     PFM:                         YES
+-- 
+--   Video I/O:
+--     DC1394:                      NO
+--     FFMPEG:                      YES (prebuilt binaries)
+--       avcodec:                   YES (58.134.100)
+--       avformat:                  YES (58.76.100)
+--       avutil:                    YES (56.70.100)
+--       swscale:                   YES (5.9.100)
+--       avresample:                YES (4.0.0)
+--     GStreamer:                   NO
+--     DirectShow:                  YES
+--     Media Foundation:            YES
+--       DXVA:                      YES
+-- 
+--   Parallel framework:            Concurrency
+-- 
+--   Trace:                         YES (built-in)
+-- 
+--   Other third-party libraries:
+--     Lapack:                      NO
+--     Eigen:                       NO
+--     Custom HAL:                  NO
+--     Protobuf:                    build (3.19.1)
+--     Flatbuffers:                 builtin/3rdparty (23.5.9)
+-- 
+--   Python (for build):            NO
+-- 
+--   Java:                          
+--     ant:                         NO
+--     Java:                        NO
+--     JNI:                         NO
+--     Java wrappers:               NO
+--     Java tests:                  NO
+-- 
+--   Install to:                    D:/opencv/build_hobl_msvc2026/install
+-- -----------------------------------------------------------------
+-- 
+CMake Warning (policy) at cmake/OpenCVUtils.cmake:32 (get_property):
+  Policy CMP0218 is not set: The CMAKE_WARN_DEPRECATED and
+  CMAKE_ERROR_DEPRECATED variables are ignored.  Run "cmake --help-policy
+  CMP0218" for policy details.  Use the cmake_policy command to set the
+  policy and suppress this warning.
+Call Stack (most recent call first):
+  CMakeLists.txt:1987 (ocv_cmake_dump_vars)
+This warning is for project developers.  Use -Wno-author or -Wno-policy to
+suppress it.
+
+CMake Warning (policy) at cmake/OpenCVUtils.cmake:32 (get_property):
+  Policy CMP0218 is not set: The CMAKE_WARN_DEPRECATED and
+  CMAKE_ERROR_DEPRECATED variables are ignored.  Run "cmake --help-policy
+  CMP0218" for policy details.  Use the cmake_policy command to set the
+  policy and suppress this warning.
+Call Stack (most recent call first):
+  CMakeLists.txt:1987 (ocv_cmake_dump_vars)
+This warning is for project developers.  Use -Wno-author or -Wno-policy to
+suppress it.
+
+-- Configuring done (5.4s)
+-- Generating done (0.3s)
+-- Build files have been written to: D:/opencv/build_hobl_msvc2026

@@ -179,5 +179,5 @@ isolated compiler-version test or an equivalent official HOBL score.
 The shared toolchain-study runner preserves the Clang study's Ninja defaults,
 while `-CandidateToolchain MSVC2026` selects MSBuild and no explicit parallelism
 option. It balances original/new/new/original order and checks generated project
-hashes and setup receipts. See [the preparation/status report](VS2026_EXPERIMENT.md);
-the local installer requires a reboot before this series can be measured.
+hashes and setup receipts. See [the experiment report](VS2026_EXPERIMENT.md),
+including the verified soft-reboot investigation and explicit pre-restart state.

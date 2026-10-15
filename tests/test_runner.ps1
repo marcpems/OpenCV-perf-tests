@@ -1,5 +1,5 @@
 #Requires -Version 7.0
-param([string]$HoblRoot = '')
+param([string]$HoblRoot = '', [switch]$VerifyVS2026)
 . "$PSScriptRoot\..\scripts\common.ps1"
 $temp = Join-Path ([IO.Path]::GetTempPath()) ([guid]::NewGuid().ToString())
 New-Item -ItemType Directory $temp | Out-Null
@@ -59,6 +59,30 @@ try {
     if (@($directories | Select-Object -Unique).Count -ne 4) { throw ' ERROR - Toolchain build trees overlap.' }
     $restart = "$temp\restart.json"
     Assert-NoPendingToolchainRestart $restart
+    if ($VerifyVS2026) {
+        $vs = Get-VisualStudio 18
+        $runtime = "$env:SystemRoot\System32\vcruntime140.dll"
+        $assessment = @{
+            exit_code = 3010
+            boot_time = (Get-CimInstance Win32_OperatingSystem).LastBootUpTime.ToUniversalTime().ToString('o')
+            restart_assessment = @{
+                kind = 'verified-soft-reboot'
+                visual_studio_build = $vs.version
+                runtime_files = @(@{ path = $runtime; sha256 = (Get-FileHash $runtime).Hash })
+            }
+        }
+        $assessment | ConvertTo-Json -Depth 6 | Set-Content $restart
+        Assert-NoPendingToolchainRestart $restart
+        $assessment.restart_assessment.runtime_files[0].sha256 = '0' * 64
+        $assessment | ConvertTo-Json -Depth 6 | Set-Content $restart
+        $failed = $false
+        try { Assert-NoPendingToolchainRestart $restart }
+        catch {
+            if ($_.Exception.Message -notmatch 'Runtime changed after soft-reboot verification') { throw }
+            $failed = $true
+        }
+        if (-not $failed) { throw ' ERROR - Soft-reboot runtime drift was ignored.' }
+    }
     @{
         exit_code = 3010
         boot_time = (Get-CimInstance Win32_OperatingSystem).LastBootUpTime.ToUniversalTime().ToString('o')
