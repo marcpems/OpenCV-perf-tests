@@ -6,6 +6,7 @@ param(
     [ValidateRange(0, 3600)][int]$PauseSeconds = 30
 )
 . "$PSScriptRoot\common.ps1"
+Assert-NoPendingToolchainRestart
 $Root = Get-SourceRoot $Root
 $ResultsDir = [IO.Path]::GetFullPath($ResultsDir, (Get-Location).ProviderPath)
 if (Test-Path $ResultsDir) { throw ' ERROR - Study directory already exists; choose a fresh -ResultsDir.' }

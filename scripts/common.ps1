@@ -17,30 +17,49 @@ function Get-NativeArchitecture {
     return $arch
 }
 
-function Get-CMake([string]$CMake) {
+function Assert-NoPendingToolchainRestart([string]$Receipt = "$PSScriptRoot\..\.tools\vs2026-installation.json") {
+    if (-not (Test-Path -LiteralPath $Receipt)) { return }
+    $installation = Get-Content $Receipt -Raw | ConvertFrom-Json
+    if ($installation.exit_code -eq 3010) {
+        $boot = (Get-CimInstance Win32_OperatingSystem).LastBootUpTime.ToUniversalTime().ToString('o')
+        if ([datetimeoffset]$installation.boot_time -eq [datetimeoffset]$boot) {
+            throw ' ERROR - Restart Windows to finish VS 2026 installation before benchmarking.'
+        }
+    }
+}
+
+function Get-ToolchainCMakeVersion([string]$Toolchain) {
+    if ($Toolchain -eq 'MSVC2026') {
+        return (Get-Content "$PSScriptRoot\..\toolchains\vs2026.json" -Raw | ConvertFrom-Json).cmake_version
+    }
+    return $script:Config.cmake_version
+}
+
+function Get-CMake([string]$CMake, [string]$Version = $script:Config.cmake_version) {
     if (-not $CMake) {
-        $portable = Join-Path $PSScriptRoot "..\.tools\cmake-$($script:Config.cmake_version)-windows-$(Get-NativeArchitecture)\bin\cmake.exe"
+        $portable = Join-Path $PSScriptRoot "..\.tools\cmake-$Version-windows-$(Get-NativeArchitecture)\bin\cmake.exe"
         $CMake = if (Test-Path $portable) { $portable } else { 'cmake' }
     }
     $exe = (Get-Command $CMake -CommandType Application -ErrorAction Stop | Select-Object -First 1).Source
-    $version = & $exe --version
-    if ($LASTEXITCODE -ne 0 -or $version[0] -ne "cmake version $($script:Config.cmake_version)") {
-        throw " ERROR - CMake $($script:Config.cmake_version) required; found $($version[0]). Supply -CMake or install the pinned portable release."
+    $versionOutput = & $exe --version
+    if ($LASTEXITCODE -ne 0 -or $versionOutput[0] -ne "cmake version $Version") {
+        throw " ERROR - CMake $Version required; found $($versionOutput[0]). Supply -CMake or install the pinned portable release."
     }
     Write-Host "CMake: $exe"
     return $exe
 }
 
-function Get-VisualStudio {
+function Get-VisualStudio([ValidateSet(17, 18)][int]$MajorVersion = 17) {
     $command = Get-Command vswhere.exe -ErrorAction SilentlyContinue | Select-Object -First 1
     $vswhere = if ($command) { $command.Source } else {
         Join-Path ${env:ProgramFiles(x86)} 'Microsoft Visual Studio\Installer\vswhere.exe'
     }
-    if (-not (Test-Path $vswhere)) { throw ' ERROR - vswhere.exe not found; install Visual Studio 2022 C++ tools.' }
-    $instances = & $vswhere -version '[17.0,18.0)' -products '*' -format json | ConvertFrom-Json
+    if (-not (Test-Path $vswhere)) { throw ' ERROR - vswhere.exe not found; install Visual Studio C++ tools.' }
+    $range = "[$MajorVersion.0,$($MajorVersion + 1).0)"
+    $instances = & $vswhere -version $range -products '*' -format json | ConvertFrom-Json
     if ($LASTEXITCODE -ne 0) { throw ' ERROR - vswhere failed.' }
     $arch = Get-NativeArchitecture
-    foreach ($instance in $instances) {
+    foreach ($instance in ($instances | Sort-Object { [version]$_.installationVersion } -Descending)) {
         $versionFile = Join-Path $instance.installationPath 'VC\Auxiliary\Build\Microsoft.VCToolsVersion.default.txt'
         if (-not (Test-Path $versionFile)) { continue }
         $toolset = (Get-Content $versionFile -Raw).Trim()
@@ -55,7 +74,7 @@ function Get-VisualStudio {
             }
         }
     }
-    throw " ERROR - VS 2022 with native $arch C++ tools was not found."
+    throw " ERROR - Visual Studio $MajorVersion with native $arch C++ tools was not found."
 }
 
 function Set-NativeToolchain($VisualStudio) {
@@ -81,6 +100,12 @@ function Set-NativeToolchain($VisualStudio) {
 }
 
 function Get-EffectiveGenerator([string]$Generator, [string]$Toolchain, [bool]$ExplicitGenerator) {
+    if ($Toolchain -eq 'MSVC2026') {
+        if ($ExplicitGenerator -and $Generator -ne 'MSBuild') {
+            throw ' ERROR - The VS 2026 experiment requires the MSBuild generator.'
+        }
+        return 'MSBuild'
+    }
     if ($Toolchain -eq 'Clang') {
         if ($ExplicitGenerator -and $Generator -ne 'Ninja') {
             throw ' ERROR - The Clang experiment requires the Ninja generator.'
@@ -152,6 +177,7 @@ function Get-ClangToolchain([string]$LLVMRoot) {
 }
 
 function Get-BuildDirectory([string]$Root, [string]$Generator, [string]$Toolchain = 'MSVC') {
+    if ($Toolchain -eq 'MSVC2026') { return Join-Path $Root 'build_hobl_msvc2026' }
     if ($Toolchain -eq 'Clang') { return Join-Path $Root 'build_hobl_clang_ninja' }
     $suffix = if ($Generator -eq 'Ninja') { 'ninja' } else { 'msvc' }
     return Join-Path $Root "build_hobl_$suffix"

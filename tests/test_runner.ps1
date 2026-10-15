@@ -17,6 +17,18 @@ try {
     if (-not $failed) { throw ' ERROR - Native failure was silently accepted.' }
     $cmake = Get-CMake ''
     if ($cmake -isnot [string] -or -not (Test-Path $cmake)) { throw ' ERROR - CMake discovery returned multiple paths.' }
+    if ((Get-ToolchainCMakeVersion 'MSVC') -ne $script:Config.cmake_version -or
+        (Get-ToolchainCMakeVersion 'Clang') -ne $script:Config.cmake_version -or
+        (Get-ToolchainCMakeVersion 'MSVC2026') -ne '4.4.4') {
+        throw ' ERROR - Per-toolchain CMake pins changed unexpectedly.'
+    }
+    $failed = $false
+    try { Get-CMake $cmake '0.0.0' | Out-Null }
+    catch {
+        if ($_.Exception.Message -notmatch 'CMake 0.0.0 required') { throw }
+        $failed = $true
+    }
+    if (-not $failed) { throw ' ERROR - Explicit CMake version guard failed.' }
     if ((Get-EffectiveGenerator 'MSBuild' 'MSVC' $false) -ne 'MSBuild' -or
         (Get-EffectiveGenerator 'MSBuild' 'Clang' $false) -ne 'Ninja') {
         throw ' ERROR - Toolchain generator defaults changed.'
@@ -28,6 +40,39 @@ try {
         $failed = $true
     }
     if (-not $failed) { throw ' ERROR - Unsupported generator was accepted for Clang.' }
+    if ((Get-EffectiveGenerator 'Ninja' 'MSVC2026' $false) -ne 'MSBuild') {
+        throw ' ERROR - VS 2026 must default to MSBuild.'
+    }
+    $failed = $false
+    try { Get-EffectiveGenerator 'Ninja' 'MSVC2026' $true | Out-Null }
+    catch {
+        if ($_.Exception.Message -notmatch 'requires the MSBuild generator') { throw }
+        $failed = $true
+    }
+    if (-not $failed) { throw ' ERROR - Unsupported generator was accepted for VS 2026.' }
+    $directories = @(
+        Get-BuildDirectory $temp 'MSBuild' 'MSVC'
+        Get-BuildDirectory $temp 'Ninja' 'MSVC'
+        Get-BuildDirectory $temp 'Ninja' 'Clang'
+        Get-BuildDirectory $temp 'MSBuild' 'MSVC2026'
+    )
+    if (@($directories | Select-Object -Unique).Count -ne 4) { throw ' ERROR - Toolchain build trees overlap.' }
+    $restart = "$temp\restart.json"
+    Assert-NoPendingToolchainRestart $restart
+    @{
+        exit_code = 3010
+        boot_time = (Get-CimInstance Win32_OperatingSystem).LastBootUpTime.ToUniversalTime().ToString('o')
+    } | ConvertTo-Json | Set-Content $restart
+    $failed = $false
+    try { Assert-NoPendingToolchainRestart $restart }
+    catch {
+        if ($_.Exception.Message -notmatch 'Restart Windows') { throw }
+        $failed = $true
+    }
+    if (-not $failed) { throw ' ERROR - Pending installation restart was ignored.' }
+    @{ exit_code = 3010; boot_time = '2000-01-01T00:00:00.0000000Z' } |
+        ConvertTo-Json | Set-Content $restart
+    Assert-NoPendingToolchainRestart $restart
     if ((Get-BuildDirectory $temp 'Ninja') -eq (Get-BuildDirectory $temp 'Ninja' 'Clang')) {
         throw ' ERROR - Clang and MSVC build directories overlap.'
     }
@@ -55,14 +100,15 @@ try {
             throw ' ERROR - CMake flags differ from the HOBL prep script.'
         }
     }
-    Get-ChildItem "$PSScriptRoot\..\scripts\*.ps1" | ForEach-Object {
+    Get-ChildItem "$PSScriptRoot\..\scripts\*.ps1", "$PSScriptRoot\*.ps1" | ForEach-Object {
         $tokens = $null
         $errors = $null
         [void][Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$tokens, [ref]$errors)
         if ($errors) { throw " ERROR - PowerShell syntax failure: $errors" }
     }
-    Write-Host 'PASS: exit codes, paths, toolchain isolation, native PE guards, CMake discovery, syntax and optional HOBL flag parity.'
+    & "$PSScriptRoot\test_toolchain_study.ps1"
+    Write-Host 'PASS: exit codes, paths, toolchain isolation, native PE/restart/version guards, syntax and optional HOBL flag parity.'
 } finally {
-    Remove-Item -LiteralPath "$temp\success.log", "$temp\failure.log" -ErrorAction SilentlyContinue
+    Remove-Item -LiteralPath "$temp\success.log", "$temp\failure.log", "$temp\restart.json" -ErrorAction SilentlyContinue
     Remove-Item -LiteralPath $temp
 }

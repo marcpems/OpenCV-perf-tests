@@ -167,3 +167,17 @@ Clang uses LLVM LLD and standard template parsing, but still targets the Windows
 MSVC ABI, SDK, headers and runtime. HOBL's macOS scenario uses Make and normally
 Apple Clang, and has different OpenCV options. No macOS hardware or Apple SDK is
 used here. See [the experiment report](CLANG_EXPERIMENT.md) for results and limits.
+
+## Latest Microsoft toolchain experiment
+
+The optional `MSVC2026` profile retains the original MSBuild-based workload but
+uses VS 2026/MSBuild 18 and its released native MSVC compiler. CMake must also
+change because 4.1.1 lacks the VS 2026 generator; both CMake versions remain
+installed side-by-side. Thus this is a complete build-stack variant, not an
+isolated compiler-version test or an equivalent official HOBL score.
+
+The shared toolchain-study runner preserves the Clang study's Ninja defaults,
+while `-CandidateToolchain MSVC2026` selects MSBuild and no explicit parallelism
+option. It balances original/new/new/original order and checks generated project
+hashes and setup receipts. See [the preparation/status report](VS2026_EXPERIMENT.md);
+the local installer requires a reboot before this series can be measured.

@@ -8,6 +8,7 @@ HOBL intentionally sets `BUILD_PERF_TESTS=OFF`.
 **[Timing results and recommendations](docs/ANALYSIS.md)** |
 **[Matched 12 vs default 14 jobs study](docs/NINJA_PARALLELISM.md)** |
 **[Native ARM64 Clang experiment](docs/CLANG_EXPERIMENT.md)** |
+**[VS 2026 / latest Microsoft tools experiment](docs/VS2026_EXPERIMENT.md)** |
 **[HOBL survey, equivalence and measurement methodology](docs/METHODOLOGY.md)**
 
 The baseline preserves HOBL's clean -> timed Release build -> install -> version-check
@@ -165,6 +166,40 @@ pwsh -NoProfile -File tests\smoke_opencv.ps1 -Toolchain MSVC
 ```
 
 Both checks use the corresponding **Ninja** build's installed package.
+
+## Optional VS 2026 / latest Microsoft build tools
+
+`-Toolchain MSVC2026` selects **MSVC + MSBuild**, not Ninja or Clang, in an isolated
+`build_hobl_msvc2026` tree. The release pins checked on 2026-10-15 are VS 2026
+18.11.0, MSVC 19.51.36260.0 (toolset 14.51.36231), MSBuild 18.11.0.47511, and
+native ARM64 CMake 4.4.4. The baseline remains VS 2022 with CMake 4.1.1.
+
+**Current local status:** tools are installed and both configurations generate
+successfully, but the VS installer requested a Windows restart (exit 3010).
+No VS 2026 OpenCV timing results have been collected. The runner blocks measurement
+until that restart; it never restarts the computer automatically.
+
+```powershell
+# Elevated native ARM64 PowerShell; preserves the separate VS 2022 installation.
+pwsh -NoProfile -File scripts\install_vs2026.ps1
+# Restart Windows if the installer requests it, then:
+pwsh -NoProfile -File scripts\setup.ps1
+pwsh -NoProfile -File scripts\setup.ps1 -Toolchain MSVC2026
+pwsh -NoProfile -File scripts\run_toolchain_study.ps1 -CandidateToolchain MSVC2026
+pwsh -NoProfile -File tests\smoke_opencv.ps1 -Toolchain MSVC -Generator MSBuild
+pwsh -NoProfile -File tests\smoke_opencv.ps1 -Toolchain MSVC2026
+```
+
+The study uses original/2026/2026/original order and 30-second rests. Neither
+condition passes an explicit parallelism option by default, matching HOBL's command;
+OpenCV's generated `/MP` still enables compiler parallelism. A new CMake is required
+for the VS 2026 generator, so this compares **build stacks**, not the compiler alone.
+Use a fresh `-ResultsDir` for a repeat. The Clang study retains its previous
+Ninja/explicit-job defaults.
+
+After restart, run only the new variant with `run.ps1 -Toolchain MSVC2026`.
+Omit the toolchain option to return to the original VS 2022/MSBuild baseline.
+See [release provenance, compatibility caveats and status](docs/VS2026_EXPERIMENT.md).
 
 ## Result artifacts
 

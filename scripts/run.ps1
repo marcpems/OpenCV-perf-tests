@@ -4,12 +4,14 @@ param(
     [string]$ResultsDir = "$PSScriptRoot\..\results\local",
     [ValidatePattern('^[A-Za-z0-9_-]+$')][string]$Label = 'hobl_baseline',
     [ValidateSet('MSBuild', 'Ninja')][string]$Generator = 'MSBuild',
-    [ValidateSet('MSVC', 'Clang')][string]$Toolchain = 'MSVC',
+    [ValidateSet('MSVC', 'Clang', 'MSVC2026')][string]$Toolchain = 'MSVC',
     [ValidateRange(0, 256)][int]$Parallel = 0,
     [switch]$Profile
 )
 . "$PSScriptRoot\common.ps1"
+Assert-NoPendingToolchainRestart
 if ($Toolchain -eq 'Clang' -and -not $PSBoundParameters.ContainsKey('Label')) { $Label = 'clang_experiment' }
+if ($Toolchain -eq 'MSVC2026' -and -not $PSBoundParameters.ContainsKey('Label')) { $Label = 'vs2026_experiment' }
 $Root = Get-SourceRoot $Root
 $Generator = Get-EffectiveGenerator $Generator $Toolchain ($PSBoundParameters.ContainsKey('Generator'))
 Assert-Source $Root
@@ -24,10 +26,29 @@ if ($receipt.config_sha256 -ne (Get-FileHash "$PSScriptRoot\..\benchmark.json").
 if ($receipt.compiler_sha256 -ne (Get-FileHash $receipt.compiler).Hash) {
     throw ' ERROR - Compiler changed since setup; rerun setup.'
 }
+if ($Generator -eq 'MSBuild') {
+    $vsMajor = if ($Toolchain -eq 'MSVC2026') { 18 } else { 17 }
+    $currentVS = Get-VisualStudio $vsMajor
+    foreach ($field in @('path', 'version', 'tools', 'toolset')) {
+        if ($currentVS.$field -ne $receipt.visual_studio.$field) {
+            throw ' ERROR - Visual Studio instance or default toolset changed since setup; rerun setup.'
+        }
+    }
+}
 foreach ($name in @('CL', '_CL_', 'CMAKE_BUILD_PARALLEL_LEVEL', 'CMAKE_GENERATOR', 'CXXFLAGS', 'CFLAGS')) {
     if ([Environment]::GetEnvironmentVariable($name)) { throw " ERROR - Unset $name before benchmarking." }
 }
-$cmakeExe = Get-CMake $receipt.cmake
+$cmakeExe = Get-CMake $receipt.cmake (Get-ToolchainCMakeVersion $Toolchain)
+if ($receipt.PSObject.Properties.Name -contains 'cmake_sha256' -and
+    (Get-FileHash $cmakeExe).Hash -ne $receipt.cmake_sha256) {
+    throw ' ERROR - CMake changed since setup; rerun setup.'
+}
+if ($receipt.PSObject.Properties.Name -contains 'build_engine' -and $receipt.build_engine) {
+    if ((Get-FileHash $receipt.build_engine.path).Hash -ne $receipt.build_engine.sha256 -or
+        (Get-FileHash $receipt.build_engine.linker).Hash -ne $receipt.build_engine.linker_sha256) {
+        throw ' ERROR - MSBuild or linker changed since setup; rerun setup.'
+    }
+}
 if ($Generator -eq 'Ninja') {
     if ($Profile) { throw ' ERROR - Profile uses MSBuild PerformanceSummary; Ninja already records per-step timings.' }
     Set-NativeToolchain $receipt.visual_studio

@@ -1,0 +1,14 @@
+{
+  "checked_latest_on": "2026-10-15",
+  "visual_studio_version": "18.11.0",
+  "visual_studio_build": "18.11.12306.390",
+  "msvc_toolset": "14.51.36231",
+  "compiler_version": "19.51.36260.0",
+  "msbuild_version": "18.11.0.47511",
+  "channel_url": "https://aka.ms/vs/stable/channel",
+  "bootstrapper_url": "https://download.visualstudio.microsoft.com/download/pr/4ee8a2e7-bc71-435a-8180-6703ab4d2017/5f06f1052f562620f27d0c14c5f9ab9658ff6b6908b35c59755ab14e2eb5a473/vs_BuildTools.exe",
+  "bootstrapper_sha256": "5f06f1052f562620f27d0c14c5f9ab9658ff6b6908b35c59755ab14e2eb5a473",
+  "cmake_version": "4.4.4",
+  "cmake_url": "https://github.com/Kitware/CMake/releases/download/v4.4.4/cmake-4.4.4-windows-arm64.zip",
+  "cmake_sha256": "ed673bbc4eb7c1e59b0407fd52f1680fc0ae3229a46b9b7b3ea9133764f07f67"
+}
