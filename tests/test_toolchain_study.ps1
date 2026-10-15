@@ -5,14 +5,17 @@ New-Item -ItemType Directory "$temp\scripts" -Force | Out-Null
 try {
     Copy-Item "$PSScriptRoot\..\scripts\common.ps1", "$PSScriptRoot\..\scripts\run_toolchain_study.ps1" "$temp\scripts"
     Copy-Item "$PSScriptRoot\..\benchmark.json" $temp
+    New-Item -ItemType Directory "$temp\toolchains" | Out-Null
+    Copy-Item "$PSScriptRoot\..\toolchains\vs2026.json", "$PSScriptRoot\..\toolchains\windows-sdk.json" "$temp\toolchains"
     @'
 param($Root, $ResultsDir, $Generator, $Toolchain, [int]$Parallel, $Label)
 @{ generator=$Generator; toolchain=$Toolchain; parallel=$Parallel; label=$Label } |
     ConvertTo-Json -Compress | Add-Content "$ResultsDir\calls.jsonl"
 '@ | Set-Content "$temp\scripts\run.ps1"
-    foreach ($candidate in @('Clang', 'MSVC2026')) {
+    foreach ($candidate in @('Clang', 'MSVC2026', 'MSVC2026Latest')) {
         $generator = if ($candidate -eq 'Clang') { 'Ninja' } else { 'MSBuild' }
-        foreach ($toolchain in @('MSVC', $candidate)) {
+        $baseline = if ($candidate -eq 'MSVC2026Latest') { 'MSVC2026' } else { 'MSVC' }
+        foreach ($toolchain in @($baseline, $candidate)) {
             $build = Get-BuildDirectory "$temp\source" $generator $toolchain
             New-Item -ItemType Directory $build -Force | Out-Null
             '{}' | Set-Content "$build\benchmark-setup.json"
@@ -22,18 +25,23 @@ param($Root, $ResultsDir, $Generator, $Toolchain, [int]$Parallel, $Label)
                 "CMAKE_MAKE_PROGRAM:FILEPATH=$((Get-Process -Id $PID).Path)" | Set-Content "$build\CMakeCache.txt"
             } else {
                 '<Project />' | Set-Content "$build\fixture.vcxproj"
-                $extension = if ($toolchain -eq 'MSVC2026') { 'slnx' } else { 'sln' }
+                $extension = if ($toolchain -in @('MSVC2026', 'MSVC2026Latest')) { 'slnx' } else { 'sln' }
                 'fixture solution' | Set-Content "$build\fixture.$extension"
             }
         }
         $results = "$temp\results_$candidate"
+        $blocks = if ($candidate -eq 'MSVC2026Latest') { 2 } else { 1 }
         & "$temp\scripts\run_toolchain_study.ps1" -Root "$temp\source" -ResultsDir $results `
-            -CandidateToolchain $candidate -PauseSeconds 0
+            -CandidateToolchain $candidate -Blocks $blocks -PauseSeconds 0
         $calls = @(Get-Content "$results\calls.jsonl" | ConvertFrom-Json)
-        $expected = @('MSVC', $candidate, $candidate, 'MSVC')
+        $expected = @($baseline, $candidate, $candidate, $baseline)
+        if ($blocks -eq 2) { $expected += @($candidate, $baseline, $baseline, $candidate) }
         $jobs = if ($candidate -eq 'Clang') { [Environment]::ProcessorCount } else { 0 }
-        if ($calls.Count -ne 4 -or ($calls.toolchain -join ',') -ne ($expected -join ',')) {
+        if ($calls.Count -ne (4 * $blocks) -or ($calls.toolchain -join ',') -ne ($expected -join ',')) {
             throw ' ERROR - Toolchain study order changed.'
+        }
+        if (@($calls.label | Select-Object -Unique).Count -ne $calls.Count) {
+            throw ' ERROR - Study labels must remain unique across blocks.'
         }
         foreach ($call in $calls) {
             if ($call.generator -ne $generator -or $call.parallel -ne $jobs) {
@@ -58,7 +66,7 @@ param($Root, $ResultsDir, $Generator, $Toolchain, [int]$Parallel, $Label)
         }
         if (-not $failed) { throw ' ERROR - Existing study could be overwritten.' }
     }
-    Write-Host 'PASS: both study protocols, ABBA ordering, default worker options and overwrite protection (mock builds).'
+    Write-Host 'PASS: three study protocols, ABBA/BAAB ordering, default worker options and overwrite protection (mock builds).'
 } finally {
     Get-ChildItem -LiteralPath $temp -Recurse -File | ForEach-Object { Remove-Item -LiteralPath $_.FullName }
     Get-ChildItem -LiteralPath $temp -Recurse -Directory | Sort-Object { $_.FullName.Length } -Descending |

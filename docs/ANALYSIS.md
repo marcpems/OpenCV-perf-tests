@@ -19,6 +19,13 @@ measured **226.22 s versus 226.68 s** for a fresh VS 2022 control. The 0.20%
 median difference was overwhelmed by run variation; no reliable build-throughput
 benefit was established. The original default remains unchanged.
 
+**Latest SDK follow-up:** the [matched VS 2026 SDK comparison](WINDOWS_SDK_EXPERIMENT.md)
+measured **238.36 s with SDK 28000.2957 versus 233.84 s with SDK 26100.7705**,
+four observations each: **1.93% more median time**, not a speedup. Both conditions
+used the same current compiler, MSBuild and CMake. Run variation overlapped; a
+documented between-run PowerShell interruption lengthened the rest before the
+final pair. This does not establish a general SDK-caused regression.
+
 **Compilation dominates. DNN is the largest module cost; linking and installation
 are comparatively small.** Prioritize build scheduling and expensive translation
 units rather than linker replacement.

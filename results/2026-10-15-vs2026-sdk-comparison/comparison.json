@@ -1,0 +1,136 @@
+{
+  "metric": "Clean Release build wall seconds; clean and install excluded",
+  "order": [
+    "MSVC2026",
+    "MSVC2026Latest",
+    "MSVC2026Latest",
+    "MSVC2026",
+    "MSVC2026Latest",
+    "MSVC2026",
+    "MSVC2026",
+    "MSVC2026Latest"
+  ],
+  "groups": {
+    "MSVC2026": {
+      "count": 4,
+      "mean_seconds": 235.437325,
+      "median_seconds": 233.83960000000002,
+      "min_seconds": 229.7287,
+      "max_seconds": 244.3414,
+      "sample_stdev_seconds": 6.475848630810221
+    },
+    "MSVC2026Latest": {
+      "count": 4,
+      "mean_seconds": 239.324575,
+      "median_seconds": 238.3604,
+      "min_seconds": 234.6448,
+      "max_seconds": 245.9327,
+      "sample_stdev_seconds": 5.04255861666476
+    }
+  },
+  "runs": [
+    {
+      "sequence": 1,
+      "condition": "MSVC2026",
+      "directory": "20261015_122113_266_msvc2026_1",
+      "build_seconds": 231.738,
+      "seconds_since_previous_finish": null
+    },
+    {
+      "sequence": 2,
+      "condition": "MSVC2026Latest",
+      "directory": "20261015_122541_491_msvc2026latest_1",
+      "build_seconds": 234.6448,
+      "seconds_since_previous_finish": 30.810576
+    },
+    {
+      "sequence": 3,
+      "condition": "MSVC2026Latest",
+      "directory": "20261015_123012_569_msvc2026latest_2",
+      "build_seconds": 245.9327,
+      "seconds_since_previous_finish": 30.799205
+    },
+    {
+      "sequence": 4,
+      "condition": "MSVC2026",
+      "directory": "20261015_123454_996_msvc2026_2",
+      "build_seconds": 235.9412,
+      "seconds_since_previous_finish": 30.823974
+    },
+    {
+      "sequence": 5,
+      "condition": "MSVC2026Latest",
+      "directory": "20261015_123927_768_msvc2026latest_3",
+      "build_seconds": 236.2562,
+      "seconds_since_previous_finish": 30.784581
+    },
+    {
+      "sequence": 6,
+      "condition": "MSVC2026",
+      "directory": "20261015_124400_538_msvc2026_3",
+      "build_seconds": 244.3414,
+      "seconds_since_previous_finish": 30.762527
+    },
+    {
+      "sequence": 7,
+      "condition": "MSVC2026",
+      "directory": "20261015_125022_977_msvc2026_4",
+      "build_seconds": 229.7287,
+      "seconds_since_previous_finish": 132.113605
+    },
+    {
+      "sequence": 8,
+      "condition": "MSVC2026Latest",
+      "directory": "20261015_125450_777_msvc2026latest_4",
+      "build_seconds": 240.4646,
+      "seconds_since_previous_finish": 32.023127
+    }
+  ],
+  "pairs": [
+    {
+      "pair": 1,
+      "baseline_seconds": 231.738,
+      "latest_seconds": 234.6448,
+      "latest_minus_baseline_seconds": 2.906800000000004
+    },
+    {
+      "pair": 2,
+      "baseline_seconds": 235.9412,
+      "latest_seconds": 245.9327,
+      "latest_minus_baseline_seconds": 9.991500000000002
+    },
+    {
+      "pair": 3,
+      "baseline_seconds": 244.3414,
+      "latest_seconds": 236.2562,
+      "latest_minus_baseline_seconds": -8.085199999999986
+    },
+    {
+      "pair": 4,
+      "baseline_seconds": 229.7287,
+      "latest_seconds": 240.4646,
+      "latest_minus_baseline_seconds": 10.735899999999987
+    }
+  ],
+  "latest_median_time_change_percent": 1.9332910251300461,
+  "latest_faster_pairs": 1,
+  "paired_mean_latest_minus_baseline_seconds": 3.8872500000000016,
+  "sdk_releases": {
+    "MSVC2026": "10.0.26100.7705",
+    "MSVC2026Latest": "10.0.28000.2957"
+  },
+  "recovery": {
+    "reason": "Windows Application Hang event 1002 closed pwsh.exe between runs 6 and 7.",
+    "event_time": "2026-10-15T12:48:27.8021307+01:00",
+    "completed_prefix_runs": 6,
+    "resumed_at": "2026-10-15T12:49:52.1471278+01:00",
+    "script_sha256": "27CA90FBEF25464476C606F1A0167665E28CEF411A12E7459A7D1BF99AF5DCF3",
+    "original_manifest_sha256": "C1DB3ED53996494EBE7CA46A7C34CCDCD4825F66C7CF38E58F425715B1CD129E"
+  },
+  "matching_workload": {
+    "projects": 37,
+    "compile_source_entries": 1015,
+    "source_multiset_sha256": "72047643af034227218a31353c44feae31a277493d1f8e8196a586f6fcacfd8d",
+    "release_compile_settings_sha256": "733e6711053c858cf0f0c9ecfd91137caca182a74f5dc940ad0fabbceddbcb6d"
+  }
+}

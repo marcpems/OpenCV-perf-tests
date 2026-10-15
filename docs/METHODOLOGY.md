@@ -81,6 +81,11 @@ within compiler tasks, so this is not a single-core compilation benchmark.
   official HOBL power/battery-life measurements or a dedicated-lab certification.
 - PowerShell, source, toolchain and CMake are prerequisites; this is not a
   system-wide tool installer. The machine's missing SDK 26100 was installed separately.
+- Historical profiles explicitly select SDK and UCRT target 10.0.26100.0.
+  `MSVC2026Latest` selects 10.0.28000.0 with checked 28000.2957 tool versions.
+  The target-directory version is distinct from the servicing release. Setup
+  records selected SDK tool/header/library hashes and checks evaluated MSBuild
+  properties; run rejects missing SDK receipts or changed selected files.
 
 ## Experiment design and interpretation
 
@@ -169,6 +174,21 @@ Apple Clang, and has different OpenCV options. No macOS hardware or Apple SDK is
 used here. See [the experiment report](CLANG_EXPERIMENT.md) for results and limits.
 
 ## Latest Microsoft toolchain experiment
+
+The original VS 2026 experiment retained the older 26100.7705 SDK. The subsequent
+[`MSVC2026Latest` SDK experiment](WINDOWS_SDK_EXPERIMENT.md) holds the VS 2026
+compiler, MSBuild, CMake, source and Release compile settings constant while
+changing the SDK/UCRT headers, libraries and SDK tools to 28000.2957. Separate
+build trees and explicit SDK pins prevent installing a new SDK from changing
+the control condition. `-CandidateToolchain MSVC2026Latest -Blocks 2` runs four
+measurements per condition in ABBA BAAB order, with 30-second rests and no explicit
+worker override. One discarded full build and smoke check per condition precedes
+the measured series. The setup/build-graph and runner hashes are frozen during it.
+The actual series was recovered after Windows closed a hung PowerShell process
+between runs 6 and 7. All frozen hashes matched before continuing, but that gap
+was 132.11 s rather than 30 s; the report retains the event, recovery script and
+original incomplete manifest and discusses the limitation.
+This measures clean-build wall time, not compiler CPU time or OpenCV runtime speed.
 
 The optional `MSVC2026` profile retains the original MSBuild-based workload but
 uses VS 2026/MSBuild 18 and its released native MSVC compiler. CMake must also

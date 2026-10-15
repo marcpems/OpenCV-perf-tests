@@ -1,7 +1,7 @@
 #Requires -Version 7.0
 param(
     [string]$Root = '',
-    [ValidateSet('MSVC', 'Clang', 'MSVC2026')][string]$Toolchain = 'MSVC',
+    [ValidateSet('MSVC', 'Clang', 'MSVC2026', 'MSVC2026Latest')][string]$Toolchain = 'MSVC',
     [ValidateSet('MSBuild', 'Ninja')][string]$Generator = 'Ninja'
 )
 . "$PSScriptRoot\..\scripts\common.ps1"
@@ -9,19 +9,23 @@ $Root = Get-SourceRoot $Root
 $Generator = Get-EffectiveGenerator $Generator $Toolchain ($PSBoundParameters.ContainsKey('Generator'))
 $buildDir = Get-BuildDirectory $Root $Generator $Toolchain
 $receipt = Get-Content "$buildDir\benchmark-setup.json" -Raw | ConvertFrom-Json
+Assert-WindowsSDK $receipt $Toolchain
 $cmake = Get-CMake $receipt.cmake (Get-ToolchainCMakeVersion $Toolchain)
-Set-NativeToolchain $receipt.visual_studio
+Set-NativeToolchain $receipt.visual_studio $receipt.windows_sdk
 $output = [IO.Path]::GetFullPath("$PSScriptRoot\..\.work\smoke_${Toolchain}_$Generator")
 New-Item -ItemType Directory -Force $output | Out-Null
 $packages = @(Get-ChildItem "$buildDir\install" -Recurse -Filter OpenCVConfig.cmake |
     Where-Object { Test-Path "$($_.DirectoryName)\OpenCVModules.cmake" })
 if ($packages.Count -ne 1) { throw ' ERROR - Concrete installed OpenCV CMake package is missing or ambiguous.' }
-$argsList = @('-S', $PSScriptRoot, '-B', $output,
+$argsList = @('--fresh', '-S', $PSScriptRoot, '-B', $output,
     '-DCMAKE_BUILD_TYPE=Release', "-DOpenCV_DIR=$($packages[0].DirectoryName)",
     '-DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreadedDLL')
 if ($Generator -eq 'MSBuild') {
-    $vsGenerator = if ($Toolchain -eq 'MSVC2026') { 'Visual Studio 18 2026' } else { 'Visual Studio 17 2022' }
-    $argsList += @('-G', $vsGenerator, "-DCMAKE_GENERATOR_INSTANCE=$($receipt.visual_studio.path)")
+    $vsGenerator = if ($Toolchain -in @('MSVC2026', 'MSVC2026Latest')) { 'Visual Studio 18 2026' } else { 'Visual Studio 17 2022' }
+    $platform = if ($receipt.architecture -eq 'arm64') { 'ARM64' } else { 'x64' }
+    $argsList += @('-G', $vsGenerator, '-A', "$platform,version=$($receipt.windows_sdk.target_version)",
+        "-DCMAKE_GENERATOR_INSTANCE=$($receipt.visual_studio.path)",
+        "-DCMAKE_VS_GLOBALS=UCRTVersion=$($receipt.windows_sdk.target_version)")
 } else {
     $ninja = (Get-Command ninja -CommandType Application | Select-Object -First 1).Source
     $argsList += @('-G', 'Ninja', "-DCMAKE_CXX_COMPILER=$($receipt.compiler)", "-DCMAKE_MAKE_PROGRAM=$ninja")

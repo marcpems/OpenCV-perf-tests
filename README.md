@@ -9,6 +9,7 @@ HOBL intentionally sets `BUILD_PERF_TESTS=OFF`.
 **[Matched 12 vs default 14 jobs study](docs/NINJA_PARALLELISM.md)** |
 **[Native ARM64 Clang experiment](docs/CLANG_EXPERIMENT.md)** |
 **[VS 2026 / latest Microsoft tools experiment](docs/VS2026_EXPERIMENT.md)** |
+**[Latest Windows SDK comparison](docs/WINDOWS_SDK_EXPERIMENT.md)** |
 **[HOBL survey, equivalence and measurement methodology](docs/METHODOLOGY.md)**
 
 The baseline preserves HOBL's clean -> timed Release build -> install -> version-check
@@ -20,7 +21,8 @@ The source revision and HOBL reference are pinned in [`benchmark.json`](benchmar
 
 - Native PowerShell 7, Git, and Visual Studio **2022** C++ tools for the native
   architecture (ARM64 or x64), including a Windows SDK. The measured machine used
-  native ARM64 MSVC 19.44.35229 and SDK 10.0.26100.0.
+  native ARM64 MSVC 19.44.35229 and SDK target 10.0.26100.0
+  (servicing release 10.0.26100.7705).
 - CMake **4.1.1**. A newer system installation is left untouched; use a portable copy.
 - Ninja for the optional alternative-generator experiments; Python 3.10+ for analysis.
   Neither is required by the MSBuild baseline itself.
@@ -63,6 +65,14 @@ Pass `-Root <absolute-source-directory>` to **both** scripts to choose another s
 location. An existing checkout must already match the pinned, unmodified tag; the
 scripts will not reset user changes. Pass `-CMake <path-to-cmake.exe>` to setup to use
 another copy of the pinned version.
+
+Setup now explicitly pins SDK/UCRT target 10.0.26100.0 for all historical profiles,
+rather than selecting whichever SDK was installed last. Run setup again after
+updating these scripts: legacy receipts without SDK selection are rejected.
+Setup uses CMake `--fresh` to regenerate the cache and compiler probes without
+deleting the source or installed libraries. SDK servicing versions and selected
+tool/header/library hashes are recorded; target 10.0.26100.0 alone does not pin
+every servicing release within that SDK family.
 
 The baseline's timed command is exactly:
 
@@ -209,6 +219,43 @@ Run only the new variant with `run.ps1 -Toolchain MSVC2026`.
 Omit the toolchain option to return to the original VS 2022/MSBuild baseline.
 See [release provenance, compatibility caveats and status](docs/VS2026_EXPERIMENT.md).
 
+### Latest SDK with the current Microsoft compiler
+
+`-Toolchain MSVC2026Latest` uses the same released VS 2026/MSVC/MSBuild/CMake
+versions, but selects **Windows SDK 10.0.28000.2957** instead of the historical
+**10.0.26100.7705** SDK. Its separate tree is `build_hobl_msvc2026_latest`.
+The SDK installer installs native ARM64 desktop C++ components side-by-side,
+checks its SHA-256/Microsoft signature, disables automatic restart, and records
+the exit code. An unresolved SDK restart request blocks measurement.
+
+The four-runs-per-condition comparison measured **238.36 s median with the
+latest SDK versus 233.84 s with the old SDK**: **1.93% more time**, with overlapping
+run variation and no demonstrated speedup. A between-run PowerShell hang required
+recovery before the final pair; the longer rest and sensitivity analysis are
+disclosed in the [report](docs/WINDOWS_SDK_EXPERIMENT.md).
+
+```powershell
+# Elevated native ARM64 PowerShell; install the missing latest components.
+pwsh -NoProfile -File scripts\install_vs2026.ps1
+pwsh -NoProfile -File scripts\install_windows_sdk.ps1
+pwsh -NoProfile -File scripts\setup.ps1 -Toolchain MSVC2026
+pwsh -NoProfile -File scripts\setup.ps1 -Toolchain MSVC2026Latest
+
+# Single latest-stack run:
+pwsh -NoProfile -File scripts\run.ps1 -Toolchain MSVC2026Latest
+
+# Matched SDK comparison: four clean builds per condition, ABBA BAAB.
+pwsh -NoProfile -File scripts\run_toolchain_study.ps1 -CandidateToolchain MSVC2026Latest -Blocks 2
+python scripts\compare_sdk.py results\local\vs2026-sdk-comparison --source-root D:\opencv
+pwsh -NoProfile -File tests\smoke_opencv.ps1 -Toolchain MSVC2026Latest
+```
+
+Both SDK and UCRT selection are checked in evaluated MSBuild properties. Ninja
+and smoke clients also use their profile's SDK rather than the newest installed
+one. The existing `MSVC2026` option retains the old SDK; no toolchain option still
+means the original VS 2022 baseline. The [SDK report](docs/WINDOWS_SDK_EXPERIMENT.md)
+documents the discarded warm-ups, measured results and limitations.
+
 ## Result artifacts
 
 Raw local outputs go to `results\local\<timestamp>_<label>` (ignored by Git).
@@ -240,6 +287,8 @@ python -m unittest discover -s tests -v
 pwsh -NoProfile -File tests\test_runner.ps1
 # Optional comparison against a checkout of the pinned HOBL revision:
 pwsh -NoProfile -File tests\test_runner.ps1 -HoblRoot <HOBL-checkout>
+# After installing the optional VS 2026 / latest SDK profiles:
+pwsh -NoProfile -File tests\test_runner.ps1 -VerifyVS2026 -VerifyLatestSDK
 ```
 
 This is a local build benchmark, not full HOBL DUT preparation or battery/thermal

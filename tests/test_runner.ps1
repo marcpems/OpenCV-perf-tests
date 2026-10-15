@@ -1,5 +1,5 @@
 #Requires -Version 7.0
-param([string]$HoblRoot = '', [switch]$VerifyVS2026)
+param([string]$HoblRoot = '', [switch]$VerifyVS2026, [switch]$VerifyLatestSDK)
 . "$PSScriptRoot\..\scripts\common.ps1"
 $temp = Join-Path ([IO.Path]::GetTempPath()) ([guid]::NewGuid().ToString())
 New-Item -ItemType Directory $temp | Out-Null
@@ -19,7 +19,8 @@ try {
     if ($cmake -isnot [string] -or -not (Test-Path $cmake)) { throw ' ERROR - CMake discovery returned multiple paths.' }
     if ((Get-ToolchainCMakeVersion 'MSVC') -ne $script:Config.cmake_version -or
         (Get-ToolchainCMakeVersion 'Clang') -ne $script:Config.cmake_version -or
-        (Get-ToolchainCMakeVersion 'MSVC2026') -ne '4.4.4') {
+        (Get-ToolchainCMakeVersion 'MSVC2026') -ne '4.4.4' -or
+        (Get-ToolchainCMakeVersion 'MSVC2026Latest') -ne '4.4.4') {
         throw ' ERROR - Per-toolchain CMake pins changed unexpectedly.'
     }
     $failed = $false
@@ -50,13 +51,56 @@ try {
         $failed = $true
     }
     if (-not $failed) { throw ' ERROR - Unsupported generator was accepted for VS 2026.' }
+    if ((Get-EffectiveGenerator 'Ninja' 'MSVC2026Latest' $false) -ne 'MSBuild') {
+        throw ' ERROR - Latest Microsoft stack must default to MSBuild.'
+    }
+    $failed = $false
+    try { Get-EffectiveGenerator 'Ninja' 'MSVC2026Latest' $true | Out-Null }
+    catch {
+        if ($_.Exception.Message -notmatch 'requires the MSBuild generator') { throw }
+        $failed = $true
+    }
+    if (-not $failed) { throw ' ERROR - Latest Microsoft stack accepted Ninja.' }
     $directories = @(
         Get-BuildDirectory $temp 'MSBuild' 'MSVC'
         Get-BuildDirectory $temp 'Ninja' 'MSVC'
         Get-BuildDirectory $temp 'Ninja' 'Clang'
         Get-BuildDirectory $temp 'MSBuild' 'MSVC2026'
+        Get-BuildDirectory $temp 'MSBuild' 'MSVC2026Latest'
     )
-    if (@($directories | Select-Object -Unique).Count -ne 4) { throw ' ERROR - Toolchain build trees overlap.' }
+    if (@($directories | Select-Object -Unique).Count -ne 5) { throw ' ERROR - Toolchain build trees overlap.' }
+    $sdk = Get-WindowsSDK
+    if ($sdk.target_version -ne '10.0.26100.0') { throw ' ERROR - Baseline SDK selection changed.' }
+    $sdkReceipt = [pscustomobject]@{ windows_sdk = $sdk }
+    Assert-WindowsSDK $sdkReceipt 'MSVC'
+    @($sdk.files_sha256.PSObject.Properties)[0].Value = '0' * 64
+    $failed = $false
+    try { Assert-WindowsSDK $sdkReceipt 'MSVC' }
+    catch {
+        if ($_.Exception.Message -notmatch 'Windows SDK file changed') { throw }
+        $failed = $true
+    }
+    if (-not $failed) { throw ' ERROR - SDK file drift was ignored.' }
+    $failed = $false
+    try { Assert-WindowsSDK ([pscustomobject]@{}) 'MSVC' }
+    catch {
+        if ($_.Exception.Message -notmatch 'no explicit Windows SDK selection') { throw }
+        $failed = $true
+    }
+    if (-not $failed) { throw ' ERROR - Unpinned legacy SDK receipt was accepted.' }
+    if ($VerifyLatestSDK) {
+        $latestSDK = Get-WindowsSDK 'MSVC2026Latest'
+        if ($latestSDK.target_version -ne '10.0.28000.0' -or $latestSDK.release_version -ne '10.0.28000.2957') {
+            throw ' ERROR - Latest SDK version pin failed.'
+        }
+        $failed = $false
+        try { Assert-WindowsSDK ([pscustomobject]@{ windows_sdk = $latestSDK }) 'MSVC2026' }
+        catch {
+            if ($_.Exception.Message -notmatch 'SDK selection changed') { throw }
+            $failed = $true
+        }
+        if (-not $failed) { throw ' ERROR - Wrong SDK profile was accepted.' }
+    }
     $restart = "$temp\restart.json"
     Assert-NoPendingToolchainRestart $restart
     if ($VerifyVS2026) {
@@ -94,9 +138,26 @@ try {
         $failed = $true
     }
     if (-not $failed) { throw ' ERROR - Pending installation restart was ignored.' }
+    $failed = $false
+    try { Assert-WindowsSDKRestart $restart }
+    catch {
+        if ($_.Exception.Message -notmatch 'Restart Windows') { throw }
+        $failed = $true
+    }
+    if (-not $failed) { throw ' ERROR - Pending SDK restart was ignored.' }
     @{ exit_code = 3010; boot_time = '2000-01-01T00:00:00.0000000Z' } |
         ConvertTo-Json | Set-Content $restart
     Assert-NoPendingToolchainRestart $restart
+    Assert-WindowsSDKRestart $restart
+    @{ exit_code = 1603; boot_time = '2000-01-01T00:00:00.0000000Z' } |
+        ConvertTo-Json | Set-Content $restart
+    $failed = $false
+    try { Assert-WindowsSDKRestart $restart }
+    catch {
+        if ($_.Exception.Message -notmatch 'installation failed') { throw }
+        $failed = $true
+    }
+    if (-not $failed) { throw ' ERROR - Failed SDK installation was ignored.' }
     if ((Get-BuildDirectory $temp 'Ninja') -eq (Get-BuildDirectory $temp 'Ninja' 'Clang')) {
         throw ' ERROR - Clang and MSVC build directories overlap.'
     }

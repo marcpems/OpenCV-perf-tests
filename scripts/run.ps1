@@ -4,20 +4,23 @@ param(
     [string]$ResultsDir = "$PSScriptRoot\..\results\local",
     [ValidatePattern('^[A-Za-z0-9_-]+$')][string]$Label = 'hobl_baseline',
     [ValidateSet('MSBuild', 'Ninja')][string]$Generator = 'MSBuild',
-    [ValidateSet('MSVC', 'Clang', 'MSVC2026')][string]$Toolchain = 'MSVC',
+    [ValidateSet('MSVC', 'Clang', 'MSVC2026', 'MSVC2026Latest')][string]$Toolchain = 'MSVC',
     [ValidateRange(0, 256)][int]$Parallel = 0,
     [switch]$Profile
 )
 . "$PSScriptRoot\common.ps1"
 Assert-NoPendingToolchainRestart
+Assert-WindowsSDKRestart
 if ($Toolchain -eq 'Clang' -and -not $PSBoundParameters.ContainsKey('Label')) { $Label = 'clang_experiment' }
 if ($Toolchain -eq 'MSVC2026' -and -not $PSBoundParameters.ContainsKey('Label')) { $Label = 'vs2026_experiment' }
+if ($Toolchain -eq 'MSVC2026Latest' -and -not $PSBoundParameters.ContainsKey('Label')) { $Label = 'vs2026_latest_experiment' }
 $Root = Get-SourceRoot $Root
 $Generator = Get-EffectiveGenerator $Generator $Toolchain ($PSBoundParameters.ContainsKey('Generator'))
 Assert-Source $Root
 $buildDir = Get-BuildDirectory $Root $Generator $Toolchain
 if (-not (Test-Path "$buildDir\benchmark-setup.json")) { throw ' ERROR - Run setup.ps1 for this generator first.' }
 $receipt = Get-Content "$buildDir\benchmark-setup.json" -Raw | ConvertFrom-Json
+Assert-WindowsSDK $receipt $Toolchain
 $receiptToolchain = if ($receipt.PSObject.Properties.Name -contains 'toolchain') { $receipt.toolchain } else { 'MSVC' }
 if ($receiptToolchain -ne $Toolchain) { throw ' ERROR - Toolchain does not match the configured build directory.' }
 if ($receipt.config_sha256 -ne (Get-FileHash "$PSScriptRoot\..\benchmark.json").Hash) {
@@ -27,7 +30,7 @@ if ($receipt.compiler_sha256 -ne (Get-FileHash $receipt.compiler).Hash) {
     throw ' ERROR - Compiler changed since setup; rerun setup.'
 }
 if ($Generator -eq 'MSBuild') {
-    $vsMajor = if ($Toolchain -eq 'MSVC2026') { 18 } else { 17 }
+    $vsMajor = if ($Toolchain -in @('MSVC2026', 'MSVC2026Latest')) { 18 } else { 17 }
     $currentVS = Get-VisualStudio $vsMajor
     foreach ($field in @('path', 'version', 'tools', 'toolset')) {
         if ($currentVS.$field -ne $receipt.visual_studio.$field) {
@@ -51,7 +54,7 @@ if ($receipt.PSObject.Properties.Name -contains 'build_engine' -and $receipt.bui
 }
 if ($Generator -eq 'Ninja') {
     if ($Profile) { throw ' ERROR - Profile uses MSBuild PerformanceSummary; Ninja already records per-step timings.' }
-    Set-NativeToolchain $receipt.visual_studio
+    Set-NativeToolchain $receipt.visual_studio $receipt.windows_sdk
     if ($Toolchain -eq 'Clang') {
         foreach ($name in @('c', 'cxx', 'linker', 'ar', 'ranlib')) {
             Assert-NativeExecutable $receipt.llvm.$name $receipt.architecture
@@ -86,6 +89,10 @@ if (Test-Path $installationReceipt) {
     $boot = (Get-CimInstance Win32_OperatingSystem).LastBootUpTime.ToUniversalTime()
     $metadata['rebooted_since_tool_installation'] =
         [datetimeoffset]$boot -ne [datetimeoffset]$metadata.tool_installation.boot_time
+}
+$sdkInstallationReceipt = "$PSScriptRoot\..\.tools\windows-sdk-installation.json"
+if (Test-Path $sdkInstallationReceipt) {
+    $metadata['sdk_installation'] = Get-Content $sdkInstallationReceipt -Raw | ConvertFrom-Json
 }
 $metadata | ConvertTo-Json -Depth 8 | Set-Content "$runDir\metadata.json"
 $lock = $null

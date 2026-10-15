@@ -1,0 +1,85 @@
+{
+  "checked_at": "2026-10-15T12:22:05.8886106+01:00",
+  "vs_stable_version": "18.11.0",
+  "vs_stable_build": "18.11.12306.390",
+  "cmake_latest_release": "v4.4.4",
+  "sdk_manifest": {
+    "checked_latest_on": "2026-10-15",
+    "baseline_target_version": "10.0.26100.0",
+    "latest_target_version": "10.0.28000.0",
+    "latest_release_version": "10.0.28000.2957",
+    "installer_version": "10.1.28000.2957",
+    "installer_url": "https://download.microsoft.com/download/e6cfffdc-0d3e-4c6c-96d7-d491da459a07/KIT_BUNDLE_WINDOWSSDK_MEDIACREATION/winsdksetup.exe",
+    "installer_sha256": "e8e264aca8bc34abdf592352bf09f986a85cdb96db0efba405ca9e149181fe61"
+  },
+  "sdk_installation": {
+    "boot_time": "2026-10-14T11:00:37.731082Z",
+    "release_version": "10.0.28000.2957",
+    "finished_at": "2026-10-15T12:06:22.2304488+01:00",
+    "arguments": "/features OptionId.DesktopCPParm64 /quiet /norestart /ceip off /log \"D:\\copilot\\opencv-perf-tests\\.tools\\windows-sdk-installation.log\"",
+    "installer_sha256": "E8E264ACA8BC34ABDF592352BF09F986A85CDB96DB0EFBA405CA9E149181FE61",
+    "exit_code": 0
+  },
+  "original_sdk_files_verified_unchanged": 5464,
+  "original_sdk_snapshot_sha256": "248B520AEF1EA86B27184ADDADA2496358558310CFDB8003C0162A0979B18516",
+  "files": [
+    {
+      "version": "19.51.36260.0",
+      "path": "C:\\Program Files\\Microsoft Visual Studio\\2026\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostarm64\\arm64\\cl.exe",
+      "sha256": "9F36F48C99F07158A62F3D013247095F318D3560B0C31555F3664F0DE25EBBCB"
+    },
+    {
+      "version": "19.51.36260.0",
+      "path": "C:\\Program Files\\Microsoft Visual Studio\\2026\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostarm64\\arm64\\c1xx.dll",
+      "sha256": "BE0280D8D622E44C2177827797778CBE879E394A233206FC8782069575DC4F4C"
+    },
+    {
+      "version": "19.51.36260.0",
+      "path": "C:\\Program Files\\Microsoft Visual Studio\\2026\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostarm64\\arm64\\c2.dll",
+      "sha256": "A638D908E5E5B03A43E75821D75A7B24F73943172F69448E2FB787305E5A534C"
+    },
+    {
+      "version": "14.51.36260.0",
+      "path": "C:\\Program Files\\Microsoft Visual Studio\\2026\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostarm64\\arm64\\link.exe",
+      "sha256": "D760C224CB123ADDE2305665C8E929A0633224E9726A859B2233AB1CFFDEF747"
+    },
+    {
+      "version": "14.51.36260.0",
+      "path": "C:\\Program Files\\Microsoft Visual Studio\\2026\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostarm64\\arm64\\lib.exe",
+      "sha256": "0CA41A337F71DCF7043EE68F80E5D2635DD6E0A187E0BEB4BE9B04F440FD8594"
+    },
+    {
+      "version": "14.51.36260.0",
+      "path": "C:\\Program Files\\Microsoft Visual Studio\\2026\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostarm64\\arm64\\mspdb140.dll",
+      "sha256": "6A6C88BB674A183DF1E94BD5D243E97C3AC7B1434A769F14F628B27F1E8D6A61"
+    },
+    {
+      "version": "14.51.36247.0",
+      "path": "C:\\Windows\\System32\\vcruntime140.dll",
+      "sha256": "3C56F4167E2B3D8E6338497731E6AAE8CD7EC46BD6789F9423A8D9CF9A630310"
+    },
+    {
+      "version": "10.0.28000.3231 (WinBuild.160101.0800)",
+      "path": "C:\\Windows\\System32\\ucrtbase.dll",
+      "sha256": "0CAF23776D1D32BDF96D1D1D7AEA5E72AD5E8A158F0799230EFFBC2F9D9BEEF2"
+    }
+  ],
+  "updates": [
+    {
+      "HotFixID": "KB5127691",
+      "InstalledOn": "2026-10-14T00:00:00"
+    },
+    {
+      "HotFixID": "KB5127646",
+      "InstalledOn": "2026-10-14T00:00:00"
+    },
+    {
+      "HotFixID": "KB5124005",
+      "InstalledOn": "2026-09-29T00:00:00"
+    },
+    {
+      "HotFixID": "KB5127645",
+      "InstalledOn": "2026-10-14T00:00:00"
+    }
+  ]
+}

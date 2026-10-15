@@ -1,0 +1,6 @@
+{
+  "TimeCreated": "2026-10-15T12:48:27.8021307+01:00",
+  "ProviderName": "Application Hang",
+  "Id": 1002,
+  "Message": "The program pwsh.exe version 7.6.6.500 stopped interacting with Windows and was closed. To see if more information about the problem is available, check the problem history in the Security and Maintenance control panel.\r\n"
+}

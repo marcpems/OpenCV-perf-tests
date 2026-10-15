@@ -2,16 +2,23 @@
 param(
     [string]$Root = '',
     [string]$ResultsDir = '',
-    [ValidateSet('Clang', 'MSVC2026')][string]$CandidateToolchain = 'Clang',
+    [ValidateSet('Clang', 'MSVC2026', 'MSVC2026Latest')][string]$CandidateToolchain = 'Clang',
+    [ValidateRange(1, 10)][int]$Blocks = 1,
     [ValidateRange(0, 256)][int]$Parallel = 0,
     [ValidateRange(0, 3600)][int]$PauseSeconds = 30
 )
 . "$PSScriptRoot\common.ps1"
 Assert-NoPendingToolchainRestart
+Assert-WindowsSDKRestart
 $Root = Get-SourceRoot $Root
 $generator = if ($CandidateToolchain -eq 'Clang') { 'Ninja' } else { 'MSBuild' }
+$baseline = if ($CandidateToolchain -eq 'MSVC2026Latest') { 'MSVC2026' } else { 'MSVC' }
 if (-not $ResultsDir) {
-    $name = if ($CandidateToolchain -eq 'Clang') { 'clang-comparison' } else { 'vs2026-comparison' }
+    $name = switch ($CandidateToolchain) {
+        'Clang' { 'clang-comparison' }
+        'MSVC2026' { 'vs2026-comparison' }
+        'MSVC2026Latest' { 'vs2026-sdk-comparison' }
+    }
     $ResultsDir = "$PSScriptRoot\..\results\local\$name"
 }
 if (-not $PSBoundParameters.ContainsKey('Parallel') -and $CandidateToolchain -eq 'Clang') {
@@ -20,12 +27,18 @@ if (-not $PSBoundParameters.ContainsKey('Parallel') -and $CandidateToolchain -eq
 $ResultsDir = [IO.Path]::GetFullPath($ResultsDir, (Get-Location).ProviderPath)
 if (Test-Path $ResultsDir) { throw ' ERROR - Study directory already exists; choose a fresh -ResultsDir.' }
 $graphs = @{}
+foreach ($path in @("$PSScriptRoot\run_toolchain_study.ps1", "$PSScriptRoot\..\benchmark.json",
+        "$PSScriptRoot\..\toolchains\vs2026.json", "$PSScriptRoot\..\toolchains\windows-sdk.json")) {
+    $graphs[$path] = (Get-FileHash $path).Hash
+}
 $installationReceipt = "$PSScriptRoot\..\.tools\vs2026-installation.json"
 if (Test-Path $installationReceipt) {
     $graphs[$installationReceipt] = (Get-FileHash $installationReceipt).Hash
 }
+$sdkReceipt = "$PSScriptRoot\..\.tools\windows-sdk-installation.json"
+if (Test-Path $sdkReceipt) { $graphs[$sdkReceipt] = (Get-FileHash $sdkReceipt).Hash }
 $ninjaPaths = @()
-foreach ($toolchain in @('MSVC', $CandidateToolchain)) {
+foreach ($toolchain in @($baseline, $CandidateToolchain)) {
     $buildDir = Get-BuildDirectory $Root $generator $toolchain
     if (-not (Test-Path "$buildDir\benchmark-setup.json")) { throw " ERROR - Configure $generator/$toolchain first." }
     if ($generator -eq 'Ninja') {
@@ -40,10 +53,15 @@ foreach ($toolchain in @('MSVC', $CandidateToolchain)) {
     }
     $graphs["$buildDir\benchmark-setup.json"] = (Get-FileHash "$buildDir\benchmark-setup.json").Hash
 }
-$order = @('MSVC', $CandidateToolchain, $CandidateToolchain, 'MSVC')
+$order = @()
+for ($block = 0; $block -lt $Blocks; $block++) {
+    $pair = if ($block % 2 -eq 0) { @($baseline, $CandidateToolchain) } else { @($CandidateToolchain, $baseline) }
+    $order += @($pair[0], $pair[1], $pair[1], $pair[0])
+}
 $manifest = [ordered]@{
     started_at = [datetimeoffset]::Now.ToString('o')
     order = $order
+    blocks = $Blocks
     generator = $generator
     parallel = $Parallel
     pause_seconds = $PauseSeconds
@@ -63,7 +81,8 @@ if ($generator -eq 'Ninja') {
 New-Item -ItemType Directory $ResultsDir | Out-Null
 $manifest | ConvertTo-Json -Depth 4 | Set-Content "$ResultsDir\study.json"
 $shell = (Get-Process -Id $PID).Path
-$counts = @{ MSVC = 0 }
+$counts = @{}
+$counts[$baseline] = 0
 $counts[$CandidateToolchain] = 0
 foreach ($toolchain in $order) {
     $counts[$toolchain]++

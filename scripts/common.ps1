@@ -45,7 +45,7 @@ function Assert-NoPendingToolchainRestart([string]$Receipt = "$PSScriptRoot\..\.
 }
 
 function Get-ToolchainCMakeVersion([string]$Toolchain) {
-    if ($Toolchain -eq 'MSVC2026') {
+    if ($Toolchain -in @('MSVC2026', 'MSVC2026Latest')) {
         return (Get-Content "$PSScriptRoot\..\toolchains\vs2026.json" -Raw | ConvertFrom-Json).cmake_version
     }
     return $script:Config.cmake_version
@@ -95,9 +95,21 @@ function Get-VisualStudio([ValidateSet(17, 18)][int]$MajorVersion = 17) {
     throw " ERROR - Visual Studio $MajorVersion with native $arch C++ tools was not found."
 }
 
-function Set-NativeToolchain($VisualStudio) {
+function Assert-WindowsSDKRestart([string]$Receipt = "$PSScriptRoot\..\.tools\windows-sdk-installation.json") {
+    if (-not (Test-Path -LiteralPath $Receipt)) { return }
+    $installation = Get-Content $Receipt -Raw | ConvertFrom-Json
+    if ($installation.exit_code -notin @(0, 3010)) {
+        throw " ERROR - Windows SDK installation failed with code $($installation.exit_code); review its log."
+    }
+    if ($installation.exit_code -eq 3010 -and
+        [datetimeoffset]$installation.boot_time -eq
+        [datetimeoffset](Get-CimInstance Win32_OperatingSystem).LastBootUpTime.ToUniversalTime()) {
+        throw ' ERROR - Restart Windows to finish Windows SDK installation before benchmarking.'
+    }
+}
+
+function Get-WindowsSDK([string]$Toolchain = 'MSVC') {
     $arch = Get-NativeArchitecture
-    # Read the SDK registration explicitly in the 32-bit registry view used by the SDK installer.
     $key = [Microsoft.Win32.RegistryKey]::OpenBaseKey(
         [Microsoft.Win32.RegistryHive]::LocalMachine, [Microsoft.Win32.RegistryView]::Registry32)
     try {
@@ -106,10 +118,60 @@ function Set-NativeToolchain($VisualStudio) {
         try { $sdk = $roots.GetValue('KitsRoot10') } finally { $roots.Dispose() }
     } finally { $key.Dispose() }
     if (-not $sdk -or -not (Test-Path "$sdk\Include")) { throw ' ERROR - Windows SDK includes not found.' }
-    $sdkVersion = Get-ChildItem "$sdk\Include" -Directory |
-        Where-Object { Test-Path "$sdk\Lib\$($_.Name)\um\$arch\kernel32.lib" } |
-        Sort-Object { [version]$_.Name } -Descending | Select-Object -First 1 -ExpandProperty Name
-    if (-not $sdkVersion) { throw " ERROR - Windows SDK libraries for $arch not found." }
+    $spec = Get-Content "$PSScriptRoot\..\toolchains\windows-sdk.json" -Raw | ConvertFrom-Json
+    $sdkVersion = if ($Toolchain -eq 'MSVC2026Latest') { $spec.latest_target_version } else { $spec.baseline_target_version }
+    $files = @(
+        "bin\$sdkVersion\$arch\rc.exe", "bin\$sdkVersion\$arch\mt.exe",
+        "Include\$sdkVersion\um\Windows.h", "Include\$sdkVersion\shared\sdkddkver.h",
+        "Include\$sdkVersion\ucrt\stdio.h", "Lib\$sdkVersion\um\$arch\kernel32.lib",
+        "Lib\$sdkVersion\ucrt\$arch\ucrt.lib"
+    )
+    $hashes = [ordered]@{}
+    foreach ($file in $files) {
+        $path = Join-Path $sdk $file
+        if (-not (Test-Path $path)) { throw " ERROR - Required Windows SDK file missing: $path" }
+        $hashes[$path] = (Get-FileHash $path).Hash
+    }
+    $rc = "$sdk\bin\$sdkVersion\$arch\rc.exe"
+    $mt = "$sdk\bin\$sdkVersion\$arch\mt.exe"
+    Assert-NativeExecutable $rc $arch
+    Assert-NativeExecutable $mt $arch
+    $releaseVersion = ((Get-Item $rc).VersionInfo.FileVersion -split ' ')[0]
+    $manifestVersion = ((Get-Item $mt).VersionInfo.FileVersion -split ' ')[0]
+    if ($Toolchain -eq 'MSVC2026Latest' -and
+        ($releaseVersion -ne $spec.latest_release_version -or $manifestVersion -ne $spec.latest_release_version)) {
+        throw ' ERROR - Latest Windows SDK tools differ from the release pin.'
+    }
+    return [pscustomobject]@{
+        root = $sdk
+        target_version = $sdkVersion
+        release_version = $releaseVersion
+        manifest_tool_version = $manifestVersion
+        files_sha256 = [pscustomobject]$hashes
+    }
+}
+
+function Assert-WindowsSDK($Receipt, [string]$Toolchain) {
+    if ($null -eq $Receipt.PSObject.Properties['windows_sdk']) {
+        throw ' ERROR - Setup receipt has no explicit Windows SDK selection; rerun setup.'
+    }
+    $current = Get-WindowsSDK $Toolchain
+    if ($Receipt.windows_sdk.target_version -ne $current.target_version -or
+        $Receipt.windows_sdk.release_version -ne $current.release_version) {
+        throw ' ERROR - Windows SDK selection changed since setup; rerun setup.'
+    }
+    foreach ($file in $current.files_sha256.PSObject.Properties) {
+        if ($Receipt.windows_sdk.files_sha256.PSObject.Properties.Name -notcontains $file.Name -or
+            $Receipt.windows_sdk.files_sha256.($file.Name) -ne $file.Value) {
+            throw ' ERROR - Windows SDK file changed since setup; rerun setup.'
+        }
+    }
+}
+
+function Set-NativeToolchain($VisualStudio, $WindowsSDK = (Get-WindowsSDK)) {
+    $arch = Get-NativeArchitecture
+    $sdk = $WindowsSDK.root
+    $sdkVersion = $WindowsSDK.target_version
     $tools = $VisualStudio.tools
     $env:PATH = "$tools\bin\Host$arch\$arch;$sdk\bin\$sdkVersion\$arch;$env:PATH"
     $env:INCLUDE = "$tools\include;$sdk\Include\$sdkVersion\ucrt;$sdk\Include\$sdkVersion\um;$sdk\Include\$sdkVersion\shared"
@@ -118,7 +180,7 @@ function Set-NativeToolchain($VisualStudio) {
 }
 
 function Get-EffectiveGenerator([string]$Generator, [string]$Toolchain, [bool]$ExplicitGenerator) {
-    if ($Toolchain -eq 'MSVC2026') {
+    if ($Toolchain -in @('MSVC2026', 'MSVC2026Latest')) {
         if ($ExplicitGenerator -and $Generator -ne 'MSBuild') {
             throw ' ERROR - The VS 2026 experiment requires the MSBuild generator.'
         }
@@ -195,6 +257,7 @@ function Get-ClangToolchain([string]$LLVMRoot) {
 }
 
 function Get-BuildDirectory([string]$Root, [string]$Generator, [string]$Toolchain = 'MSVC') {
+    if ($Toolchain -eq 'MSVC2026Latest') { return Join-Path $Root 'build_hobl_msvc2026_latest' }
     if ($Toolchain -eq 'MSVC2026') { return Join-Path $Root 'build_hobl_msvc2026' }
     if ($Toolchain -eq 'Clang') { return Join-Path $Root 'build_hobl_clang_ninja' }
     $suffix = if ($Generator -eq 'Ninja') { 'ninja' } else { 'msvc' }

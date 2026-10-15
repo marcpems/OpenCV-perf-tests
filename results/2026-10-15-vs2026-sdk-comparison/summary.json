@@ -1,0 +1,66 @@
+{
+  "msvc2026": {
+    "count": 4,
+    "median_seconds": 233.83960000000002,
+    "min_seconds": 229.7287,
+    "max_seconds": 244.3414,
+    "runs": [
+      {
+        "directory": "20261015_122113_266_msvc2026_1",
+        "build_seconds": 231.738,
+        "clean_seconds": 1.7133,
+        "install_seconds": 2.5679
+      },
+      {
+        "directory": "20261015_123454_996_msvc2026_2",
+        "build_seconds": 235.9412,
+        "clean_seconds": 1.6139,
+        "install_seconds": 2.6128
+      },
+      {
+        "directory": "20261015_124400_538_msvc2026_3",
+        "build_seconds": 244.3414,
+        "clean_seconds": 1.637,
+        "install_seconds": 2.855
+      },
+      {
+        "directory": "20261015_125022_977_msvc2026_4",
+        "build_seconds": 229.7287,
+        "clean_seconds": 1.6556,
+        "install_seconds": 2.584
+      }
+    ]
+  },
+  "msvc2026latest": {
+    "count": 4,
+    "median_seconds": 238.3604,
+    "min_seconds": 234.6448,
+    "max_seconds": 245.9327,
+    "runs": [
+      {
+        "directory": "20261015_122541_491_msvc2026latest_1",
+        "build_seconds": 234.6448,
+        "clean_seconds": 1.6353,
+        "install_seconds": 2.6014
+      },
+      {
+        "directory": "20261015_123012_569_msvc2026latest_2",
+        "build_seconds": 245.9327,
+        "clean_seconds": 1.6728,
+        "install_seconds": 2.5959
+      },
+      {
+        "directory": "20261015_123927_768_msvc2026latest_3",
+        "build_seconds": 236.2562,
+        "clean_seconds": 1.6266,
+        "install_seconds": 2.6087
+      },
+      {
+        "directory": "20261015_125450_777_msvc2026latest_4",
+        "build_seconds": 240.4646,
+        "clean_seconds": 1.6064,
+        "install_seconds": 2.6688
+      }
+    ]
+  }
+}

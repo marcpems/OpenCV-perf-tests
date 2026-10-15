@@ -1,0 +1,22 @@
+{
+  "successful_native_version_checks": 8,
+  "version": "4.10.0",
+  "matching_workload": {
+    "projects": 37,
+    "compile_source_entries": 1015,
+    "source_multiset_sha256": "72047643af034227218a31353c44feae31a277493d1f8e8196a586f6fcacfd8d",
+    "release_compile_settings_sha256": "733e6711053c858cf0f0c9ecfd91137caca182a74f5dc940ad0fabbceddbcb6d"
+  },
+  "normalized_build_info_sha256": "ccdf336a334d610e74389acb39d2f4ae3bb06cd0f5e7c2f90a6f536efa1d0cde",
+  "build_info_ignored_fields": [
+    "Timestamp",
+    "Install to"
+  ],
+  "smoke": {
+    "MSVC_MSBuild": "passed",
+    "MSVC_Ninja": "passed",
+    "Clang_Ninja": "passed",
+    "MSVC2026_MSBuild": "passed",
+    "MSVC2026Latest_MSBuild": "passed"
+  }
+}

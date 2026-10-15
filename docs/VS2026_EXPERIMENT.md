@@ -5,6 +5,12 @@ VS 2026/MSBuild stack on the same Windows ARM64 machine. The original default is
 preserved. The source, HOBL definitions and timing boundaries remain unchanged;
 the compiler, build engine and CMake versions change together.
 
+**SDK scope clarification:** this series retained SDK **10.0.26100.7705**, selected
+as target **10.0.26100.0**, in both conditions. It updated the Microsoft compiler
+and build engine, not every SDK component. The separate
+[latest-SDK follow-up](WINDOWS_SDK_EXPERIMENT.md) compares old/new SDKs using the
+same VS 2026 stack; do not pool those measurements with this earlier series.
+
 ## Results: no reliable build-time improvement established
 
 Measured on **2026-10-15**, on the same 12-core Snapdragon X2 Elite, 63.48 GiB RAM,
