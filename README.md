@@ -10,6 +10,7 @@ HOBL intentionally sets `BUILD_PERF_TESTS=OFF`.
 **[Native ARM64 Clang experiment](docs/CLANG_EXPERIMENT.md)** |
 **[VS 2026 / latest Microsoft tools experiment](docs/VS2026_EXPERIMENT.md)** |
 **[Latest Windows SDK comparison](docs/WINDOWS_SDK_EXPERIMENT.md)** |
+**[LLVM vs MSVC: CPU time and WPR/ETL investigation](docs/CPU_ETL_ANALYSIS.md)** |
 **[HOBL survey, equivalence and measurement methodology](docs/METHODOLOGY.md)**
 
 The baseline preserves HOBL's clean -> timed Release build -> install -> version-check
@@ -97,7 +98,18 @@ pwsh -NoProfile -File scripts\run.ps1 -Generator Ninja -Parallel 12 -Label ninja
 
 # Separate instrumented baseline, not pooled with uninstrumented samples.
 pwsh -NoProfile -File scripts\run.ps1 -Label baseline_profile -Profile
+
+# Optional process-tree CPU accounting; WPR capture requires an elevated shell.
+pwsh -NoProfile -File scripts\run.ps1 -Label baseline_cpu -MeasureCpu
+pwsh -NoProfile -File scripts\run.ps1 -Label baseline_etl -Trace
 ```
+
+The [CPU/ETL investigation](docs/CPU_ETL_ANALYSIS.md) measured **210.80 s wall /
+1,716.12 CPU s** for original MSBuild versus **94.90 s / 893.90 CPU s** for LLVM.
+With Ninja held constant, LLVM used **50.87% less CPU time**. WPR exposed both a
+45-second serialized MSBuild compilation tail and substantial MSVC backend cost.
+Raw ETLs stay local; only sanitized build-specific evidence is published.
+`-Trace` implies `-MeasureCpu`; neither can be combined with `-Profile`.
 
 Ninja uses its own `build_hobl_ninja` tree. Both generators clean outside the timer,
 build, install and validate the installed executable. The default `-Parallel 0`

@@ -1,0 +1,176 @@
+{
+  "status": "succeeded",
+  "label": "msvc_ninja_1",
+  "started_at": "2026-10-15T13:54:55.4415007+01:00",
+  "generator": "Ninja",
+  "toolchain": "MSVC",
+  "parallel": 12,
+  "profile": false,
+  "measure_cpu": true,
+  "wpr_trace": false,
+  "setup": {
+    "hobl_commit": "05896ef511054a705d2216ffe8cf67f66cea3fe0",
+    "opencv_commit": "71d3237a093b60a27601c20e9ee6c3e52154e8b1",
+    "cmake_version": "4.1.1",
+    "cmake": "D:\\copilot\\opencv-perf-tests\\.tools\\cmake-4.1.1-windows-arm64\\bin\\cmake.exe",
+    "cmake_sha256": "80FD1FAF9578B5278BAF2CB33E3A0A33B0213B0ACB0D2AA2B36A3A9182C1A4A2",
+    "build_engine": null,
+    "generator": "Ninja",
+    "toolchain": "MSVC",
+    "llvm": null,
+    "architecture": "arm64",
+    "configure_seconds": 24.8348,
+    "configure_arguments": [
+      "--fresh",
+      "-S",
+      "D:\\opencv",
+      "-B",
+      "D:\\opencv\\build_hobl_ninja",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DBUILD_opencv_world=ON",
+      "-DWITH_ITT=OFF",
+      "-DWITH_OPENCL=OFF",
+      "-DWITH_OPENCLAMDBLAS=OFF",
+      "-DWITH_OPENCLAMDFFT=OFF",
+      "-DWITH_OPENCL_D3D11_NV=OFF",
+      "-DWITH_DIRECTML=OFF",
+      "-DWITH_DIRECTX=OFF",
+      "-DWITH_ADE=OFF",
+      "-DWITH_CAROTENE=OFF",
+      "-DBUILD_opencv_python2=OFF",
+      "-DBUILD_opencv_python3=OFF",
+      "-DWITH_PYTHON=OFF",
+      "-DBUILD_opencv_python_bindings_generator=OFF",
+      "-DBUILD_opencv_python_tests=OFF",
+      "-DOPENCV_SKIP_PYTHON_LOADER=ON",
+      "-DOPENCV_PYTHON_SKIP_DETECTION=ON",
+      "-DBUILD_PERF_TESTS=OFF",
+      "-DBUILD_TESTS=OFF",
+      "-DPYTHON_EXECUTABLE=",
+      "-DPYTHON3_EXECUTABLE=",
+      "-DPYTHON2_EXECUTABLE=",
+      "-G",
+      "Ninja",
+      "-DCMAKE_MAKE_PROGRAM=C:\\Strawberry\\c\\bin\\ninja.exe",
+      "-DCMAKE_C_COMPILER=cl",
+      "-DCMAKE_CXX_COMPILER=cl"
+    ],
+    "compiler": "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostarm64/arm64/cl.exe",
+    "compiler_id": "MSVC",
+    "compiler_version": "19.44.35229.0",
+    "compiler_frontend": "MSVC",
+    "compiler_sha256": "47B1E067B8F81A52EDDD5A623675BD50126567B1DD1118CDE4D52B9E550EB149",
+    "visual_studio": {
+      "path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools",
+      "version": "17.14.37710.0",
+      "tools": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\VC\\Tools\\MSVC\\14.44.35207",
+      "toolset": "14.44.35207",
+      "complete": true,
+      "reboot_required": false
+    },
+    "windows_sdk": {
+      "root": "C:\\Program Files (x86)\\Windows Kits\\10\\",
+      "target_version": "10.0.26100.0",
+      "release_version": "10.0.26100.7705",
+      "manifest_tool_version": "10.0.26100.7705",
+      "files_sha256": {
+        "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\arm64\\rc.exe": "49CB21BF37CBCB6B4212B002D31BBC5B33A50CEE0DD2FDFB1B7B6814EE62B5F5",
+        "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\arm64\\mt.exe": "E6B485F294D7AE23AD3B00D13BD38B4D3F85D3B4489FF5BD4092672263321F66",
+        "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\um\\Windows.h": "B337D661D03A4ABEFB7B86A2742CE1AD5D19B57CD8B858BD13E7BBCC1DBEEAAA",
+        "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\shared\\sdkddkver.h": "2472140E0A4D56595743BB74002A51AEE9B58667BD178FC43742E19DEBFEB774",
+        "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\ucrt\\stdio.h": "06CBAB3A501306FDD9176A00A83E5BB92EA4D7863CFD666355743527CF99EDC6",
+        "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\um\\arm64\\kernel32.lib": "5A4A1E63AD1692F0767DC911D608E981E6E7B24B3EC2684429A61ADD648327F4",
+        "C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\ucrt\\arm64\\ucrt.lib": "C2C1328647F4454F71A68E8E194F89EEF7D3FDF2661192AB8D87FBA395EE13FA"
+      }
+    },
+    "config_sha256": "298A17EBA62A2D17E82B1AB806E48BE4BF3B06EC615B31AA936D6E9845FACBE1"
+  },
+  "cpu": {
+    "Name": "Snapdragon X2 Elite @ 4.03 GHz",
+    "NumberOfCores": 12,
+    "NumberOfLogicalProcessors": 12
+  },
+  "memory_gib": 63.48,
+  "os": {
+    "Caption": "Microsoft Windows 11 Pro",
+    "Version": "10.0.28000",
+    "BuildNumber": "28000",
+    "OSArchitecture": "ARM 64-bit Processor"
+  },
+  "power_scheme": "Power Scheme GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c  (High performance)",
+  "runner_sha256": "CB368FCFA8792939BE94DF5C8AF57D2CE664CD5CEF451A4EAABC48C8B26BFD71",
+  "tool_installation": {
+    "exit_code": 3010,
+    "boot_time": "2026-10-14T11:00:37.731082Z",
+    "bootstrapper_sha256": "5F06F1052F562620F27D0C14C5F9AB9658FF6B6908B35C59755AB14E2EB5A473",
+    "recorded_at": "2026-10-15T09:52:02.4146502+01:00",
+    "restart_assessment": {
+      "runtime_files": [
+        {
+          "path": "C:\\Windows\\System32\\vcruntime140.dll",
+          "version": "14.51.36247.0",
+          "sha256": "3C56F4167E2B3D8E6338497731E6AAE8CD7EC46BD6789F9423A8D9CF9A630310"
+        },
+        {
+          "path": "C:\\Windows\\System32\\msvcp140.dll",
+          "version": "14.51.36247.0",
+          "sha256": "167CEAC85C2D726C4CD9E39B8881FAFDC6DE1520C0E67C4F6B271235F9D2A6C5"
+        },
+        {
+          "path": "C:\\Windows\\System32\\concrt140.dll",
+          "version": "14.51.36247.0",
+          "sha256": "F5B1C14533BCF14B944A9921602328CEE1696C0B2C27487AD2769942C82B8986"
+        }
+      ],
+      "source_log": "dd_setup_20261015094100.log",
+      "package_success_exit_codes": [
+        "0",
+        "862968"
+      ],
+      "assessed_at": "2026-10-15T10:03:55.4346773+01:00",
+      "kind": "verified-soft-reboot",
+      "visual_studio_build": "18.11.12306.390",
+      "source_log_sha256": "57E1457CEFB25AD758C3635E31E71FB4735D2C150D565D4AC625FF0BAFC077C1",
+      "reason": "Microsoft VC redist wrapper verified a consistent updated installation and converted 3010 to NS_S_REBOOT_RECOMMENDED (862968); VS instance complete with no required reboot."
+    }
+  },
+  "rebooted_since_tool_installation": false,
+  "sdk_installation": {
+    "boot_time": "2026-10-14T11:00:37.731082Z",
+    "release_version": "10.0.28000.2957",
+    "finished_at": "2026-10-15T12:06:22.2304488+01:00",
+    "arguments": "/features OptionId.DesktopCPParm64 /quiet /norestart /ceip off /log \"D:\\copilot\\opencv-perf-tests\\.tools\\windows-sdk-installation.log\"",
+    "installer_sha256": "E8E264ACA8BC34ABDF592352BF09F986A85CDB96DB0EFBA405CA9E149181FE61",
+    "exit_code": 0
+  },
+  "build_arguments": [
+    "--build",
+    ".",
+    "--config",
+    "Release",
+    "--parallel",
+    "12"
+  ],
+  "cpu_accounting": {
+    "WallSeconds": 169.7987871,
+    "UserSeconds": 1660.65625,
+    "KernelSeconds": 138.21875,
+    "CpuSeconds": 1798.875,
+    "AverageCores": 10.59415694730837,
+    "ExitCode": 0,
+    "ProcessId": 30244,
+    "TotalProcesses": 1097,
+    "ActiveProcessesAtBuildExit": 1,
+    "ReadBytes": 6456093291,
+    "WriteBytes": 1267802076,
+    "StartedAt": "2026-10-15T13:54:57.1263479+01:00",
+    "FinishedAt": "2026-10-15T13:57:46.9257033+01:00"
+  },
+  "accounting_source_sha256": "E9F819A2CD00208782FB390895C6C9EB9F9CF0C4FBA9670562DC907AFBCB3692",
+  "measurement_helper_sha256": "314A4F17C2CBC45E1A7CF740CE8DB10F1A11A9E17F6CC3C6CE5A320953AC029E",
+  "build_seconds": 169.7988,
+  "clean_seconds": 0.1744,
+  "install_seconds": 0.2969,
+  "validated_version": "4.10.0",
+  "finished_at": "2026-10-15T13:57:47.4780777+01:00"
+}

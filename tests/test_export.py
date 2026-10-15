@@ -62,6 +62,23 @@ class ExportTests(unittest.TestCase):
             summary = export(source, root / "public")
             self.assertEqual(summary["baseline"]["median_seconds"], 10.001)
             self.assertTrue((root / "public" / "sample" / "original_sha256.json").is_file())
+            metadata.update(measure_cpu=True, wpr_trace=False, cpu_accounting={"CpuSeconds": 20})
+            (run / "metadata.json").write_text(json.dumps(metadata), encoding="utf-8")
+            (run / "cpu-accounting.json").write_text('{"CpuSeconds":20}', encoding="utf-8")
+            export(source, root / "cpu")
+            self.assertTrue((root / "cpu" / "sample" / "cpu-accounting.json").is_file())
+            (run / "build.etl").write_bytes(b"private raw trace")
+            self.assertFalse((root / "cpu" / "sample" / "build.etl").exists())
+            second = source / "traced"
+            second.mkdir()
+            metadata["wpr_trace"] = True
+            (second / "metadata.json").write_text(json.dumps(metadata), encoding="utf-8")
+            (second / "opencv_build_results.csv").write_text(metrics.read_text(), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "Do not pool"):
+                export(source, root / "mixed")
+            (second / "metadata.json").unlink()
+            (second / "opencv_build_results.csv").unlink()
+            second.rmdir()
             metrics.write_text("scenario_runtime,11.00\nbuild_time,10.00\n", encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "Invalid HOBL"):
                 export(source, root / "invalid")

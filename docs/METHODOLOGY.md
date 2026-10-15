@@ -71,7 +71,7 @@ within compiler tasks, so this is not a single-core compilation benchmark.
 - Use separate `build_hobl_msvc` / `build_hobl_ninja` directories to avoid disturbing
   the initial exploratory trees. Source root defaults to the script's drive plus
   `\opencv`, and can be overridden.
-- Validate the installed version executable by discovery rather than HOBL's
+- Validate the installed version executable from the current install manifest rather than HOBL's
   hard-coded `install/x64/vc17` path.
 - Preserve individual logs and metadata per iteration; stop on native command failure.
   A per-source exclusive lock prevents these runners from overlapping one another.
@@ -201,3 +201,24 @@ while `-CandidateToolchain MSVC2026` selects MSBuild and no explicit parallelism
 option. It balances original/new/new/original order and checks generated project
 hashes and setup receipts. See [the experiment report](VS2026_EXPERIMENT.md),
 including the verified soft-reboot investigation and explicit pre-restart state.
+
+## Optional CPU accounting and WPR diagnostics
+
+`run.ps1 -MeasureCpu` measures user/kernel CPU for a Windows job containing the
+native build command and descendants, including exited processes. Its wall
+boundary is root-command completion, not eventual exit of persistent helpers.
+`-Trace` adds a named WPR CPU+DiskIO session outside that timed interval and
+implies CPU accounting. Neither switch changes the default run path; these
+measurements and `-Profile` runs must be exported separately.
+
+ETL analysis uses timed-root lifetime boundaries, lifetime-qualified process
+ancestry, precise context-switch CPU and sampled leaf modules/functions.
+It must not include trace-stop rundown, aggregate reused PIDs across ownership
+boundaries, treat command lifetimes as CPU use, or sum nested Clang time-trace
+totals. Traces with lost events are rejected. Raw ETLs and machine-wide process
+exports stay local because they include unrelated applications and command lines.
+
+The [CPU/ETL report](CPU_ETL_ANALYSIS.md) describes the six-run balanced comparison,
+three full traces, focused compiler replays, symbol provenance, accounting
+cross-checks, installation-manifest correction and limitations. Its measured
+speedups are local observations, not runtime-speed or energy claims.

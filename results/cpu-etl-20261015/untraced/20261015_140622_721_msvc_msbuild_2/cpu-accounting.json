@@ -1,0 +1,15 @@
+{
+  "WallSeconds": 211.4973009,
+  "UserSeconds": 1674.8125,
+  "KernelSeconds": 68.84375,
+  "CpuSeconds": 1743.65625,
+  "AverageCores": 8.24434280049954,
+  "ExitCode": 0,
+  "ProcessId": 32508,
+  "TotalProcesses": 507,
+  "ActiveProcessesAtBuildExit": 1,
+  "ReadBytes": 7976361467,
+  "WriteBytes": 2705038288,
+  "StartedAt": "2026-10-15T14:06:25.1268925+01:00",
+  "FinishedAt": "2026-10-15T14:09:56.6246777+01:00"
+}

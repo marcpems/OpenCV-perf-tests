@@ -1,0 +1,44 @@
+{
+  "msvc_msbuild_etl": {
+    "count": 1,
+    "median_seconds": 211.3563,
+    "min_seconds": 211.3563,
+    "max_seconds": 211.3563,
+    "runs": [
+      {
+        "directory": "20261015_141045_707_msvc_msbuild_etl",
+        "build_seconds": 211.3563,
+        "clean_seconds": 0.8346,
+        "install_seconds": 1.972
+      }
+    ]
+  },
+  "msvc_ninja_etl": {
+    "count": 1,
+    "median_seconds": 170.682,
+    "min_seconds": 170.682,
+    "max_seconds": 170.682,
+    "runs": [
+      {
+        "directory": "20261015_141535_718_msvc_ninja_etl",
+        "build_seconds": 170.682,
+        "clean_seconds": 0.2688,
+        "install_seconds": 0.2201
+      }
+    ]
+  },
+  "clang_ninja_etl": {
+    "count": 1,
+    "median_seconds": 92.6339,
+    "min_seconds": 92.6339,
+    "max_seconds": 92.6339,
+    "runs": [
+      {
+        "directory": "20261015_141934_098_clang_ninja_etl",
+        "build_seconds": 92.6339,
+        "clean_seconds": 0.2238,
+        "install_seconds": 0.2329
+      }
+    ]
+  }
+}

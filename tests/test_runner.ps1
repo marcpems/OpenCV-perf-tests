@@ -192,6 +192,8 @@ try {
         if ($errors) { throw " ERROR - PowerShell syntax failure: $errors" }
     }
     & "$PSScriptRoot\test_toolchain_study.ps1"
+    & "$PSScriptRoot\test_install_manifest.ps1"
+    & "$PSScriptRoot\test_cpu_accounting.ps1"
     Write-Host 'PASS: exit codes, paths, toolchain isolation, native PE/restart/version guards, syntax and optional HOBL flag parity.'
 } finally {
     Remove-Item -LiteralPath "$temp\success.log", "$temp\failure.log", "$temp\restart.json" -ErrorAction SilentlyContinue

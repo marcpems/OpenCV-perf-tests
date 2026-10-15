@@ -6,11 +6,16 @@ param(
     [ValidateSet('MSBuild', 'Ninja')][string]$Generator = 'MSBuild',
     [ValidateSet('MSVC', 'Clang', 'MSVC2026', 'MSVC2026Latest')][string]$Toolchain = 'MSVC',
     [ValidateRange(0, 256)][int]$Parallel = 0,
-    [switch]$Profile
+    [switch]$Profile,
+    [switch]$MeasureCpu,
+    [switch]$Trace
 )
 . "$PSScriptRoot\common.ps1"
 Assert-NoPendingToolchainRestart
 Assert-WindowsSDKRestart
+if ($Trace) { $MeasureCpu = $true }
+if ($MeasureCpu -and $Profile) { throw ' ERROR - Keep CPU accounting and MSBuild PerformanceSummary runs separate.' }
+if ($MeasureCpu) { . "$PSScriptRoot\measure_build.ps1" }
 if ($Toolchain -eq 'Clang' -and -not $PSBoundParameters.ContainsKey('Label')) { $Label = 'clang_experiment' }
 if ($Toolchain -eq 'MSVC2026' -and -not $PSBoundParameters.ContainsKey('Label')) { $Label = 'vs2026_experiment' }
 if ($Toolchain -eq 'MSVC2026Latest' -and -not $PSBoundParameters.ContainsKey('Label')) { $Label = 'vs2026_latest_experiment' }
@@ -76,6 +81,8 @@ $metadata = [ordered]@{
     toolchain = $Toolchain
     parallel = $Parallel
     profile = [bool]$Profile
+    measure_cpu = [bool]$MeasureCpu
+    wpr_trace = [bool]$Trace
     setup = $receipt
     cpu = (Get-CimInstance Win32_Processor | Select-Object Name, NumberOfCores, NumberOfLogicalProcessors)
     memory_gib = [math]::Round((Get-CimInstance Win32_ComputerSystem).TotalPhysicalMemory / 1GB, 2)
@@ -110,19 +117,26 @@ try {
         if ($Parallel -gt 0) { $argsList += @('--parallel', "$Parallel") }
         if ($Profile) { $argsList += @('--', '/clp:PerformanceSummary;Summary', '/v:minimal') }
         $metadata['build_arguments'] = $argsList
-        $build = Invoke-Logged $cmakeExe $argsList "$runDir\build.log"
+        if ($MeasureCpu) {
+            $accounting = Invoke-MeasuredBuild $cmakeExe $argsList $buildDir $runDir -Trace:$Trace
+            $build = [math]::Round($accounting.WallSeconds, 4)
+            $metadata['cpu_accounting'] = $accounting
+            $metadata['accounting_source_sha256'] = (Get-FileHash "$PSScriptRoot\BuildAccounting.cs").Hash
+            $metadata['measurement_helper_sha256'] = (Get-FileHash "$PSScriptRoot\measure_build.ps1").Hash
+        } else {
+            $build = Invoke-Logged $cmakeExe $argsList "$runDir\build.log"
+        }
         if ($Generator -eq 'Ninja') { Copy-Item "$buildDir\.ninja_log" "$runDir\ninja_log.txt" }
         $installTarget = if ($Generator -eq 'MSBuild') { 'INSTALL' } else { 'install' }
         $install = Invoke-Logged $cmakeExe @('--build', '.', '--target', $installTarget, '--config', 'Release') "$runDir\install.log"
-        $versions = @(Get-ChildItem "$buildDir\install" -Recurse -Filter opencv_version.exe)
-        if ($versions.Count -ne 1) { throw " ERROR - Expected one installed opencv_version.exe; found $($versions.Count)." }
-        Assert-NativeExecutable $versions[0].FullName $receipt.architecture
-        $version = & $versions[0].FullName
+        $versionExe = Get-InstalledOpenCVFile $buildDir 'opencv_version.exe'
+        Assert-NativeExecutable $versionExe.FullName $receipt.architecture
+        $version = & $versionExe.FullName
         if ($LASTEXITCODE -ne 0 -or "$version".Trim() -ne $script:Config.opencv_tag) {
             throw " ERROR - Installed executable validation failed: $version"
         }
         $version | Set-Content "$runDir\opencv_version.txt"
-        & $versions[0].FullName --verbose *> "$runDir\opencv_build_info.txt"
+        & $versionExe.FullName --verbose *> "$runDir\opencv_build_info.txt"
         if ($LASTEXITCODE -ne 0) { throw ' ERROR - opencv_version --verbose failed.' }
         Copy-Item "$buildDir\CMakeCache.txt", "$buildDir\configure.log" $runDir
         $format = [Globalization.CultureInfo]::InvariantCulture

@@ -14,11 +14,9 @@ $cmake = Get-CMake $receipt.cmake (Get-ToolchainCMakeVersion $Toolchain)
 Set-NativeToolchain $receipt.visual_studio $receipt.windows_sdk
 $output = [IO.Path]::GetFullPath("$PSScriptRoot\..\.work\smoke_${Toolchain}_$Generator")
 New-Item -ItemType Directory -Force $output | Out-Null
-$packages = @(Get-ChildItem "$buildDir\install" -Recurse -Filter OpenCVConfig.cmake |
-    Where-Object { Test-Path "$($_.DirectoryName)\OpenCVModules.cmake" })
-if ($packages.Count -ne 1) { throw ' ERROR - Concrete installed OpenCV CMake package is missing or ambiguous.' }
+$package = Get-InstalledOpenCVFile $buildDir 'OpenCVConfig.cmake'
 $argsList = @('--fresh', '-S', $PSScriptRoot, '-B', $output,
-    '-DCMAKE_BUILD_TYPE=Release', "-DOpenCV_DIR=$($packages[0].DirectoryName)",
+    '-DCMAKE_BUILD_TYPE=Release', "-DOpenCV_DIR=$($package.DirectoryName)",
     '-DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreadedDLL')
 if ($Generator -eq 'MSBuild') {
     $vsGenerator = if ($Toolchain -in @('MSVC2026', 'MSVC2026Latest')) { 'Visual Studio 18 2026' } else { 'Visual Studio 17 2022' }
@@ -37,9 +35,8 @@ if ($Toolchain -eq 'Clang') {
 }
 Invoke-Logged $cmake $argsList "$output\configure.log" | Out-Null
 Invoke-Logged $cmake @('--build', $output, '--config', 'Release') "$output\build.log" | Out-Null
-$versions = @(Get-ChildItem "$buildDir\install" -Recurse -Filter opencv_version.exe)
-if ($versions.Count -ne 1) { throw ' ERROR - Installed OpenCV version executable is missing or ambiguous.' }
-$env:PATH = "$($versions[0].DirectoryName);$env:PATH"
+$versionExe = Get-InstalledOpenCVFile $buildDir 'opencv_version.exe'
+$env:PATH = "$($versionExe.DirectoryName);$env:PATH"
 $exe = if ($Generator -eq 'MSBuild') { "$output\Release\opencv_smoke.exe" } else { "$output\opencv_smoke.exe" }
 Assert-NativeExecutable $exe $receipt.architecture
 Invoke-Logged $exe @() "$output\smoke.log" | Out-Null

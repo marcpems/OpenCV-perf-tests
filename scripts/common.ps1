@@ -264,6 +264,25 @@ function Get-BuildDirectory([string]$Root, [string]$Generator, [string]$Toolchai
     return Join-Path $Root "build_hobl_$suffix"
 }
 
+function Get-InstalledOpenCVFile([string]$BuildDirectory, [string]$Name) {
+    $manifest = Join-Path $BuildDirectory 'install_manifest.txt'
+    if (-not (Test-Path $manifest)) { throw ' ERROR - OpenCV install manifest is missing; run installation first.' }
+    $install = [IO.Path]::GetFullPath("$BuildDirectory\install").TrimEnd('\') + '\'
+    $files = @(Get-Content $manifest | Where-Object { [IO.Path]::GetFileName($_) -eq $Name } |
+        ForEach-Object {
+            $path = [IO.Path]::GetFullPath($_)
+            if (-not $path.StartsWith($install, [StringComparison]::OrdinalIgnoreCase)) {
+                throw " ERROR - Install manifest entry is outside the benchmark install directory: $path"
+            }
+            Get-Item -LiteralPath $path -ErrorAction Stop
+        })
+    if ($Name -eq 'OpenCVConfig.cmake') {
+        $files = @($files | Where-Object { Test-Path "$($_.DirectoryName)\OpenCVModules.cmake" })
+    }
+    if ($files.Count -ne 1) { throw " ERROR - Expected one current installed $Name; found $($files.Count)." }
+    return $files[0]
+}
+
 function Invoke-Logged([string]$Executable, [string[]]$Arguments, [string]$Log) {
     $watch = [Diagnostics.Stopwatch]::StartNew()
     & $Executable @Arguments *> $Log

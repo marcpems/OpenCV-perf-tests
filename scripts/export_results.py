@@ -37,6 +37,7 @@ def export(source, destination):
         if "finished_at" not in study:
             raise ValueError("Cannot export an incomplete study")
     runs = []
+    measurement_modes = set()
     for directory in sorted(source.iterdir()):
         metadata_file = directory / "metadata.json"
         if not directory.is_dir() or not metadata_file.is_file():
@@ -53,23 +54,33 @@ def export(source, destination):
         if abs(float(metrics["build_time"]) - metadata["build_seconds"]) > 0.006:
             raise ValueError(f"CSV/metadata time mismatch: {directory}")
         runs.append((directory, metadata))
+        measurement_modes.add((metadata.get("profile", False),
+                               metadata.get("measure_cpu", False),
+                               metadata.get("wpr_trace", False)))
     if not runs:
         raise ValueError("No successful validated runs to export")
     if study and len(runs) != len(study["order"]):
         raise ValueError("Study run count does not match its manifest")
+    if len(measurement_modes) != 1:
+        raise ValueError("Do not pool different measurement/profiling modes in one snapshot")
     destination.mkdir(parents=True)
     groups = {}
     for directory, metadata in runs:
         output = destination / directory.name
         output.mkdir()
         hashes = {}
-        for name in FILES:
+        names = FILES + (("cpu-accounting.json",) if metadata.get("measure_cpu") else ())
+        for name in names:
             path = directory / name
             if not path.exists():
                 if name == "ninja_log.txt" and metadata["generator"] != "Ninja":
                     continue
                 raise ValueError(f"Missing run artifact: {path}")
             hashes[name] = hashlib.sha256(path.read_bytes()).hexdigest()
+            if name == "cpu-accounting.json":
+                accounting = json.loads(path.read_text(encoding="utf-8-sig"))
+                if accounting != metadata["cpu_accounting"]:
+                    raise ValueError("CPU artifact does not match run metadata")
             text = redact(path.read_text(encoding="utf-8-sig"))
             (output / name).write_text(text, encoding="utf-8")
         (output / "original_sha256.json").write_text(json.dumps(hashes, indent=2), encoding="utf-8")

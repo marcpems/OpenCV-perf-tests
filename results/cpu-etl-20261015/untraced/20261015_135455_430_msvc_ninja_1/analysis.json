@@ -1,0 +1,296 @@
+{
+  "unique_steps": 1039,
+  "compile_steps": 1015,
+  "log_span_seconds": 169.676,
+  "summed_step_elapsed_seconds": 1963.573,
+  "mean_concurrent_steps": 11.572,
+  "finish_tail_seconds": 4.185,
+  "median_compile_elapsed_seconds": 1.348,
+  "by_kind_elapsed_seconds": {
+    "compile": 1953.1619999999978,
+    "link/lib": 8.431000000000001,
+    "other": 1.98
+  },
+  "by_component_elapsed_seconds": {
+    "opencv/dnn": 669.2980000000003,
+    "opencv/core": 180.06300000000005,
+    "opencv/calib3d": 172.25300000000004,
+    "opencv/imgproc": 168.56899999999993,
+    "opencv/stitching": 88.79000000000002,
+    "opencv/objdetect": 85.57900000000001,
+    "opencv/features2d": 71.42699999999999,
+    "opencv/video": 70.35199999999999,
+    "3rdparty/openexr": 64.58200000000002,
+    "opencv/imgcodecs": 58.11000000000001,
+    "opencv/videoio": 47.456999999999994,
+    "3rdparty/protobuf": 45.230999999999995,
+    "modules/world": 41.006,
+    "opencv/photo": 38.335,
+    "opencv/ml": 32.638999999999996,
+    "3rdparty/libjpeg-turbo": 26.396,
+    "3rdparty/libwebp": 18.535,
+    "3rdparty/libtiff": 16.813,
+    "opencv/highgui": 14.454999999999998,
+    "3rdparty/openjpeg": 9.402999999999999,
+    "apps/interactive-calibration": 9.111,
+    "3rdparty/libpng": 8.082,
+    "opencv/flann": 7.645,
+    "link/generated": 5.021999999999999,
+    "3rdparty/lib": 3.409,
+    "3rdparty/zlib": 2.8200000000000003,
+    "apps/version": 2.536,
+    "apps/visualisation": 2.367,
+    "apps/annotation": 1.771,
+    "apps/model-diagnostics": 1.517
+  },
+  "slowest_steps": [
+    {
+      "seconds": 16.263,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/onnx/onnx_importer.cpp.obj"
+      ],
+      "start_seconds": 90.403
+    },
+    {
+      "seconds": 14.896,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/dls.cpp.obj"
+      ],
+      "start_seconds": 124.206
+    },
+    {
+      "seconds": 12.023,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/net_impl.cpp.obj"
+      ],
+      "start_seconds": 87.663
+    },
+    {
+      "seconds": 11.931,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/tensorflow/tf_importer.cpp.obj"
+      ],
+      "start_seconds": 97.09
+    },
+    {
+      "seconds": 11.15,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/stitching/src/seam_finders.cpp.obj"
+      ],
+      "start_seconds": 147.259
+    },
+    {
+      "seconds": 11.125,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/torch/torch_importer.cpp.obj"
+      ],
+      "start_seconds": 98.945
+    },
+    {
+      "seconds": 10.476,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/dnn/misc/caffe/opencv-caffe.pb.cc.obj"
+      ],
+      "start_seconds": 52.416
+    },
+    {
+      "seconds": 9.783,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/elementwise_layers.cpp.obj"
+      ],
+      "start_seconds": 71.472
+    },
+    {
+      "seconds": 9.661,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/fisheye.cpp.obj"
+      ],
+      "start_seconds": 125.524
+    },
+    {
+      "seconds": 9.164,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/reduce_layer.cpp.obj"
+      ],
+      "start_seconds": 81.442
+    },
+    {
+      "seconds": 8.958,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/calibinit.cpp.obj"
+      ],
+      "start_seconds": 122.51
+    },
+    {
+      "seconds": 8.789,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/tflite/tflite_importer.cpp.obj"
+      ],
+      "start_seconds": 97.46
+    },
+    {
+      "seconds": 8.639,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/net_impl_fuse.cpp.obj"
+      ],
+      "start_seconds": 88.786
+    },
+    {
+      "seconds": 8.603,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/caffe/caffe_io.cpp.obj"
+      ],
+      "start_seconds": 55.939
+    },
+    {
+      "seconds": 8.459,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/stitching/src/matchers.cpp.obj"
+      ],
+      "start_seconds": 147.013
+    },
+    {
+      "seconds": 8.433,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/connectedcomponents.cpp.obj"
+      ],
+      "start_seconds": 35.861
+    },
+    {
+      "seconds": 8.155,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/chessboard.cpp.obj"
+      ],
+      "start_seconds": 123.658
+    },
+    {
+      "seconds": 8.117,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/stitching/src/timelapsers.cpp.obj"
+      ],
+      "start_seconds": 147.3
+    },
+    {
+      "seconds": 7.798,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/net_quantization.cpp.obj"
+      ],
+      "start_seconds": 89.931
+    },
+    {
+      "seconds": 7.786,
+      "outputs": [
+        "modules/world/CMakeFiles/opencv_world.dir/__/stitching/src/motion_estimators.cpp.obj"
+      ],
+      "start_seconds": 147.111
+    }
+  ],
+  "link_steps": [
+    {
+      "seconds": 4.199,
+      "outputs": [
+        "bin/opencv_world4100.dll",
+        "lib/opencv_world4100.lib"
+      ],
+      "start_seconds": 165.343
+    },
+    {
+      "seconds": 0.738,
+      "outputs": [
+        "3rdparty/lib/libjpeg-turbo.lib"
+      ],
+      "start_seconds": 15.36
+    },
+    {
+      "seconds": 0.621,
+      "outputs": [
+        "3rdparty/lib/libwebp.lib"
+      ],
+      "start_seconds": 15.493
+    },
+    {
+      "seconds": 0.599,
+      "outputs": [
+        "3rdparty/lib/libtiff.lib"
+      ],
+      "start_seconds": 15.46
+    },
+    {
+      "seconds": 0.535,
+      "outputs": [
+        "3rdparty/lib/libopenjp2.lib"
+      ],
+      "start_seconds": 15.581
+    },
+    {
+      "seconds": 0.396,
+      "outputs": [
+        "3rdparty/lib/libpng.lib"
+      ],
+      "start_seconds": 15.736
+    },
+    {
+      "seconds": 0.214,
+      "outputs": [
+        "3rdparty/lib/IlmImf.lib"
+      ],
+      "start_seconds": 16.025
+    },
+    {
+      "seconds": 0.185,
+      "outputs": [
+        "3rdparty/lib/zlib.lib"
+      ],
+      "start_seconds": 0.489
+    },
+    {
+      "seconds": 0.144,
+      "outputs": [
+        "bin/opencv_interactive-calibration.exe"
+      ],
+      "start_seconds": 169.564
+    },
+    {
+      "seconds": 0.141,
+      "outputs": [
+        "bin/opencv_visualisation.exe"
+      ],
+      "start_seconds": 169.554
+    },
+    {
+      "seconds": 0.14,
+      "outputs": [
+        "bin/opencv_annotation.exe"
+      ],
+      "start_seconds": 169.543
+    },
+    {
+      "seconds": 0.137,
+      "outputs": [
+        "bin/opencv_version.exe"
+      ],
+      "start_seconds": 169.576
+    },
+    {
+      "seconds": 0.133,
+      "outputs": [
+        "bin/opencv_model_diagnostics.exe"
+      ],
+      "start_seconds": 169.595
+    },
+    {
+      "seconds": 0.128,
+      "outputs": [
+        "bin/opencv_version_win32.exe"
+      ],
+      "start_seconds": 169.585
+    },
+    {
+      "seconds": 0.121,
+      "outputs": [
+        "3rdparty/lib/libprotobuf.lib"
+      ],
+      "start_seconds": 17.854
+    }
+  ]
+}

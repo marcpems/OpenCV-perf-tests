@@ -1,5 +1,13 @@
 # Initial OpenCV build performance analysis
 
+**CPU/ETL follow-up:** the [LLVM versus original MSVC investigation](CPU_ETL_ANALYSIS.md)
+separates wall time from actual process-tree CPU. In a new matched series,
+LLVM used **54.98% less wall time and 47.91% less CPU than original MSBuild**;
+with Ninja fixed, it used **50.87% less CPU than MSVC**. WPR identifies a
+**45-second serialized compilation tail** in MSBuild and substantial MSVC
+optimizer/code-generation CPU. These are separate measurements from the
+historical initial results below.
+
 Measured locally on **14 October 2026**. The HOBL-equivalent baseline took
 **230.34 seconds median (3 min 50 s)**. The fastest configuration in this initial MSVC-only series was
 **Ninja with 12 jobs: 192.99 seconds median**, a **16.2% reduction** in this small
