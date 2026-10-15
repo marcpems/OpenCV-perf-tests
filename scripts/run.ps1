@@ -11,7 +11,8 @@ param(
     [switch]$Trace,
     [switch]$BinaryLog,
     [ValidateSet('Default', 'MultiToolTask')][string]$MSBuildScheduler = 'Default',
-    [ValidateRange(1, 256)][int]$CompilerJobs = 12
+    [ValidateRange(1, 256)][int]$CompilerJobs = 12,
+    [switch]$SharedCompilerLimit
 )
 . "$PSScriptRoot\common.ps1"
 Assert-NoPendingToolchainRestart
@@ -30,10 +31,18 @@ if (($BinaryLog -or $MSBuildScheduler -ne 'Default') -and $Generator -ne 'MSBuil
 if ($PSBoundParameters.ContainsKey('CompilerJobs') -and $MSBuildScheduler -eq 'Default') {
     throw ' ERROR - CompilerJobs is only used with the MultiToolTask scheduler.'
 }
+if ($SharedCompilerLimit -and $MSBuildScheduler -ne 'MultiToolTask') {
+    throw ' ERROR - SharedCompilerLimit requires the MultiToolTask scheduler.'
+}
 $schedulerArguments = @()
 if ($MSBuildScheduler -eq 'MultiToolTask') {
     $schedulerArguments = @('/p:MultiProcCL=true', "/p:MultiProcMaxCount=$CompilerJobs")
     if (-not $PSBoundParameters.ContainsKey('Label')) { $Label = 'msbuild_multitool_experiment' }
+    if ($SharedCompilerLimit) {
+        # Fresh worker nodes keep CPU attribution and subsequent runs isolated.
+        $schedulerArguments += @('/p:EnforceProcessCountAcrossBuilds=true', '/nr:false')
+        if (-not $PSBoundParameters.ContainsKey('Label')) { $Label = 'msbuild_multitool_shared_experiment' }
+    }
 }
 Assert-Source $Root
 $buildDir = Get-BuildDirectory $Root $Generator $Toolchain
@@ -100,6 +109,7 @@ $metadata = [ordered]@{
     binary_log = [bool]$BinaryLog
     msbuild_scheduler = $MSBuildScheduler
     compiler_jobs = if ($MSBuildScheduler -ne 'Default') { $CompilerJobs } else { $null }
+    shared_compiler_limit = [bool]$SharedCompilerLimit
     setup = $receipt
     cpu = (Get-CimInstance Win32_Processor | Select-Object Name, NumberOfCores, NumberOfLogicalProcessors)
     memory_gib = [math]::Round((Get-CimInstance Win32_ComputerSystem).TotalPhysicalMemory / 1GB, 2)

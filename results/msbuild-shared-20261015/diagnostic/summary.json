@@ -1,0 +1,18 @@
+{
+  "shared12_diagnostic": {
+    "count": 1,
+    "median_seconds": 171.1256,
+    "min_seconds": 171.1256,
+    "max_seconds": 171.1256,
+    "runs": [
+      {
+        "directory": "20261015_174450_844_shared12_diagnostic",
+        "build_seconds": 171.1256,
+        "clean_seconds": 0.8965,
+        "install_seconds": 2.0749,
+        "cpu_seconds": 1666.21875
+      }
+    ],
+    "median_cpu_seconds": 1666.21875
+  }
+}

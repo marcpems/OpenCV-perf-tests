@@ -1,0 +1,71 @@
+{
+  "multitool": {
+    "count": 2,
+    "median_seconds": 205.35505,
+    "min_seconds": 201.3758,
+    "max_seconds": 209.3343,
+    "runs": [
+      {
+        "directory": "20261015_175234_853_multitool_1",
+        "build_seconds": 201.3758,
+        "clean_seconds": 0.9246,
+        "install_seconds": 2.1119,
+        "cpu_seconds": 1631.96875
+      },
+      {
+        "directory": "20261015_181049_614_multitool_2",
+        "build_seconds": 209.3343,
+        "clean_seconds": 1.0708,
+        "install_seconds": 3.7285,
+        "cpu_seconds": 1905.765625
+      }
+    ],
+    "median_cpu_seconds": 1768.8671875
+  },
+  "ninja": {
+    "count": 2,
+    "median_seconds": 176.74935,
+    "min_seconds": 171.8543,
+    "max_seconds": 181.6444,
+    "runs": [
+      {
+        "directory": "20261015_175631_931_ninja_1",
+        "build_seconds": 171.8543,
+        "clean_seconds": 0.3121,
+        "install_seconds": 0.2627,
+        "cpu_seconds": 1738.109375
+      },
+      {
+        "directory": "20261015_180714_579_ninja_2",
+        "build_seconds": 181.6444,
+        "clean_seconds": 0.342,
+        "install_seconds": 0.391,
+        "cpu_seconds": 1848.390625
+      }
+    ],
+    "median_cpu_seconds": 1793.25
+  },
+  "shared": {
+    "count": 2,
+    "median_seconds": 180.9385,
+    "min_seconds": 174.8255,
+    "max_seconds": 187.0515,
+    "runs": [
+      {
+        "directory": "20261015_175956_928_shared_1",
+        "build_seconds": 187.0515,
+        "clean_seconds": 0.9381,
+        "install_seconds": 4.0753,
+        "cpu_seconds": 1781.65625
+      },
+      {
+        "directory": "20261015_180342_543_shared_2",
+        "build_seconds": 174.8255,
+        "clean_seconds": 0.92,
+        "install_seconds": 3.8695,
+        "cpu_seconds": 1693.90625
+      }
+    ],
+    "median_cpu_seconds": 1737.78125
+  }
+}

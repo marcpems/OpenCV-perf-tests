@@ -12,6 +12,7 @@ HOBL intentionally sets `BUILD_PERF_TESTS=OFF`.
 **[Latest Windows SDK comparison](docs/WINDOWS_SDK_EXPERIMENT.md)** |
 **[LLVM vs MSVC: CPU time and WPR/ETL investigation](docs/CPU_ETL_ANALYSIS.md)** |
 **[MSBuild serial-tail investigation and scheduler experiment](docs/MSBUILD_SERIAL_TAIL.md)** |
+**[MSBuild project + shared-compiler parallelism](docs/MSBUILD_SHARED_PARALLELISM.md)** |
 **[HOBL survey, equivalence and measurement methodology](docs/METHODOLOGY.md)**
 
 The baseline preserves HOBL's clean -> timed Release build -> install -> version-check
@@ -120,6 +121,14 @@ not the entire 45-second tail. It costs **7.25% more CPU** through a different
 process/scheduling model. Omit the option to retain the HOBL default.
 `-BinaryLog` captures local-only MSBuild task/command evidence and is independent
 of `-Trace`; do not publish raw binlogs.
+
+The [full-parallelism follow-up](docs/MSBUILD_SHARED_PARALLELISM.md) adds
+`-SharedCompilerLimit -Parallel 12` to MultiToolTask's `-CompilerJobs 12`.
+It measured **180.94 s**, versus **176.75 s for a fresh MSVC/Ninja control** and
+**205.36 s for fresh compiler-only MultiToolTask**. The 2.37% median gap to Ninja
+had overlapping ranges and mixed pair results; no reliable winner is established.
+WPR verified a peak of **12 compiler processes across all MSBuild workers**.
+Run `scripts\run_msbuild_parallelism_study.ps1` for the balanced six-build comparison.
 
 Ninja uses its own `build_hobl_ninja` tree. Both generators clean outside the timer,
 build, install and validate the installed executable. The default `-Parallel 0`

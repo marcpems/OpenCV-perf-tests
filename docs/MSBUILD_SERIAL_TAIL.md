@@ -1,5 +1,10 @@
 # MSBuild's serial compilation tail: what blocks it, and what is recoverable?
 
+**Next experiment:** [project parallelism with a shared compiler limit](MSBUILD_SHARED_PARALLELISM.md)
+measured **180.94 s**, versus fresh controls of **205.36 s** for compiler-only
+MultiToolTask and **176.75 s** for MSVC/Ninja. This is a separate series, not
+an update to the measurements below.
+
 Investigated on **15 October 2026**, using the original VS 2022/MSVC ARM64
 configuration. **The tail is real, but it is not 45 seconds of removable idle
 time.** It contains serial compiler execution plus repeatedly rebuilding

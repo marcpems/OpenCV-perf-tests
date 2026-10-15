@@ -192,12 +192,14 @@ try {
         if ($errors) { throw " ERROR - PowerShell syntax failure: $errors" }
     }
     & "$PSScriptRoot\test_toolchain_study.ps1"
+    & "$PSScriptRoot\test_msbuild_parallelism_study.ps1"
     & "$PSScriptRoot\test_install_manifest.ps1"
     & "$PSScriptRoot\test_cpu_accounting.ps1"
     foreach ($case in @(
         @{ arguments = @{ Toolchain = 'Clang'; BinaryLog = $true }; error = 'require MSBuild' },
         @{ arguments = @{ Generator = 'Ninja'; MSBuildScheduler = 'MultiToolTask' }; error = 'require MSBuild' },
         @{ arguments = @{ CompilerJobs = 6 }; error = 'only used with' }
+        @{ arguments = @{ SharedCompilerLimit = $true }; error = 'requires the MultiToolTask' }
     )) {
         $failed = $false
         $options = $case.arguments

@@ -229,3 +229,11 @@ The latter passes `MultiProcCL=true` and a bounded `MultiProcMaxCount`, retainin
 tracking and all source/compiler settings. It applies to clean/build/install
 and is never enabled by default. A separate untraced ABBA series measures its
 net cost; raw binary logs are private and excluded from public exports.
+
+The [shared-parallelism experiment](MSBUILD_SHARED_PARALLELISM.md) combines
+compiler-only MultiToolTask with project-level `--parallel 12`,
+`EnforceProcessCountAcrossBuilds=true` and disabled node reuse. A separate
+six-build sequence compares compiler-only MSBuild, MSVC-Ninja and shared-parallel
+MSBuild in forward/reverse order, with CPU accounting and 30-second rests.
+The single WPR/binlog pilot verifies the global compiler-process peak and is
+excluded from primary timings. Historical measurements are contextual only.
