@@ -1,5 +1,9 @@
 # LLVM versus original MSVC: wall time, CPU work and WPR evidence
 
+**Compiler-only follow-up:** [native-execution checks and microbenchmarks](COMPILER_GAP_INVESTIGATION.md)
+reproduce a large throughput gap without linking or installation, test exception
+and code-generation-thread controls, and isolate an accessor-heavy DLS function.
+
 **Follow-up:** the [deeper MSBuild tail investigation](MSBUILD_SERIAL_TAIL.md)
 correlates binary-log task boundaries with WPR. The approximately 45-second tail
 contains **31.2 s of serial compiler execution and 13.6 s of task bookkeeping**;

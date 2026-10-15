@@ -193,6 +193,7 @@ try {
     }
     & "$PSScriptRoot\test_toolchain_study.ps1"
     & "$PSScriptRoot\test_msbuild_parallelism_study.ps1"
+    & "$PSScriptRoot\test_compiler_commands.ps1"
     & "$PSScriptRoot\test_install_manifest.ps1"
     & "$PSScriptRoot\test_cpu_accounting.ps1"
     foreach ($case in @(

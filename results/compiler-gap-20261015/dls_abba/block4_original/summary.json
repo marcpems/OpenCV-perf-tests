@@ -1,0 +1,34 @@
+[
+  {
+    "case": "calib3d/src/dls.cpp",
+    "variant": "clang",
+    "count": 2,
+    "median_wall_seconds": 2.25832855,
+    "min_wall_seconds": 2.0586625,
+    "max_wall_seconds": 2.4579946,
+    "median_cpu_seconds": 2.2265625,
+    "median_user_seconds": 2.0703125,
+    "median_kernel_seconds": 0.15625,
+    "median_phase_elapsed_seconds": {
+      "Backend": 1.6423565,
+      "CodeGenPasses": 1.230241,
+      "Frontend": 0.5287014999999999,
+      "Optimizer": 0.411067
+    }
+  },
+  {
+    "case": "calib3d/src/dls.cpp",
+    "variant": "msvc",
+    "count": 2,
+    "median_wall_seconds": 4.1327774,
+    "min_wall_seconds": 3.8822533,
+    "max_wall_seconds": 4.3833015,
+    "median_cpu_seconds": 5.796875,
+    "median_user_seconds": 5.6171875,
+    "median_kernel_seconds": 0.1796875,
+    "median_phase_elapsed_seconds": {
+      "c1xx": 0.46319,
+      "c2": 3.6057300000000003
+    }
+  }
+]

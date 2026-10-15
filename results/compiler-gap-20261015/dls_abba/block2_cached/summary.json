@@ -1,0 +1,34 @@
+[
+  {
+    "case": "dls_cached.cpp",
+    "variant": "clang",
+    "count": 2,
+    "median_wall_seconds": 2.1569819,
+    "min_wall_seconds": 2.1366907,
+    "max_wall_seconds": 2.1772731,
+    "median_cpu_seconds": 2.1328125,
+    "median_user_seconds": 2.0546875,
+    "median_kernel_seconds": 0.078125,
+    "median_phase_elapsed_seconds": {
+      "Backend": 1.6245205,
+      "CodeGenPasses": 1.22218,
+      "Frontend": 0.45067599999999997,
+      "Optimizer": 0.40128949999999997
+    }
+  },
+  {
+    "case": "dls_cached.cpp",
+    "variant": "msvc",
+    "count": 2,
+    "median_wall_seconds": 2.5969732,
+    "min_wall_seconds": 2.2914048,
+    "max_wall_seconds": 2.9025416,
+    "median_cpu_seconds": 4.09375,
+    "median_user_seconds": 3.8515625,
+    "median_kernel_seconds": 0.2421875,
+    "median_phase_elapsed_seconds": {
+      "c1xx": 0.50784,
+      "c2": 2.0248299999999997
+    }
+  }
+]

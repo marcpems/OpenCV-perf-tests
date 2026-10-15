@@ -1,0 +1,19 @@
+{
+  "status": "succeeded",
+  "started_at": "2026-10-15T19:45:27.6638142+01:00",
+  "order": [
+    "original",
+    "cached",
+    "cached",
+    "original"
+  ],
+  "cached_source_sha256": "A2B36CE54CFA6993191A4A33E3BFC4A0795BFC42FAE02328933AB1F719822107",
+  "runner_sha256": "0D52B870E8A31947B4F44417AD25EE30ABC86CE12CA02198B7D23E20D45CE5D5",
+  "completed_blocks": [
+    "block1_original",
+    "block2_cached",
+    "block3_cached",
+    "block4_original"
+  ],
+  "finished_at": "2026-10-15T19:46:37.9698816+01:00"
+}

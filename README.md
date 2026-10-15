@@ -14,6 +14,7 @@ HOBL intentionally sets `BUILD_PERF_TESTS=OFF`.
 **[MSBuild serial-tail investigation and scheduler experiment](docs/MSBUILD_SERIAL_TAIL.md)** |
 **[MSBuild project + shared-compiler parallelism](docs/MSBUILD_SHARED_PARALLELISM.md)** |
 **[Fresh five-configuration rerun after device change](docs/FIVE_CONFIGURATION_RERUN.md)** |
+**[Compiler gap: native execution, microbenchmarks and source patterns](docs/COMPILER_GAP_INVESTIGATION.md)** |
 **[HOBL survey, equivalence and measurement methodology](docs/METHODOLOGY.md)**
 
 The baseline preserves HOBL's clean -> timed Release build -> install -> version-check

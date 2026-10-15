@@ -1,0 +1,130 @@
+{
+  "architecture": [
+    {
+      "process_machine": "0x0000",
+      "executable": "C:\\PROGRA~2\\MICROS~2\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\HOSTAR~1\\arm64\\cl.exe",
+      "native_machine": "0xAA64",
+      "toolchain": "MSVC",
+      "loaded_images": [
+        {
+          "sha256": "47B1E067B8F81A52EDDD5A623675BD50126567B1DD1118CDE4D52B9E550EB149",
+          "name": "cl.exe",
+          "machine": "0xAA64",
+          "path": "C:\\PROGRA~2\\MICROS~2\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\HOSTAR~1\\arm64\\cl.exe",
+          "file_version": "19.44.35229.0",
+          "is_debug_image": false
+        },
+        {
+          "sha256": "1786A6B851CA6DC9FDF6950330B67EA52EF9BB9C0D63DAF83242EE1A3CE19F60",
+          "name": "c2.dll",
+          "machine": "0xAA64",
+          "path": "C:\\PROGRA~2\\MICROS~2\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\HOSTAR~1\\arm64\\c2.dll",
+          "file_version": "19.44.35229.0",
+          "is_debug_image": false
+        },
+        {
+          "sha256": "8B20A7F19B79BBA3B28CB770CC964872EC13E443692C2D14814CFE95B2DDB0C7",
+          "name": "c1xx.dll",
+          "machine": "0xAA64",
+          "path": "C:\\PROGRA~2\\MICROS~2\\2022\\BUILDT~1\\VC\\Tools\\MSVC\\1444~1.352\\bin\\HOSTAR~1\\arm64\\c1xx.dll",
+          "file_version": "19.44.35229.0",
+          "is_debug_image": false
+        }
+      ],
+      "arguments": "/nologo /TP -DCVAPI_EXPORTS -DENABLE_PLUGINS -DHAVE_DSHOW -DHAVE_FFMPEG_WRAPPER -DHAVE_FLATBUFFERS=1 -DHAVE_IMGCODEC_HDR -DHAVE_IMGCODEC_PFM -DHAVE_IMGCODEC_PXM -DHAVE_IMGCODEC_SUNRASTER -DHAVE_MSMF -DHAVE_MSMF_DXVA -DHAVE_OBSENSOR -DHAVE_OBSENSOR_MSMF -DHAVE_PROTOBUF=1 -DHAVE_WEBP -DHAVE_WIN32UI -DOPENCV_ALLOCATOR_STATS_COUNTER_TYPE=int -DOPENCV_MODULE_IS_PART_OF_WORLD=1 -DOPJ_STATIC -D_CRT_SECURE_NO_WARNINGS=1 -D_USE_MATH_DEFINES -D_VARIADIC_MAX=10 -D_WIN32_WINNT=0x0601 -D__OPENCV_BUILD=1 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -ID:\\opencv\\build_hobl_ninja\\3rdparty\\zlib -ID:\\opencv\\3rdparty\\zlib -ID:\\opencv\\build_hobl_ninja -ID:\\opencv\\3rdparty\\openjpeg\\openjp2 -ID:\\opencv\\build_hobl_ninja\\3rdparty\\openjpeg\\openjp2 -ID:\\opencv\\build_hobl_ninja\\3rdparty\\libtiff -ID:\\opencv\\3rdparty\\libtiff -ID:\\opencv\\3rdparty\\libpng -ID:\\opencv\\3rdparty\\libwebp\\src -ID:\\opencv\\build_hobl_ninja\\3rdparty\\libjpeg-turbo -ID:\\opencv\\3rdparty\\libjpeg-turbo\\src -ID:\\opencv\\modules\\core\\include -ID:\\opencv\\build_hobl_ninja\\modules\\world -ID:\\opencv\\modules\\flann\\include -ID:\\opencv\\modules\\imgproc\\include -ID:\\opencv\\modules\\ml\\include -ID:\\opencv\\modules\\photo\\include -ID:\\opencv\\modules\\dnn\\include -ID:\\opencv\\modules\\dnn\\misc\\caffe -ID:\\opencv\\modules\\dnn\\misc\\tensorflow -ID:\\opencv\\modules\\dnn\\misc\\onnx -ID:\\opencv\\modules\\dnn\\misc\\tflite -ID:\\opencv\\modules\\features2d\\include -ID:\\opencv\\modules\\imgcodecs\\include -ID:\\opencv\\modules\\videoio\\include -ID:\\opencv\\modules\\calib3d\\include -ID:\\opencv\\modules\\highgui\\include -ID:\\opencv\\modules\\objdetect\\include -ID:\\opencv\\modules\\stitching\\include -ID:\\opencv\\modules\\video\\include -ID:\\opencv\\modules\\world\\include -external:ID:\\opencv\\3rdparty\\openexr\\Half -external:ID:\\opencv\\3rdparty\\openexr\\Iex -external:ID:\\opencv\\3rdparty\\openexr\\IlmThread -external:ID:\\opencv\\3rdparty\\openexr\\Imath -external:ID:\\opencv\\3rdparty\\openexr\\IlmImf -external:ID:\\opencv\\build_hobl_ninja\\3rdparty\\openexr -external:ID:\\opencv\\3rdparty\\flatbuffers\\include -external:ID:\\opencv\\3rdparty\\protobuf\\src -external:W0 /DWIN32 /D_WINDOWS /W4 /GR  /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D _SCL_SECURE_NO_WARNINGS /Gy /bigobj /D _ARM64_DISTINCT_NEON_TYPES /Oi  /fp:precise /FS   /EHa /wd4127 /wd4251 /wd4324 /wd4275 /wd4512 /wd4589 /wd4819 /wd4244 /wd4267 /wd4018 /wd4355 /wd4800 /wd4251 /wd4996 /wd4146 /wd4305 /wd4127 /wd4100 /wd4512 /wd4125 /wd4389 /wd4510 /wd4610 /wd4702 /wd4456 /wd4457 /wd4065 /wd4310 /wd4661 /wd4506 /wd4125 /wd4267 /wd4127 /wd4244 /wd4512 /wd4702 /wd4456 /wd4510 /wd4610 /wd4800 /wd4701 /wd4703 /wd4505 /wd4458  /O2 /Ob2 /DNDEBUG  -MD /showIncludes /Fo\"D:\\copilot\\opencv-perf-tests\\results\\local\\compiler-architecture-20261015\\MSVC\\unit.obj\" /Fd\"D:\\copilot\\opencv-perf-tests\\results\\local\\compiler-architecture-20261015\\MSVC\\unit.pdb\" /FS -c D:\\opencv\\modules\\calib3d\\src\\dls.cpp",
+      "exit_code": 0
+    },
+    {
+      "process_machine": "0x0000",
+      "executable": "D:\\copilot\\opencv-perf-tests\\.tools\\clang+llvm-23.1.3-aarch64-pc-windows-msvc\\bin\\clang++.exe",
+      "native_machine": "0xAA64",
+      "toolchain": "Clang",
+      "loaded_images": [
+        {
+          "sha256": "EDA503F44C4E64122E081F977E64D3DD7354E3C19C2522D3A7994D1CD9EF2286",
+          "name": "clang++.exe",
+          "machine": "0xAA64",
+          "path": "D:\\copilot\\opencv-perf-tests\\.tools\\clang+llvm-23.1.3-aarch64-pc-windows-msvc\\bin\\clang++.exe",
+          "file_version": "23.1.3",
+          "is_debug_image": false
+        }
+      ],
+      "arguments": "-DCVAPI_EXPORTS -DENABLE_PLUGINS -DHAVE_DSHOW -DHAVE_FFMPEG_WRAPPER -DHAVE_FLATBUFFERS=1 -DHAVE_IMGCODEC_HDR -DHAVE_IMGCODEC_PFM -DHAVE_IMGCODEC_PXM -DHAVE_IMGCODEC_SUNRASTER -DHAVE_MSMF -DHAVE_MSMF_DXVA -DHAVE_OBSENSOR -DHAVE_OBSENSOR_MSMF -DHAVE_PROTOBUF=1 -DHAVE_WEBP -DHAVE_WIN32UI -DOPENCV_ALLOCATOR_STATS_COUNTER_TYPE=int -DOPENCV_MODULE_IS_PART_OF_WORLD=1 -DOPJ_STATIC -D_USE_MATH_DEFINES -D_WIN32_WINNT=0x0601 -D__OPENCV_BUILD=1 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -ID:/opencv/build_hobl_clang_ninja/3rdparty/zlib -ID:/opencv/3rdparty/zlib -ID:/opencv/build_hobl_clang_ninja -ID:/opencv/3rdparty/openjpeg/openjp2 -ID:/opencv/build_hobl_clang_ninja/3rdparty/openjpeg/openjp2 -ID:/opencv/build_hobl_clang_ninja/3rdparty/libtiff -ID:/opencv/3rdparty/libtiff -ID:/opencv/3rdparty/libpng -ID:/opencv/3rdparty/libwebp/src -ID:/opencv/build_hobl_clang_ninja/3rdparty/libjpeg-turbo -ID:/opencv/3rdparty/libjpeg-turbo/src -ID:/opencv/modules/core/include -ID:/opencv/build_hobl_clang_ninja/modules/world -ID:/opencv/modules/flann/include -ID:/opencv/modules/imgproc/include -ID:/opencv/modules/ml/include -ID:/opencv/modules/photo/include -ID:/opencv/modules/dnn/include -ID:/opencv/modules/dnn/misc/caffe -ID:/opencv/modules/dnn/misc/tensorflow -ID:/opencv/modules/dnn/misc/onnx -ID:/opencv/modules/dnn/misc/tflite -ID:/opencv/modules/features2d/include -ID:/opencv/modules/imgcodecs/include -ID:/opencv/modules/videoio/include -ID:/opencv/modules/calib3d/include -ID:/opencv/modules/highgui/include -ID:/opencv/modules/objdetect/include -ID:/opencv/modules/stitching/include -ID:/opencv/modules/video/include -ID:/opencv/modules/world/include -isystem D:/opencv/3rdparty/openexr/Half -isystem D:/opencv/3rdparty/openexr/Iex -isystem D:/opencv/3rdparty/openexr/IlmThread -isystem D:/opencv/3rdparty/openexr/Imath -isystem D:/opencv/3rdparty/openexr/IlmImf -isystem D:/opencv/build_hobl_clang_ninja/3rdparty/openexr -isystem D:/opencv/3rdparty/flatbuffers/include -isystem D:/opencv/3rdparty/protobuf/src -fno-delayed-template-parsing   -fsigned-char -W -Wall -Wreturn-type -Wnon-virtual-dtor -Waddress -Wsequence-point -Wformat -Wformat-security -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wsign-promo -Wuninitialized -Winconsistent-missing-override -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -Wno-comment -Wno-deprecated-enum-enum-conversion -Wno-deprecated-anon-enum-enum-conversion -fdiagnostics-show-option -Qunused-arguments -ffunction-sections -fdata-sections   -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-prototypes -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-sign-compare -Wno-invalid-offsetof -Wno-deprecated-declarations -Wno-deprecated-declarations -O3 -DNDEBUG  -DNDEBUG -std=c++14 -D_DLL -D_MT -Xclang --dependent-lib=msvcrt -MD -MT modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/dls.cpp.obj -MF \"D:\\copilot\\opencv-perf-tests\\results\\local\\compiler-architecture-20261015\\Clang\\unit.d\" -o \"D:\\copilot\\opencv-perf-tests\\results\\local\\compiler-architecture-20261015\\Clang\\unit.obj\" -c D:/opencv/modules/calib3d/src/dls.cpp",
+      "exit_code": 0
+    }
+  ],
+  "shared_compile_outputs": 1015,
+  "shared_source_files_with_different_bytes": [],
+  "msvc_only_outputs": [],
+  "clang_only_outputs": [
+    "3rdparty/libpng/CMakeFiles/libpng.dir/arm/filter_neon.S.obj"
+  ],
+  "feature_headers": {
+    "cvconfig.h": {
+      "identical": true,
+      "sha256": "2625acce461596dc5e923e75b65f438a3d9caa611e5bce3c5fe44fbdc95eb20b"
+    },
+    "opencv2/opencv_modules.hpp": {
+      "identical": true,
+      "sha256": "4e6ab0950576259daf5ad2dc8f296c8b4bb21b3cc74f3d0e30f4d867e8a443e9"
+    }
+  },
+  "flags": {
+    "msvc": {
+      "compile_count": 1015,
+      "debug_info_commands": 0,
+      "lto_commands": 0
+    },
+    "clang": {
+      "compile_count": 1016,
+      "debug_info_commands": 0,
+      "lto_commands": 0
+    }
+  },
+  "macros": {
+    "msvc": {
+      "_M_ARM64": "1",
+      "_MSC_VER": "1944",
+      "_MSVC_LANG": "201402L",
+      "_ITERATOR_DEBUG_LEVEL": "0",
+      "_MSVC_STL_HARDENING": "0",
+      "_CPPUNWIND": "1",
+      "_DLL": "1",
+      "NDEBUG": "defined"
+    },
+    "clang": {
+      "_M_ARM64": "1",
+      "_MSC_VER": "1944",
+      "_MSVC_LANG": "201402L",
+      "_ITERATOR_DEBUG_LEVEL": "0",
+      "_MSVC_STL_HARDENING": "0",
+      "_CPPUNWIND": "1",
+      "_DLL": "1",
+      "NDEBUG": "defined"
+    }
+  },
+  "dls_code_section_bytes": {
+    "msvc_original": 48420,
+    "msvc_cached": 17316,
+    "clang_original": 56568,
+    "clang_cached": 17168
+  },
+  "generated_patterns": {
+    "original_dls_sha256": "496ff97c8cdb86f26d8e137fde5749521cb43ebd0f84263b93ad312876c4a86e",
+    "changed_function": "cv::dls::cayley_LS_M",
+    "assignment_count": 1968,
+    "files_sha256": {
+      "cached_2048.cpp": "fd17e4adf1a75d2402b98d48b522e9d4994aea731e9888c3b36d41bbf15de73d",
+      "cached_4096.cpp": "e4542ad97c1bfd0329dc5544fd5ecdc48148179b369a24590a832ee18072c077",
+      "cached_512.cpp": "6941fd39b84fb09a10a9a3ab7735c667df0a0b92e528f611071776e6756590fc",
+      "dls_cached.cpp": "a2b36ce54cfa6993191a4a33e3bfc4a0795bfc42fae02328933ab1f719822107",
+      "table_2048.cpp": "b7eb3c1aa54cc020252a5424a1c385de1d02afa584ae03c00d0d459a9ac08137",
+      "table_4096.cpp": "9b8d675b493c88f7332b1c14d7b47ffeadbcede99dbccbc0530a2ec718b2f0da",
+      "table_512.cpp": "d796ec1251876a5a8654d8ba93eab220cc58ef1d420a3216647d9376d528f18e",
+      "validate_dls.cpp": "ae7c2c47887cfdae64aaea88147a0695fc20362688d928d0131891a950e02dc0",
+      "view_2048.cpp": "249f47a3a3e18248fe5a1245f797bd62c43908875bcd3e164d9d5754276bf901",
+      "view_4096.cpp": "7b6c53837e28c4a6cd83657117bf19464b163d9814736e2546b0a4708b3aaa0b",
+      "view_512.cpp": "e6b8fed16a9f3cb5c7609f4480193d176226a145c7630a1212b08345993d6b35"
+    }
+  }
+}

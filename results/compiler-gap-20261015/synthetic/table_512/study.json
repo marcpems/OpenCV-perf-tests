@@ -1,0 +1,53 @@
+{
+  "status": "succeeded",
+  "started_at": "2026-10-15T19:39:12.4972047+01:00",
+  "sources": [
+    "calib3d/src/dls.cpp"
+  ],
+  "variants": [
+    "msvc",
+    "clang",
+    "clang_noalias"
+  ],
+  "repetitions": 4,
+  "source_override": "D:\\copilot\\opencv-perf-tests\\.work\\compiler-patterns\\table_512.cpp",
+  "warmups_per_source_variant": 1,
+  "phase_timing": false,
+  "frozen_sha256": {
+    "D:\\opencv\\build_hobl_ninja\\build.ninja": "3957E4FDDE710633E16DD77184ECAE9E3BA5232871CBDA687A45909833D73795",
+    "D:\\opencv\\build_hobl_clang_ninja\\build.ninja": "CF17D94E2490F6D7F9F3E67C084C1388FC9DEC99D2B625B270B0E789CA89F7AB",
+    "D:\\opencv\\build_hobl_clang_ninja\\benchmark-setup.json": "EAFD6847553E3359CA2A0231B3E93D039D614A96275F1E6D77FF35B823BAC767",
+    "D:\\copilot\\opencv-perf-tests\\scripts\\run_compiler_microbench.ps1": "B939CFA161E0E01EB4114E1C190585A58105BEAD02FE7EB1893CCD26666B8A3D",
+    "D:\\copilot\\opencv-perf-tests\\scripts\\BuildAccounting.cs": "E9F819A2CD00208782FB390895C6C9EB9F9CF0C4FBA9670562DC907AFBCB3692",
+    "D:\\copilot\\opencv-perf-tests\\benchmark.json": "298A17EBA62A2D17E82B1AB806E48BE4BF3B06EC615B31AA936D6E9845FACBE1",
+    "D:\\copilot\\opencv-perf-tests\\.work\\compiler-patterns\\table_512.cpp": "D796EC1251876A5A8654D8BA93EAB220CC58EF1D420A3216647D9376D528F18E",
+    "C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostarm64/arm64/cl.exe": "47B1E067B8F81A52EDDD5A623675BD50126567B1DD1118CDE4D52B9E550EB149",
+    "D:\\opencv\\build_hobl_clang_ninja\\CMakeFiles\\rules.ninja": "A9CF2A572B1FEC324F621DD2C22205856E5C71DE5EE79246F69BDF610F119284",
+    "D:\\copilot\\opencv-perf-tests\\scripts\\compiler_commands.ps1": "74613BD54FCF1DD1288C56A4C93F131DC4CB3544B3513E899E94B7BD34128F96",
+    "D:\\opencv\\build_hobl_ninja\\CMakeFiles\\rules.ninja": "64A09A8B3657424CD03D0B5D7178EC61579504C162C0DA96605F24BB4C6B9C46",
+    "D:\\opencv\\build_hobl_ninja\\benchmark-setup.json": "57D1DE9072BCCF9F0BC72581DD6051D9EC53E97C9ECA904D16C0602B85DF8DD0",
+    "D:\\copilot\\opencv-perf-tests\\scripts\\common.ps1": "B1D2B2883C1AA6D05BB1C4BECCCC315013D21513E452EFAECCBAF53C5E9D15AC",
+    "D:/copilot/opencv-perf-tests/.tools/clang+llvm-23.1.3-aarch64-pc-windows-msvc/bin/clang++.exe": "EDA503F44C4E64122E081F977E64D3DD7354E3C19C2522D3A7994D1CD9EF2286",
+    "D:\\opencv\\build_hobl_ninja\\CMakeCache.txt": "3B14B45067CE13E96DCA03D8D33F8BE400CEF29A77686D13328076139BD6F514",
+    "D:\\opencv\\modules\\calib3d\\src\\dls.cpp": "496FF97C8CDB86F26D8E137FDE5749521CB43EBD0F84263B93AD312876C4A86E",
+    "D:\\opencv\\build_hobl_clang_ninja\\CMakeCache.txt": "BBE493BF6272217B02D242A3A4E9A99D924A67BAA826ACF2EAB45140D9C58631"
+  },
+  "runs": [
+    "calib3d_src_dls.cpp_msvc_0",
+    "calib3d_src_dls.cpp_clang_0",
+    "calib3d_src_dls.cpp_clang_noalias_0",
+    "calib3d_src_dls.cpp_msvc_1",
+    "calib3d_src_dls.cpp_clang_1",
+    "calib3d_src_dls.cpp_clang_noalias_1",
+    "calib3d_src_dls.cpp_clang_noalias_2",
+    "calib3d_src_dls.cpp_clang_2",
+    "calib3d_src_dls.cpp_msvc_2",
+    "calib3d_src_dls.cpp_msvc_3",
+    "calib3d_src_dls.cpp_clang_3",
+    "calib3d_src_dls.cpp_clang_noalias_3",
+    "calib3d_src_dls.cpp_clang_noalias_4",
+    "calib3d_src_dls.cpp_clang_4",
+    "calib3d_src_dls.cpp_msvc_4"
+  ],
+  "finished_at": "2026-10-15T19:39:14.2513929+01:00"
+}

@@ -1,0 +1,84 @@
+compiler_config_probe.cpp
+Note: including file: C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vector
+Note: including file:  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\yvals_core.h
+Note: including file:   C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h
+Note: including file:    C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\sal.h
+Note: including file:     C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\concurrencysal.h
+Note: including file:    C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vadefs.h
+Note: including file:   C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\xkeycheck.h
+Note: including file:  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\__msvc_bit_utils.hpp
+Note: including file:   C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\climits
+Note: including file:    C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\limits.h
+Note: including file:   C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\xtr1common
+Note: including file:   C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\intrin0.h
+Note: including file:    C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\intrin0.inl.h
+Note: including file:  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\__msvc_sanitizer_annotate_container.hpp
+Note: including file:  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\xmemory
+Note: including file:   C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\cstdint
+Note: including file:    C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\stdint.h
+Note: including file:   C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\cstdlib
+Note: including file:    C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\math.h
+Note: including file:     C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_math.h
+Note: including file:      C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt.h
+Note: including file:     C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_math_defines.h
+Note: including file:    C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\stdlib.h
+Note: including file:     C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_malloc.h
+Note: including file:     C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_search.h
+Note: including file:      C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\stddef.h
+Note: including file:     C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_wstdlib.h
+Note: including file:   C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\limits
+Note: including file:    C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\cfloat
+Note: including file:     C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\float.h
+Note: including file:    C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\cwchar
+Note: including file:     C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\cstdio
+Note: including file:      C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\stdio.h
+Note: including file:       C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_wstdio.h
+Note: including file:        C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_stdio_config.h
+Note: including file:     C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\wchar.h
+Note: including file:      C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_memcpy_s.h
+Note: including file:       C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\errno.h
+Note: including file:       C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime_string.h
+Note: including file:      C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_wconio.h
+Note: including file:      C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_wctype.h
+Note: including file:      C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_wdirect.h
+Note: including file:      C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_wio.h
+Note: including file:       C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_share.h
+Note: including file:      C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_wprocess.h
+Note: including file:      C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_wstring.h
+Note: including file:      C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_wtime.h
+Note: including file:      C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\sys/stat.h
+Note: including file:       C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\sys/types.h
+Note: including file:      C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\intrin.h
+Note: including file:       C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\setjmp.h
+Note: including file:       C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\arm64intr.h
+Note: including file:       C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\arm64_neon.h
+Note: including file:   C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\new
+Note: including file:    C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\exception
+Note: including file:     C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\yvals.h
+Note: including file:      C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\crtdbg.h
+Note: including file:       C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime_new_debug.h
+Note: including file:        C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime_new.h
+Note: including file:      C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\crtdefs.h
+Note: including file:      C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\use_ansi.h
+Note: including file:     C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\type_traits
+Note: including file:      C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\cstddef
+Note: including file:      C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\cstring
+Note: including file:       C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\string.h
+Note: including file:        C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_memory.h
+Note: including file:     C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\malloc.h
+Note: including file:     C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime_exception.h
+Note: including file:      C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\eh.h
+Note: including file:       C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_terminate.h
+Note: including file:   C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\xatomic.h
+Note: including file:   C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\xutility
+Note: including file:    C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\__msvc_iter_core.hpp
+Note: including file:     C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\utility
+Note: including file:      C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\initializer_list
+_M_ARM64=1
+_MSC_VER=1944
+_MSVC_LANG=201402L
+_ITERATOR_DEBUG_LEVEL=0
+_MSVC_STL_HARDENING=0
+_CPPUNWIND=1
+_DLL=1
+NDEBUG=defined

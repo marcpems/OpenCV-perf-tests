@@ -1,0 +1,51 @@
+[
+  {
+    "case": "calib3d/src/dls.cpp",
+    "variant": "clang",
+    "count": 4,
+    "median_wall_seconds": 2.0985427000000003,
+    "min_wall_seconds": 1.9896077,
+    "max_wall_seconds": 2.1773102,
+    "median_cpu_seconds": 2.0625,
+    "median_user_seconds": 1.9296875,
+    "median_kernel_seconds": 0.1328125,
+    "median_phase_elapsed_seconds": {
+      "Backend": 1.4912450000000002,
+      "CodeGenPasses": 1.017093,
+      "Frontend": 0.55322,
+      "Optimizer": 0.437593
+    }
+  },
+  {
+    "case": "calib3d/src/dls.cpp",
+    "variant": "clang_noalias",
+    "count": 4,
+    "median_wall_seconds": 2.0343211500000002,
+    "min_wall_seconds": 1.7713894,
+    "max_wall_seconds": 2.2729647,
+    "median_cpu_seconds": 2.015625,
+    "median_user_seconds": 1.875,
+    "median_kernel_seconds": 0.140625,
+    "median_phase_elapsed_seconds": {
+      "Backend": 1.4558464999999998,
+      "CodeGenPasses": 0.9966785,
+      "Frontend": 0.5114445000000001,
+      "Optimizer": 0.397162
+    }
+  },
+  {
+    "case": "calib3d/src/dls.cpp",
+    "variant": "msvc",
+    "count": 4,
+    "median_wall_seconds": 4.9575853500000004,
+    "min_wall_seconds": 3.8297888,
+    "max_wall_seconds": 5.5159042,
+    "median_cpu_seconds": 6.609375,
+    "median_user_seconds": 6.3984375,
+    "median_kernel_seconds": 0.2109375,
+    "median_phase_elapsed_seconds": {
+      "c1xx": 0.5805199999999999,
+      "c2": 4.245755
+    }
+  }
+]

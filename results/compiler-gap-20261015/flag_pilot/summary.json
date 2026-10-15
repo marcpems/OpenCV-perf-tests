@@ -1,0 +1,258 @@
+[
+  {
+    "case": "calib3d/src/dls.cpp",
+    "variant": "clang",
+    "count": 2,
+    "median_wall_seconds": 1.81722985,
+    "min_wall_seconds": 1.7683072,
+    "max_wall_seconds": 1.8661525,
+    "median_cpu_seconds": 1.8046875,
+    "median_user_seconds": 1.7109375,
+    "median_kernel_seconds": 0.09375,
+    "median_phase_elapsed_seconds": {
+      "Backend": 1.2481445,
+      "CodeGenPasses": 0.937732,
+      "Frontend": 0.4891505,
+      "Optimizer": 0.309587
+    }
+  },
+  {
+    "case": "calib3d/src/dls.cpp",
+    "variant": "clang_O0",
+    "count": 2,
+    "median_wall_seconds": 0.6434176,
+    "min_wall_seconds": 0.6434104,
+    "max_wall_seconds": 0.6434248,
+    "median_cpu_seconds": 0.6328125,
+    "median_user_seconds": 0.546875,
+    "median_kernel_seconds": 0.0859375,
+    "median_phase_elapsed_seconds": {
+      "Backend": 0.143947,
+      "CodeGenPasses": 0.14102900000000002,
+      "Frontend": 0.43028,
+      "Optimizer": 0.0023959999999999997
+    }
+  },
+  {
+    "case": "calib3d/src/dls.cpp",
+    "variant": "clang_O2",
+    "count": 2,
+    "median_wall_seconds": 2.04630635,
+    "min_wall_seconds": 1.9056063,
+    "max_wall_seconds": 2.1870064,
+    "median_cpu_seconds": 2.015625,
+    "median_user_seconds": 1.921875,
+    "median_kernel_seconds": 0.09375,
+    "median_phase_elapsed_seconds": {
+      "Backend": 1.506163,
+      "CodeGenPasses": 1.114527,
+      "Frontend": 0.467814,
+      "Optimizer": 0.390671
+    }
+  },
+  {
+    "case": "calib3d/src/dls.cpp",
+    "variant": "clang_async",
+    "count": 2,
+    "median_wall_seconds": 2.5107303,
+    "min_wall_seconds": 2.4184304,
+    "max_wall_seconds": 2.6030302,
+    "median_cpu_seconds": 2.484375,
+    "median_user_seconds": 2.3359375,
+    "median_kernel_seconds": 0.1484375,
+    "median_phase_elapsed_seconds": {
+      "Backend": 1.7786415,
+      "CodeGenPasses": 1.0189755,
+      "Frontend": 0.6513709999999999,
+      "Optimizer": 0.7586045
+    }
+  },
+  {
+    "case": "calib3d/src/dls.cpp",
+    "variant": "msvc",
+    "count": 2,
+    "median_wall_seconds": 3.8596786499999998,
+    "min_wall_seconds": 3.4542496,
+    "max_wall_seconds": 4.2651077,
+    "median_cpu_seconds": 5.4140625,
+    "median_user_seconds": 5.25,
+    "median_kernel_seconds": 0.1640625,
+    "median_phase_elapsed_seconds": {
+      "c1xx": 0.52634,
+      "c2": 3.26876
+    }
+  },
+  {
+    "case": "calib3d/src/dls.cpp",
+    "variant": "msvc_Od",
+    "count": 2,
+    "median_wall_seconds": 0.6415466000000001,
+    "min_wall_seconds": 0.6176336,
+    "max_wall_seconds": 0.6654596,
+    "median_cpu_seconds": 0.71875,
+    "median_user_seconds": 0.578125,
+    "median_kernel_seconds": 0.140625,
+    "median_phase_elapsed_seconds": {
+      "c1xx": 0.479605,
+      "c2": 0.095695
+    }
+  },
+  {
+    "case": "calib3d/src/dls.cpp",
+    "variant": "msvc_cg1",
+    "count": 2,
+    "median_wall_seconds": 5.0099531,
+    "min_wall_seconds": 4.9888058,
+    "max_wall_seconds": 5.0311004,
+    "median_cpu_seconds": 4.984375,
+    "median_user_seconds": 4.8671875,
+    "median_kernel_seconds": 0.1171875,
+    "median_phase_elapsed_seconds": {
+      "c1xx": 0.497955,
+      "c2": 4.45576
+    }
+  },
+  {
+    "case": "calib3d/src/dls.cpp",
+    "variant": "msvc_ehsc",
+    "count": 2,
+    "median_wall_seconds": 3.5936970500000003,
+    "min_wall_seconds": 3.468923,
+    "max_wall_seconds": 3.7184711,
+    "median_cpu_seconds": 5.1640625,
+    "median_user_seconds": 4.9921875,
+    "median_kernel_seconds": 0.171875,
+    "median_phase_elapsed_seconds": {
+      "c1xx": 0.5179050000000001,
+      "c2": 3.0097300000000002
+    }
+  },
+  {
+    "case": "dnn/src/onnx/onnx_importer.cpp",
+    "variant": "clang",
+    "count": 2,
+    "median_wall_seconds": 3.1559771999999997,
+    "min_wall_seconds": 3.1089613,
+    "max_wall_seconds": 3.2029931,
+    "median_cpu_seconds": 3.1171875,
+    "median_user_seconds": 3.0390625,
+    "median_kernel_seconds": 0.078125,
+    "median_phase_elapsed_seconds": {
+      "Backend": 2.2457065,
+      "CodeGenPasses": 1.121209,
+      "Frontend": 0.818044,
+      "Optimizer": 1.1233795
+    }
+  },
+  {
+    "case": "dnn/src/onnx/onnx_importer.cpp",
+    "variant": "clang_O0",
+    "count": 2,
+    "median_wall_seconds": 1.15619735,
+    "min_wall_seconds": 1.1553657,
+    "max_wall_seconds": 1.157029,
+    "median_cpu_seconds": 1.140625,
+    "median_user_seconds": 1.0859375,
+    "median_kernel_seconds": 0.0546875,
+    "median_phase_elapsed_seconds": {
+      "Backend": 0.28737650000000003,
+      "CodeGenPasses": 0.2792155,
+      "Frontend": 0.793545,
+      "Optimizer": 0.0075435
+    }
+  },
+  {
+    "case": "dnn/src/onnx/onnx_importer.cpp",
+    "variant": "clang_O2",
+    "count": 2,
+    "median_wall_seconds": 3.2213786,
+    "min_wall_seconds": 2.9453491,
+    "max_wall_seconds": 3.4974081,
+    "median_cpu_seconds": 3.203125,
+    "median_user_seconds": 3.046875,
+    "median_kernel_seconds": 0.15625,
+    "median_phase_elapsed_seconds": {
+      "Backend": 2.1835405,
+      "CodeGenPasses": 0.973794,
+      "Frontend": 0.9416720000000001,
+      "Optimizer": 1.208656
+    }
+  },
+  {
+    "case": "dnn/src/onnx/onnx_importer.cpp",
+    "variant": "clang_async",
+    "count": 2,
+    "median_wall_seconds": 3.65734915,
+    "min_wall_seconds": 3.5592745,
+    "max_wall_seconds": 3.7554238,
+    "median_cpu_seconds": 3.609375,
+    "median_user_seconds": 3.484375,
+    "median_kernel_seconds": 0.125,
+    "median_phase_elapsed_seconds": {
+      "Backend": 2.7535815,
+      "CodeGenPasses": 1.3651735,
+      "Frontend": 0.8094465,
+      "Optimizer": 1.387324
+    }
+  },
+  {
+    "case": "dnn/src/onnx/onnx_importer.cpp",
+    "variant": "msvc",
+    "count": 2,
+    "median_wall_seconds": 2.9557269,
+    "min_wall_seconds": 2.9085605,
+    "max_wall_seconds": 3.0028933,
+    "median_cpu_seconds": 8.8984375,
+    "median_user_seconds": 8.65625,
+    "median_kernel_seconds": 0.2421875,
+    "median_phase_elapsed_seconds": {
+      "c1xx": 1.09747,
+      "c2": 1.79491
+    }
+  },
+  {
+    "case": "dnn/src/onnx/onnx_importer.cpp",
+    "variant": "msvc_Od",
+    "count": 2,
+    "median_wall_seconds": 1.26740685,
+    "min_wall_seconds": 1.1258735,
+    "max_wall_seconds": 1.4089402,
+    "median_cpu_seconds": 1.5703125,
+    "median_user_seconds": 1.296875,
+    "median_kernel_seconds": 0.2734375,
+    "median_phase_elapsed_seconds": {
+      "c1xx": 1.033495,
+      "c2": 0.160895
+    }
+  },
+  {
+    "case": "dnn/src/onnx/onnx_importer.cpp",
+    "variant": "msvc_cg1",
+    "count": 2,
+    "median_wall_seconds": 8.124513100000001,
+    "min_wall_seconds": 7.8405158,
+    "max_wall_seconds": 8.4085104,
+    "median_cpu_seconds": 8.03125,
+    "median_user_seconds": 7.8671875,
+    "median_kernel_seconds": 0.1640625,
+    "median_phase_elapsed_seconds": {
+      "c1xx": 1.1677749999999998,
+      "c2": 6.888059999999999
+    }
+  },
+  {
+    "case": "dnn/src/onnx/onnx_importer.cpp",
+    "variant": "msvc_ehsc",
+    "count": 2,
+    "median_wall_seconds": 2.89854645,
+    "min_wall_seconds": 2.8778789,
+    "max_wall_seconds": 2.919214,
+    "median_cpu_seconds": 9.2265625,
+    "median_user_seconds": 8.9609375,
+    "median_kernel_seconds": 0.265625,
+    "median_phase_elapsed_seconds": {
+      "c1xx": 0.95175,
+      "c2": 1.8834849999999999
+    }
+  }
+]

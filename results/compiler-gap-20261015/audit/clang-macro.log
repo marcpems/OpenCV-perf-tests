@@ -1,0 +1,25 @@
+D:\copilot\opencv-perf-tests\tests\compiler_config_probe.cpp:5:9: warning: _M_ARM64=1 [-W#pragma-messages]
+    5 | #pragma message("_M_ARM64=" STRINGIFY(_M_ARM64))
+      |         ^
+D:\copilot\opencv-perf-tests\tests\compiler_config_probe.cpp:6:9: warning: _MSC_VER=1944 [-W#pragma-messages]
+    6 | #pragma message("_MSC_VER=" STRINGIFY(_MSC_VER))
+      |         ^
+D:\copilot\opencv-perf-tests\tests\compiler_config_probe.cpp:7:9: warning: _MSVC_LANG=201402L [-W#pragma-messages]
+    7 | #pragma message("_MSVC_LANG=" STRINGIFY(_MSVC_LANG))
+      |         ^
+D:\copilot\opencv-perf-tests\tests\compiler_config_probe.cpp:8:9: warning: _ITERATOR_DEBUG_LEVEL=0 [-W#pragma-messages]
+    8 | #pragma message("_ITERATOR_DEBUG_LEVEL=" STRINGIFY(_ITERATOR_DEBUG_LEVEL))
+      |         ^
+D:\copilot\opencv-perf-tests\tests\compiler_config_probe.cpp:9:9: warning: _MSVC_STL_HARDENING=0 [-W#pragma-messages]
+    9 | #pragma message("_MSVC_STL_HARDENING=" STRINGIFY(_MSVC_STL_HARDENING))
+      |         ^
+D:\copilot\opencv-perf-tests\tests\compiler_config_probe.cpp:10:9: warning: _CPPUNWIND=1 [-W#pragma-messages]
+   10 | #pragma message("_CPPUNWIND=" STRINGIFY(_CPPUNWIND))
+      |         ^
+D:\copilot\opencv-perf-tests\tests\compiler_config_probe.cpp:11:9: warning: _DLL=1 [-W#pragma-messages]
+   11 | #pragma message("_DLL=" STRINGIFY(_DLL))
+      |         ^
+D:\copilot\opencv-perf-tests\tests\compiler_config_probe.cpp:13:9: warning: NDEBUG=defined [-W#pragma-messages]
+   13 | #pragma message("NDEBUG=defined")
+      |         ^
+8 warnings generated.

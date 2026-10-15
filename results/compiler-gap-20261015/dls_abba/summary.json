@@ -1,0 +1,50 @@
+[
+  {
+    "source_variant": "cached",
+    "compiler": "clang",
+    "count": 4,
+    "median_wall_seconds": 2.0426458,
+    "median_cpu_seconds": 2.0234375,
+    "phase_medians": {
+      "Backend": 1.5109270000000001,
+      "CodeGenPasses": 1.141653,
+      "Frontend": 0.4519115,
+      "Optimizer": 0.37517449999999997
+    }
+  },
+  {
+    "source_variant": "cached",
+    "compiler": "msvc",
+    "count": 4,
+    "median_wall_seconds": 2.5969732,
+    "median_cpu_seconds": 4.09375,
+    "phase_medians": {
+      "c1xx": 0.507285,
+      "c2": 2.0248299999999997
+    }
+  },
+  {
+    "source_variant": "original",
+    "compiler": "clang",
+    "count": 4,
+    "median_wall_seconds": 2.23444245,
+    "median_cpu_seconds": 2.1796875,
+    "phase_medians": {
+      "Backend": 1.6470665,
+      "CodeGenPasses": 1.230241,
+      "Frontend": 0.5229735,
+      "Optimizer": 0.4744195
+    }
+  },
+  {
+    "source_variant": "original",
+    "compiler": "msvc",
+    "count": 4,
+    "median_wall_seconds": 3.8767943999999996,
+    "median_cpu_seconds": 5.5234375,
+    "phase_medians": {
+      "c1xx": 0.464255,
+      "c2": 3.2920949999999998
+    }
+  }
+]

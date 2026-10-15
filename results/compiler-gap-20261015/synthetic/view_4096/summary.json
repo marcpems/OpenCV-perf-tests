@@ -1,0 +1,38 @@
+[
+  {
+    "case": "view_4096.cpp",
+    "variant": "clang",
+    "count": 4,
+    "median_wall_seconds": 5.0108196,
+    "min_wall_seconds": 4.3448967,
+    "max_wall_seconds": 5.7356463,
+    "median_cpu_seconds": 5.0078125,
+    "median_user_seconds": 4.90625,
+    "median_kernel_seconds": 0.1015625,
+    "median_phase_elapsed_seconds": {}
+  },
+  {
+    "case": "view_4096.cpp",
+    "variant": "clang_noalias",
+    "count": 4,
+    "median_wall_seconds": 5.25701905,
+    "min_wall_seconds": 4.8408154,
+    "max_wall_seconds": 5.8925342,
+    "median_cpu_seconds": 5.21875,
+    "median_user_seconds": 5.1171875,
+    "median_kernel_seconds": 0.0859375,
+    "median_phase_elapsed_seconds": {}
+  },
+  {
+    "case": "view_4096.cpp",
+    "variant": "msvc",
+    "count": 4,
+    "median_wall_seconds": 2.7462907,
+    "min_wall_seconds": 2.263879,
+    "max_wall_seconds": 3.1546769,
+    "median_cpu_seconds": 2.7421875,
+    "median_user_seconds": 2.640625,
+    "median_kernel_seconds": 0.09375,
+    "median_phase_elapsed_seconds": {}
+  }
+]

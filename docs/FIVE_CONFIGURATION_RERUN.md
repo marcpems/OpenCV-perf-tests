@@ -1,5 +1,9 @@
 # Fresh five-configuration comparison after a device configuration change
 
+**Follow-up:** the [compiler-gap investigation](COMPILER_GAP_INVESTIGATION.md)
+checks native ARM64 execution and workload equivalence, then measures isolated
+compilations, compiler-only parallel batches and source-pattern controls.
+
 All five configurations were rerun on **15 October 2026, 18:23-18:58 BST**,
 after the device owner reported a configuration change. This is a new,
 self-contained comparison: **ten full clean builds, two per configuration**.

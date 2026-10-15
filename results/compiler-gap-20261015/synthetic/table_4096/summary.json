@@ -1,0 +1,38 @@
+[
+  {
+    "case": "table_4096.cpp",
+    "variant": "clang",
+    "count": 4,
+    "median_wall_seconds": 0.0701891,
+    "min_wall_seconds": 0.0608522,
+    "max_wall_seconds": 0.0904389,
+    "median_cpu_seconds": 0.0546875,
+    "median_user_seconds": 0.0234375,
+    "median_kernel_seconds": 0.03125,
+    "median_phase_elapsed_seconds": {}
+  },
+  {
+    "case": "table_4096.cpp",
+    "variant": "clang_noalias",
+    "count": 4,
+    "median_wall_seconds": 0.06578975000000001,
+    "min_wall_seconds": 0.0645044,
+    "max_wall_seconds": 0.0850093,
+    "median_cpu_seconds": 0.0625,
+    "median_user_seconds": 0.0390625,
+    "median_kernel_seconds": 0.0234375,
+    "median_phase_elapsed_seconds": {}
+  },
+  {
+    "case": "table_4096.cpp",
+    "variant": "msvc",
+    "count": 4,
+    "median_wall_seconds": 0.09513525,
+    "min_wall_seconds": 0.0757711,
+    "max_wall_seconds": 0.0990021,
+    "median_cpu_seconds": 0.078125,
+    "median_user_seconds": 0.0390625,
+    "median_kernel_seconds": 0.0390625,
+    "median_phase_elapsed_seconds": {}
+  }
+]

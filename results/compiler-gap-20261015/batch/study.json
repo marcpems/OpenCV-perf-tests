@@ -1,0 +1,54 @@
+{
+  "status": "succeeded",
+  "started_at": "2026-10-15T19:30:21.8653671+01:00",
+  "source_study": "D:\\copilot\\opencv-perf-tests\\results\\local\\compiler-isolated-baseline",
+  "sources": [
+    "calib3d/src/dls.cpp",
+    "dnn/src/onnx/onnx_importer.cpp",
+    "dnn/src/net_impl.cpp",
+    "dnn/src/tensorflow/tf_importer.cpp",
+    "core/src/arithm.cpp",
+    "imgproc/src/resize.cpp",
+    "features2d/src/orb.cpp",
+    "core/src/alloc.cpp"
+  ],
+  "copies": 3,
+  "jobs": 12,
+  "variants": [
+    "msvc",
+    "msvc_cg1",
+    "clang",
+    "clang_async"
+  ],
+  "repetitions": 4,
+  "warmups_per_variant": 1,
+  "frozen_sha256": {
+    "D:\\copilot\\opencv-perf-tests\\scripts\\run_compiler_batch.ps1": "DAD461143DE11CB29B566E7ADCFED912CB8726A9F78C52735B6BF9421B080470",
+    "D:\\copilot\\opencv-perf-tests\\scripts\\BuildAccounting.cs": "E9F819A2CD00208782FB390895C6C9EB9F9CF0C4FBA9670562DC907AFBCB3692",
+    "D:\\copilot\\opencv-perf-tests\\scripts\\compiler_commands.ps1": "74613BD54FCF1DD1288C56A4C93F131DC4CB3544B3513E899E94B7BD34128F96",
+    "C:\\Strawberry\\c\\bin\\ninja.exe": "442ADBDC1906DA39ACD56D1A3B5B9AAFFB01EDA5EB55A6882A3651B8F9FF09B0"
+  },
+  "runs": [
+    "msvc_0",
+    "msvc_cg1_0",
+    "clang_0",
+    "clang_async_0",
+    "msvc_1",
+    "msvc_cg1_1",
+    "clang_1",
+    "clang_async_1",
+    "clang_async_2",
+    "clang_2",
+    "msvc_cg1_2",
+    "msvc_2",
+    "msvc_3",
+    "msvc_cg1_3",
+    "clang_3",
+    "clang_async_3",
+    "clang_async_4",
+    "clang_4",
+    "msvc_cg1_4",
+    "msvc_4"
+  ],
+  "finished_at": "2026-10-15T19:34:31.7795093+01:00"
+}

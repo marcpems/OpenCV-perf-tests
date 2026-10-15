@@ -1,0 +1,38 @@
+[
+  {
+    "case": "cached_512.cpp",
+    "variant": "clang",
+    "count": 4,
+    "median_wall_seconds": 0.31481955,
+    "min_wall_seconds": 0.3029085,
+    "max_wall_seconds": 0.3219505,
+    "median_cpu_seconds": 0.3046875,
+    "median_user_seconds": 0.265625,
+    "median_kernel_seconds": 0.0390625,
+    "median_phase_elapsed_seconds": {}
+  },
+  {
+    "case": "cached_512.cpp",
+    "variant": "clang_noalias",
+    "count": 4,
+    "median_wall_seconds": 0.3461506,
+    "min_wall_seconds": 0.3175631,
+    "max_wall_seconds": 0.3690335,
+    "median_cpu_seconds": 0.3359375,
+    "median_user_seconds": 0.296875,
+    "median_kernel_seconds": 0.03125,
+    "median_phase_elapsed_seconds": {}
+  },
+  {
+    "case": "cached_512.cpp",
+    "variant": "msvc",
+    "count": 4,
+    "median_wall_seconds": 0.18593365,
+    "min_wall_seconds": 0.1788742,
+    "max_wall_seconds": 0.2073959,
+    "median_cpu_seconds": 0.171875,
+    "median_user_seconds": 0.125,
+    "median_kernel_seconds": 0.0390625,
+    "median_phase_elapsed_seconds": {}
+  }
+]
