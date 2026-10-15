@@ -51,6 +51,11 @@ class EtlTests(unittest.TestCase):
         self.assertEqual(len(processes), 3)
         self.assertIn("\nWrite-Output", processes[-1]["command"])
 
+    def test_quoted_build_argument_is_recognized(self):
+        self.write("processes.csv", (self.root / "processes.csv").read_text().replace(
+            "cmake --build .", 'cmake "--build" "."'))
+        self.assertEqual(summarize(self.root)["build_process_instances"], 2)
+
     def test_reused_parent_pid_uses_lifetime(self):
         self.append_process("5,90,Process,0,cmd.exe (10),1,1,abc,old parent")
         self.append_process("20,80,Process,0,old.exe (50),10,1,def,old child")

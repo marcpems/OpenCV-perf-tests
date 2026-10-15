@@ -1,5 +1,12 @@
 # LLVM versus original MSVC: wall time, CPU work and WPR evidence
 
+**Follow-up:** the [deeper MSBuild tail investigation](MSBUILD_SERIAL_TAIL.md)
+correlates binary-log task boundaries with WPR. The approximately 45-second tail
+contains **31.2 s of serial compiler execution and 13.6 s of task bookkeeping**;
+CPU stacks identify repeated dependency-table construction. A reversible
+MultiToolTask experiment removes the 34-task serial tail but saves only
+**13.15 s / 6.52% overall**, because it adds per-file process overhead elsewhere.
+
 Measured on **15 October 2026**, on the same native ARM64, 12-core Snapdragon X2
 Elite machine. **LLVM is faster primarily because it performs much less CPU work,
 not because it uses more cores.** The original MSBuild configuration also has a

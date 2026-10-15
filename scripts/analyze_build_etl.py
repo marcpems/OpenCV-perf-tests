@@ -8,6 +8,7 @@ from pathlib import Path
 import re
 
 PROCESS = re.compile(r"^\s*(.*?)\s+\(\s*(\d+)\)$")
+BUILD_COMMAND = re.compile(r'(?:^|\s)"?--build"?(?:\s|$)')
 
 
 def load_processes(path):
@@ -109,7 +110,7 @@ def summarize(directory):
     validate_trace(directory / "trace-stats.txt")
     processes = load_processes(directory / "processes.csv")
     roots = [p for p in processes if p["pid"] == accounting["ProcessId"]
-             and " --build " in p["command"] and "build.log" in p["command"]]
+             and BUILD_COMMAND.search(p["command"]) and "build.log" in p["command"]]
     if len(roots) != 1:
         raise ValueError("Build root is missing or ambiguous")
     root = roots[0]

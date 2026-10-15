@@ -1,5 +1,6 @@
 #Requires -Version 7.0
 . "$PSScriptRoot\..\scripts\common.ps1"
+. "$PSScriptRoot\..\scripts\measure_build.ps1"
 Add-Type -Path "$PSScriptRoot\..\scripts\BuildAccounting.cs"
 $temp = Join-Path ([IO.Path]::GetTempPath()) ([guid]::NewGuid().ToString())
 New-Item -ItemType Directory $temp | Out-Null
@@ -21,9 +22,18 @@ exit 0
     }
     $failure = [BuildAccounting]::Run($env:ComSpec, '/d /c exit 7', $temp, "$temp\failure.log")
     if ($failure.ExitCode -ne 7) { throw ' ERROR - Accounting lost the failed process exit code.' }
+    @'
+Write-Output $args[0]
+exit 0
+'@ | Set-Content "$temp\arguments with spaces.ps1"
+    Invoke-MeasuredBuild $shell @('-NoProfile', '-File', "$temp\arguments with spaces.ps1",
+        'spaces and ; semicolon') $temp $temp | Out-Null
+    if ((Get-Content "$temp\build.log").Trim() -ne 'spaces and ; semicolon') {
+        throw ' ERROR - Measurement changed native argument boundaries.'
+    }
     Write-Host 'PASS: job accounting includes child CPU, captures output and preserves exit codes.'
 } finally {
-    foreach ($name in @('child.ps1', 'build.log', 'failure.log')) {
+    foreach ($name in @('child.ps1', 'build.log', 'failure.log', 'arguments with spaces.ps1', 'cpu-accounting.json')) {
         if (Test-Path "$temp\$name") { Remove-Item -LiteralPath "$temp\$name" }
     }
     Remove-Item -LiteralPath $temp

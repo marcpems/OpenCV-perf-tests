@@ -11,6 +11,7 @@ HOBL intentionally sets `BUILD_PERF_TESTS=OFF`.
 **[VS 2026 / latest Microsoft tools experiment](docs/VS2026_EXPERIMENT.md)** |
 **[Latest Windows SDK comparison](docs/WINDOWS_SDK_EXPERIMENT.md)** |
 **[LLVM vs MSVC: CPU time and WPR/ETL investigation](docs/CPU_ETL_ANALYSIS.md)** |
+**[MSBuild serial-tail investigation and scheduler experiment](docs/MSBUILD_SERIAL_TAIL.md)** |
 **[HOBL survey, equivalence and measurement methodology](docs/METHODOLOGY.md)**
 
 The baseline preserves HOBL's clean -> timed Release build -> install -> version-check
@@ -110,6 +111,15 @@ With Ninja held constant, LLVM used **50.87% less CPU time**. WPR exposed both a
 45-second serialized MSBuild compilation tail and substantial MSVC backend cost.
 Raw ETLs stay local; only sanitized build-specific evidence is published.
 `-Trace` implies `-MeasureCpu`; neither can be combined with `-Profile`.
+
+The [serial-tail follow-up](docs/MSBUILD_SERIAL_TAIL.md) identifies 34 single-file
+CL tasks plus repeated dependency-table construction. Opt-in
+`-MSBuildScheduler MultiToolTask -CompilerJobs 12` removes that serial task
+structure, but saves **13.15 s / 6.52%** in balanced whole-build measurements,
+not the entire 45-second tail. It costs **7.25% more CPU** through a different
+process/scheduling model. Omit the option to retain the HOBL default.
+`-BinaryLog` captures local-only MSBuild task/command evidence and is independent
+of `-Trace`; do not publish raw binlogs.
 
 Ninja uses its own `build_hobl_ninja` tree. Both generators clean outside the timer,
 build, install and validate the installed executable. The default `-Parallel 0`

@@ -194,6 +194,20 @@ try {
     & "$PSScriptRoot\test_toolchain_study.ps1"
     & "$PSScriptRoot\test_install_manifest.ps1"
     & "$PSScriptRoot\test_cpu_accounting.ps1"
+    foreach ($case in @(
+        @{ arguments = @{ Toolchain = 'Clang'; BinaryLog = $true }; error = 'require MSBuild' },
+        @{ arguments = @{ Generator = 'Ninja'; MSBuildScheduler = 'MultiToolTask' }; error = 'require MSBuild' },
+        @{ arguments = @{ CompilerJobs = 6 }; error = 'only used with' }
+    )) {
+        $failed = $false
+        $options = $case.arguments
+        try { & "$PSScriptRoot\..\scripts\run.ps1" @options }
+        catch {
+            if ($_.Exception.Message -notmatch $case.error) { throw }
+            $failed = $true
+        }
+        if (-not $failed) { throw ' ERROR - Unsupported MSBuild profiling options were accepted.' }
+    }
     Write-Host 'PASS: exit codes, paths, toolchain isolation, native PE/restart/version guards, syntax and optional HOBL flag parity.'
 } finally {
     Remove-Item -LiteralPath "$temp\success.log", "$temp\failure.log", "$temp\restart.json" -ErrorAction SilentlyContinue

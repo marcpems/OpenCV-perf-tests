@@ -56,7 +56,8 @@ def export(source, destination):
         runs.append((directory, metadata))
         measurement_modes.add((metadata.get("profile", False),
                                metadata.get("measure_cpu", False),
-                               metadata.get("wpr_trace", False)))
+                               metadata.get("wpr_trace", False),
+                               metadata.get("binary_log", False)))
     if not runs:
         raise ValueError("No successful validated runs to export")
     if study and len(runs) != len(study["order"]):
@@ -93,6 +94,8 @@ def export(source, destination):
             "build_seconds": metadata["build_seconds"],
             "clean_seconds": metadata["clean_seconds"],
             "install_seconds": metadata["install_seconds"],
+            **({"cpu_seconds": metadata["cpu_accounting"]["CpuSeconds"]}
+               if metadata.get("measure_cpu") else {}),
         })
     report = {}
     for group, values in groups.items():
@@ -101,6 +104,8 @@ def export(source, destination):
             "count": len(times), "median_seconds": statistics.median(times),
             "min_seconds": min(times), "max_seconds": max(times), "runs": values,
         }
+        if "cpu_seconds" in values[0]:
+            report[group]["median_cpu_seconds"] = statistics.median(v["cpu_seconds"] for v in values)
     (destination / "summary.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
     if study:
         (destination / "study.json").write_text(

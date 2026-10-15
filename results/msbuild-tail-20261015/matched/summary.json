@@ -1,0 +1,48 @@
+{
+  "default": {
+    "count": 2,
+    "median_seconds": 201.52165,
+    "min_seconds": 199.8979,
+    "max_seconds": 203.1454,
+    "runs": [
+      {
+        "directory": "20261015_155427_898_default_1",
+        "build_seconds": 199.8979,
+        "clean_seconds": 0.9069,
+        "install_seconds": 2.0104,
+        "cpu_seconds": 1563.53125
+      },
+      {
+        "directory": "20261015_160623_847_default_2",
+        "build_seconds": 203.1454,
+        "clean_seconds": 0.8625,
+        "install_seconds": 2.0723,
+        "cpu_seconds": 1622.46875
+      }
+    ],
+    "median_cpu_seconds": 1593.0
+  },
+  "multitool": {
+    "count": 2,
+    "median_seconds": 188.3755,
+    "min_seconds": 185.939,
+    "max_seconds": 190.812,
+    "runs": [
+      {
+        "directory": "20261015_155824_398_multitool_1",
+        "build_seconds": 190.812,
+        "clean_seconds": 0.8971,
+        "install_seconds": 3.8826,
+        "cpu_seconds": 1710.140625
+      },
+      {
+        "directory": "20261015_160240_362_multitool_2",
+        "build_seconds": 185.939,
+        "clean_seconds": 0.9097,
+        "install_seconds": 2.9722,
+        "cpu_seconds": 1706.71875
+      }
+    ],
+    "median_cpu_seconds": 1708.4296875
+  }
+}

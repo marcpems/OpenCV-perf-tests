@@ -16,7 +16,13 @@ function Invoke-MeasuredBuild([string]$Executable, [string[]]$Arguments, [string
         $recording = $true
     }
     try {
-        $result = [BuildAccounting]::Run($Executable, ($Arguments -join ' '), $Directory, "$RunDirectory\build.log")
+        $quotedArguments = @($Arguments | ForEach-Object {
+            if ($_.Contains('"') -or $_ -match '[\r\n]') {
+                throw ' ERROR - Embedded quotes/newlines are not supported in measured build arguments.'
+            }
+            '"' + $_ + '"'
+        })
+        $result = [BuildAccounting]::Run($Executable, ($quotedArguments -join ' '), $Directory, "$RunDirectory\build.log")
         $result | ConvertTo-Json | Set-Content "$RunDirectory\cpu-accounting.json"
     } finally {
         if ($recording) {

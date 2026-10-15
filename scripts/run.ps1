@@ -8,7 +8,10 @@ param(
     [ValidateRange(0, 256)][int]$Parallel = 0,
     [switch]$Profile,
     [switch]$MeasureCpu,
-    [switch]$Trace
+    [switch]$Trace,
+    [switch]$BinaryLog,
+    [ValidateSet('Default', 'MultiToolTask')][string]$MSBuildScheduler = 'Default',
+    [ValidateRange(1, 256)][int]$CompilerJobs = 12
 )
 . "$PSScriptRoot\common.ps1"
 Assert-NoPendingToolchainRestart
@@ -21,6 +24,17 @@ if ($Toolchain -eq 'MSVC2026' -and -not $PSBoundParameters.ContainsKey('Label'))
 if ($Toolchain -eq 'MSVC2026Latest' -and -not $PSBoundParameters.ContainsKey('Label')) { $Label = 'vs2026_latest_experiment' }
 $Root = Get-SourceRoot $Root
 $Generator = Get-EffectiveGenerator $Generator $Toolchain ($PSBoundParameters.ContainsKey('Generator'))
+if (($BinaryLog -or $MSBuildScheduler -ne 'Default') -and $Generator -ne 'MSBuild') {
+    throw ' ERROR - BinaryLog and MSBuildScheduler require MSBuild.'
+}
+if ($PSBoundParameters.ContainsKey('CompilerJobs') -and $MSBuildScheduler -eq 'Default') {
+    throw ' ERROR - CompilerJobs is only used with the MultiToolTask scheduler.'
+}
+$schedulerArguments = @()
+if ($MSBuildScheduler -eq 'MultiToolTask') {
+    $schedulerArguments = @('/p:MultiProcCL=true', "/p:MultiProcMaxCount=$CompilerJobs")
+    if (-not $PSBoundParameters.ContainsKey('Label')) { $Label = 'msbuild_multitool_experiment' }
+}
 Assert-Source $Root
 $buildDir = Get-BuildDirectory $Root $Generator $Toolchain
 if (-not (Test-Path "$buildDir\benchmark-setup.json")) { throw ' ERROR - Run setup.ps1 for this generator first.' }
@@ -83,6 +97,9 @@ $metadata = [ordered]@{
     profile = [bool]$Profile
     measure_cpu = [bool]$MeasureCpu
     wpr_trace = [bool]$Trace
+    binary_log = [bool]$BinaryLog
+    msbuild_scheduler = $MSBuildScheduler
+    compiler_jobs = if ($MSBuildScheduler -ne 'Default') { $CompilerJobs } else { $null }
     setup = $receipt
     cpu = (Get-CimInstance Win32_Processor | Select-Object Name, NumberOfCores, NumberOfLogicalProcessors)
     memory_gib = [math]::Round((Get-CimInstance Win32_ComputerSystem).TotalPhysicalMemory / 1GB, 2)
@@ -108,14 +125,19 @@ try {
     $lock = [IO.File]::Open("$Root\.hobl-benchmark.lock", 'OpenOrCreate', 'ReadWrite', 'None')
     Push-Location $buildDir
     try {
-        $clean = Invoke-Logged $cmakeExe @('--build', '.', '--target', 'clean', '--config', 'Release') "$runDir\clean.log"
+        $cleanArguments = @('--build', '.', '--target', 'clean', '--config', 'Release')
+        if ($schedulerArguments.Count) { $cleanArguments += @('--') + $schedulerArguments }
+        $clean = Invoke-Logged $cmakeExe $cleanArguments "$runDir\clean.log"
         if ($Generator -eq 'Ninja' -and (Test-Path "$buildDir\.ninja_log")) {
             # Ninja clean preserves historical log entries. Each run must have an isolated log.
             Remove-Item -LiteralPath "$buildDir\.ninja_log"
         }
         $argsList = @('--build', '.', '--config', 'Release')
         if ($Parallel -gt 0) { $argsList += @('--parallel', "$Parallel") }
-        if ($Profile) { $argsList += @('--', '/clp:PerformanceSummary;Summary', '/v:minimal') }
+        $nativeArguments = @($schedulerArguments)
+        if ($Profile) { $nativeArguments += @('/clp:PerformanceSummary;Summary', '/v:minimal') }
+        if ($BinaryLog) { $nativeArguments += "/bl:$runDir\build.binlog;ProjectImports=None" }
+        if ($nativeArguments.Count) { $argsList += @('--') + $nativeArguments }
         $metadata['build_arguments'] = $argsList
         if ($MeasureCpu) {
             $accounting = Invoke-MeasuredBuild $cmakeExe $argsList $buildDir $runDir -Trace:$Trace
@@ -128,7 +150,9 @@ try {
         }
         if ($Generator -eq 'Ninja') { Copy-Item "$buildDir\.ninja_log" "$runDir\ninja_log.txt" }
         $installTarget = if ($Generator -eq 'MSBuild') { 'INSTALL' } else { 'install' }
-        $install = Invoke-Logged $cmakeExe @('--build', '.', '--target', $installTarget, '--config', 'Release') "$runDir\install.log"
+        $installArguments = @('--build', '.', '--target', $installTarget, '--config', 'Release')
+        if ($schedulerArguments.Count) { $installArguments += @('--') + $schedulerArguments }
+        $install = Invoke-Logged $cmakeExe $installArguments "$runDir\install.log"
         $versionExe = Get-InstalledOpenCVFile $buildDir 'opencv_version.exe'
         Assert-NativeExecutable $versionExe.FullName $receipt.architecture
         $version = & $versionExe.FullName

@@ -222,3 +222,10 @@ The [CPU/ETL report](CPU_ETL_ANALYSIS.md) describes the six-run balanced compari
 three full traces, focused compiler replays, symbol provenance, accounting
 cross-checks, installation-manifest correction and limitations. Its measured
 speedups are local observations, not runtime-speed or energy claims.
+
+The [MSBuild serial-tail follow-up](MSBUILD_SERIAL_TAIL.md) adds optional
+`-BinaryLog` task evidence and compiler-only `-MSBuildScheduler MultiToolTask`.
+The latter passes `MultiProcCL=true` and a bounded `MultiProcMaxCount`, retaining
+tracking and all source/compiler settings. It applies to clean/build/install
+and is never enabled by default. A separate untraced ABBA series measures its
+net cost; raw binary logs are private and excluded from public exports.

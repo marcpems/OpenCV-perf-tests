@@ -65,10 +65,13 @@ class ExportTests(unittest.TestCase):
             metadata.update(measure_cpu=True, wpr_trace=False, cpu_accounting={"CpuSeconds": 20})
             (run / "metadata.json").write_text(json.dumps(metadata), encoding="utf-8")
             (run / "cpu-accounting.json").write_text('{"CpuSeconds":20}', encoding="utf-8")
-            export(source, root / "cpu")
+            cpu_summary = export(source, root / "cpu")
+            self.assertEqual(cpu_summary["baseline"]["median_cpu_seconds"], 20)
             self.assertTrue((root / "cpu" / "sample" / "cpu-accounting.json").is_file())
             (run / "build.etl").write_bytes(b"private raw trace")
+            (run / "build.binlog").write_bytes(b"private raw build events")
             self.assertFalse((root / "cpu" / "sample" / "build.etl").exists())
+            self.assertFalse((root / "cpu" / "sample" / "build.binlog").exists())
             second = source / "traced"
             second.mkdir()
             metadata["wpr_trace"] = True
@@ -76,6 +79,11 @@ class ExportTests(unittest.TestCase):
             (second / "opencv_build_results.csv").write_text(metrics.read_text(), encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "Do not pool"):
                 export(source, root / "mixed")
+            metadata["wpr_trace"] = False
+            metadata["binary_log"] = True
+            (second / "metadata.json").write_text(json.dumps(metadata), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "Do not pool"):
+                export(source, root / "mixed-binlog")
             (second / "metadata.json").unlink()
             (second / "opencv_build_results.csv").unlink()
             second.rmdir()
