@@ -60,10 +60,9 @@ if ($LASTEXITCODE) { throw 'Runtime preparation failed' }
 & python "$PSScriptRoot\run_runtime_screen.py" $root pilot
 if ($LASTEXITCODE) { throw 'Runtime pilot failed' }
 & python "$PSScriptRoot\run_runtime_screen.py" $root run
-if ($LASTEXITCODE) { throw 'Runtime measurement failed' }
-$public = Join-Path $repo "results\minos-runtime-$env:GITHUB_RUN_ID"
-& python "$PSScriptRoot\analyze_runtime_screen.py" $root --export $public
-if ($LASTEXITCODE) { throw 'Runtime analysis/export failed' }
+$measurementExit = $LASTEXITCODE
+& "$PSScriptRoot\export_minos_runtime.ps1" -SourceRunId $env:GITHUB_RUN_ID
+if ($measurementExit) { throw 'Runtime measurement failed; completed-study evidence was exported without treating failures as passes.' }
 if ($env:GITHUB_STEP_SUMMARY) {
     "Runtime screen complete: 52 cases, three libraries, 1/20 threads, six balanced rounds. Main CPU $cpu. Results include output-check limitations and per-case ranges." |
         Add-Content $env:GITHUB_STEP_SUMMARY

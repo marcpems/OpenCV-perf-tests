@@ -38,6 +38,7 @@ Use the repository's Actions page to dispatch:
 | `probe` | Read hardware, filesystem, power-plan and installed-tool inventory |
 | `llvm` | Prepare missing tools, then perform one clean Ninja/LLVM build and immediately upload its timing evidence |
 | `study` | Configure all three build trees, run the balanced ten-build comparison, upload build results, then run/upload the bounded runtime screen |
+| `export-runtime` | Recover an already completed runtime dataset using `source_run_id`, without rebuilding or remeasuring |
 
 The first LLVM observation is explicitly **preliminary and separate** from the
 balanced study. It is not silently pooled into the two-observation medians.
@@ -106,3 +107,7 @@ model-level or API equivalence claim follows from this screen.
 Build artifacts are uploaded **before** runtime testing finishes so timings
 can be reported promptly. Final per-case runtime analysis, traces of the
 invoked test commands, provenance and caveats are uploaded separately.
+Completed runtime studies with failed cases retain their failed status and
+export diagnostic evidence; invalid case/thread groups are excluded from
+performance summaries. A successful recovery/export does not mean the
+underlying tests passed.
