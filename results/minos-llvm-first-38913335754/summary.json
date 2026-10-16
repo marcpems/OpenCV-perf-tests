@@ -1,0 +1,18 @@
+{
+  "llvm_first": {
+    "count": 1,
+    "median_seconds": 61.5596,
+    "min_seconds": 61.5596,
+    "max_seconds": 61.5596,
+    "runs": [
+      {
+        "directory": "20261016_151544_993_llvm_first",
+        "build_seconds": 61.5596,
+        "clean_seconds": 0.1668,
+        "install_seconds": 0.369,
+        "cpu_seconds": 994.265625
+      }
+    ],
+    "median_cpu_seconds": 994.265625
+  }
+}

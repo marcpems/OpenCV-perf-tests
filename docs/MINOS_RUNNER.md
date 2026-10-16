@@ -1,5 +1,22 @@
 # Minos runner validation
 
+## First measured result (16 October 2026)
+
+The first clean **Ninja/LLVM build completed in 61.5596 seconds** with 20 jobs,
+using **994.2656 CPU seconds**. This is one preliminary observation, not the
+balanced comparison's median. Configuration took 79.9487 seconds separately;
+cleaning (0.1668 seconds), installation (0.3690 seconds), and version validation
+were outside the timed build. The installed OpenCV reported version 4.10.0.
+
+The measured power plan was Ultimate Performance. This workflow did not change
+the plan. Native ARM64 compiler prerequisites were successfully restored before
+measurement. [Sanitized evidence](../results/minos-llvm-first-38913335754) and
+[completed workflow](https://github.com/marcpems/OpenCV-perf-tests/actions/runs/38913335754)
+record the actual toolchain, commands, source/configuration receipt and CPU data.
+The five-configuration study and runtime comparison remain separate work;
+this observation alone does not establish the original baseline's proximity
+to the 154-second lab reference.
+
 The manual-only **Minos OpenCV validation** GitHub Actions workflow targets the
 self-hosted `MARCPE-D4` runner using its dedicated `Marcpe-d4` label and checks
 the actual runner name before executing benchmark code. It does not run on
