@@ -8,6 +8,7 @@ on:
         type: choice
         options:
           - probe
+          - llvm
         default: probe
 
 permissions:
@@ -25,9 +26,21 @@ jobs:
         shell: powershell
         run: |
           if ($env:RUNNER_NAME -ine 'MARCPE-D4') { throw 'Unexpected runner' }
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           persist-credentials: false
+          clean: false
       - name: Inspect benchmark prerequisites
         shell: powershell
         run: .\scripts\inspect_minos_runner.ps1
+      - name: First Ninja LLVM clean build
+        if: inputs.phase == 'llvm'
+        shell: pwsh
+        run: .\scripts\run_minos_quick.ps1
+      - name: Publish first-build evidence
+        if: always() && inputs.phase == 'llvm'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: minos-llvm-first-${{ github.run_id }}
+          path: results/minos-llvm-first-${{ github.run_id }}
+          if-no-files-found: warn

@@ -8,7 +8,8 @@ $vswhere = Join-Path ${env:ProgramFiles(x86)} 'Microsoft Visual Studio\Installer
 $vs = if (Test-Path $vswhere) {
     $raw = & $vswhere -products '*' -format json
     if ($LASTEXITCODE) { throw 'Visual Studio inventory failed' }
-    @($raw | ConvertFrom-Json | Select-Object installationPath,installationVersion,isComplete,isRebootRequired)
+    $instances = $raw | ConvertFrom-Json
+    @($instances | Select-Object installationPath,installationVersion,isComplete,isRebootRequired)
 } else { @() }
 $inventory = [ordered]@{
     runner = $env:RUNNER_NAME
