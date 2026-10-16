@@ -17,8 +17,7 @@ if ($LASTEXITCODE) { throw 'Visual Studio inventory failed' }
 $inventory = @()
 foreach ($instance in $instances) {
     $default = "$($instance.installationPath)\VC\Auxiliary\Build\Microsoft.VCToolsVersion.default.txt"
-    if (-not (Test-Path $default)) { continue }
-    $toolset = (Get-Content $default -Raw).Trim()
+    $toolset = if (Test-Path $default) { (Get-Content $default -Raw).Trim() } else { $null }
     $native = "$($instance.installationPath)\VC\Tools\MSVC\$toolset\bin\Hostarm64\arm64\cl.exe"
     $inventory += [pscustomobject]@{
         path = $instance.installationPath
@@ -43,7 +42,7 @@ if ($signature.Status -ne 'Valid' -or $signature.SignerCertificate.Subject -notm
     throw 'Expected a valid Microsoft-signed Visual Studio bootstrapper'
 }
 if ($selected.path.Contains('"')) { throw 'Unexpected quote in installed VS path' }
-$arguments = "modify --quiet --wait --norestart --installPath `"$($selected.path)`" --add $($spec.component)"
+$arguments = "modify --quiet --wait --norestart --installPath `"$($selected.path)`" --add $($spec.workload) --add $($spec.component)"
 $receipt = [ordered]@{
     before = $inventory
     component = $spec.component
