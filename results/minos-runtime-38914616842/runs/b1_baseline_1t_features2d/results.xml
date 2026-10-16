@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="0" disabled="0" errors="0" timestamp="2026-10-16T15:47:27" time="0.888" cv_module_name="features2d" cv_implementation="plain" cv_num_threads="1" test_tags="" test_tags_skip="mem_6gb,verylong" test_tags_force="" cv_version="4.10.0" cv_version_build="4.10.0" cv_vcs_version="4.10.0" cv_build_type="Debug Release" cv_build_type_build="Release" cv_compiler="C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostarm64/arm64/cl.exe  (ver 19.44.35229.0)" cv_parallel_framework="ms-concurrency" cv_parallel_threads="1" cv_cpu_features="NEON *NEON_DOTPROD? *NEON_FP16?" name="AllTests">
+  <testsuite name="Norm_CrossCheck_batchDistance_Dest_32S" tests="2" failures="0" disabled="0" errors="0" time="0.335">
+    <testcase name="batchDistance_Dest_32S/0" value_param="(NORM_HAMMING, false)" status="run" time="0.112" classname="Norm_CrossCheck_batchDistance_Dest_32S">
+<properties>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="20"/>
+<property name="outliers" value="1"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="5329700"/>
+<property name="median" value="5480400"/>
+<property name="gmean" value="5483718"/>
+<property name="gstddev" value="0.013687"/>
+<property name="mean" value="5484205"/>
+<property name="stddev" value="75318"/>
+</properties>
+    </testcase>
+    <testcase name="batchDistance_Dest_32S/1" value_param="(NORM_HAMMING, true)" status="run" time="0.223" classname="Norm_CrossCheck_batchDistance_Dest_32S">
+<properties>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="20"/>
+<property name="outliers" value="1"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="10873500"/>
+<property name="median" value="11071000"/>
+<property name="gmean" value="11069248"/>
+<property name="gstddev" value="0.007423"/>
+<property name="mean" value="11069537"/>
+<property name="stddev" value="82064"/>
+</properties>
+    </testcase>
+  </testsuite>
+  <testsuite name="Source_CrossCheck_batchDistance_L2" tests="2" failures="0" disabled="0" errors="0" time="0.553">
+    <testcase name="batchDistance_L2/2" value_param="(32FC1, false)" status="run" time="0.182" classname="Source_CrossCheck_batchDistance_L2">
+<properties>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="20"/>
+<property name="outliers" value="1"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="8845900"/>
+<property name="median" value="8905500"/>
+<property name="gmean" value="8924839"/>
+<property name="gstddev" value="0.008074"/>
+<property name="mean" value="8925116"/>
+<property name="stddev" value="72520"/>
+</properties>
+    </testcase>
+    <testcase name="batchDistance_L2/3" value_param="(32FC1, true)" status="run" time="0.37" classname="Source_CrossCheck_batchDistance_L2">
+<properties>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="20"/>
+<property name="outliers" value="1"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="18077200"/>
+<property name="median" value="18300800"/>
+<property name="gmean" value="18319358"/>
+<property name="gstddev" value="0.005769"/>
+<property name="mean" value="18319647"/>
+<property name="stddev" value="105895"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,5 +1,7 @@
 # Minos runner validation
 
+**[Completed Minos build/runtime results and correctness caveats](MINOS_RESULTS.md).**
+
 ## First measured result (16 October 2026)
 
 The first clean **Ninja/LLVM build completed in 61.5596 seconds** with 20 jobs,
@@ -13,7 +15,7 @@ the plan. Native ARM64 compiler prerequisites were successfully restored before
 measurement. [Sanitized evidence](../results/minos-llvm-first-38913335754) and
 [completed workflow](https://github.com/marcpems/OpenCV-perf-tests/actions/runs/38913335754)
 record the actual toolchain, commands, source/configuration receipt and CPU data.
-The five-configuration study and runtime comparison remain separate work;
+The five-configuration study and runtime comparison are separate datasets;
 this observation alone does not establish the original baseline's proximity
 to the 154-second lab reference.
 

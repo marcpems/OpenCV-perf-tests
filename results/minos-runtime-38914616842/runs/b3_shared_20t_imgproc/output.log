@@ -1,0 +1,84 @@
+RUNTIME_AFFINITY=1048575
+RUNTIME_DLL=D:\action-runner-OpenCV\_work\OpenCV-perf-tests\OpenCV-perf-tests\.work\minos-runtime-38914616842\shared\opencv_world4100.dll
+RUNTIME_NATIVE_ARM64=1
+RUNTIME_THREADS=20
+RUNTIME_CPU_WARMUP=1
+RUNTIME_MAIN_AFFINITY=32
+TEST: Skip tests with tags: 'mem_6gb', 'verylong'
+CTEST_FULL_OUTPUT
+OpenCV version: 4.10.0
+OpenCV VCS version: 4.10.0
+Build type: Debug Release
+WARNING: build value differs from runtime: Release
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostarm64/arm64/cl.exe  (ver 19.44.35229.0)
+Parallel framework: ms-concurrency (nthreads=20)
+CPU features: NEON *NEON_DOTPROD? *NEON_FP16?
+Note: Google Test filter = MatInfo_Size_Size_resizeUpLinear.resizeUpLinear/2:MatInfo_Size_Size_resizeUpLinear.resizeUpLinear/6:MatInfo_SizePair_resizeUpLinearNonExact.resizeUpLinearNonExact/4:MatInfo_SizePair_resizeUpLinearNonExact.resizeUpLinearNonExact/5:MatInfo_SizePair_resizeUpLinearNonExact.resizeUpLinearNonExact/16:MatInfo_SizePair_resizeUpLinearNonExact.resizeUpLinearNonExact/17:Size_MatType_BorderType_gaussianBlur5x5.gaussianBlur5x5/43:Size_MatType_BorderType_gaussianBlur5x5.gaussianBlur5x5/63:Size_CvtMode_cvtColor8u.cvtColor8u/123:Size_CvtMode_cvtColor8u.cvtColor8u/126:Size_CvtMode_cvtColor8u.cvtColor8u/243:Size_CvtMode_cvtColor8u.cvtColor8u/246:Size_MatType_erode.erode/2:Size_MatType_erode.erode/3:Size_MatType_erode.erode/8:Size_MatType_erode.erode/9
+[==========] Running 16 tests from 5 test cases.
+[----------] Global test environment set-up.
+[----------] 2 tests from MatInfo_Size_Size_resizeUpLinear
+[ RUN      ] MatInfo_Size_Size_resizeUpLinear.resizeUpLinear/2, where GetParam() = (8UC3, 640x480, 960x540)
+[ PERFSTAT ]    (samples=20   mean=0.46   median=0.43   min=0.42   stddev=0.09 (20.5%))
+[       OK ] MatInfo_Size_Size_resizeUpLinear.resizeUpLinear/2 (99 ms)
+[ RUN      ] MatInfo_Size_Size_resizeUpLinear.resizeUpLinear/6, where GetParam() = (8UC3, 640x480, 1280x720)
+[ PERFSTAT ]    (samples=20   mean=0.71   median=0.71   min=0.66   stddev=0.02 (2.3%))
+[       OK ] MatInfo_Size_Size_resizeUpLinear.resizeUpLinear/6 (145 ms)
+[----------] 2 tests from MatInfo_Size_Size_resizeUpLinear (245 ms total)
+
+[----------] 4 tests from MatInfo_SizePair_resizeUpLinearNonExact
+[ RUN      ] MatInfo_SizePair_resizeUpLinearNonExact.resizeUpLinearNonExact/4, where GetParam() = (8UC3, (640x480, 960x540))
+[ PERFSTAT ]    (samples=20   mean=0.23   median=0.24   min=0.17   stddev=0.04 (18.3%))
+[       OK ] MatInfo_SizePair_resizeUpLinearNonExact.resizeUpLinearNonExact/4 (49 ms)
+[ RUN      ] MatInfo_SizePair_resizeUpLinearNonExact.resizeUpLinearNonExact/5, where GetParam() = (8UC3, (640x480, 1280x720))
+[ PERFSTAT ]    (samples=20   mean=0.37   median=0.38   min=0.33   stddev=0.02 (6.3%))
+[       OK ] MatInfo_SizePair_resizeUpLinearNonExact.resizeUpLinearNonExact/5 (77 ms)
+[ RUN      ] MatInfo_SizePair_resizeUpLinearNonExact.resizeUpLinearNonExact/16, where GetParam() = (32FC1, (640x480, 960x540))
+[ PERFSTAT ]    (samples=20   mean=0.09   median=0.09   min=0.08   stddev=0.00 (4.1%))
+[       OK ] MatInfo_SizePair_resizeUpLinearNonExact.resizeUpLinearNonExact/16 (18 ms)
+[ RUN      ] MatInfo_SizePair_resizeUpLinearNonExact.resizeUpLinearNonExact/17, where GetParam() = (32FC1, (640x480, 1280x720))
+[ PERFSTAT ]    (samples=20   mean=0.10   median=0.09   min=0.08   stddev=0.02 (20.8%))
+[       OK ] MatInfo_SizePair_resizeUpLinearNonExact.resizeUpLinearNonExact/17 (23 ms)
+[----------] 4 tests from MatInfo_SizePair_resizeUpLinearNonExact (167 ms total)
+
+[----------] 2 tests from Size_MatType_BorderType_gaussianBlur5x5
+[ RUN      ] Size_MatType_BorderType_gaussianBlur5x5.gaussianBlur5x5/43, where GetParam() = (640x480, 8UC1, BORDER_REFLECT101)
+[ PERFSTAT ]    (samples=20   mean=0.06   median=0.06   min=0.04   stddev=0.02 (37.3%))
+[       OK ] Size_MatType_BorderType_gaussianBlur5x5.gaussianBlur5x5/43 (2 ms)
+[ RUN      ] Size_MatType_BorderType_gaussianBlur5x5.gaussianBlur5x5/63, where GetParam() = (1280x720, 8UC1, BORDER_REFLECT101)
+[ PERFSTAT ]    (samples=20   mean=0.09   median=0.09   min=0.07   stddev=0.02 (18.1%))
+[       OK ] Size_MatType_BorderType_gaussianBlur5x5.gaussianBlur5x5/63 (2 ms)
+[----------] 2 tests from Size_MatType_BorderType_gaussianBlur5x5 (5 ms total)
+
+[----------] 4 tests from Size_CvtMode_cvtColor8u
+[ RUN      ] Size_CvtMode_cvtColor8u.cvtColor8u/123, where GetParam() = (640x480, COLOR_BGR2GRAY)
+[ PERFSTAT ]    (samples=20   mean=0.08   median=0.08   min=0.06   stddev=0.01 (16.6%))
+[       OK ] Size_CvtMode_cvtColor8u.cvtColor8u/123 (8 ms)
+[ RUN      ] Size_CvtMode_cvtColor8u.cvtColor8u/126, where GetParam() = (640x480, COLOR_BGR2HSV)
+[ PERFSTAT ]    (samples=20   mean=0.12   median=0.12   min=0.07   stddev=0.03 (27.5%))
+[       OK ] Size_CvtMode_cvtColor8u.cvtColor8u/126 (14 ms)
+[ RUN      ] Size_CvtMode_cvtColor8u.cvtColor8u/243, where GetParam() = (1920x1080, COLOR_BGR2GRAY)
+[ PERFSTAT ]    (samples=20   mean=0.20   median=0.20   min=0.18   stddev=0.02 (8.4%))
+[       OK ] Size_CvtMode_cvtColor8u.cvtColor8u/243 (24 ms)
+[ RUN      ] Size_CvtMode_cvtColor8u.cvtColor8u/246, where GetParam() = (1920x1080, COLOR_BGR2HSV)
+[ PERFSTAT ]    (samples=20   mean=0.34   median=0.33   min=0.32   stddev=0.02 (4.8%))
+[       OK ] Size_CvtMode_cvtColor8u.cvtColor8u/246 (40 ms)
+[----------] 4 tests from Size_CvtMode_cvtColor8u (86 ms total)
+
+[----------] 4 tests from Size_MatType_erode
+[ RUN      ] Size_MatType_erode.erode/2, where GetParam() = (640x480, 8UC1)
+[ PERFSTAT ]    (samples=20   mean=0.02   median=0.02   min=0.02   stddev=0.00 (6.3%))
+[       OK ] Size_MatType_erode.erode/2 (1 ms)
+[ RUN      ] Size_MatType_erode.erode/3, where GetParam() = (640x480, 8UC4)
+[ PERFSTAT ]    (samples=20   mean=0.07   median=0.07   min=0.06   stddev=0.00 (2.9%))
+[       OK ] Size_MatType_erode.erode/3 (2 ms)
+[ RUN      ] Size_MatType_erode.erode/8, where GetParam() = (1280x1024, 8UC1)
+[ PERFSTAT ]    (samples=20   mean=0.08   median=0.08   min=0.08   stddev=0.00 (3.0%))
+[       OK ] Size_MatType_erode.erode/8 (3 ms)
+[ RUN      ] Size_MatType_erode.erode/9, where GetParam() = (1280x1024, 8UC4)
+[ PERFSTAT ]    (samples=20   mean=0.44   median=0.45   min=0.35   stddev=0.05 (10.4%))
+[       OK ] Size_MatType_erode.erode/9 (13 ms)
+[----------] 4 tests from Size_MatType_erode (19 ms total)
+
+[----------] Global test environment tear-down
+[==========] 16 tests from 5 test cases ran. (522 ms total)
+[  PASSED  ] 16 tests.

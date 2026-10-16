@@ -1,0 +1,21 @@
+{
+  "status": "completed_with_failures",
+  "case_executions": 120,
+  "failures": [
+    {
+      "label": "diag02_baseline_20t_features2d",
+      "variant": "baseline",
+      "threads": 20,
+      "name": "Norm_CrossCheck_batchDistance_Dest_32S.batchDistance_Dest_32S/1",
+      "message": "D:\\action-runner-OpenCV\\_work\\OpenCV-perf-tests\\OpenCV-perf-tests\\.work\\minos-source\\modules\\ts\\src\\ts_perf.cpp:370\nThe difference between expect_min and actual_min is 1, which exceeds eps, where\nexpect_min evaluates to 0,\nactual_min evaluates to -1, and\neps evaluates to 2.2204460492503131e-16.\nArgument \"ndix\" has unexpected minimal value\n"
+    },
+    {
+      "label": "diag08_baseline_20t_features2d",
+      "variant": "baseline",
+      "threads": 20,
+      "name": "Source_CrossCheck_batchDistance_L2.batchDistance_L2/3",
+      "message": "D:\\action-runner-OpenCV\\_work\\OpenCV-perf-tests\\OpenCV-perf-tests\\.work\\minos-source\\modules\\ts\\src\\ts_perf.cpp:372\nThe difference between expect_max and actual_max is 0.22256094217300415, which exceeds eps, where\nexpect_max evaluates to 0.24995326995849609,\nactual_max evaluates to 0.47251421213150024, and\neps evaluates to 2.2204460492503131e-16.\nArgument \"dist\" has unexpected maximal value\n"
+    }
+  ],
+  "interpretation": "Separate repeatability diagnostic; preserves the original failed screen. A clean repeat would not invalidate an earlier failure."
+}

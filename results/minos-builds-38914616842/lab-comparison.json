@@ -1,0 +1,13 @@
+{
+  "reference_lab_seconds": 154,
+  "minos_baseline_seconds": 170.53425,
+  "difference_seconds": 16.534249999999986,
+  "difference_percent": 10.736525974025968,
+  "reference_inside_observed_range": false,
+  "within_five_percent": false,
+  "within_ten_percent": false,
+  "interpretation": "Two measured builds per configuration. Five/ten-percent bands are descriptive, not statistical equivalence tests; lab variance and full lab software configuration are unavailable.",
+  "jobs": 20,
+  "source_run_id": "38914616842",
+  "source_commit": "959f1ff2bb7d71437035177c0b0135ae2a31113f"
+}

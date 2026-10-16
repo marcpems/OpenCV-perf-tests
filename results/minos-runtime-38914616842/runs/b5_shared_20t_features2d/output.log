@@ -1,0 +1,61 @@
+RUNTIME_AFFINITY=1048575
+RUNTIME_DLL=D:\action-runner-OpenCV\_work\OpenCV-perf-tests\OpenCV-perf-tests\.work\minos-runtime-38914616842\shared\opencv_world4100.dll
+RUNTIME_NATIVE_ARM64=1
+RUNTIME_THREADS=20
+RUNTIME_CPU_WARMUP=1
+RUNTIME_MAIN_AFFINITY=32
+TEST: Skip tests with tags: 'mem_6gb', 'verylong'
+CTEST_FULL_OUTPUT
+OpenCV version: 4.10.0
+OpenCV VCS version: 4.10.0
+Build type: Debug Release
+WARNING: build value differs from runtime: Release
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostarm64/arm64/cl.exe  (ver 19.44.35229.0)
+Parallel framework: ms-concurrency (nthreads=20)
+CPU features: NEON *NEON_DOTPROD? *NEON_FP16?
+Note: Google Test filter = Norm_CrossCheck_batchDistance_Dest_32S.batchDistance_Dest_32S/0:Norm_CrossCheck_batchDistance_Dest_32S.batchDistance_Dest_32S/1:Source_CrossCheck_batchDistance_L2.batchDistance_L2/2:Source_CrossCheck_batchDistance_L2.batchDistance_L2/3
+[==========] Running 4 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 2 tests from Norm_CrossCheck_batchDistance_Dest_32S
+[ RUN      ] Norm_CrossCheck_batchDistance_Dest_32S.batchDistance_Dest_32S/0, where GetParam() = (NORM_HAMMING, false)
+[ PERFSTAT ]    (samples=20   mean=0.75   median=0.72   min=0.64   stddev=0.09 (11.4%))
+[       OK ] Norm_CrossCheck_batchDistance_Dest_32S.batchDistance_Dest_32S/0 (17 ms)
+[ RUN      ] Norm_CrossCheck_batchDistance_Dest_32S.batchDistance_Dest_32S/1, where GetParam() = (NORM_HAMMING, true)
+D:\action-runner-OpenCV\_work\OpenCV-perf-tests\OpenCV-perf-tests\.work\minos-source\modules\ts\src\ts_perf.cpp(370): error: The difference between expect_min and actual_min is 1, which exceeds eps, where
+expect_min evaluates to 0,
+actual_min evaluates to -1, and
+eps evaluates to 2.2204460492503131e-16.
+Argument "ndix" has unexpected minimal value
+
+params    = (NORM_HAMMING, true)
+termination reason:  reached maximum number of iterations
+bytesIn   =          0
+bytesOut  =          0
+samples   =         20
+outliers  =          1
+frequency = 1000000000
+min       =    1232200 = 1.23ms
+median    =    1357200 = 1.36ms
+gmean     =    1391058 = 1.39ms
+gstddev   = 0.10422889 = 0.88ms for 97% dispersion interval
+mean      =    1398479 = 1.40ms
+stddev    =     153439 = 0.15ms
+[  FAILED  ] Norm_CrossCheck_batchDistance_Dest_32S.batchDistance_Dest_32S/1, where GetParam() = (NORM_HAMMING, true) (32 ms)
+[----------] 2 tests from Norm_CrossCheck_batchDistance_Dest_32S (49 ms total)
+
+[----------] 2 tests from Source_CrossCheck_batchDistance_L2
+[ RUN      ] Source_CrossCheck_batchDistance_L2.batchDistance_L2/2, where GetParam() = (32FC1, false)
+[ PERFSTAT ]    (samples=20   mean=2.17   median=2.17   min=1.99   stddev=0.09 (4.1%))
+[       OK ] Source_CrossCheck_batchDistance_L2.batchDistance_L2/2 (46 ms)
+[ RUN      ] Source_CrossCheck_batchDistance_L2.batchDistance_L2/3, where GetParam() = (32FC1, true)
+[ PERFSTAT ]    (samples=20   mean=3.32   median=3.32   min=3.16   stddev=0.08 (2.5%))
+[       OK ] Source_CrossCheck_batchDistance_L2.batchDistance_L2/3 (81 ms)
+[----------] 2 tests from Source_CrossCheck_batchDistance_L2 (127 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 2 test cases ran. (176 ms total)
+[  PASSED  ] 3 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] Norm_CrossCheck_batchDistance_Dest_32S.batchDistance_Dest_32S/1, where GetParam() = (NORM_HAMMING, true)
+
+ 1 FAILED TEST

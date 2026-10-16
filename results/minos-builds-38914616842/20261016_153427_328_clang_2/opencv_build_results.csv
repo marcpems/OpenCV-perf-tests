@@ -1,0 +1,5 @@
+scenario_runtime,60.12
+build_time,60.12
+architecture,ARM64
+clean_time,0.27
+install_time,0.27

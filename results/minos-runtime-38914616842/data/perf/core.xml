@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<Size_MatType_FlagsType_NzeroRows_dft--dft---320x480--32FC1--0--false->
+  <dst>
+    <kind>65536</kind>
+    <type>5</type>
+    <min>-2833255.</min>
+    <max>2846556.</max>
+    <last>
+      <x>319</x>
+      <y>479</y>
+      <val>-1252064.625</val></last>
+    <rng1>
+      <x>229</x>
+      <y>207</y>
+      <val>469258.5</val></rng1>
+    <rng2>
+      <x>224</x>
+      <y>348</y>
+      <val>-214068.0625</val></rng2></dst></Size_MatType_FlagsType_NzeroRows_dft--dft---320x480--32FC1--0--false->
+<Size_MatType_FlagsType_NzeroRows_dft--dft---800x600--32FC1--0--false->
+  <dst>
+    <kind>65536</kind>
+    <type>5</type>
+    <min>-5257306.5</min>
+    <max>5363186.5</max>
+    <last>
+      <x>799</x>
+      <y>599</y>
+      <val>-464012.25</val></last>
+    <rng1>
+      <x>125</x>
+      <y>333</y>
+      <val>2357438.25</val></rng1>
+    <rng2>
+      <x>567</x>
+      <y>561</y>
+      <val>1229188.5</val></rng2></dst></Size_MatType_FlagsType_NzeroRows_dft--dft---800x600--32FC1--0--false->
+<Size_MatType_NormType_norm--norm---640x480--8UC1--NORM_L2->
+  <n>
+    <kind>131072</kind>
+    <type>6</type>
+    <val type_id="opencv-matrix">
+      <rows>1</rows>
+      <cols>1</cols>
+      <dt>d</dt>
+      <data>
+        81623.095175323993</data></val></n></Size_MatType_NormType_norm--norm---640x480--8UC1--NORM_L2->
+<Size_MatType_NormType_norm--norm---1920x1080--32FC1--NORM_L2->
+  <n>
+    <kind>131072</kind>
+    <type>6</type>
+    <val type_id="opencv-matrix">
+      <rows>1</rows>
+      <cols>1</cols>
+      <dt>d</dt>
+      <data>
+        3403317.5450010463</data></val></n></Size_MatType_NormType_norm--norm---1920x1080--32FC1--NORM_L2->
+<VectorLength_phase32f--phase32f--131072>
+  <angle>
+    <kind>196608</kind>
+    <type>5</type>
+    <min>0.0035934667102992535</min>
+    <max>359.99252319335938</max>
+    <last>
+      <x>131071</x>
+      <y>0</y>
+      <val>314.39065551757812</val></last>
+    <rng1>
+      <x>128419</x>
+      <y>0</y>
+      <val>146.58932495117188</val></rng1>
+    <rng2>
+      <x>46780</x>
+      <y>0</y>
+      <val>210.56053161621094</val></rng2></angle></VectorLength_phase32f--phase32f--131072>
+<VectorLength_phase32f--phase32f--1048576>
+  <angle>
+    <kind>196608</kind>
+    <type>5</type>
+    <min>0.00020392297301441431</min>
+    <max>359.99905395507812</max>
+    <last>
+      <x>1048575</x>
+      <y>0</y>
+      <val>110.95233917236328</val></last>
+    <rng1>
+      <x>124625</x>
+      <y>0</y>
+      <val>170.03155517578125</val></rng1>
+    <rng2>
+      <x>1002541</x>
+      <y>0</y>
+      <val>53.665374755859375</val></rng2></angle></VectorLength_phase32f--phase32f--1048576>
+<VectorLength_phase64f--phase64f--131072>
+  <angle>
+    <kind>196608</kind>
+    <type>6</type>
+    <min>0.0035934930201619864</min>
+    <max>359.99252319335938</max>
+    <last>
+      <x>131071</x>
+      <y>0</y>
+      <val>314.39065551757812</val></last>
+    <rng1>
+      <x>34366</x>
+      <y>0</y>
+      <val>218.18588256835938</val></rng1>
+    <rng2>
+      <x>81231</x>
+      <y>0</y>
+      <val>252.94705200195312</val></rng2></angle></VectorLength_phase64f--phase64f--131072>
+<VectorLength_phase64f--phase64f--1048576>
+  <angle>
+    <kind>196608</kind>
+    <type>6</type>
+    <min>0.00020394461171235889</min>
+    <max>359.99905395507812</max>
+    <last>
+      <x>1048575</x>
+      <y>0</y>
+      <val>110.95233154296875</val></last>
+    <rng1>
+      <x>285408</x>
+      <y>0</y>
+      <val>338.6998291015625</val></rng1>
+    <rng2>
+      <x>156172</x>
+      <y>0</y>
+      <val>55.598361968994141</val></rng2></angle></VectorLength_phase64f--phase64f--1048576>
+</opencv_storage>

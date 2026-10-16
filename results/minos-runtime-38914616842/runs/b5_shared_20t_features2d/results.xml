@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="4" failures="1" disabled="0" errors="0" timestamp="2026-10-16T15:53:40" time="0.176" cv_module_name="features2d" cv_implementation="plain" cv_num_threads="20" test_tags="" test_tags_skip="mem_6gb,verylong" test_tags_force="" cv_version="4.10.0" cv_version_build="4.10.0" cv_vcs_version="4.10.0" cv_build_type="Debug Release" cv_build_type_build="Release" cv_compiler="C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostarm64/arm64/cl.exe  (ver 19.44.35229.0)" cv_parallel_framework="ms-concurrency" cv_parallel_threads="20" cv_cpu_features="NEON *NEON_DOTPROD? *NEON_FP16?" name="AllTests">
+  <testsuite name="Norm_CrossCheck_batchDistance_Dest_32S" tests="2" failures="1" disabled="0" errors="0" time="0.049">
+    <testcase name="batchDistance_Dest_32S/0" value_param="(NORM_HAMMING, false)" status="run" time="0.017" classname="Norm_CrossCheck_batchDistance_Dest_32S">
+<properties>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="20"/>
+<property name="outliers" value="1"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="642600"/>
+<property name="median" value="716600"/>
+<property name="gmean" value="748736"/>
+<property name="gstddev" value="0.108640"/>
+<property name="mean" value="753074"/>
+<property name="stddev" value="86053"/>
+</properties>
+    </testcase>
+    <testcase name="batchDistance_Dest_32S/1" value_param="(NORM_HAMMING, true)" status="run" time="0.032" classname="Norm_CrossCheck_batchDistance_Dest_32S">
+      <failure message="D:\action-runner-OpenCV\_work\OpenCV-perf-tests\OpenCV-perf-tests\.work\minos-source\modules\ts\src\ts_perf.cpp:370&#x0A;The difference between expect_min and actual_min is 1, which exceeds eps, where&#x0A;expect_min evaluates to 0,&#x0A;actual_min evaluates to -1, and&#x0A;eps evaluates to 2.2204460492503131e-16.&#x0A;Argument &quot;ndix&quot; has unexpected minimal value&#x0A;" type=""><![CDATA[D:\action-runner-OpenCV\_work\OpenCV-perf-tests\OpenCV-perf-tests\.work\minos-source\modules\ts\src\ts_perf.cpp:370
+The difference between expect_min and actual_min is 1, which exceeds eps, where
+expect_min evaluates to 0,
+actual_min evaluates to -1, and
+eps evaluates to 2.2204460492503131e-16.
+Argument "ndix" has unexpected minimal value
+]]></failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Source_CrossCheck_batchDistance_L2" tests="2" failures="0" disabled="0" errors="0" time="0.127">
+    <testcase name="batchDistance_L2/2" value_param="(32FC1, false)" status="run" time="0.046" classname="Source_CrossCheck_batchDistance_L2">
+<properties>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="20"/>
+<property name="outliers" value="1"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1990500"/>
+<property name="median" value="2167700"/>
+<property name="gmean" value="2170473"/>
+<property name="gstddev" value="0.041194"/>
+<property name="mean" value="2172211"/>
+<property name="stddev" value="88870"/>
+</properties>
+    </testcase>
+    <testcase name="batchDistance_L2/3" value_param="(32FC1, true)" status="run" time="0.081" classname="Source_CrossCheck_batchDistance_L2">
+<properties>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="20"/>
+<property name="outliers" value="1"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="3162100"/>
+<property name="median" value="3315700"/>
+<property name="gmean" value="3315250"/>
+<property name="gstddev" value="0.025315"/>
+<property name="mean" value="3316258"/>
+<property name="stddev" value="84067"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

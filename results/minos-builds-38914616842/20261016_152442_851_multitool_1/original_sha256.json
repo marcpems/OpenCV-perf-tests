@@ -1,0 +1,13 @@
+{
+  "metadata.json": "4347eb325b1eebf488024d69d124551f81177ee32e6e2aad9752bb6c5d5af185",
+  "opencv_build_results.csv": "5e0facdd6644488ad9d77247e4096332281697ec136b6ffc4b16ad5fbb2326b6",
+  "opencv_build_results.trace": "480440ec53198a56e98228942e1218fc70e0b7936e8dac34efad535b11e94016",
+  "build.log": "9efa91816a4bd5747b63e7669273b60565e4e525ce4017849c02760d5e621545",
+  "clean.log": "aa322df6cb26442ca8132dbdfb5fa77ca5f8daca19d1f77c6c6b8ea7700cc37e",
+  "install.log": "813481148a4cdeff1785a5fa763b02a29eb405bdc0adaee14a8eabb63db958b2",
+  "configure.log": "6513d5b1b5b45a15af304eef0e293a016aa6c88c36961e56d632cbae7384d028",
+  "CMakeCache.txt": "4c4c97e66735794e0d2ae1ef1ce330b719275da60a5b52b59a19c1efb31eff64",
+  "opencv_version.txt": "0770defd2221c969bee9b055fa376a82709102dea6021edc6e8582ee285e543a",
+  "opencv_build_info.txt": "efc5a5153cc801de0ebfc4f902a14177cff2e2be9d16124c4f36f3a26c3c5753",
+  "cpu-accounting.json": "de7814edcdd3b87550e9c16150a3195836d1c2ea2ecfb716512607cfb3585699"
+}

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="5" failures="0" disabled="0" errors="0" timestamp="2026-10-16T15:50:26" time="0.008" cv_module_name="calib3d" cv_implementation="plain" cv_num_threads="1" test_tags="" test_tags_skip="mem_6gb,verylong" test_tags_force="" cv_version="4.10.0" cv_version_build="4.10.0" cv_vcs_version="4.10.0" cv_build_type="Debug Release" cv_build_type_build="Release" cv_compiler="C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostarm64/arm64/cl.exe  (ver 19.44.35229.0)" cv_parallel_framework="ms-concurrency" cv_parallel_threads="1" cv_cpu_features="NEON *NEON_DOTPROD? *NEON_FP16?" name="AllTests">
+  <testsuite name="PointsNum_Algo_solvePnP" tests="4" failures="0" disabled="0" errors="0" time="0.007">
+    <testcase name="solvePnP/0" value_param="(6, SOLVEPNP_ITERATIVE)" status="run" time="0.002" classname="PointsNum_Algo_solvePnP">
+<properties>
+<property name="bytesIn" value="120"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="20"/>
+<property name="outliers" value="1"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="39000"/>
+<property name="median" value="40100"/>
+<property name="gmean" value="41896"/>
+<property name="gstddev" value="0.091494"/>
+<property name="mean" value="42068"/>
+<property name="stddev" value="4061"/>
+</properties>
+    </testcase>
+    <testcase name="solvePnP/1" value_param="(6, SOLVEPNP_EPNP)" status="run" time="0" classname="PointsNum_Algo_solvePnP">
+<properties>
+<property name="bytesIn" value="120"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="20"/>
+<property name="outliers" value="1"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="25100"/>
+<property name="median" value="25300"/>
+<property name="gmean" value="25517"/>
+<property name="gstddev" value="0.017319"/>
+<property name="mean" value="25521"/>
+<property name="stddev" value="445"/>
+</properties>
+    </testcase>
+    <testcase name="solvePnP/8" value_param="(91, SOLVEPNP_ITERATIVE)" status="run" time="0.003" classname="PointsNum_Algo_solvePnP">
+<properties>
+<property name="bytesIn" value="1820"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="20"/>
+<property name="outliers" value="1"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="130400"/>
+<property name="median" value="131900"/>
+<property name="gmean" value="133043"/>
+<property name="gstddev" value="0.034573"/>
+<property name="mean" value="133121"/>
+<property name="stddev" value="4898"/>
+</properties>
+    </testcase>
+    <testcase name="solvePnP/9" value_param="(91, SOLVEPNP_EPNP)" status="run" time="0" classname="PointsNum_Algo_solvePnP">
+<properties>
+<property name="bytesIn" value="1820"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="20"/>
+<property name="outliers" value="1"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="33600"/>
+<property name="median" value="33900"/>
+<property name="gmean" value="34035"/>
+<property name="gstddev" value="0.010436"/>
+<property name="mean" value="34037"/>
+<property name="stddev" value="356"/>
+</properties>
+    </testcase>
+  </testsuite>
+  <testsuite name="PointsNum_Algo_solvePnPSmallPoints" tests="1" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="solvePnPSmallPoints/0" value_param="(5, SOLVEPNP_P3P)" status="run" time="0.001" classname="PointsNum_Algo_solvePnPSmallPoints">
+<properties>
+<property name="bytesIn" value="80"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="20"/>
+<property name="outliers" value="1"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="11000"/>
+<property name="median" value="11300"/>
+<property name="gmean" value="11552"/>
+<property name="gstddev" value="0.061498"/>
+<property name="mean" value="11574"/>
+<property name="stddev" value="747"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

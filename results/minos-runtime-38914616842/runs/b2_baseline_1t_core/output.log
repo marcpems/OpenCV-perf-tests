@@ -1,0 +1,96 @@
+RUNTIME_AFFINITY=32
+RUNTIME_DLL=D:\action-runner-OpenCV\_work\OpenCV-perf-tests\OpenCV-perf-tests\.work\minos-runtime-38914616842\baseline\opencv_world4100.dll
+RUNTIME_NATIVE_ARM64=1
+RUNTIME_THREADS=1
+RUNTIME_CPU_WARMUP=1
+RUNTIME_MAIN_AFFINITY=32
+TEST: Skip tests with tags: 'mem_6gb', 'verylong'
+CTEST_FULL_OUTPUT
+OpenCV version: 4.10.0
+OpenCV VCS version: 4.10.0
+Build type: Debug Release
+WARNING: build value differs from runtime: Release
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostarm64/arm64/cl.exe  (ver 19.44.35229.0)
+Parallel framework: ms-concurrency (nthreads=1)
+CPU features: NEON *NEON_DOTPROD? *NEON_FP16?
+Note: Google Test filter = BinaryOpTest.add/0:BinaryOpTest.add/19:BinaryOpTest.add/21:BinaryOpTest.multiply/0:BinaryOpTest.multiply/19:BinaryOpTest.multiply/21:BinaryOpTest.absdiff/0:BinaryOpTest.absdiff/19:BinaryOpTest.absdiff/21:Size_MatType_FlagsType_NzeroRows_dft.dft/1:Size_MatType_FlagsType_NzeroRows_dft.dft/37:Size_MatType_NormType_norm.norm/2:Size_MatType_NormType_norm.norm/26:VectorLength_phase32f.phase32f/2:VectorLength_phase32f.phase32f/4:VectorLength_phase64f.phase64f/2:VectorLength_phase64f.phase64f/4:SvdTest_decompose.decompose/0:SvdTest_decompose.decompose/4
+[==========] Running 19 tests from 6 test cases.
+[----------] Global test environment set-up.
+[----------] 9 tests from BinaryOpTest
+[ RUN      ] BinaryOpTest.absdiff/0, where GetParam() = (640x480, 8UC1)
+[ PERFSTAT ]    (samples=20   mean=0.01   median=0.01   min=0.01   stddev=0.00 (1.5%))
+[       OK ] BinaryOpTest.absdiff/0 (1 ms)
+[ RUN      ] BinaryOpTest.absdiff/19, where GetParam() = (1280x720, 32FC1)
+[ PERFSTAT ]    (samples=20   mean=0.21   median=0.17   min=0.14   stddev=0.08 (37.2%))
+[       OK ] BinaryOpTest.absdiff/19 (8 ms)
+[ RUN      ] BinaryOpTest.absdiff/21, where GetParam() = (1920x1080, 8UC3)
+[ PERFSTAT ]    (samples=20   mean=0.41   median=0.38   min=0.29   stddev=0.14 (35.1%))
+[       OK ] BinaryOpTest.absdiff/21 (16 ms)
+[ RUN      ] BinaryOpTest.add/0, where GetParam() = (640x480, 8UC1)
+[ PERFSTAT ]    (samples=20   mean=0.01   median=0.01   min=0.01   stddev=0.00 (2.0%))
+[       OK ] BinaryOpTest.add/0 (0 ms)
+[ RUN      ] BinaryOpTest.add/19, where GetParam() = (1280x720, 32FC1)
+[ PERFSTAT ]    (samples=20   mean=0.18   median=0.16   min=0.13   stddev=0.07 (36.8%))
+[       OK ] BinaryOpTest.add/19 (8 ms)
+[ RUN      ] BinaryOpTest.add/21, where GetParam() = (1920x1080, 8UC3)
+[ PERFSTAT ]    (samples=20   mean=0.42   median=0.39   min=0.27   stddev=0.15 (34.9%))
+[       OK ] BinaryOpTest.add/21 (16 ms)
+[ RUN      ] BinaryOpTest.multiply/0, where GetParam() = (640x480, 8UC1)
+[ PERFSTAT ]    (samples=20   mean=0.01   median=0.01   min=0.01   stddev=0.00 (21.2%))
+[       OK ] BinaryOpTest.multiply/0 (1 ms)
+[ RUN      ] BinaryOpTest.multiply/19, where GetParam() = (1280x720, 32FC1)
+[ PERFSTAT ]    (samples=20   mean=0.19   median=0.17   min=0.13   stddev=0.07 (37.6%))
+[       OK ] BinaryOpTest.multiply/19 (8 ms)
+[ RUN      ] BinaryOpTest.multiply/21, where GetParam() = (1920x1080, 8UC3)
+[ PERFSTAT ]    (samples=20   mean=0.32   median=0.30   min=0.28   stddev=0.06 (19.4%))
+[       OK ] BinaryOpTest.multiply/21 (15 ms)
+[----------] 9 tests from BinaryOpTest (75 ms total)
+
+[----------] 2 tests from Size_MatType_FlagsType_NzeroRows_dft
+[ RUN      ] Size_MatType_FlagsType_NzeroRows_dft.dft/1, where GetParam() = (320x480, 32FC1, 0, false)
+[ PERFSTAT ]    (samples=20   mean=0.50   median=0.50   min=0.49   stddev=0.00 (0.9%))
+[       OK ] Size_MatType_FlagsType_NzeroRows_dft.dft/1 (10 ms)
+[ RUN      ] Size_MatType_FlagsType_NzeroRows_dft.dft/37, where GetParam() = (800x600, 32FC1, 0, false)
+[ PERFSTAT ]    (samples=20   mean=1.78   median=1.77   min=1.77   stddev=0.01 (0.4%))
+[       OK ] Size_MatType_FlagsType_NzeroRows_dft.dft/37 (37 ms)
+[----------] 2 tests from Size_MatType_FlagsType_NzeroRows_dft (47 ms total)
+
+[----------] 2 tests from Size_MatType_NormType_norm
+[ RUN      ] Size_MatType_NormType_norm.norm/2, where GetParam() = (640x480, 8UC1, NORM_L2)
+[ PERFSTAT ]    (samples=20   mean=0.04   median=0.04   min=0.04   stddev=0.00 (0.7%))
+[       OK ] Size_MatType_NormType_norm.norm/2 (2 ms)
+[ RUN      ] Size_MatType_NormType_norm.norm/26, where GetParam() = (1920x1080, 32FC1, NORM_L2)
+[ PERFSTAT ]    (samples=20   mean=0.35   median=0.34   min=0.33   stddev=0.02 (6.6%))
+[       OK ] Size_MatType_NormType_norm.norm/26 (10 ms)
+[----------] 2 tests from Size_MatType_NormType_norm (12 ms total)
+
+[----------] 2 tests from VectorLength_phase32f
+[ RUN      ] VectorLength_phase32f.phase32f/2, where GetParam() = 131072
+[ PERFSTAT ]    (samples=20   mean=0.06   median=0.06   min=0.06   stddev=0.00 (0.8%))
+[       OK ] VectorLength_phase32f.phase32f/2 (2 ms)
+[ RUN      ] VectorLength_phase32f.phase32f/4, where GetParam() = 1048576
+[ PERFSTAT ]    (samples=20   mean=0.51   median=0.51   min=0.49   stddev=0.01 (2.6%))
+[       OK ] VectorLength_phase32f.phase32f/4 (15 ms)
+[----------] 2 tests from VectorLength_phase32f (17 ms total)
+
+[----------] 2 tests from VectorLength_phase64f
+[ RUN      ] VectorLength_phase64f.phase64f/2, where GetParam() = 131072
+[ PERFSTAT ]    (samples=20   mean=0.13   median=0.13   min=0.13   stddev=0.00 (0.5%))
+[       OK ] VectorLength_phase64f.phase64f/2 (4 ms)
+[ RUN      ] VectorLength_phase64f.phase64f/4, where GetParam() = 1048576
+[ PERFSTAT ]    (samples=20   mean=1.71   median=1.67   min=1.26   stddev=0.31 (18.3%))
+[       OK ] VectorLength_phase64f.phase64f/4 (44 ms)
+[----------] 2 tests from VectorLength_phase64f (48 ms total)
+
+[----------] 2 tests from SvdTest_decompose
+[ RUN      ] SvdTest_decompose.decompose/0, where GetParam() = ((5, 15), RANK_HALF, CV_32F, false, false)
+[ PERFSTAT ]    (samples=20   mean=0.00   median=0.00   min=0.00   stddev=0.00 (5.9%))
+[       OK ] SvdTest_decompose.decompose/0 (0 ms)
+[ RUN      ] SvdTest_decompose.decompose/4, where GetParam() = ((5, 15), RANK_HALF, CV_64F, false, false)
+[ PERFSTAT ]    (samples=20   mean=0.00   median=0.00   min=0.00   stddev=0.00 (4.7%))
+[       OK ] SvdTest_decompose.decompose/4 (0 ms)
+[----------] 2 tests from SvdTest_decompose (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 19 tests from 6 test cases ran. (200 ms total)
+[  PASSED  ] 19 tests.

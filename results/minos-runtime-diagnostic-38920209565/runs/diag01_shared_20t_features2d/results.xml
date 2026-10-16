@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="2" failures="0" disabled="0" errors="0" timestamp="2026-10-16T15:59:41" time="0.108" cv_module_name="features2d" cv_implementation="plain" cv_num_threads="20" test_tags="" test_tags_skip="mem_6gb,verylong" test_tags_force="" cv_version="4.10.0" cv_version_build="4.10.0" cv_vcs_version="4.10.0" cv_build_type="Debug Release" cv_build_type_build="Release" cv_compiler="C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostarm64/arm64/cl.exe  (ver 19.44.35229.0)" cv_parallel_framework="ms-concurrency" cv_parallel_threads="20" cv_cpu_features="NEON *NEON_DOTPROD? *NEON_FP16?" name="AllTests">
+  <testsuite name="Norm_CrossCheck_batchDistance_Dest_32S" tests="1" failures="0" disabled="0" errors="0" time="0.032">
+    <testcase name="batchDistance_Dest_32S/1" value_param="(NORM_HAMMING, true)" status="run" time="0.032" classname="Norm_CrossCheck_batchDistance_Dest_32S">
+<properties>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="20"/>
+<property name="outliers" value="1"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="1212400"/>
+<property name="median" value="1349500"/>
+<property name="gmean" value="1460259"/>
+<property name="gstddev" value="0.202711"/>
+<property name="mean" value="1492000"/>
+<property name="stddev" value="351314"/>
+</properties>
+    </testcase>
+  </testsuite>
+  <testsuite name="Source_CrossCheck_batchDistance_L2" tests="1" failures="0" disabled="0" errors="0" time="0.076">
+    <testcase name="batchDistance_L2/3" value_param="(32FC1, true)" status="run" time="0.076" classname="Source_CrossCheck_batchDistance_L2">
+<properties>
+<property name="bytesIn" value="0"/>
+<property name="bytesOut" value="0"/>
+<property name="term" value="0"/>
+<property name="samples" value="20"/>
+<property name="outliers" value="1"/>
+<property name="frequency" value="1000000000"/>
+<property name="min" value="2768900"/>
+<property name="median" value="2926700"/>
+<property name="gmean" value="2970723"/>
+<property name="gstddev" value="0.060991"/>
+<property name="mean" value="2976105"/>
+<property name="stddev" value="189032"/>
+</properties>
+    </testcase>
+  </testsuite>
+</testsuites>

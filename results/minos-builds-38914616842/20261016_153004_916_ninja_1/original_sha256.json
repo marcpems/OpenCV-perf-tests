@@ -1,0 +1,14 @@
+{
+  "metadata.json": "a5d05bda04eb37cfab0d3fcaccdbe41a51c34b14c305d9ae5ba231c768448055",
+  "opencv_build_results.csv": "3a62d951e3e314068dff0028c0ac389374a664b891732827688498314cec92c7",
+  "opencv_build_results.trace": "636bc899cdeb66d74f995fab4837c5b166319f94f8492baf3448de18f2008d54",
+  "build.log": "a1479ef8c56d55c846876eff647d2cdb421207c6fb86604c49898331aa574e8f",
+  "clean.log": "04db8349d1882f1bfe214433e4af11dd0d6492a3c31cdb796e78249454dddd68",
+  "install.log": "51bc91c09a037755ae97092bdc7d3f75034a9724784bbf5a8687c4584d9ee955",
+  "configure.log": "ef03403ae4f65bc85cca25c42eb841e8556878416320f79f951689d14889bfbc",
+  "CMakeCache.txt": "e4b32550016a67f876ed1ced2960a5ce57e13d675494156c8f18357b0ea33854",
+  "opencv_version.txt": "0770defd2221c969bee9b055fa376a82709102dea6021edc6e8582ee285e543a",
+  "opencv_build_info.txt": "f78f39e040645e868ced9b71e6b4bc262bdd51acd316d4e9456426aca8e39b01",
+  "ninja_log.txt": "b7e4b845829496231583fed44caaf17ce6c69fda1ad0b652ad4e0599022b0dd0",
+  "cpu-accounting.json": "9462bf8bf1a00387b84adf5dc76dbac2f3b5cd750d090a3d725bcd21d86e78bd"
+}

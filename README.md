@@ -18,6 +18,7 @@ libraries without changing the build-time workload.
 **[Compiler gap: native execution, microbenchmarks and source patterns](docs/COMPILER_GAP_INVESTIGATION.md)** |
 **[Targeted runtime comparison of the resulting OpenCV libraries](docs/RUNTIME_SCREENING.md)** |
 **[Minos self-hosted runner validation](docs/MINOS_RUNNER.md)** |
+**[Minos build and runtime results](docs/MINOS_RESULTS.md)** |
 **[HOBL survey, equivalence and measurement methodology](docs/METHODOLOGY.md)**
 
 The baseline preserves HOBL's clean -> timed Release build -> install -> version-check
