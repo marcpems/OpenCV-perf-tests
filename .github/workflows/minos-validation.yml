@@ -11,6 +11,7 @@ on:
           - llvm
           - study
           - export-runtime
+          - diagnose-runtime
         default: probe
       source_run_id:
         description: Original run ID for export-runtime recovery only
@@ -85,4 +86,18 @@ jobs:
         with:
           name: minos-runtime-${{ inputs.source_run_id }}
           path: ${{ env.MINOS_RUNTIME_EXPORT }}
+          if-no-files-found: error
+      - name: Repeat failed descriptor cases with original frozen libraries
+        if: inputs.phase == 'diagnose-runtime'
+        timeout-minutes: 10
+        shell: pwsh
+        env:
+          SOURCE_RUN_ID: ${{ inputs.source_run_id }}
+        run: python .\scripts\diagnose_minos_runtime.py $env:SOURCE_RUN_ID
+      - name: Publish separate descriptor diagnostic
+        if: always() && inputs.phase == 'diagnose-runtime'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: minos-runtime-diagnostic-${{ github.run_id }}
+          path: results/minos-runtime-diagnostic-${{ github.run_id }}
           if-no-files-found: error
