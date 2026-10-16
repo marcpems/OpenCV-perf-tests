@@ -11,6 +11,11 @@ LLVM takes **42.56% less wall time and 47.61% less CPU** in that full-build seri
 The microbenchmarks below are new, separate measurements, not additional
 full-build samples.
 
+The subsequent [targeted runtime screen](RUNTIME_SCREENING.md) compares the
+resulting baseline, shared-cap and LLVM libraries. Compiler throughput and
+generated-code runtime performance are separate questions; the runtime screen
+is not a full correctness or application-performance equivalence certification.
+
 ## 1. Native execution and workload checks
 
 These checks use the actual compiler commands from the configured Ninja graphs,

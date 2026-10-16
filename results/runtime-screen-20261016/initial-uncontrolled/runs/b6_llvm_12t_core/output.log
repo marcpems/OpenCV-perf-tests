@@ -1,0 +1,92 @@
+RUNTIME_DLL=D:\copilot\opencv-perf-tests\.work\runtime-screen-20261016\llvm\opencv_world4100.dll
+RUNTIME_NATIVE_ARM64=1
+RUNTIME_THREADS=12
+TEST: Skip tests with tags: 'mem_6gb', 'verylong'
+CTEST_FULL_OUTPUT
+OpenCV version: 4.10.0
+OpenCV VCS version: 4.10.0
+Build type: Release
+Compiler: D:/copilot/opencv-perf-tests/.tools/clang+llvm-23.1.3-aarch64-pc-windows-msvc/bin/clang++.exe  (ver 23.1.3)
+Parallel framework: ms-concurrency (nthreads=12)
+CPU features: NEON *NEON_DOTPROD? *NEON_FP16? *NEON_BF16?
+Note: Google Test filter = BinaryOpTest.add/0:BinaryOpTest.add/19:BinaryOpTest.add/21:BinaryOpTest.multiply/0:BinaryOpTest.multiply/19:BinaryOpTest.multiply/21:BinaryOpTest.absdiff/0:BinaryOpTest.absdiff/19:BinaryOpTest.absdiff/21:Size_MatType_FlagsType_NzeroRows_dft.dft/1:Size_MatType_FlagsType_NzeroRows_dft.dft/37:Size_MatType_NormType_norm.norm/2:Size_MatType_NormType_norm.norm/26:VectorLength_phase32f.phase32f/2:VectorLength_phase32f.phase32f/4:VectorLength_phase64f.phase64f/2:VectorLength_phase64f.phase64f/4:SvdTest_decompose.decompose/0:SvdTest_decompose.decompose/4
+[==========] Running 19 tests from 6 test cases.
+[----------] Global test environment set-up.
+[----------] 9 tests from BinaryOpTest
+[ RUN      ] BinaryOpTest.absdiff/0, where GetParam() = (640x480, 8UC1)
+[ PERFSTAT ]    (samples=20   mean=0.01   median=0.01   min=0.01   stddev=0.00 (1.7%))
+[       OK ] BinaryOpTest.absdiff/0 (0 ms)
+[ RUN      ] BinaryOpTest.absdiff/19, where GetParam() = (1280x720, 32FC1)
+[ PERFSTAT ]    (samples=20   mean=0.12   median=0.12   min=0.10   stddev=0.02 (15.1%))
+[       OK ] BinaryOpTest.absdiff/19 (6 ms)
+[ RUN      ] BinaryOpTest.absdiff/21, where GetParam() = (1920x1080, 8UC3)
+[ PERFSTAT ]    (samples=20   mean=0.23   median=0.22   min=0.18   stddev=0.04 (16.8%))
+[       OK ] BinaryOpTest.absdiff/21 (13 ms)
+[ RUN      ] BinaryOpTest.add/0, where GetParam() = (640x480, 8UC1)
+[ PERFSTAT ]    (samples=20   mean=0.01   median=0.01   min=0.01   stddev=0.00 (1.0%))
+[       OK ] BinaryOpTest.add/0 (0 ms)
+[ RUN      ] BinaryOpTest.add/19, where GetParam() = (1280x720, 32FC1)
+[ PERFSTAT ]    (samples=20   mean=0.10   median=0.10   min=0.10   stddev=0.00 (2.9%))
+[       OK ] BinaryOpTest.add/19 (5 ms)
+[ RUN      ] BinaryOpTest.add/21, where GetParam() = (1920x1080, 8UC3)
+[ PERFSTAT ]    (samples=20   mean=0.20   median=0.19   min=0.18   stddev=0.02 (10.8%))
+[       OK ] BinaryOpTest.add/21 (13 ms)
+[ RUN      ] BinaryOpTest.multiply/0, where GetParam() = (640x480, 8UC1)
+[ PERFSTAT ]    (samples=20   mean=0.01   median=0.01   min=0.01   stddev=0.00 (0.9%))
+[       OK ] BinaryOpTest.multiply/0 (0 ms)
+[ RUN      ] BinaryOpTest.multiply/19, where GetParam() = (1280x720, 32FC1)
+[ PERFSTAT ]    (samples=20   mean=0.10   median=0.10   min=0.09   stddev=0.00 (4.9%))
+[       OK ] BinaryOpTest.multiply/19 (5 ms)
+[ RUN      ] BinaryOpTest.multiply/21, where GetParam() = (1920x1080, 8UC3)
+[ PERFSTAT ]    (samples=20   mean=0.20   median=0.19   min=0.18   stddev=0.02 (7.9%))
+[       OK ] BinaryOpTest.multiply/21 (12 ms)
+[----------] 9 tests from BinaryOpTest (55 ms total)
+
+[----------] 2 tests from Size_MatType_FlagsType_NzeroRows_dft
+[ RUN      ] Size_MatType_FlagsType_NzeroRows_dft.dft/1, where GetParam() = (320x480, 32FC1, 0, false)
+[ PERFSTAT ]    (samples=20   mean=0.45   median=0.45   min=0.45   stddev=0.00 (0.2%))
+[       OK ] Size_MatType_FlagsType_NzeroRows_dft.dft/1 (10 ms)
+[ RUN      ] Size_MatType_FlagsType_NzeroRows_dft.dft/37, where GetParam() = (800x600, 32FC1, 0, false)
+[ PERFSTAT ]    (samples=20   mean=1.61   median=1.60   min=1.59   stddev=0.02 (1.5%))
+[       OK ] Size_MatType_FlagsType_NzeroRows_dft.dft/37 (33 ms)
+[----------] 2 tests from Size_MatType_FlagsType_NzeroRows_dft (43 ms total)
+
+[----------] 2 tests from Size_MatType_NormType_norm
+[ RUN      ] Size_MatType_NormType_norm.norm/2, where GetParam() = (640x480, 8UC1, NORM_L2)
+[ PERFSTAT ]    (samples=20   mean=0.02   median=0.02   min=0.02   stddev=0.00 (0.6%))
+[       OK ] Size_MatType_NormType_norm.norm/2 (0 ms)
+[ RUN      ] Size_MatType_NormType_norm.norm/26, where GetParam() = (1920x1080, 32FC1, NORM_L2)
+[ PERFSTAT ]    (samples=20   mean=0.41   median=0.41   min=0.39   stddev=0.01 (3.6%))
+[       OK ] Size_MatType_NormType_norm.norm/26 (11 ms)
+[----------] 2 tests from Size_MatType_NormType_norm (11 ms total)
+
+[----------] 2 tests from VectorLength_phase32f
+[ RUN      ] VectorLength_phase32f.phase32f/2, where GetParam() = 131072
+[ PERFSTAT ]    (samples=20   mean=0.05   median=0.05   min=0.05   stddev=0.00 (1.0%))
+[       OK ] VectorLength_phase32f.phase32f/2 (2 ms)
+[ RUN      ] VectorLength_phase32f.phase32f/4, where GetParam() = 1048576
+[ PERFSTAT ]    (samples=20   mean=0.43   median=0.43   min=0.43   stddev=0.00 (0.7%))
+[       OK ] VectorLength_phase32f.phase32f/4 (12 ms)
+[----------] 2 tests from VectorLength_phase32f (14 ms total)
+
+[----------] 2 tests from VectorLength_phase64f
+[ RUN      ] VectorLength_phase64f.phase64f/2, where GetParam() = 131072
+[ PERFSTAT ]    (samples=20   mean=0.08   median=0.08   min=0.08   stddev=0.00 (0.5%))
+[       OK ] VectorLength_phase64f.phase64f/2 (3 ms)
+[ RUN      ] VectorLength_phase64f.phase64f/4, where GetParam() = 1048576
+[ PERFSTAT ]    (samples=20   mean=0.64   median=0.64   min=0.63   stddev=0.01 (1.3%))
+[       OK ] VectorLength_phase64f.phase64f/4 (18 ms)
+[----------] 2 tests from VectorLength_phase64f (21 ms total)
+
+[----------] 2 tests from SvdTest_decompose
+[ RUN      ] SvdTest_decompose.decompose/0, where GetParam() = ((5, 15), RANK_HALF, CV_32F, false, false)
+[ PERFSTAT ]    (samples=20   mean=0.00   median=0.00   min=0.00   stddev=0.00 (5.4%))
+[       OK ] SvdTest_decompose.decompose/0 (0 ms)
+[ RUN      ] SvdTest_decompose.decompose/4, where GetParam() = ((5, 15), RANK_HALF, CV_64F, false, false)
+[ PERFSTAT ]    (samples=20   mean=0.00   median=0.00   min=0.00   stddev=0.00 (4.4%))
+[       OK ] SvdTest_decompose.decompose/4 (0 ms)
+[----------] 2 tests from SvdTest_decompose (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 19 tests from 6 test cases ran. (144 ms total)
+[  PASSED  ] 19 tests.

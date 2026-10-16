@@ -1,0 +1,38 @@
+RUNTIME_AFFINITY=1
+RUNTIME_DLL=D:\copilot\opencv-perf-tests\.work\runtime-screen-affinity-20261016\baseline\opencv_world4100.dll
+RUNTIME_NATIVE_ARM64=1
+RUNTIME_THREADS=1
+RUNTIME_CPU_WARMUP=1
+TEST: Skip tests with tags: 'mem_6gb', 'verylong'
+CTEST_FULL_OUTPUT
+OpenCV version: 4.10.0
+OpenCV VCS version: 4.10.0
+Build type: Debug Release
+WARNING: build value differs from runtime: Release
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostarm64/arm64/cl.exe  (ver 19.44.35229.0)
+Parallel framework: ms-concurrency (nthreads=1)
+CPU features: NEON *NEON_DOTPROD? *NEON_FP16?
+Note: Google Test filter = Norm_CrossCheck_batchDistance_Dest_32S.batchDistance_Dest_32S/0:Norm_CrossCheck_batchDistance_Dest_32S.batchDistance_Dest_32S/1:Source_CrossCheck_batchDistance_L2.batchDistance_L2/2:Source_CrossCheck_batchDistance_L2.batchDistance_L2/3
+[==========] Running 4 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 2 tests from Norm_CrossCheck_batchDistance_Dest_32S
+[ RUN      ] Norm_CrossCheck_batchDistance_Dest_32S.batchDistance_Dest_32S/0, where GetParam() = (NORM_HAMMING, false)
+[ PERFSTAT ]    (samples=20   mean=13.91   median=13.91   min=13.78   stddev=0.06 (0.5%))
+[       OK ] Norm_CrossCheck_batchDistance_Dest_32S.batchDistance_Dest_32S/0 (280 ms)
+[ RUN      ] Norm_CrossCheck_batchDistance_Dest_32S.batchDistance_Dest_32S/1, where GetParam() = (NORM_HAMMING, true)
+[ PERFSTAT ]    (samples=20   mean=28.48   median=28.49   min=28.36   stddev=0.07 (0.2%))
+[       OK ] Norm_CrossCheck_batchDistance_Dest_32S.batchDistance_Dest_32S/1 (571 ms)
+[----------] 2 tests from Norm_CrossCheck_batchDistance_Dest_32S (852 ms total)
+
+[----------] 2 tests from Source_CrossCheck_batchDistance_L2
+[ RUN      ] Source_CrossCheck_batchDistance_L2.batchDistance_L2/2, where GetParam() = (32FC1, false)
+[ PERFSTAT ]    (samples=20   mean=19.91   median=19.91   min=19.79   stddev=0.08 (0.4%))
+[       OK ] Source_CrossCheck_batchDistance_L2.batchDistance_L2/2 (400 ms)
+[ RUN      ] Source_CrossCheck_batchDistance_L2.batchDistance_L2/3, where GetParam() = (32FC1, true)
+[ PERFSTAT ]    (samples=20   mean=40.78   median=40.77   min=40.52   stddev=0.16 (0.4%))
+[       OK ] Source_CrossCheck_batchDistance_L2.batchDistance_L2/3 (818 ms)
+[----------] 2 tests from Source_CrossCheck_batchDistance_L2 (1218 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 2 test cases ran. (2070 ms total)
+[  PASSED  ] 4 tests.

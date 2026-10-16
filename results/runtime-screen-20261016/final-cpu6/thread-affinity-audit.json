@@ -1,0 +1,1031 @@
+[
+  {
+    "time": "2026-10-16T13:34:13.5235978+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_calib3d.exe",
+    "process_mask": 64,
+    "thread_masks": [
+      64,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:13.7739161+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_calib3d.exe",
+    "process_mask": 64,
+    "thread_masks": [
+      64,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:14.0297292+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_features2d.exe",
+    "process_mask": 64,
+    "thread_masks": [
+      64,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:14.2958608+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_features2d.exe",
+    "process_mask": 64,
+    "thread_masks": [
+      64,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:14.5585322+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_features2d.exe",
+    "process_mask": 64,
+    "thread_masks": [
+      64,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:14.8194920+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_features2d.exe",
+    "process_mask": 64,
+    "thread_masks": [
+      64,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:15.0748132+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_features2d.exe",
+    "process_mask": 64,
+    "thread_masks": [
+      64,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:15.3277082+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_features2d.exe",
+    "process_mask": 64,
+    "thread_masks": [
+      64,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:15.5846021+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_features2d.exe",
+    "process_mask": 64,
+    "thread_masks": [
+      64,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:15.8549419+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_dnn.exe",
+    "process_mask": 64,
+    "thread_masks": [
+      64,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:16.1094388+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_dnn.exe",
+    "process_mask": 64,
+    "thread_masks": [
+      64,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:16.3636915+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_dnn.exe",
+    "process_mask": 64,
+    "thread_masks": [
+      64,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:16.6167480+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_dnn.exe",
+    "process_mask": 64,
+    "thread_masks": [
+      64,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:16.8715681+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_dnn.exe",
+    "process_mask": 64,
+    "thread_masks": [
+      64,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:17.1248893+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_dnn.exe",
+    "process_mask": 64,
+    "thread_masks": [
+      64,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:17.3829631+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_dnn.exe",
+    "process_mask": 64,
+    "thread_masks": [
+      64,
+      64,
+      64,
+      64
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:17.6506181+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_core.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:17.9141580+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_core.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:18.1805521+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_core.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:18.4489651+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_core.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:18.7149315+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_core.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:18.9709856+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_core.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:19.2254328+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_core.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:19.4967751+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_core.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      64,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:19.7744965+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_imgproc.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:20.0468256+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_imgproc.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:20.3178994+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_imgproc.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:20.5887052+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_imgproc.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:20.8455239+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_imgproc.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:21.1012068+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_imgproc.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:21.3546671+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_imgproc.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:21.6078731+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_imgproc.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:21.8772402+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_imgproc.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      64,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:22.1287331+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_imgproc.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      64,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:22.3896348+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_calib3d.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:22.6461400+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_calib3d.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:22.9134324+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_calib3d.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:23.1785632+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_calib3d.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:23.4457547+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_calib3d.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:23.6994288+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_calib3d.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:23.9531597+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_calib3d.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:24.2331090+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_features2d.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:24.4960058+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_features2d.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:24.7623931+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_features2d.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:25.0301536+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_features2d.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:25.2908820+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_features2d.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      64,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:25.5593676+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_dnn.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:25.8242230+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_dnn.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:26.0906113+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_dnn.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:26.3614693+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_dnn.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:26.6219023+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_dnn.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:26.8763933+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_dnn.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:27.1457795+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_dnn.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:27.4024015+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_dnn.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  },
+  {
+    "time": "2026-10-16T13:34:27.6559280+01:00",
+    "executable": "D:\\copilot\\opencv-perf-tests\\.work\\runtime-screen-final-20261016\\llvm\\screen_dnn.exe",
+    "process_mask": 4095,
+    "thread_masks": [
+      64,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095,
+      4095
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+RUNTIME_AFFINITY=64
+RUNTIME_DLL=D:\copilot\opencv-perf-tests\.work\runtime-screen-final-20261016\shared\opencv_world4100.dll
+RUNTIME_NATIVE_ARM64=1
+RUNTIME_THREADS=1
+RUNTIME_CPU_WARMUP=1
+RUNTIME_MAIN_AFFINITY=64
+TEST: Skip tests with tags: 'mem_6gb', 'verylong'
+CTEST_FULL_OUTPUT
+OpenCV version: 4.10.0
+OpenCV VCS version: 4.10.0
+Build type: Debug Release
+WARNING: build value differs from runtime: Release
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostarm64/arm64/cl.exe  (ver 19.44.35229.0)
+Parallel framework: ms-concurrency (nthreads=1)
+CPU features: NEON *NEON_DOTPROD? *NEON_FP16?
+Note: Google Test filter = PointsNum_Algo_solvePnP.solvePnP/0:PointsNum_Algo_solvePnP.solvePnP/1:PointsNum_Algo_solvePnP.solvePnP/8:PointsNum_Algo_solvePnP.solvePnP/9:PointsNum_Algo_solvePnPSmallPoints.solvePnPSmallPoints/0
+[==========] Running 5 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 4 tests from PointsNum_Algo_solvePnP
+[ RUN      ] PointsNum_Algo_solvePnP.solvePnP/0, where GetParam() = (6, SOLVEPNP_ITERATIVE)
+[ PERFSTAT ]    (samples=20   mean=0.04   median=0.04   min=0.03   stddev=0.00 (3.5%))
+[       OK ] PointsNum_Algo_solvePnP.solvePnP/0 (1 ms)
+[ RUN      ] PointsNum_Algo_solvePnP.solvePnP/1, where GetParam() = (6, SOLVEPNP_EPNP)
+[ PERFSTAT ]    (samples=20   mean=0.02   median=0.02   min=0.02   stddev=0.00 (1.6%))
+[       OK ] PointsNum_Algo_solvePnP.solvePnP/1 (1 ms)
+[ RUN      ] PointsNum_Algo_solvePnP.solvePnP/8, where GetParam() = (91, SOLVEPNP_ITERATIVE)
+[ PERFSTAT ]    (samples=20   mean=0.14   median=0.13   min=0.13   stddev=0.00 (1.3%))
+[       OK ] PointsNum_Algo_solvePnP.solvePnP/8 (2 ms)
+[ RUN      ] PointsNum_Algo_solvePnP.solvePnP/9, where GetParam() = (91, SOLVEPNP_EPNP)
+[ PERFSTAT ]    (samples=20   mean=0.03   median=0.03   min=0.03   stddev=0.00 (1.3%))
+[       OK ] PointsNum_Algo_solvePnP.solvePnP/9 (1 ms)
+[----------] 4 tests from PointsNum_Algo_solvePnP (6 ms total)
+
+[----------] 1 test from PointsNum_Algo_solvePnPSmallPoints
+[ RUN      ] PointsNum_Algo_solvePnPSmallPoints.solvePnPSmallPoints/0, where GetParam() = (5, SOLVEPNP_P3P)
+[ PERFSTAT ]    (samples=20   mean=0.01   median=0.01   min=0.01   stddev=0.00 (4.6%))
+[       OK ] PointsNum_Algo_solvePnPSmallPoints.solvePnPSmallPoints/0 (0 ms)
+[----------] 1 test from PointsNum_Algo_solvePnPSmallPoints (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 2 test cases ran. (7 ms total)
+[  PASSED  ] 5 tests.

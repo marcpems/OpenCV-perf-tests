@@ -2,8 +2,9 @@
 
 Standalone Windows reproduction of Microsoft's **HOBL OpenCV build-time workload**,
 with local measurements and build-cost analysis. This compiles **OpenCV 4.10.0** with
-**CMake 4.1.1 / Visual Studio 2022**. It does **not** benchmark image-processing algorithms:
-HOBL intentionally sets `BUILD_PERF_TESTS=OFF`.
+**CMake 4.1.1 / Visual Studio 2022**. HOBL intentionally sets
+`BUILD_PERF_TESTS=OFF`; a separate, opt-in runtime screen compares the resulting
+libraries without changing the build-time workload.
 
 **[Timing results and recommendations](docs/ANALYSIS.md)** |
 **[Matched 12 vs default 14 jobs study](docs/NINJA_PARALLELISM.md)** |
@@ -15,6 +16,7 @@ HOBL intentionally sets `BUILD_PERF_TESTS=OFF`.
 **[MSBuild project + shared-compiler parallelism](docs/MSBUILD_SHARED_PARALLELISM.md)** |
 **[Fresh five-configuration rerun after device change](docs/FIVE_CONFIGURATION_RERUN.md)** |
 **[Compiler gap: native execution, microbenchmarks and source patterns](docs/COMPILER_GAP_INVESTIGATION.md)** |
+**[Targeted runtime comparison of the resulting OpenCV libraries](docs/RUNTIME_SCREENING.md)** |
 **[HOBL survey, equivalence and measurement methodology](docs/METHODOLOGY.md)**
 
 The baseline preserves HOBL's clean -> timed Release build -> install -> version-check

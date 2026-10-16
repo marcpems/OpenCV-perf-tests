@@ -1,0 +1,65 @@
+RUNTIME_AFFINITY=1
+RUNTIME_DLL=D:\copilot\opencv-perf-tests\.work\runtime-screen-affinity-20261016\shared\opencv_world4100.dll
+RUNTIME_NATIVE_ARM64=1
+[ERROR:0@0.001] global persistence.cpp:531 cv::FileStorage::Impl::open Can't open file: 'D:\copilot\opencv-perf-tests\.work\runtime-screen-affinity-20261016\data/perf/dnn.xml' in read mode
+RUNTIME_THREADS=1
+RUNTIME_CPU_WARMUP=1
+TEST: Skip tests with tags: 'mem_6gb', 'verylong'
+CTEST_FULL_OUTPUT
+OpenCV version: 4.10.0
+OpenCV VCS version: 4.10.0
+Build type: Debug Release
+WARNING: build value differs from runtime: Release
+Compiler: C:/Program Files (x86)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostarm64/arm64/cl.exe  (ver 19.44.35229.0)
+Parallel framework: ms-concurrency (nthreads=1)
+CPU features: NEON *NEON_DOTPROD? *NEON_FP16?
+Note: Google Test filter = Conv.conv/37:Conv.conv/47:Conv_1x1.conv/0:Conv_1x1.conv/2:Conv_3x3S1D1.conv/0:Conv_3x3S1D1.conv/1:Conv_Depthwise.conv/2:Conv_Depthwise.conv/3
+[==========] Running 8 tests from 4 test cases.
+[----------] Global test environment set-up.
+[----------] 2 tests from Conv
+[ RUN      ] Conv.conv/37, where GetParam() = (GFLOPS=0.170, K=[3 x 3], IN={1, 64, 96, 96}, OCN=64, S=[2 x 2], PM=SAME, BIAS, OCV/CPU)
+IN=2304 Kb [ 1 64 96 96 ]    OUT=576 Kb [ 1 64 48 48 ]    Weights(parameters): 145 Kb    MFLOPS=170.017
+[ PERFSTAT ]    (samples=20   mean=3.99   median=3.96   min=3.94   stddev=0.06 (1.4%))
+[       OK ] Conv.conv/37 (87 ms)
+[ RUN      ] Conv.conv/47, where GetParam() = (GFLOPS=0.120, K=[5 x 5], IN={1, 32, 28, 28}, OCN=96, P=[2 x 2], BIAS, OCV/CPU)
+IN=98 Kb [ 1 32 28 28 ]    OUT=294 Kb [ 1 96 28 28 ]    Weights(parameters): 301 Kb    MFLOPS=120.498
+[ PERFSTAT ]    (samples=20   mean=2.50   median=2.48   min=2.48   stddev=0.03 (1.2%))
+[       OK ] Conv.conv/47 (55 ms)
+[----------] 2 tests from Conv (142 ms total)
+
+[----------] 2 tests from Conv_1x1
+[ RUN      ] Conv_1x1.conv/0, where GetParam() = (GFLOPS=0.280, K=[1 x 1], IN={1, 576, 38, 50}, OCN=128, PM=SAME, BIAS, OCV/CPU)
+IN=4275 Kb [ 1 576 38 50 ]    OUT=950 Kb [ 1 128 38 50 ]    Weights(parameters): 289 Kb    MFLOPS=280.41
+[ PERFSTAT ]    (samples=20   mean=6.30   median=6.27   min=6.07   stddev=0.11 (1.8%))
+[       OK ] Conv_1x1.conv/0 (136 ms)
+[ RUN      ] Conv_1x1.conv/2, where GetParam() = (GFLOPS=0.357, K=[1 x 1], IN={1, 64, 208, 208}, OCN=64, OCV/CPU)
+IN=10816 Kb [ 1 64 208 208 ]    OUT=10816 Kb [ 1 64 208 208 ]    Weights(parameters): 16 Kb    MFLOPS=357.188
+[ PERFSTAT ]    (samples=20   mean=9.68   median=9.19   min=9.07   stddev=0.94 (9.7%))
+[       OK ] Conv_1x1.conv/2 (218 ms)
+[----------] 2 tests from Conv_1x1 (355 ms total)
+
+[----------] 2 tests from Conv_3x3S1D1
+[ RUN      ] Conv_3x3S1D1.conv/0, where GetParam() = (GFLOPS=1.596, K=[3 x 3], IN={1, 128, 52, 52}, OCN=256, P=[1 x 1], OCV/CPU, true)
+IN=1352 Kb [ 1 128 52 52 ]    OUT=2704 Kb [ 1 256 52 52 ]    Weights(parameters): 1152 Kb    MFLOPS=1595.58
+[ PERFSTAT ]    (samples=20   mean=8.91   median=8.88   min=8.64   stddev=0.17 (1.9%))
+[       OK ] Conv_3x3S1D1.conv/0 (194 ms)
+[ RUN      ] Conv_3x3S1D1.conv/1, where GetParam() = (GFLOPS=1.596, K=[3 x 3], IN={1, 128, 52, 52}, OCN=256, P=[1 x 1], OCV/CPU, false)
+IN=1352 Kb [ 1 128 52 52 ]    OUT=2704 Kb [ 1 256 52 52 ]    Weights(parameters): 1152 Kb    MFLOPS=1595.58
+[ PERFSTAT ]    (samples=20   mean=32.17   median=32.17   min=32.02   stddev=0.10 (0.3%))
+[       OK ] Conv_3x3S1D1.conv/1 (680 ms)
+[----------] 2 tests from Conv_3x3S1D1 (874 ms total)
+
+[----------] 2 tests from Conv_Depthwise
+[ RUN      ] Conv_Depthwise.conv/2, where GetParam() = (GFLOPS=0.925, K=[3 x 3], IN={1, 512, 14, 14}, OCN=512, G=512, P=[1 x 1], OCV/CPU)
+IN=392 Kb [ 1 512 14 14 ]    OUT=392 Kb [ 1 512 14 14 ]    Weights(parameters): 18 Kb    MFLOPS=924.944
+[ PERFSTAT ]    (samples=20   mean=0.16   median=0.15   min=0.15   stddev=0.01 (6.2%))
+[       OK ] Conv_Depthwise.conv/2 (4 ms)
+[ RUN      ] Conv_Depthwise.conv/3, where GetParam() = (GFLOPS=4.301, K=[3 x 3], IN={1, 336, 46, 46}, OCN=336, G=336, P=[1 x 1], BIAS, OCV/CPU)
+IN=2778 Kb [ 1 336 46 46 ]    OUT=2778 Kb [ 1 336 46 46 ]    Weights(parameters): 14 Kb    MFLOPS=4300.69
+[ PERFSTAT ]    (samples=20   mean=0.79   median=0.78   min=0.78   stddev=0.02 (3.0%))
+[       OK ] Conv_Depthwise.conv/3 (21 ms)
+[----------] 2 tests from Conv_Depthwise (25 ms total)
+
+[----------] Global test environment tear-down
+[==========] 8 tests from 4 test cases ran. (1396 ms total)
+[  PASSED  ] 8 tests.

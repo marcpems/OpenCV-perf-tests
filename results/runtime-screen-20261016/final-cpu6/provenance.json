@@ -1,0 +1,35 @@
+{
+  "shared_rebuild": {
+    "status": "succeeded",
+    "label": "runtime_shared_20261016",
+    "started_at": "2026-10-16T13:07:23.2876403+01:00",
+    "finished_at": "2026-10-16T13:10:32.8082363+01:00",
+    "generator": "MSBuild",
+    "toolchain": "MSVC",
+    "parallel": 12,
+    "msbuild_scheduler": "MultiToolTask",
+    "compiler_jobs": 12,
+    "shared_compiler_limit": true,
+    "build_seconds": 183.5483,
+    "build_arguments": [
+      "--build",
+      ".",
+      "--config",
+      "Release",
+      "--parallel",
+      "12",
+      "--",
+      "/p:MultiProcCL=true",
+      "/p:MultiProcMaxCount=12",
+      "/p:EnforceProcessCountAcrossBuilds=true",
+      "/nr:false"
+    ],
+    "validated_version": "4.10.0"
+  },
+  "shared_rebuild_warning": "Overlapped harness setup; not a comparable new build-performance measurement.",
+  "source_sha256": {
+    "scripts\\run_runtime_screen.py": "43e9f7873ac024fa77118d0acc8690b7df2b73ac9b8436c9fdf819914475ae62",
+    "tests\\runtime_screen\\main.cpp": "7f842df8492a792c253711ecb8ab4dc7b4b4a2dc21b0883ea5c288b8090f4d60",
+    "tests\\runtime_screen\\CMakeLists.txt": "5f4d52264086a1123f11fdb2146a8e4dd9d9c1f8f656fffcd9b78c8bd5c7fa09"
+  }
+}
