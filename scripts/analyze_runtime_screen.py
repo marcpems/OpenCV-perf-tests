@@ -98,7 +98,7 @@ def analyze(root):
         comparisons.append(item)
     modules = []
     for module in ("core", "imgproc", "calib3d", "features2d", "dnn"):
-        for threads in (1, 12):
+        for threads in study["threads"]:
             cases = [c for c in comparisons if c["module"] == module and c["threads"] == threads and c["valid"]]
             if not cases:
                 continue

@@ -13,6 +13,18 @@ param($Root, $ResultsDir, $Generator, $Toolchain, $Label, $MSBuildScheduler = 'D
 @{ generator=$Generator; toolchain=$Toolchain; label=$Label; scheduler=$MSBuildScheduler;
    compiler_jobs=$CompilerJobs; parallel=$Parallel; shared=[bool]$SharedCompilerLimit;
    cpu=[bool]$MeasureCpu } | ConvertTo-Json -Compress | Add-Content "$ResultsDir\calls.jsonl"
+. "$PSScriptRoot\common.ps1"
+$build = Get-BuildDirectory $Root $Generator $Toolchain
+New-Item -ItemType Directory "$build\install" -Force | Out-Null
+foreach ($name in @('opencv_world4100.dll','opencv_world4100.lib')) {
+    $Label | Set-Content "$build\install\$name"
+}
+@("$build\install\opencv_world4100.dll","$build\install\opencv_world4100.lib") |
+    Set-Content "$build\install_manifest.txt"
+$run = "$ResultsDir\fixture_$Label"
+New-Item -ItemType Directory $run | Out-Null
+@{status='succeeded';label=$Label} | ConvertTo-Json | Set-Content "$run\metadata.json"
+"Build info for $Label" | Set-Content "$run\opencv_build_info.txt"
 '@ | Set-Content "$temp\scripts\run.ps1"
     foreach ($configuration in @(
             @{ Generator = 'MSBuild'; Toolchain = 'MSVC' },
@@ -91,7 +103,24 @@ param($Root, $ResultsDir, $Generator, $Toolchain, $Label, $MSBuildScheduler = 'D
         "$clangBuild\build.ninja" -notin $allManifest.frozen_sha256.PSObject.Properties.Name) {
         throw ' ERROR - Full study completion or Clang graph freeze is missing.'
     }
-    Write-Host 'PASS: three/five-condition study orders, project/compiler limits, toolchains, controls and overwrite guard.'
+    $snapshots = "$temp\snapshot-results"
+    & "$temp\scripts\run_msbuild_parallelism_study.ps1" -Root "$temp\source" `
+        -ResultsDir $snapshots -PauseSeconds 0 -Jobs 20 -AllConfigurations -SnapshotRuntimeBinaries
+    $snapshotStudy = Get-Content "$snapshots\study.json" -Raw | ConvertFrom-Json
+    foreach ($variant in @('baseline','shared','llvm')) {
+        $snapshot = $snapshotStudy.runtime_snapshots.$variant
+        $expected = switch ($variant) { baseline {'original_2'} shared {'shared_2'} llvm {'clang_2'} }
+        if ($snapshot.label -ne $expected) { throw " ERROR - Wrong final snapshot for $variant" }
+        $dll = "$snapshots\$($snapshot.path)\opencv_world4100.dll"
+        if ((Get-Content $dll -Raw).Trim() -ne $expected -or
+            (Get-FileHash $dll).Hash -ne $snapshot.sha256.'opencv_world4100.dll') {
+            throw " ERROR - Snapshot contents or hashes do not match the originating run: $variant"
+        }
+    }
+    if ((Get-Content "$snapshots\runtime-binaries\original_1\opencv_world4100.dll" -Raw).Trim() -ne 'original_1') {
+        throw ' ERROR - A later build overwrote an earlier runtime snapshot.'
+    }
+    Write-Host 'PASS: study orders, project/compiler limits, toolchains, overwrite guard and preserved runtime snapshots.'
 } finally {
     Get-ChildItem -LiteralPath $temp -Recurse -File | ForEach-Object { Remove-Item -LiteralPath $_.FullName }
     Get-ChildItem -LiteralPath $temp -Recurse -Directory | Sort-Object { $_.FullName.Length } -Descending |

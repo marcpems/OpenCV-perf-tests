@@ -4,9 +4,13 @@ param(
     [string]$ResultsDir = "$PSScriptRoot\..\results\local\msbuild-shared-study",
     [ValidateRange(1, 256)][int]$Jobs = 12,
     [ValidateRange(0, 3600)][int]$PauseSeconds = 30,
-    [switch]$AllConfigurations
+    [switch]$AllConfigurations,
+    [switch]$SnapshotRuntimeBinaries
 )
 . "$PSScriptRoot\common.ps1"
+if ($SnapshotRuntimeBinaries -and -not $AllConfigurations) {
+    throw ' ERROR - Runtime snapshots require the complete five-configuration study.'
+}
 Assert-NoPendingToolchainRestart
 Assert-WindowsSDKRestart
 $Root = Get-SourceRoot $Root
@@ -70,6 +74,7 @@ $manifest = [ordered]@{
     variants = $variants
     frozen_sha256 = $frozen
     completed_labels = @()
+    runtime_snapshots = @{}
 }
 New-Item -ItemType Directory $ResultsDir | Out-Null
 $manifest | ConvertTo-Json -Depth 5 | Set-Content "$ResultsDir\study.json"
@@ -91,6 +96,35 @@ try {
         if ($LASTEXITCODE -ne 0) { throw " ERROR - Study stopped after failed run: $label" }
         foreach ($path in $frozen.Keys) {
             if ((Get-FileHash $path).Hash -ne $frozen[$path]) { throw " ERROR - Frozen input changed: $path" }
+        }
+        if ($SnapshotRuntimeBinaries -and $variant -in @('original', 'shared', 'clang')) {
+            $toolchain = if ($variant -eq 'clang') { 'Clang' } else { 'MSVC' }
+            $generator = if ($variant -eq 'clang') { 'Ninja' } else { 'MSBuild' }
+            $build = Get-BuildDirectory $Root $generator $toolchain
+            $destination = Join-Path $ResultsDir "runtime-binaries\$label"
+            New-Item -ItemType Directory $destination | Out-Null
+            $runs = @(Get-ChildItem $ResultsDir -Directory -Filter "*_$label")
+            if ($runs.Count -ne 1) { throw " ERROR - Expected one completed run for $label" }
+            $metadata = Get-Content "$($runs[0].FullName)\metadata.json" -Raw | ConvertFrom-Json
+            if ($metadata.status -ne 'succeeded' -or $metadata.label -ne $label) {
+                throw " ERROR - Cannot snapshot an unverified build: $label"
+            }
+            foreach ($name in @('opencv_world4100.dll', 'opencv_world4100.lib')) {
+                $installed = Get-InstalledOpenCVFile $build $name
+                Copy-Item -LiteralPath $installed.FullName -Destination "$destination\$name"
+                if ((Get-FileHash "$destination\$name").Hash -ne (Get-FileHash $installed.FullName).Hash) {
+                    throw " ERROR - Runtime snapshot copy changed: $name"
+                }
+            }
+            Copy-Item "$build\benchmark-setup.json" "$destination\benchmark-setup.json"
+            Copy-Item "$($runs[0].FullName)\opencv_build_info.txt" "$destination\version.txt"
+            Copy-Item "$($runs[0].FullName)\metadata.json" "$destination\build-metadata.json"
+            $hashes = @{}
+            Get-ChildItem $destination -File | ForEach-Object { $hashes[$_.Name] = (Get-FileHash $_.FullName).Hash }
+            $runtimeVariant = if ($variant -eq 'original') { 'baseline' } elseif ($variant -eq 'clang') { 'llvm' } else { 'shared' }
+            $manifest.runtime_snapshots[$runtimeVariant] = @{
+                path = "runtime-binaries\$label"; label = $label; sha256 = $hashes
+            }
         }
         $manifest.completed_labels += $label
         $manifest | ConvertTo-Json -Depth 5 | Set-Content "$ResultsDir\study.json"

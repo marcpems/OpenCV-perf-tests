@@ -86,7 +86,7 @@ def choose(all_cases):
     return chosen
 
 
-def prepare(root, deadline, affinity, single_cpu, pin_main):
+def prepare(root, deadline, affinity, single_cpu, pin_main, parallel_threads=12):
     if (root / "screen-study.json").exists():
         raise FileExistsError("Study already prepared")
     all_cases = {}
@@ -109,11 +109,11 @@ def prepare(root, deadline, affinity, single_cpu, pin_main):
         "deadline": deadline, "variant_budget_seconds": 1800,
         "affinity_control": affinity,
         "single_cpu": single_cpu, "pin_main_thread": pin_main,
-        "samples": 10, "threads": [1, 12], "selected": selected,
+        "samples": 10, "threads": [1, parallel_threads], "selected": selected,
         "frozen_sha256": frozen, "runs": [],
         "notes": [
             "Same MSVC-built upstream test executables for all DLLs; measures library runtime, not differently compiled harnesses.",
-            "Baseline and LLVM reused; shared-cap rebuilt because its earlier output was overwritten by baseline.",
+            "Uses caller-provided preserved libraries; consult this dataset's provenance for build origins.",
             "Baseline-generated sanity records are a differential screen, not independent correctness proof.",
             "DNN upstream convolution tests use SANITY_CHECK_NOTHING; no inference-output equivalence claim.",
             "No model downloads, importer/startup, ORB, video I/O, GPU or DLS-internal runtime coverage.",
@@ -144,6 +144,10 @@ def validate_cases(cases, selected, exit_code):
     return failures, skips
 
 
+def requested_affinity(study, threads):
+    return 1 << study.get("single_cpu", 0) if threads == 1 else (1 << study["threads"][-1]) - 1
+
+
 def run_one(root, study, variant, module, threads, block, sanity=False):
     remaining = (dt.datetime.fromisoformat(study["deadline"]) -
                  dt.datetime.now().astimezone()).total_seconds()
@@ -166,7 +170,7 @@ def run_one(root, study, variant, module, threads, block, sanity=False):
     env["OPENCV_TEST_DATA_PATH"] = str(root / "data")
     env["OPENCV_TEST_REQUIRE_DATA"] = "1"
     if study.get("affinity_control"):
-        env["RUNTIME_AFFINITY"] = str(1 << study.get("single_cpu", 0)) if threads == 1 else "4095"
+        env["RUNTIME_AFFINITY"] = str(requested_affinity(study, threads))
     else:
         env.pop("RUNTIME_AFFINITY", None)
     if study.get("pin_main_thread"):
@@ -199,7 +203,7 @@ def run_one(root, study, variant, module, threads, block, sanity=False):
     if f"RUNTIME_THREADS={threads}\n" not in output:
         raise RuntimeError(f"Thread-count audit failed: {label}")
     if study.get("affinity_control"):
-        mask = 1 << study.get("single_cpu", 0) if threads == 1 else 4095
+        mask = requested_affinity(study, threads)
         if f"RUNTIME_AFFINITY={mask}\n" not in output or "RUNTIME_CPU_WARMUP=1\n" not in output:
             raise RuntimeError(f"Affinity/warm-up audit failed: {label}")
     if study.get("pin_main_thread"):
@@ -247,7 +251,7 @@ def execute(root, pilot):
         for block, order in enumerate(orders, 1):
             for variant in order:
                 check_frozen(root, study)
-                for threads in ((1, 12) if block % 2 else (12, 1)):
+                for threads in (study["threads"] if block % 2 else study["threads"][::-1]):
                     for module in MODULES:
                         run_one(root, study, variant, module, threads, f"b{block}")
                 remaining = (dt.datetime.fromisoformat(study["deadline"]) -
@@ -268,8 +272,10 @@ def main():
     parser.add_argument("root", type=Path)
     parser.add_argument("mode", choices=("prepare", "pilot", "run"))
     parser.add_argument("--deadline", help="Required for prepare: absolute ISO timestamp with UTC offset")
-    parser.add_argument("--affinity", action="store_true", help="Pin 1-thread runs to --single-cpu, 12-thread runs to CPUs 0-11")
-    parser.add_argument("--single-cpu", type=int, choices=range(12), default=0)
+    parser.add_argument("--affinity", action="store_true", help="Pin single-thread runs; allow all selected CPUs for parallel runs")
+    parser.add_argument("--single-cpu", type=int, choices=range(64), default=0)
+    parser.add_argument("--parallel-threads", type=int, choices=range(2, 65), default=12,
+                        help="Parallel thread limit and contiguous group-0 CPU count (default: 12)")
     parser.add_argument("--pin-main", action="store_true", help="Pin main thread after worker warm-up to --single-cpu")
     args = parser.parse_args()
     root = args.root.resolve()
@@ -278,7 +284,9 @@ def main():
             parser.error("prepare requires an absolute --deadline with timezone")
         if args.pin_main and not args.affinity:
             parser.error("--pin-main requires --affinity")
-        prepare(root, args.deadline, args.affinity, args.single_cpu, args.pin_main)
+        if args.single_cpu >= args.parallel_threads:
+            parser.error("--single-cpu must be below --parallel-threads")
+        prepare(root, args.deadline, args.affinity, args.single_cpu, args.pin_main, args.parallel_threads)
     else:
         execute(root, args.mode == "pilot")
 

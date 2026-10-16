@@ -9,6 +9,7 @@ on:
         options:
           - probe
           - llvm
+          - study
         default: probe
 
 permissions:
@@ -43,4 +44,27 @@ jobs:
         with:
           name: minos-llvm-first-${{ github.run_id }}
           path: results/minos-llvm-first-${{ github.run_id }}
+          if-no-files-found: warn
+      - name: Balanced five-configuration build study
+        if: inputs.phase == 'study'
+        shell: pwsh
+        run: .\scripts\run_minos_study.ps1
+      - name: Publish build timings before runtime testing
+        if: always() && inputs.phase == 'study'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: minos-builds-${{ github.run_id }}
+          path: results/minos-builds-${{ github.run_id }}
+          if-no-files-found: warn
+      - name: Limited runtime comparison using preserved Minos libraries
+        if: inputs.phase == 'study'
+        timeout-minutes: 120
+        shell: pwsh
+        run: .\scripts\run_minos_runtime.ps1 -StudyRoot $env:MINOS_STUDY_ROOT
+      - name: Publish runtime evidence
+        if: always() && inputs.phase == 'study'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: minos-runtime-${{ github.run_id }}
+          path: results/minos-runtime-${{ github.run_id }}
           if-no-files-found: warn

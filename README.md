@@ -17,6 +17,7 @@ libraries without changing the build-time workload.
 **[Fresh five-configuration rerun after device change](docs/FIVE_CONFIGURATION_RERUN.md)** |
 **[Compiler gap: native execution, microbenchmarks and source patterns](docs/COMPILER_GAP_INVESTIGATION.md)** |
 **[Targeted runtime comparison of the resulting OpenCV libraries](docs/RUNTIME_SCREENING.md)** |
+**[Minos self-hosted runner validation](docs/MINOS_RUNNER.md)** |
 **[HOBL survey, equivalence and measurement methodology](docs/METHODOLOGY.md)**
 
 The baseline preserves HOBL's clean -> timed Release build -> install -> version-check

@@ -19,9 +19,25 @@ def load(name):
 
 runner = load("run_runtime_screen")
 analysis = load("analyze_runtime_screen")
+topology = load("runtime_cpu_topology")
 
 
 class RuntimeScreenTests(unittest.TestCase):
+    def test_cpu_topology_chooses_first_highest_class_processor(self):
+        data = bytearray()
+        for cpu in range(20):
+            record = bytearray(32)
+            struct.pack_into("<II", record, 0, 32, 0)
+            struct.pack_into("<IHBBBBBB", record, 8, 256 + cpu, 0, cpu, cpu,
+                             0 if cpu < 10 else 10, 0, cpu // 10, 0)
+            data.extend(record)
+        rows = topology.parse_cpu_sets(data)
+        self.assertEqual(topology.select_main_cpu(rows, 20), 10)
+        with self.assertRaisesRegex(ValueError, "contiguous"):
+            topology.select_main_cpu(rows, 12)
+        with self.assertRaises(ValueError):
+            topology.parse_cpu_sets(data[:-1])
+
     def make_study(self, root):
         study = {"status": "succeeded", "threads": [1],
                  "selected": {"core": [{"name": "BinaryOpTest.add/0"}]},
@@ -73,12 +89,26 @@ class RuntimeScreenTests(unittest.TestCase):
             self.assertEqual(result.returncode, 2)
             self.assertIn("--pin-main requires --affinity", result.stderr)
 
-    def test_cpu_outside_twelve_core_protocol_rejected(self):
+    def test_cpu_outside_selected_processor_group_rejected(self):
         result = subprocess.run(
-            [sys.executable, runner.__file__, ".", "prepare", "--single-cpu", "12"],
+            [sys.executable, runner.__file__, ".", "prepare", "--single-cpu", "64"],
             capture_output=True, text=True, check=False)
         self.assertEqual(result.returncode, 2)
         self.assertIn("invalid choice", result.stderr)
+
+    def test_affinity_supports_twelve_and_twenty_cpu_protocols(self):
+        for count, cpu in ((12, 6), (20, 10)):
+            study = {"threads": [1, count], "single_cpu": cpu}
+            self.assertEqual(runner.requested_affinity(study, 1), 1 << cpu)
+            self.assertEqual(runner.requested_affinity(study, count), (1 << count) - 1)
+
+    def test_single_cpu_must_be_inside_parallel_mask(self):
+        result = subprocess.run(
+            [sys.executable, runner.__file__, ".", "prepare", "--single-cpu", "20",
+             "--parallel-threads", "20", "--deadline", "2099-01-01T00:00:00+00:00"],
+            capture_output=True, text=True, check=False)
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("--single-cpu must be below", result.stderr)
 
     def test_exact_case_identity_checked_not_only_count(self):
         cases = [ET.fromstring('<testcase classname="Wrong" name="case" status="run"/>')]

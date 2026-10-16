@@ -292,3 +292,10 @@ test executables, upstream source copies, or machine-wide traces.
 The final export also preserves `measured-runner.py`, the exact driver used for
 the observations. The current driver adds stricter case-identity/failure guards
 and deadline-bounded rests; no measurement parameters changed.
+
+For a different single-group machine, `--parallel-threads N` changes both the
+parallel thread limit and allowed CPUs to 0 through N-1; the default remains
+12. `--single-cpu` must be inside that range. The
+[Minos workflow](MINOS_RUNNER.md) uses 20 and records its own CPU topology rather
+than reusing the laptop's CPU-6 assumption. These later protocol extensions do
+not alter the archived measurements above.
