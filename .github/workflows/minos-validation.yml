@@ -1,0 +1,33 @@
+name: Minos OpenCV validation
+
+on:
+  workflow_dispatch:
+    inputs:
+      phase:
+        description: Validation phase
+        type: choice
+        options:
+          - probe
+        default: probe
+
+permissions:
+  contents: read
+
+concurrency:
+  group: minos-opencv-validation
+  cancel-in-progress: false
+
+jobs:
+  benchmark:
+    runs-on: [self-hosted, Windows, ARM64, Marcpe-d4]
+    steps:
+      - name: Verify requested runner
+        shell: powershell
+        run: |
+          if ($env:RUNNER_NAME -ine 'MARCPE-D4') { throw 'Unexpected runner' }
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Inspect benchmark prerequisites
+        shell: powershell
+        run: .\scripts\inspect_minos_runner.ps1
