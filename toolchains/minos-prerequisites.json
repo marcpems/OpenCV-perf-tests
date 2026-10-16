@@ -1,0 +1,5 @@
+{
+  "visual_studio_major": 17,
+  "component": "Microsoft.VisualStudio.Component.VC.Tools.ARM64",
+  "bootstrapper_url": "https://aka.ms/vs/17/release/vs_BuildTools.exe"
+}

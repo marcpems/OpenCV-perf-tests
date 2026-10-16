@@ -3,6 +3,8 @@
 if ($env:RUNNER_NAME -ine 'MARCPE-D4') { throw 'This workflow is scoped to MARCPE-D4.' }
 if ((Get-NativeArchitecture) -ne 'arm64') { throw 'Native ARM64 PowerShell is required.' }
 # Check installed Microsoft prerequisites before downloading the isolated portable tools.
+& (Get-Process -Id $PID).Path -NoProfile -File "$PSScriptRoot\restore_minos_msvc.ps1"
+if ($LASTEXITCODE) { throw 'Native MSVC prerequisite restoration failed' }
 $vs = Get-VisualStudio
 $sdk = Get-WindowsSDK
 Set-NativeToolchain $vs $sdk
