@@ -12,9 +12,14 @@ on:
           - study
           - export-runtime
           - diagnose-runtime
+          - llvm-custom-probe
         default: probe
       source_run_id:
         description: Original run ID for export-runtime recovery only
+        type: string
+        default: ''
+      installer_path:
+        description: Runner-local custom LLVM MSI path; never uploaded
         type: string
         default: ''
 
@@ -40,6 +45,12 @@ jobs:
       - name: Inspect benchmark prerequisites
         shell: powershell
         run: .\scripts\inspect_minos_runner.ps1
+      - name: Check runner-local custom LLVM installer
+        if: inputs.phase == 'llvm-custom-probe'
+        shell: pwsh
+        env:
+          CUSTOM_LLVM_INSTALLER: ${{ inputs.installer_path }}
+        run: .\scripts\inspect_custom_llvm.ps1 -InstallerPath $env:CUSTOM_LLVM_INSTALLER
       - name: First Ninja LLVM clean build
         if: inputs.phase == 'llvm'
         shell: pwsh
