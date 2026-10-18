@@ -42,6 +42,7 @@ Use the repository's Actions page to dispatch:
 | `study` | Configure all three build trees, run the balanced ten-build comparison, upload build results, then run/upload the bounded runtime screen |
 | `export-runtime` | Recover an already completed runtime dataset using `source_run_id`, without rebuilding or remeasuring |
 | `diagnose-runtime` | Separately repeat the two descriptor cases that failed output checks, using frozen libraries and original sanity references; ten rounds at 1/20 threads |
+| `llvm-custom-probe` / `llvm-custom` | Check a private runner-local MSI, then compare a custom LLVM package against a fresh stock control; see [protocol](CUSTOM_LLVM_COMPARISON.md) |
 
 The first LLVM observation is explicitly **preliminary and separate** from the
 balanced study. It is not silently pooled into the two-observation medians.
