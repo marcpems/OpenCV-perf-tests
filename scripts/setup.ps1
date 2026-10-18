@@ -4,6 +4,7 @@ param(
     [ValidateSet('MSBuild', 'Ninja')][string]$Generator = 'MSBuild',
     [ValidateSet('MSVC', 'Clang', 'MSVC2026', 'MSVC2026Latest')][string]$Toolchain = 'MSVC',
     [string]$LLVMRoot = '',
+    [string]$InitialCache = '',
     [string]$CMake = ''
 )
 . "$PSScriptRoot\common.ps1"
@@ -33,6 +34,12 @@ $buildDir = Get-BuildDirectory $Root $Generator $Toolchain
 $llvm = if ($Toolchain -eq 'Clang') { Get-ClangToolchain $LLVMRoot } else { $null }
 New-Item -ItemType Directory -Force $buildDir | Out-Null
 $argsList = @('--fresh', '-S', $Root, '-B', $buildDir) + @($script:Config.cmake_flags)
+$initialCacheReceipt = $null
+if ($InitialCache) {
+    $InitialCache = (Get-Item -LiteralPath $InitialCache -ErrorAction Stop).FullName
+    $argsList += @('-C', $InitialCache)
+    $initialCacheReceipt = @{ path = $InitialCache; sha256 = (Get-FileHash -LiteralPath $InitialCache).Hash }
+}
 if ($Generator -eq 'MSBuild') {
     $vsGenerator = if ($vsMajor -eq 18) { 'Visual Studio 18 2026' } else { 'Visual Studio 17 2022' }
     $platform = if ($arch -eq 'arm64') { 'ARM64' } else { 'x64' }
@@ -155,6 +162,7 @@ $receipt = [ordered]@{
     visual_studio = $vs
     windows_sdk = $sdk
     config_sha256 = (Get-FileHash "$PSScriptRoot\..\benchmark.json").Hash
+    initial_cache = $initialCacheReceipt
 }
 $receipt | ConvertTo-Json -Depth 6 | Set-Content "$buildDir\benchmark-setup.json"
 Write-Host "Configured $buildDir in ${configureTime}s (excluded from benchmark)."

@@ -17,6 +17,11 @@ $results = Join-Path $work 'measurements'
 $public = Join-Path $repo "results\minos-custom-llvm-$env:GITHUB_RUN_ID"
 if ((Test-Path $work) -or (Test-Path $extract) -or (Test-Path $public)) { throw 'Use a fresh run ID; existing evidence is preserved.' }
 New-Item -ItemType Directory $work | Out-Null
+$initialCache = Join-Path $work 'matched-warning-policy.cmake'
+@'
+set(HAVE_C_WNO_STRINGOP_OVERREAD 0 CACHE INTERNAL "Matched LLVM comparison warning policy")
+set(HAVE_CXX_WNO_STRINGOP_OVERREAD 0 CACHE INTERNAL "Matched LLVM comparison warning policy")
+'@ | Set-Content $initialCache
 $stock = Get-ClangToolchain ''
 Get-VisualStudio | Out-Null
 Get-WindowsSDK | Out-Null
@@ -42,19 +47,21 @@ $origin = [ordered]@{
     github_run_id = $env:GITHUB_RUN_ID
     github_commit = $env:GITHUB_SHA
     attribution = 'Comparison of LLVM packages/versions. PGO/LTO-only attribution requires a matched LLVM 24 source/build without those optimizations.'
+    warning_policy = 'Disable OpenCV auto-addition of -Wno-stringop-overread for both compilers; stock does not support it. No optimization/code-generation flags changed.'
 }
 $origin | ConvertTo-Json -Depth 6 | Set-Content "$work\compiler-origin.json"
 $seed = Join-Path $repo '.work\minos-source'
 Assert-Source $seed
 $roots = @{ stock = "$work\stock-source"; custom = "$work\custom-source" }
 $toolRoots = @{ stock = $stock.root; custom = $custom.root }
-$frozen = @{}
+$frozen = @{ $initialCache = (Get-FileHash $initialCache).Hash }
 $ninja = $null
 foreach ($variant in @('stock','custom')) {
     $root = $roots[$variant]
     & git -C $seed worktree add --detach $root $script:Config.opencv_commit
     if ($LASTEXITCODE) { throw "Worktree creation failed: $variant" }
-    & $shell -NoProfile -File "$PSScriptRoot\setup.ps1" -Root $root -Toolchain Clang -LLVMRoot $toolRoots[$variant]
+    & $shell -NoProfile -File "$PSScriptRoot\setup.ps1" -Root $root -Toolchain Clang `
+        -LLVMRoot $toolRoots[$variant] -InitialCache $initialCache
     if ($LASTEXITCODE) { throw "Configuration failed: $variant" }
     $build = Get-BuildDirectory $root Ninja Clang
     $entry = Select-String "$build\CMakeCache.txt" -Pattern '^CMAKE_MAKE_PROGRAM:[^=]+=(.+)$'

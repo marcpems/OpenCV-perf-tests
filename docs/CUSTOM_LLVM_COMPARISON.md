@@ -20,6 +20,15 @@ commands must match before measurements proceed. Source trees, generated
 graphs, tool receipts, compiler hashes, Ninja and scripts are checked for
 changes. Existing timing/source/SDK guards remain in use.
 
+The first preflight stopped before any benchmark build: OpenCV auto-added
+`-Wno-stringop-overread` for LLVM 24, but not the stock compiler. The comparison
+therefore supplies the same explicit CMake initial-cache policy to both:
+`HAVE_C_WNO_STRINGOP_OVERREAD=0` and `HAVE_CXX_WNO_STRINGOP_OVERREAD=0`.
+This keeps the requested warning flags equal without ignoring differences in
+the parity check or altering optimization/code-generation flags. The cache
+file is hashed and recorded through setup's opt-in `-InitialCache` parameter;
+ordinary benchmark setup is unchanged.
+
 Each package gets one clean warm-up build, retained as separate evidence but
 excluded from medians. Four clean builds per package follow, in order:
 stock / custom / custom / stock / custom / stock / stock / custom.
