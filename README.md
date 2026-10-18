@@ -19,6 +19,7 @@ libraries without changing the build-time workload.
 **[Targeted runtime comparison of the resulting OpenCV libraries](docs/RUNTIME_SCREENING.md)** |
 **[Minos self-hosted runner validation](docs/MINOS_RUNNER.md)** |
 **[Minos build and runtime results](docs/MINOS_RESULTS.md)** |
+**[Custom LLVM comparison: 10.23% less build time](docs/CUSTOM_LLVM_COMPARISON.md)** |
 **[HOBL survey, equivalence and measurement methodology](docs/METHODOLOGY.md)**
 
 The baseline preserves HOBL's clean -> timed Release build -> install -> version-check

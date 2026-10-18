@@ -1,0 +1,76 @@
+{
+  "stock": {
+    "count": 4,
+    "median_seconds": 62.893100000000004,
+    "min_seconds": 62.4138,
+    "max_seconds": 63.9064,
+    "runs": [
+      {
+        "directory": "20261018_140514_663_stock_1",
+        "build_seconds": 62.9485,
+        "clean_seconds": 0.2815,
+        "install_seconds": 0.2921,
+        "cpu_seconds": 1015.765625
+      },
+      {
+        "directory": "20261018_140957_841_stock_2",
+        "build_seconds": 62.8377,
+        "clean_seconds": 0.3001,
+        "install_seconds": 0.2939,
+        "cpu_seconds": 1014.328125
+      },
+      {
+        "directory": "20261018_141309_263_stock_3",
+        "build_seconds": 62.4138,
+        "clean_seconds": 0.3146,
+        "install_seconds": 0.3181,
+        "cpu_seconds": 1012.5
+      },
+      {
+        "directory": "20261018_141447_634_stock_4",
+        "build_seconds": 63.9064,
+        "clean_seconds": 0.2957,
+        "install_seconds": 0.3014,
+        "cpu_seconds": 1031.421875
+      }
+    ],
+    "median_cpu_seconds": 1015.046875
+  },
+  "custom": {
+    "count": 4,
+    "median_seconds": 56.45975,
+    "min_seconds": 55.925,
+    "max_seconds": 56.9982,
+    "runs": [
+      {
+        "directory": "20261018_140653_235_custom_1",
+        "build_seconds": 56.9982,
+        "clean_seconds": 0.2988,
+        "install_seconds": 0.2964,
+        "cpu_seconds": 906.125
+      },
+      {
+        "directory": "20261018_140825_931_custom_2",
+        "build_seconds": 56.2093,
+        "clean_seconds": 0.2864,
+        "install_seconds": 0.2904,
+        "cpu_seconds": 898.796875
+      },
+      {
+        "directory": "20261018_141136_570_custom_3",
+        "build_seconds": 56.7102,
+        "clean_seconds": 0.3176,
+        "install_seconds": 0.3317,
+        "cpu_seconds": 908.453125
+      },
+      {
+        "directory": "20261018_141627_506_custom_4",
+        "build_seconds": 55.925,
+        "clean_seconds": 0.3061,
+        "install_seconds": 0.2886,
+        "cpu_seconds": 902.625
+      }
+    ],
+    "median_cpu_seconds": 904.375
+  }
+}

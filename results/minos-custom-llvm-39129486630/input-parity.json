@@ -1,0 +1,9 @@
+{
+  "source_compilations": 1018,
+  "normalized_commands_equal": true,
+  "feature_headers_sha256": {
+    "cvconfig.h": "2625acce461596dc5e923e75b65f438a3d9caa611e5bce3c5fe44fbdc95eb20b",
+    "opencv2/opencv_modules.hpp": "4e6ab0950576259daf5ad2dc8f296c8b4bb21b3cc74f3d0e30f4d867e8a443e9"
+  },
+  "caveat": "Identical requested flags do not guarantee identical semantics across compiler versions."
+}

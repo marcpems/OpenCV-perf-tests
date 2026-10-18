@@ -1,0 +1,2086 @@
+[1/1040] Building C object 3rdparty/zlib/CMakeFiles/zlib.dir/adler32.c.obj
+[2/1040] Building C object 3rdparty/zlib/CMakeFiles/zlib.dir/compress.c.obj
+[3/1040] Building C object 3rdparty/zlib/CMakeFiles/zlib.dir/crc32.c.obj
+[4/1040] Building C object 3rdparty/zlib/CMakeFiles/zlib.dir/deflate.c.obj
+[5/1040] Building C object 3rdparty/zlib/CMakeFiles/zlib.dir/gzclose.c.obj
+[6/1040] Building C object 3rdparty/zlib/CMakeFiles/zlib.dir/infback.c.obj
+[7/1040] Building C object 3rdparty/zlib/CMakeFiles/zlib.dir/inftrees.c.obj
+[8/1040] Building C object 3rdparty/zlib/CMakeFiles/zlib.dir/inffast.c.obj
+[9/1040] Building C object 3rdparty/zlib/CMakeFiles/zlib.dir/trees.c.obj
+[10/1040] Building C object 3rdparty/zlib/CMakeFiles/zlib.dir/uncompr.c.obj
+[11/1040] Building C object 3rdparty/zlib/CMakeFiles/zlib.dir/zutil.c.obj
+[12/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jcapistd.c.obj
+[13/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jccolor.c.obj
+[14/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jcdiffct.c.obj
+[15/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jclossls.c.obj
+[16/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jcmainct.c.obj
+[17/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jcprepct.c.obj
+[18/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jcsample.c.obj
+[19/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jdapistd.c.obj
+[20/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jddiffct.c.obj
+[21/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jdlossls.c.obj
+[22/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jdmainct.c.obj
+[23/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jdpostct.c.obj
+[24/1040] Building C object 3rdparty/zlib/CMakeFiles/zlib.dir/inflate.c.obj
+[25/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jdsample.c.obj
+[26/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jutils.c.obj
+[27/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jccoefct.c.obj
+[28/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jcdctmgr.c.obj
+[29/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jdcoefct.c.obj
+[30/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jddctmgr.c.obj
+[31/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jdmerge.c.obj
+[32/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jfdctfst.c.obj
+[33/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jfdctint.c.obj
+[34/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jidctflt.c.obj
+[35/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jidctfst.c.obj
+[36/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jdcolor.c.obj
+[37/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jidctred.c.obj
+[38/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jquant1.c.obj
+[39/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jcapistd.c.obj
+[40/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jccolor.c.obj
+[41/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jcdiffct.c.obj
+[42/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jclossls.c.obj
+[43/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jcmainct.c.obj
+[44/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jcprepct.c.obj
+[45/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jcsample.c.obj
+[46/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jdapistd.c.obj
+[47/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jdcolor.c.obj
+[48/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jddiffct.c.obj
+[49/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jdlossls.c.obj
+[50/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jdmainct.c.obj
+[51/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jdpostct.c.obj
+[52/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jdsample.c.obj
+[53/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg16-static.dir/src/jutils.c.obj
+[54/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcapistd.c.obj
+[55/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jquant2.c.obj
+[56/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/jpeg12-static.dir/src/jidctint.c.obj
+[57/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jccolor.c.obj
+[58/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcdiffct.c.obj
+[59/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jclossls.c.obj
+[60/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcmainct.c.obj
+[61/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcprepct.c.obj
+[62/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcsample.c.obj
+[63/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdapistd.c.obj
+[64/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jddiffct.c.obj
+[65/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdlossls.c.obj
+[66/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdmainct.c.obj
+[67/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdpostct.c.obj
+[68/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdsample.c.obj
+[69/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jutils.c.obj
+[70/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jccoefct.c.obj
+[71/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcdctmgr.c.obj
+[72/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdcoefct.c.obj
+[73/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jddctmgr.c.obj
+[74/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdmerge.c.obj
+[75/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jfdctfst.c.obj
+[76/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jfdctint.c.obj
+[77/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jidctflt.c.obj
+[78/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jidctfst.c.obj
+[79/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jidctred.c.obj
+[80/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jquant1.c.obj
+[81/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdcolor.c.obj
+[82/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcapimin.c.obj
+[83/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcicc.c.obj
+[84/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcinit.c.obj
+[85/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jclhuff.c.obj
+[86/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcmarker.c.obj
+[87/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcmaster.c.obj
+[88/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcomapi.c.obj
+[89/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcparam.c.obj
+[90/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcphuff.c.obj
+[91/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jctrans.c.obj
+[92/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdapimin.c.obj
+[93/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdatadst.c.obj
+[94/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdatasrc.c.obj
+[95/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdhuff.c.obj
+[96/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdicc.c.obj
+[97/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdinput.c.obj
+[98/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jidctint.c.obj
+[99/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdlhuff.c.obj
+[100/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jquant2.c.obj
+[101/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdmarker.c.obj
+[102/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdmaster.c.obj
+[103/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdphuff.c.obj
+[104/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdtrans.c.obj
+[105/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jerror.c.obj
+[106/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jfdctflt.c.obj
+[107/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jmemmgr.c.obj
+[108/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jmemnobs.c.obj
+[109/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jpeg_nbits.c.obj
+[110/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jaricom.c.obj
+[111/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jcarith.c.obj
+[112/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jdarith.c.obj
+[113/1040] Building C object 3rdparty/libjpeg-turbo/src/simd/CMakeFiles/simd.dir/arm/jcgray-neon.c.obj
+[114/1040] Building C object 3rdparty/libjpeg-turbo/src/simd/CMakeFiles/simd.dir/arm/jcphuff-neon.c.obj
+[115/1040] Building C object 3rdparty/libjpeg-turbo/src/simd/CMakeFiles/simd.dir/arm/jcsample-neon.c.obj
+[116/1040] Building C object 3rdparty/libjpeg-turbo/src/simd/CMakeFiles/simd.dir/arm/jdsample-neon.c.obj
+[117/1040] Building C object 3rdparty/libjpeg-turbo/src/simd/CMakeFiles/simd.dir/arm/jfdctfst-neon.c.obj
+[118/1040] Building C object 3rdparty/libjpeg-turbo/src/simd/CMakeFiles/simd.dir/arm/jidctred-neon.c.obj
+[119/1040] Building C object 3rdparty/libjpeg-turbo/src/simd/CMakeFiles/simd.dir/arm/jquanti-neon.c.obj
+[120/1040] Building C object 3rdparty/libjpeg-turbo/src/simd/CMakeFiles/simd.dir/arm/jidctint-neon.c.obj
+[121/1040] Building C object 3rdparty/libjpeg-turbo/src/simd/CMakeFiles/simd.dir/arm/jidctfst-neon.c.obj
+[122/1040] Building C object 3rdparty/libjpeg-turbo/src/simd/CMakeFiles/simd.dir/arm/aarch64/jchuff-neon.c.obj
+[123/1040] Building C object 3rdparty/libjpeg-turbo/src/simd/CMakeFiles/simd.dir/arm/jfdctint-neon.c.obj
+[124/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_aux.c.obj
+[125/1040] Building C object 3rdparty/libjpeg-turbo/src/simd/CMakeFiles/simd.dir/arm/jdmerge-neon.c.obj
+[126/1040] Building C object 3rdparty/libjpeg-turbo/src/simd/CMakeFiles/simd.dir/arm/jccolor-neon.c.obj
+[127/1040] Building C object 3rdparty/libjpeg-turbo/src/simd/CMakeFiles/simd.dir/arm/jdcolor-neon.c.obj
+[128/1040] Building C object 3rdparty/libjpeg-turbo/src/simd/CMakeFiles/simd.dir/arm/aarch64/jsimd.c.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libjpeg-turbo/src/simd/arm/aarch64/jsimd.c:35:34: warning: unused variable 'simd_features' [-Wunused-variable]
+
+   35 | static THREAD_LOCAL unsigned int simd_features = JSIMD_FASTLD3 |
+
+      |                                  ^~~~~~~~~~~~~
+
+1 warning generated.
+
+[129/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_fax3sm.c.obj
+[130/1040] Building C object 3rdparty/libjpeg-turbo/CMakeFiles/libjpeg-turbo.dir/src/jchuff.c.obj
+[131/1040] Building C object 3rdparty/zlib/CMakeFiles/zlib.dir/gzread.c.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/zlib/gzread.c:22:15: warning: 'read' is deprecated: The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _read. See online help for details. [-Wdeprecated-declarations]
+   22 |         ret = read(state->fd, buf + *have, get);
+      |               ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_io.h:524:9: note: 'read' has been explicitly marked deprecated here
+  524 |         _CRT_NONSTDC_DEPRECATE(_read)
+      |         ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt.h:428:50: note: expanded from macro '_CRT_NONSTDC_DEPRECATE'
+  428 |         #define _CRT_NONSTDC_DEPRECATE(_NewName) _CRT_DEPRECATE_TEXT(             \
+      |                                                  ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/zlib/gzread.c:28:34: warning: 'strerror' is deprecated: This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+   28 |         gz_error(state, Z_ERRNO, zstrerror());
+      |                                  ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/zlib\gzguts.h:132:25: note: expanded from macro 'zstrerror'
+  132 | #    define zstrerror() strerror(errno)
+      |                         ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\string.h:177:16: note: 'strerror' has been explicitly marked deprecated here
+  177 | _Check_return_ _CRT_INSECURE_DEPRECATE(strerror_s)
+      |                ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/zlib/gzread.c:599:11: warning: 'close' is deprecated: The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _close. See online help for details. [-Wdeprecated-declarations]
+  599 |     ret = close(state->fd);
+      |           ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_io.h:460:28: note: 'close' has been explicitly marked deprecated here
+  460 |         _Check_return_opt_ _CRT_NONSTDC_DEPRECATE(_close)
+      |                            ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt.h:428:50: note: expanded from macro '_CRT_NONSTDC_DEPRECATE'
+  428 |         #define _CRT_NONSTDC_DEPRECATE(_NewName) _CRT_DEPRECATE_TEXT(             \
+
+      |                                                  ^
+
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+
+      |                                               ^
+
+3 warnings generated.
+
+[132/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_codec.c.obj
+[133/1040] Building C object 3rdparty/zlib/CMakeFiles/zlib.dir/gzlib.c.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/zlib/gzlib.c:183:15: warning: 'wcstombs' is deprecated: This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+  183 |         len = wcstombs(NULL, path, 0);
+      |               ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\stdlib.h:1012:1: note: 'wcstombs' has been explicitly marked deprecated here
+ 1012 | __DEFINE_CPP_OVERLOAD_STANDARD_NFUNC_0_2_SIZE(
+      | ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt.h:930:5: note: expanded from macro '__DEFINE_CPP_OVERLOAD_STANDARD_NFUNC_0_2_SIZE'
+  930 |     __DEFINE_CPP_OVERLOAD_STANDARD_NFUNC_0_2_SIZE_EX(_DeclSpec, _FuncName, _FuncName##_s, _DstType, _SalAttributeDst, _DstType, _Dst, _TType1, _TArg1, _TType2, _TArg2)
+      |     ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt.h:2001:17: note: expanded from macro '__DEFINE_CPP_OVERLOAD_STANDARD_NFUNC_0_2_SIZE_EX'
+ 2001 |                 _CRT_INSECURE_DEPRECATE(_SecureFuncName) _DeclSpec size_t __cdecl _FuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1, _TType2 _TArg2);
+      |                 ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/zlib/gzlib.c:198:13: warning: 'wcstombs' is deprecated: This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+  198 |             wcstombs(state->path, path, len + 1);
+      |             ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\stdlib.h:1012:1: note: 'wcstombs' has been explicitly marked deprecated here
+ 1012 | __DEFINE_CPP_OVERLOAD_STANDARD_NFUNC_0_2_SIZE(
+      | ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt.h:930:5: note: expanded from macro '__DEFINE_CPP_OVERLOAD_STANDARD_NFUNC_0_2_SIZE'
+  930 |     __DEFINE_CPP_OVERLOAD_STANDARD_NFUNC_0_2_SIZE_EX(_DeclSpec, _FuncName, _FuncName##_s, _DstType, _SalAttributeDst, _DstType, _Dst, _TType1, _TArg1, _TType2, _TArg2)
+      |     ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt.h:2001:17: note: expanded from macro '__DEFINE_CPP_OVERLOAD_STANDARD_NFUNC_0_2_SIZE_EX'
+ 2001 |                 _CRT_INSECURE_DEPRECATE(_SecureFuncName) _DeclSpec size_t __cdecl _FuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1, _TType2 _TArg2);
+      |                 ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/zlib/gzlib.c:233:20: warning: '_wopen' is deprecated: This function or variable may be unsafe. Consider using _wsopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+  233 |         fd == -2 ? _wopen(path, oflag, 0666) :
+      |                    ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_wio.h:253:20: note: '_wopen' has been explicitly marked deprecated here
+  253 |     _Check_return_ _CRT_INSECURE_DEPRECATE(_wsopen_s)
+      |                    ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/zlib/gzlib.c:235:9: warning: 'open' is deprecated: The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _open. See online help for details. [-Wdeprecated-declarations]
+  235 |         open((const char *)path, oflag, 0666));
+      |         ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_io.h:517:24: note: 'open' has been explicitly marked deprecated here
+  517 |         _Check_return_ _CRT_NONSTDC_DEPRECATE(_open) _CRT_INSECURE_DEPRECATE(_sopen_s)
+      |                        ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt.h:428:50: note: expanded from macro '_CRT_NONSTDC_DEPRECATE'
+  428 |         #define _CRT_NONSTDC_DEPRECATE(_NewName) _CRT_DEPRECATE_TEXT(             \
+
+      |                                                  ^
+
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+
+      |                                               ^
+
+4 warnings generated.
+
+[134/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_hash_set.c.obj
+[135/1040] Building C object 3rdparty/zlib/CMakeFiles/zlib.dir/gzwrite.c.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/zlib/gzwrite.c:78:20: warning: 'write' is deprecated: The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details. [-Wdeprecated-declarations]
+   78 |             writ = write(state->fd, strm->next_in, put);
+      |                    ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_io.h:559:24: note: 'write' has been explicitly marked deprecated here
+  559 |         _Check_return_ _CRT_NONSTDC_DEPRECATE(_write)
+      |                        ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt.h:428:50: note: expanded from macro '_CRT_NONSTDC_DEPRECATE'
+  428 |         #define _CRT_NONSTDC_DEPRECATE(_NewName) _CRT_DEPRECATE_TEXT(             \
+      |                                                  ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/zlib/gzwrite.c:80:42: warning: 'strerror' is deprecated: This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+   80 |                 gz_error(state, Z_ERRNO, zstrerror());
+      |                                          ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/zlib\gzguts.h:132:25: note: expanded from macro 'zstrerror'
+  132 | #    define zstrerror() strerror(errno)
+      |                         ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\string.h:177:16: note: 'strerror' has been explicitly marked deprecated here
+  177 | _Check_return_ _CRT_INSECURE_DEPRECATE(strerror_s)
+      |                ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/zlib/gzwrite.c:108:24: warning: 'write' is deprecated: The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _write. See online help for details. [-Wdeprecated-declarations]
+  108 |                 writ = write(state->fd, state->x.next, put);
+      |                        ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_io.h:559:24: note: 'write' has been explicitly marked deprecated here
+  559 |         _Check_return_ _CRT_NONSTDC_DEPRECATE(_write)
+      |                        ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt.h:428:50: note: expanded from macro '_CRT_NONSTDC_DEPRECATE'
+  428 |         #define _CRT_NONSTDC_DEPRECATE(_NewName) _CRT_DEPRECATE_TEXT(             \
+      |                                                  ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/zlib/gzwrite.c:110:46: warning: 'strerror' is deprecated: This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+  110 |                     gz_error(state, Z_ERRNO, zstrerror());
+      |                                              ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/zlib\gzguts.h:132:25: note: expanded from macro 'zstrerror'
+  132 | #    define zstrerror() strerror(errno)
+      |                         ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\string.h:177:16: note: 'strerror' has been explicitly marked deprecated here
+  177 | _Check_return_ _CRT_INSECURE_DEPRECATE(strerror_s)
+      |                ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/zlib/gzwrite.c:627:9: warning: 'close' is deprecated: The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _close. See online help for details. [-Wdeprecated-declarations]
+  627 |     if (close(state->fd) == -1)
+      |         ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt_io.h:460:28: note: 'close' has been explicitly marked deprecated here
+  460 |         _Check_return_opt_ _CRT_NONSTDC_DEPRECATE(_close)
+      |                            ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt.h:428:50: note: expanded from macro '_CRT_NONSTDC_DEPRECATE'
+  428 |         #define _CRT_NONSTDC_DEPRECATE(_NewName) _CRT_DEPRECATE_TEXT(             \
+      |                                                  ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+
+      |                                               ^
+
+5 warnings generated.
+
+[136/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_close.c.obj
+[137/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_color.c.obj
+[138/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_dirinfo.c.obj
+[139/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_dumpmode.c.obj
+[140/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_dir.c.obj
+[141/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_error.c.obj
+[142/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_compress.c.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libtiff/tif_compress.c:217:9: warning: 'strcpy' is deprecated: This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+  217 |         strcpy(cd->info->name, name);
+      |         ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\string.h:130:1: note: 'strcpy' has been explicitly marked deprecated here
+  130 | __DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_1(
+      | ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt.h:874:5: note: expanded from macro '__DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_1'
+  874 |     __DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_1_EX(_ReturnType, _ReturnPolicy, _DeclSpec, _FuncName, _FuncName##_s, _DstType, _SalAttributeDst, _DstType, _Dst, _TType1, _TArg1)
+      |     ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt.h:1933:17: note: expanded from macro '__DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_1_EX'
+ 1933 |                 _CRT_INSECURE_DEPRECATE(_SecureFuncName) _DeclSpec _ReturnType __cdecl _FuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1);
+      |                 ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+
+      |                                                       ^
+
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+
+      |                                               ^
+
+1 warning generated.
+
+[143/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_extension.c.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libtiff/tif_extension.c:106:5: warning: 'strcpy' is deprecated: This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+  106 |     strcpy(psLink->name, name);
+      |     ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\string.h:130:1: note: 'strcpy' has been explicitly marked deprecated here
+  130 | __DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_1(
+      | ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt.h:874:5: note: expanded from macro '__DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_1'
+  874 |     __DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_1_EX(_ReturnType, _ReturnPolicy, _DeclSpec, _FuncName, _FuncName##_s, _DstType, _SalAttributeDst, _DstType, _Dst, _TType1, _TArg1)
+      |     ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt.h:1933:17: note: expanded from macro '__DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_1_EX'
+ 1933 |                 _CRT_INSECURE_DEPRECATE(_SecureFuncName) _DeclSpec _ReturnType __cdecl _FuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1);
+      |                 ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+
+      |                                                       ^
+
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+
+      |                                               ^
+
+1 warning generated.
+
+[144/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_flush.c.obj
+[145/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_jpeg_12.c.obj
+[146/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_jbig.c.obj
+[147/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_dirwrite.c.obj
+[148/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_ojpeg.c.obj
+[149/1040] Linking C static library 3rdparty\lib\zlib.lib
+[150/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_predict.c.obj
+[151/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_jpeg.c.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libtiff/tif_jpeg.c:440:34: warning: 'getenv' is deprecated: This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+  440 |     sz_max_allowed_scan_number = getenv("LIBTIFF_JPEG_MAX_ALLOWED_SCAN_NUMBER");
+      |                                  ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\stdlib.h:1183:20: note: 'getenv' has been explicitly marked deprecated here
+ 1183 |     _Check_return_ _CRT_INSECURE_DEPRECATE(_dupenv_s)
+      |                    ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libtiff/tif_jpeg.c:1350:13: warning: 'getenv' is deprecated: This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+ 1350 |             getenv("LIBTIFF_ALLOW_LARGE_LIBJPEG_MEM_ALLOC") == NULL)
+      |             ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\stdlib.h:1183:20: note: 'getenv' has been explicitly marked deprecated here
+ 1183 |     _Check_return_ _CRT_INSECURE_DEPRECATE(_dupenv_s)
+      |                    ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libtiff/tif_jpeg.c:2760:17: warning: 'getenv' is deprecated: This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+ 2760 |             if (getenv("JPEGMEM") == NULL)
+      |                 ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\stdlib.h:1183:20: note: 'getenv' has been explicitly marked deprecated here
+ 1183 |     _Check_return_ _CRT_INSECURE_DEPRECATE(_dupenv_s)
+      |                    ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+
+      |                                                       ^
+
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+
+      |                                               ^
+
+3 warnings generated.
+
+[152/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_fax3.c.obj
+[153/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_next.c.obj
+[154/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_lzma.c.obj
+[155/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_dirread.c.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libtiff/tif_dirread.c:7153:30: warning: 'getenv' is deprecated: This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+ 7153 |         const char *pszMax = getenv("LIBTIFF_STRILE_ARRAY_MAX_RESIZE_COUNT");
+      |                              ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\stdlib.h:1183:20: note: 'getenv' has been explicitly marked deprecated here
+ 1183 |     _Check_return_ _CRT_INSECURE_DEPRECATE(_dupenv_s)
+      |                    ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+
+      |                                               ^
+
+1 warning generated.
+
+[156/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_getimage.c.obj
+[157/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_lzw.c.obj
+[158/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_luv.c.obj
+[159/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_pixarlog.c.obj
+[160/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_packbits.c.obj
+[161/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/sharpyuv/sharpyuv_cpu.c.obj
+[162/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/sharpyuv/sharpyuv_csp.c.obj
+[163/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/sharpyuv/sharpyuv_dsp.c.obj
+[164/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_print.c.obj
+[165/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/sharpyuv/sharpyuv_gamma.c.obj
+[166/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/sharpyuv/sharpyuv_sse2.c.obj
+[167/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/sharpyuv/sharpyuv.c.obj
+[168/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_strip.c.obj
+[169/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dec/alpha_dec.c.obj
+[170/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_tile.c.obj
+[171/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_swab.c.obj
+[172/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_thunder.c.obj
+[173/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/sharpyuv/sharpyuv_neon.c.obj
+[174/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_read.c.obj
+[175/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dec/buffer_dec.c.obj
+[176/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_version.c.obj
+[177/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dec/idec_dec.c.obj
+[178/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dec/frame_dec.c.obj
+[179/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_write.c.obj
+[180/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dec/quant_dec.c.obj
+[181/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dec/io_dec.c.obj
+[182/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_warning.c.obj
+[183/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_zstd.c.obj
+[184/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/alpha_processing_mips_dsp_r2.c.obj
+[185/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_win32.c.obj
+[186/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_webp.c.obj
+[187/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_zip.c.obj
+[188/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/alpha_processing_sse2.c.obj
+[189/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dec/tree_dec.c.obj
+[190/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/alpha_processing_sse41.c.obj
+[191/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/cost.c.obj
+[192/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dec/vp8_dec.c.obj
+[193/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/cost_mips32.c.obj
+[194/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dec/webp_dec.c.obj
+[195/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/alpha_processing.c.obj
+[196/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/cost_mips_dsp_r2.c.obj
+[197/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/cost_neon.c.obj
+[198/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/cost_sse2.c.obj
+[199/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/demux/demux.c.obj
+[200/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/cpu.c.obj
+[201/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/dec.c.obj
+[202/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/dec_clip_tables.c.obj
+[203/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/dec_mips32.c.obj
+[204/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/dec_mips_dsp_r2.c.obj
+[205/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/dec_msa.c.obj
+[206/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dec/vp8l_dec.c.obj
+[207/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/alpha_processing_neon.c.obj
+[208/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/dec_sse2.c.obj
+[209/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/dec_sse41.c.obj
+[210/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/enc.c.obj
+[211/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/enc_mips32.c.obj
+[212/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/enc_mips_dsp_r2.c.obj
+[213/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/enc_msa.c.obj
+[214/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/enc_neon.c.obj
+[215/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/enc_sse2.c.obj
+[216/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/enc_sse41.c.obj
+[217/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/filters.c.obj
+[218/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/filters_mips_dsp_r2.c.obj
+[219/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/filters_msa.c.obj
+[220/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/filters_neon.c.obj
+[221/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/filters_sse2.c.obj
+[222/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/lossless_enc.c.obj
+[223/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/lossless_enc_mips32.c.obj
+[224/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/lossless_enc_mips_dsp_r2.c.obj
+[225/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/dec_neon.c.obj
+[226/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/lossless_enc_msa.c.obj
+[227/1040] Building CXX object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_stream.cxx.obj
+[228/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/lossless_enc_neon.c.obj
+[229/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/lossless_enc_sse2.c.obj
+[230/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/lossless_enc_sse41.c.obj
+[231/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/lossless_mips_dsp_r2.c.obj
+[232/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/lossless_msa.c.obj
+[233/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/lossless_neon.c.obj
+[234/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/lossless_sse2.c.obj
+[235/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/lossless_sse41.c.obj
+[236/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/rescaler.c.obj
+[237/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/rescaler_mips32.c.obj
+[238/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/rescaler_mips_dsp_r2.c.obj
+[239/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/rescaler_msa.c.obj
+[240/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/lossless.c.obj
+[241/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/rescaler_neon.c.obj
+[242/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/rescaler_sse2.c.obj
+[243/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/ssim.c.obj
+[244/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/ssim_sse2.c.obj
+[245/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/upsampling.c.obj
+[246/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/upsampling_mips_dsp_r2.c.obj
+[247/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/upsampling_msa.c.obj
+[248/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/upsampling_sse2.c.obj
+[249/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/upsampling_sse41.c.obj
+[250/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/yuv_mips32.c.obj
+[251/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/yuv_mips_dsp_r2.c.obj
+[252/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/yuv_neon.c.obj
+[253/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/yuv_sse2.c.obj
+[254/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/yuv_sse41.c.obj
+[255/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/alpha_enc.c.obj
+[256/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/analysis_enc.c.obj
+[257/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/config_enc.c.obj
+[258/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/cost_enc.c.obj
+[259/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/frame_enc.c.obj
+[260/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/near_lossless_enc.c.obj
+[261/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/picture_enc.c.obj
+[262/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/picture_psnr_enc.c.obj
+[263/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/picture_rescale_enc.c.obj
+[264/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/yuv.c.obj
+[265/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/backward_references_enc.c.obj
+[266/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/histogram_enc.c.obj
+[267/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/picture_csp_enc.c.obj
+[268/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/dsp/upsampling_neon.c.obj
+[269/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/token_enc.c.obj
+[270/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/webp_enc.c.obj
+[271/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/utils/bit_reader_utils.c.obj
+[272/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/utils/color_cache_utils.c.obj
+[273/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/mux/muxinternal.c.obj
+[274/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/mux/muxread.c.obj
+[275/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/predictor_enc.c.obj
+[276/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/utils/bit_writer_utils.c.obj
+[277/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/utils/filters_utils.c.obj
+[278/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/quant_enc.c.obj
+[279/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/mux/anim_encode.c.obj
+[280/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/utils/huffman_utils.c.obj
+[281/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/vp8l_enc.c.obj
+[282/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/utils/huffman_encode_utils.c.obj
+[283/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/utils/random_utils.c.obj
+[284/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/utils/quant_levels_utils.c.obj
+[285/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/tree_enc.c.obj
+In file included from D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp/src/enc/tree_enc.c:14:
+In file included from D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp\src/enc/vp8i_enc.h:22:
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp\src/utils/utils.h:35:5: warning: 'SIZE_MAX' is not defined, evaluates to 0 [-Wundef]
+
+   35 | #if SIZE_MAX > (1ULL << 34)
+
+      |     ^
+
+1 warning generated.
+
+[286/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/bio.c.obj
+[287/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/utils/rescaler_utils.c.obj
+[288/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/utils/palette.c.obj
+[289/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/mux/muxedit.c.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp/src/mux/muxedit.c:285:18: warning: comparison of integers of different signs: 'const uint32_t' (aka 'const unsigned int') and 'const WebPChunkId' (aka 'const enum WebPChunkId') [-Wsign-compare]
+
+  285 |     if (image_id != info->id) {
+
+      |         ~~~~~~~~ ^  ~~~~~~~~
+
+1 warning generated.
+
+[290/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/demux/anim_decode.c.obj
+In file included from D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp/src/demux/anim_decode.c:20:
+
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp\src/utils/utils.h:35:5: warning: 'SIZE_MAX' is not defined, evaluates to 0 [-Wundef]
+
+   35 | #if SIZE_MAX > (1ULL << 34)
+
+      |     ^
+
+1 warning generated.
+
+[291/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/filter_enc.c.obj
+In file included from D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp/src/enc/filter_enc.c:15:
+In file included from D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp\src/enc/vp8i_enc.h:22:
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp\src/utils/utils.h:35:5: warning: 'SIZE_MAX' is not defined, evaluates to 0 [-Wundef]
+
+   35 | #if SIZE_MAX > (1ULL << 34)
+
+      |     ^
+
+1 warning generated.
+
+[292/1040] Building C object 3rdparty/libtiff/CMakeFiles/libtiff.dir/tif_open.c.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libtiff/tif_open.c:243:5: warning: 'strcpy' is deprecated: This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+  243 |     strcpy(tif->tif_name, name);
+      |     ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\string.h:130:1: note: 'strcpy' has been explicitly marked deprecated here
+  130 | __DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_1(
+      | ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt.h:874:5: note: expanded from macro '__DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_1'
+  874 |     __DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_1_EX(_ReturnType, _ReturnPolicy, _DeclSpec, _FuncName, _FuncName##_s, _DstType, _SalAttributeDst, _DstType, _Dst, _TType1, _TArg1)
+      |     ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\corecrt.h:1933:17: note: expanded from macro '__DEFINE_CPP_OVERLOAD_STANDARD_FUNC_0_1_EX'
+ 1933 |                 _CRT_INSECURE_DEPRECATE(_SecureFuncName) _DeclSpec _ReturnType __cdecl _FuncName(_SalAttributeDst _DstType *_Dst, _TType1 _TArg1);
+      |                 ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+
+      |                                                       ^
+
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+
+      |                                               ^
+
+1 warning generated.
+
+[293/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/syntax_enc.c.obj
+In file included from D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp/src/enc/syntax_enc.c:16:
+
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp\src/utils/utils.h:35:5: warning: 'SIZE_MAX' is not defined, evaluates to 0 [-Wundef]
+
+   35 | #if SIZE_MAX > (1ULL << 34)
+
+      |     ^
+
+1 warning generated.
+
+[294/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/iterator_enc.c.obj
+In file included from D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp/src/enc/iterator_enc.c:16:
+In file included from D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp\src/enc/vp8i_enc.h:22:
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp\src/utils/utils.h:35:5: warning: 'SIZE_MAX' is not defined, evaluates to 0 [-Wundef]
+
+   35 | #if SIZE_MAX > (1ULL << 34)
+
+      |     ^
+
+1 warning generated.
+
+[295/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/event.c.obj
+[296/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/cio.c.obj
+[297/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/image.c.obj
+[298/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/invert.c.obj
+[299/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/mct.c.obj
+[300/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/backward_references_cost_enc.c.obj
+In file included from D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp/src/enc/backward_references_cost_enc.c:20:
+In file included from D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp\src/dsp/lossless_common.h:20:
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp\src/utils/utils.h:35:5: warning: 'SIZE_MAX' is not defined, evaluates to 0 [-Wundef]
+
+   35 | #if SIZE_MAX > (1ULL << 34)
+
+      |     ^
+
+1 warning generated.
+
+[301/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/enc/picture_tools_enc.c.obj
+In file included from D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp/src/enc/picture_tools_enc.c:16:
+In file included from D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp\src/enc/vp8i_enc.h:22:
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp\src/utils/utils.h:35:5: warning: 'SIZE_MAX' is not defined, evaluates to 0 [-Wundef]
+
+   35 | #if SIZE_MAX > (1ULL << 34)
+
+      |     ^
+
+1 warning generated.
+
+[302/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/mqc.c.obj
+[303/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/thread.c.obj
+[304/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/jp2.c.obj
+[305/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/utils/utils.c.obj
+In file included from D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp/src/utils/utils.c:14:
+
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp\src/utils/utils.h:35:5: warning: 'SIZE_MAX' is not defined, evaluates to 0 [-Wundef]
+
+   35 | #if SIZE_MAX > (1ULL << 34)
+
+      |     ^
+
+1 warning generated.
+
+[306/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/tgt.c.obj
+[307/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/function_list.c.obj
+[308/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/t2.c.obj
+[309/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/pi.c.obj
+[310/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/opj_malloc.c.obj
+[311/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/sparse_array.c.obj
+[312/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/ht_dec.c.obj
+[313/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/utils/quant_levels_dec_utils.c.obj
+In file included from D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp/src/utils/quant_levels_dec_utils.c:21:
+
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp\src/utils/utils.h:35:5: warning: 'SIZE_MAX' is not defined, evaluates to 0 [-Wundef]
+
+   35 | #if SIZE_MAX > (1ULL << 34)
+
+      |     ^
+
+1 warning generated.
+
+[314/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/openjpeg.c.obj
+[315/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/opj_clock.c.obj
+[316/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/tcd.c.obj
+[317/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/dwt.c.obj
+[318/1040] Building C object 3rdparty/libwebp/CMakeFiles/libwebp.dir/src/utils/thread_utils.c.obj
+In file included from D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp/src/utils/thread_utils.c:17:
+
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libwebp\src/utils/utils.h:35:5: warning: 'SIZE_MAX' is not defined, evaluates to 0 [-Wundef]
+
+   35 | #if SIZE_MAX > (1ULL << 34)
+
+      |     ^
+
+1 warning generated.
+
+[319/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/j2k.c.obj
+[320/1040] Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngget.c.obj
+[321/1040] Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngerror.c.obj
+[322/1040] Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngmem.c.obj
+[323/1040] Building ASM object 3rdparty/libpng/CMakeFiles/libpng.dir/arm/filter_neon.S.obj
+[324/1040] Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngpread.c.obj
+[325/1040] Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngrio.c.obj
+[326/1040] Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/png.c.obj
+[327/1040] Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngset.c.obj
+[328/1040] Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngwio.c.obj
+[329/1040] Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngtrans.c.obj
+[330/1040] Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/arm/arm_init.c.obj
+[331/1040] Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngread.c.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libpng/pngread.c:1514:21: warning: 'fopen' is deprecated: This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+ 1514 |          FILE *fp = fopen(file_name, "rb");
+      |                     ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\stdio.h:212:20: note: 'fopen' has been explicitly marked deprecated here
+  212 |     _Check_return_ _CRT_INSECURE_DEPRECATE(fopen_s)
+      |                    ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libpng/pngread.c:1530:43: warning: 'strerror' is deprecated: This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+ 1530 |             return png_image_error(image, strerror(errno));
+      |                                           ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\string.h:177:16: note: 'strerror' has been explicitly marked deprecated here
+  177 | _Check_return_ _CRT_INSECURE_DEPRECATE(strerror_s)
+      |                ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+
+      |                                               ^
+
+2 warnings generated.
+
+[332/1040] Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngwtran.c.obj
+[333/1040] Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngrutil.c.obj
+[334/1040] Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/arm/palette_neon_intrinsics.c.obj
+[335/1040] Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngwutil.c.obj
+[336/1040] Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/arm/filter_neon_intrinsics.c.obj
+[337/1040] Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngrtran.c.obj
+[338/1040] Building C object 3rdparty/libpng/CMakeFiles/libpng.dir/pngwrite.c.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libpng/pngwrite.c:496:11: warning: 'gmtime' is deprecated: This function or variable may be unsafe. Consider using gmtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+  496 |    tbuf = gmtime(&ttime);
+      |           ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\time.h:517:24: note: 'gmtime' has been explicitly marked deprecated here
+  517 |         _Check_return_ _CRT_INSECURE_DEPRECATE(gmtime_s)
+      |                        ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libpng/pngwrite.c:2360:21: warning: 'fopen' is deprecated: This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+ 2360 |          FILE *fp = fopen(file_name, "wb");
+      |                     ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\stdio.h:212:20: note: 'fopen' has been explicitly marked deprecated here
+  212 |     _Check_return_ _CRT_INSECURE_DEPRECATE(fopen_s)
+      |                    ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libpng/pngwrite.c:2388:46: warning: 'strerror' is deprecated: This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+ 2388 |                return png_image_error(image, strerror(error));
+      |                                              ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\string.h:177:16: note: 'strerror' has been explicitly marked deprecated here
+  177 | _Check_return_ _CRT_INSECURE_DEPRECATE(strerror_s)
+      |                ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+      |                                               ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/libpng/pngwrite.c:2401:43: warning: 'strerror' is deprecated: This function or variable may be unsafe. Consider using strerror_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+ 2401 |             return png_image_error(image, strerror(errno));
+      |                                           ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\string.h:177:16: note: 'strerror' has been explicitly marked deprecated here
+  177 | _Check_return_ _CRT_INSECURE_DEPRECATE(strerror_s)
+      |                ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+
+      |                                               ^
+
+4 warnings generated.
+
+[339/1040] Building C object 3rdparty/openjpeg/openjp2/CMakeFiles/libopenjp2.dir/t1.c.obj
+[340/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/Half/half.cpp.obj
+[341/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfAcesFile.cpp.obj
+[342/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfBoxAttribute.cpp.obj
+[343/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfChannelListAttribute.cpp.obj
+[344/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfDeepCompositing.cpp.obj
+[345/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfAttribute.cpp.obj
+[346/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfChromaticitiesAttribute.cpp.obj
+[347/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfCompressionAttribute.cpp.obj
+[348/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfChromaticities.cpp.obj
+[349/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfChannelList.cpp.obj
+[350/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfConvert.cpp.obj
+[351/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfB44Compressor.cpp.obj
+[352/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfCRgbaFile.cpp.obj
+In file included from D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/openexr/IlmImf/ImfCRgbaFile.cpp:54:
+In file included from D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/openexr/IlmImf\ImfLut.h:51:
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/openexr/Half\halfFunction.h:151:13: warning: first argument in call to 'memset' is a pointer to non-trivially copyable type 'half' [-Wnontrivial-memcall]
+  151 |     memset (_lut, 0 , (1<<16) * sizeof(T));
+      |             ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/openexr/IlmImf\ImfLut.h:182:5: note: in instantiation of function template specialization 'halfFunction<half>::halfFunction<half (*)(half)>' requested here
+  182 |     _lut(f, -HALF_MAX, HALF_MAX, half (0),
+      |     ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/openexr/IlmImf/ImfCRgbaFile.cpp:1393:24: note: in instantiation of function template specialization 'Imf_opencv::RgbaLut::RgbaLut<half (*)(half)>' requested here
+ 1393 |         return (ImfLut *) new OPENEXR_IMF_INTERNAL_NAMESPACE::RgbaLut
+      |                               ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/build_hobl_clang_ninja/3rdparty/openexr\OpenEXRConfig.h:48:40: note: expanded from macro 'OPENEXR_IMF_INTERNAL_NAMESPACE'
+   48 | #define OPENEXR_IMF_INTERNAL_NAMESPACE Imf_opencv
+      |                                        ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/openexr/Half\halfFunction.h:151:13: note: explicitly cast the pointer to silence this warning
+  151 |     memset (_lut, 0 , (1<<16) * sizeof(T));
+      |             ^
+      |             (void*)
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/openexr/Half\halfFunction.h:151:13: warning: first argument in call to 'memset' is a pointer to non-trivially copyable type 'half' [-Wnontrivial-memcall]
+  151 |     memset (_lut, 0 , (1<<16) * sizeof(T));
+      |             ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/openexr/IlmImf\ImfLut.h:182:5: note: in instantiation of function template specialization 'halfFunction<half>::halfFunction<Imf_opencv::roundNBit>' requested here
+  182 |     _lut(f, -HALF_MAX, HALF_MAX, half (0),
+      |     ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/openexr/IlmImf/ImfCRgbaFile.cpp:1409:24: note: in instantiation of function template specialization 'Imf_opencv::RgbaLut::RgbaLut<Imf_opencv::roundNBit>' requested here
+ 1409 |         return (ImfLut *) new OPENEXR_IMF_INTERNAL_NAMESPACE::RgbaLut
+      |                               ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/build_hobl_clang_ninja/3rdparty/openexr\OpenEXRConfig.h:48:40: note: expanded from macro 'OPENEXR_IMF_INTERNAL_NAMESPACE'
+   48 | #define OPENEXR_IMF_INTERNAL_NAMESPACE Imf_opencv
+      |                                        ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/openexr/Half\halfFunction.h:151:13: note: explicitly cast the pointer to silence this warning
+
+  151 |     memset (_lut, 0 , (1<<16) * sizeof(T));
+
+      |             ^
+
+      |             (void*)
+
+2 warnings generated.
+
+[353/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/Iex/IexBaseExc.cpp.obj
+[354/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfCompressor.cpp.obj
+[355/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/Iex/IexThrowErrnoExc.cpp.obj
+[356/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfDeepImageStateAttribute.cpp.obj
+[357/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfDeepFrameBuffer.cpp.obj
+[358/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfFramesPerSecond.cpp.obj
+[359/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfCompositeDeepScanLine.cpp.obj
+[360/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfDeepScanLineInputPart.cpp.obj
+[361/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfDeepScanLineOutputPart.cpp.obj
+[362/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfDeepTiledInputPart.cpp.obj
+[363/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfDoubleAttribute.cpp.obj
+[364/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfDeepTiledOutputPart.cpp.obj
+[365/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfEnvmapAttribute.cpp.obj
+[366/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfEnvmap.cpp.obj
+[367/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfFastHuf.cpp.obj
+[368/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfFloatAttribute.cpp.obj
+[369/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfFloatVectorAttribute.cpp.obj
+[370/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfFrameBuffer.cpp.obj
+[371/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfGenericInputFile.cpp.obj
+[372/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfIO.cpp.obj
+[373/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfGenericOutputFile.cpp.obj
+[374/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfHuf.cpp.obj
+[375/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfIntAttribute.cpp.obj
+[376/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfKeyCode.cpp.obj
+[377/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfInputPartData.cpp.obj
+[378/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfKeyCodeAttribute.cpp.obj
+[379/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfInputPart.cpp.obj
+[380/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfDeepScanLineOutputFile.cpp.obj
+[381/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfDeepScanLineInputFile.cpp.obj
+[382/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfLineOrderAttribute.cpp.obj
+[383/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfDeepTiledInputFile.cpp.obj
+[384/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfLut.cpp.obj
+[385/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfInputFile.cpp.obj
+[386/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfDwaCompressor.cpp.obj
+[387/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfMatrixAttribute.cpp.obj
+[388/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfDeepTiledOutputFile.cpp.obj
+[389/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfRational.cpp.obj
+[390/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfHeader.cpp.obj
+[391/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfRle.cpp.obj
+[392/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfPartType.cpp.obj
+[393/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfMultiView.cpp.obj
+[394/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfOutputPartData.cpp.obj
+[395/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfOpaqueAttribute.cpp.obj
+[396/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfMisc.cpp.obj
+[397/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfOutputPart.cpp.obj
+[398/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfPreviewImageAttribute.cpp.obj
+[399/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfMultiPartOutputFile.cpp.obj
+[400/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfRationalAttribute.cpp.obj
+[401/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfMultiPartInputFile.cpp.obj
+[402/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfPreviewImage.cpp.obj
+[403/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfSystemSpecific.cpp.obj
+[404/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfThreading.cpp.obj
+[405/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfPizCompressor.cpp.obj
+[406/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfPxr24Compressor.cpp.obj
+[407/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfRleCompressor.cpp.obj
+[408/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfStringAttribute.cpp.obj
+[409/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfRgbaYca.cpp.obj
+[410/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfVersion.cpp.obj
+[411/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfStringVectorAttribute.cpp.obj
+[412/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfWav.cpp.obj
+[413/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfTestFile.cpp.obj
+[414/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfStandardAttributes.cpp.obj
+[415/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfTileDescriptionAttribute.cpp.obj
+[416/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfTiledInputPart.cpp.obj
+[417/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfOutputFile.cpp.obj
+[418/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfTiledOutputPart.cpp.obj
+[419/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfTimeCode.cpp.obj
+[420/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmThread/IlmThreadMutex.cpp.obj
+[421/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfTimeCodeAttribute.cpp.obj
+[422/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmThread/IlmThreadMutexWin32.cpp.obj
+[423/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfVecAttribute.cpp.obj
+[424/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmThread/IlmThreadSemaphore.cpp.obj
+[425/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfTiledMisc.cpp.obj
+[426/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmThread/IlmThreadWin32.cpp.obj
+[427/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfTileOffsets.cpp.obj
+[428/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfZip.cpp.obj
+[429/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/Imath/ImathFun.cpp.obj
+[430/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfStdIO.cpp.obj
+[431/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/Imath/ImathRandom.cpp.obj
+[432/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfRgbaFile.cpp.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/openexr/IlmImf/ImfRgbaFile.cpp:531:13: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'Rgba' [-Wnontrivial-memcall]
+  531 |     memcpy (_buf[N - 1], _buf[N - 2], _width * sizeof (Rgba));
+      |             ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/openexr/IlmImf/ImfRgbaFile.cpp:531:13: note: explicitly cast the pointer to silence this warning
+  531 |     memcpy (_buf[N - 1], _buf[N - 2], _width * sizeof (Rgba));
+      |             ^
+      |             (void*)
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/openexr/IlmImf/ImfRgbaFile.cpp:539:13: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'Rgba' [-Wnontrivial-memcall]
+  539 |     memcpy (_buf[N - 1], _buf[N - 3], _width * sizeof (Rgba));
+      |             ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/openexr/IlmImf/ImfRgbaFile.cpp:539:13: note: explicitly cast the pointer to silence this warning
+  539 |     memcpy (_buf[N - 1], _buf[N - 3], _width * sizeof (Rgba));
+      |             ^
+      |             (void*)
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/openexr/IlmImf/ImfRgbaFile.cpp:547:10: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'Rgba' [-Wnontrivial-memcall]
+  547 |         memcpy (_tmpBuf, _buf[N2], _width * sizeof (Rgba));
+      |                 ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/openexr/IlmImf/ImfRgbaFile.cpp:547:10: note: explicitly cast the pointer to silence this warning
+  547 |         memcpy (_tmpBuf, _buf[N2], _width * sizeof (Rgba));
+      |                 ^
+      |                 (void*)
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/openexr/IlmImf/ImfRgbaFile.cpp:1144:10: warning: first argument in call to 'memcpy' is a pointer to non-trivially copyable type 'Rgba' [-Wnontrivial-memcall]
+ 1144 |         memcpy (buf, _tmpBuf + N2, _width * sizeof (Rgba));
+      |                 ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/openexr/IlmImf/ImfRgbaFile.cpp:1144:10: note: explicitly cast the pointer to silence this warning
+
+ 1144 |         memcpy (buf, _tmpBuf + N2, _width * sizeof (Rgba));
+
+      |                 ^
+
+      |                 (void*)
+
+4 warnings generated.
+
+[433/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfTiledRgbaFile.cpp.obj
+[434/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfZipCompressor.cpp.obj
+[435/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfScanLineInputFile.cpp.obj
+[436/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmThread/IlmThread.cpp.obj
+[437/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/Imath/ImathBox.cpp.obj
+[438/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfTiledInputFile.cpp.obj
+[439/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/Imath/ImathColorAlgo.cpp.obj
+[440/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/Imath/ImathShear.cpp.obj
+[441/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/Imath/ImathVec.cpp.obj
+[442/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/ImfTiledOutputFile.cpp.obj
+[443/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/arena.cc.obj
+[444/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/implicit_weak_message.cc.obj
+[445/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/Imath/ImathMatrixAlgo.cpp.obj
+[446/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/arenastring.cc.obj
+[447/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/io/strtod.cc.obj
+[448/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/any_lite.cc.obj
+[449/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmThread/IlmThreadPool.cpp.obj
+[450/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmThread/IlmThreadSemaphoreWin32.cpp.obj
+[451/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/io/zero_copy_stream.cc.obj
+[452/1040] Building CXX object 3rdparty/openexr/CMakeFiles/IlmImf.dir/IlmImf/dwaLookups.cpp.obj
+[453/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/io/zero_copy_stream_impl.cc.obj
+[454/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/io/coded_stream.cc.obj
+[455/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/map.cc.obj
+[456/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/io/zero_copy_stream_impl_lite.cc.obj
+[457/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/io/io_win32.cc.obj
+[458/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/status.cc.obj
+[459/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/stringpiece.cc.obj
+[460/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/generated_message_util.cc.obj
+[461/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/int128.cc.obj
+[462/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/bytestream.cc.obj
+[463/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/message_lite.cc.obj
+[464/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/repeated_ptr_field.cc.obj
+[465/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/stringprintf.cc.obj
+[466/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/structurally_valid.cc.obj
+[467/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/parse_context.cc.obj
+[468/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/extension_set.cc.obj
+[469/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/common.cc.obj
+[470/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/any.cc.obj
+[471/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/repeated_field.cc.obj
+[472/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/wire_format_lite.cc.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/protobuf/src/google/protobuf/wire_format_lite.cc:609:15: warning: unused function template 'VarintSize' [-Wunused-template]
+  609 | static size_t VarintSize(const T* data, const int n) {
+      |               ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/3rdparty/protobuf/src/google/protobuf/wire_format_lite.cc:644:15: warning: unused function template 'VarintSize64' [-Wunused-template]
+
+  644 | static size_t VarintSize64(const T* data, const int n) {
+
+      |               ^~~~~~~~~~~~
+
+2 warnings generated.
+
+[473/1040] Linking C static library 3rdparty\lib\libjpeg-turbo.lib
+[474/1040] Linking CXX static library 3rdparty\lib\libtiff.lib
+[475/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/strutil.cc.obj
+[476/1040] Linking C static library 3rdparty\lib\libwebp.lib
+[477/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/stubs/substitute.cc.obj
+[478/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/io/tokenizer.cc.obj
+[479/1040] Linking C static library 3rdparty\lib\libopenjp2.lib
+[480/1040] Linking C static library 3rdparty\lib\libpng.lib
+[481/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/dynamic_message.cc.obj
+[482/1040] Linking CXX static library 3rdparty\lib\IlmImf.lib
+[483/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/unknown_field_set.cc.obj
+[484/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/extension_set_heavy.cc.obj
+[485/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/map_field.cc.obj
+[486/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/message.cc.obj
+[487/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/reflection_ops.cc.obj
+[488/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/descriptor_database.cc.obj
+[489/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/generated_message_reflection.cc.obj
+[490/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/wire_format.cc.obj
+[491/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/descriptor.pb.cc.obj
+[492/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/text_format.cc.obj
+[493/1040] Building CXX object 3rdparty/protobuf/CMakeFiles/libprotobuf.dir/src/google/protobuf/descriptor.cc.obj
+[494/1040] Linking CXX static library 3rdparty\lib\libprotobuf.lib
+[495/1040] Processing OpenCL kernels (photo)
+-- D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/build_hobl_clang_ninja/modules/world/opencl_kernels_photo.hpp contains the same content
+[496/1040] Processing OpenCL kernels (core)
+-- D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/build_hobl_clang_ninja/modules/world/opencl_kernels_core.hpp contains the same content
+[497/1040] Processing OpenCL kernels (features2d)
+-- D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/build_hobl_clang_ninja/modules/world/opencl_kernels_features2d.hpp contains the same content
+[498/1040] Processing OpenCL kernels (calib3d)
+-- D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/build_hobl_clang_ninja/modules/world/opencl_kernels_calib3d.hpp contains the same content
+[499/1040] Processing OpenCL kernels (objdetect)
+-- D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/build_hobl_clang_ninja/modules/world/opencl_kernels_objdetect.hpp contains the same content
+[500/1040] Processing OpenCL kernels (stitching)
+-- D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/build_hobl_clang_ninja/modules/world/opencl_kernels_stitching.hpp contains the same content
+[501/1040] Processing OpenCL kernels (imgproc)
+-- D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/build_hobl_clang_ninja/modules/world/opencl_kernels_imgproc.hpp contains the same content
+[502/1040] Processing OpenCL kernels (video)
+-- D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/build_hobl_clang_ninja/modules/world/opencl_kernels_video.hpp contains the same content
+[503/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/buffer_area.cpp.obj
+[504/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/algorithm.cpp.obj
+[505/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/async.cpp.obj
+[506/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/channels.cpp.obj
+[507/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/batch_distance.cpp.obj
+[508/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/count_non_zero.dispatch.cpp.obj
+[509/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/bindings_utils.cpp.obj
+[510/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/cuda_gpu_mat.cpp.obj
+[511/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/alloc.cpp.obj
+[512/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/check.cpp.obj
+[513/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/cuda_gpu_mat_nd.cpp.obj
+[514/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/convert_c.cpp.obj
+[515/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/arithm.cpp.obj
+[516/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/array.cpp.obj
+[517/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/command_line_parser.cpp.obj
+[518/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/conjugate_gradient.cpp.obj
+[519/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/copy.cpp.obj
+[520/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/convert.dispatch.cpp.obj
+[521/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/convert_scale.dispatch.cpp.obj
+[522/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/arithm.dispatch.cpp.obj
+[523/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/cuda_stream.cpp.obj
+[524/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/cuda_info.cpp.obj
+[525/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/directx.cpp.obj
+[526/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/cuda_host_mem.cpp.obj
+[527/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/downhill_simplex.cpp.obj
+[528/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/hal_internal.cpp.obj
+[529/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/datastructs.cpp.obj
+[530/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/gl_core_3_1.cpp.obj
+[531/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/has_non_zero.dispatch.cpp.obj
+[532/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/lut.cpp.obj
+[533/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/logger.cpp.obj
+[534/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/kmeans.cpp.obj
+[535/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/lpsolver.cpp.obj
+[536/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/lda.cpp.obj
+[537/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/glob.cpp.obj
+[538/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/lapack.cpp.obj
+[539/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/mathfuncs_core.dispatch.cpp.obj
+[540/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/matrix_c.cpp.obj
+[541/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/matrix_iterator.cpp.obj
+[542/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/mathfuncs.cpp.obj
+[543/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/matrix.cpp.obj
+[544/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/dxt.cpp.obj
+[545/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/matrix_expressions.cpp.obj
+[546/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/matrix_decomp.cpp.obj
+[547/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/minmax.cpp.obj
+[548/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/matrix_sparse.cpp.obj
+[549/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/mean.dispatch.cpp.obj
+[550/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/merge.dispatch.cpp.obj
+[551/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/matrix_wrap.cpp.obj
+[552/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/opencl/runtime/opencl_clfft.cpp.obj
+[553/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/norm.cpp.obj
+[554/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/opencl/runtime/opencl_clblas.cpp.obj
+[555/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/matrix_transform.cpp.obj
+[556/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/ocl.cpp.obj
+[557/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/opencl/runtime/opencl_core.cpp.obj
+[558/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/ovx.cpp.obj
+[559/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/matrix_operations.cpp.obj
+[560/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/out.cpp.obj
+[561/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/parallel/parallel_openmp.cpp.obj
+[562/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/opengl.cpp.obj
+[563/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/matmul.dispatch.cpp.obj
+[564/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/parallel/parallel_tbb.cpp.obj
+[565/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/parallel_impl.cpp.obj
+[566/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/pca.cpp.obj
+[567/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/parallel.cpp.obj
+[568/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/persistence_yml.cpp.obj
+[569/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/persistence_base64_encoding.cpp.obj
+[570/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/persistence_json.cpp.obj
+[571/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/persistence_types.cpp.obj
+[572/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/stat_c.cpp.obj
+[573/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/parallel/parallel.cpp.obj
+[574/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/rand.cpp.obj
+[575/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/persistence.cpp.obj
+[576/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/stat.dispatch.cpp.obj
+[577/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/persistence_xml.cpp.obj
+[578/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/stl.cpp.obj
+[579/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/split.dispatch.cpp.obj
+[580/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/softfloat.cpp.obj
+[581/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/sum.dispatch.cpp.obj
+[582/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/tables.cpp.obj
+[583/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/types.cpp.obj
+[584/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/trace.cpp.obj
+[585/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/utils/logtagconfigparser.cpp.obj
+[586/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/umatrix.cpp.obj
+[587/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/utils/filesystem.cpp.obj
+[588/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/utils/logtagmanager.cpp.obj
+[589/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/va_intel.cpp.obj
+[590/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/opencl_kernels_core.cpp.obj
+[591/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/system.cpp.obj
+[592/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/flann/src/flann.cpp.obj
+[593/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/utils/datafile.cpp.obj
+[594/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/accum.cpp.obj
+[595/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/accum.dispatch.cpp.obj
+[596/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/core/src/utils/samples.cpp.obj
+[597/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/bilateral_filter.dispatch.cpp.obj
+[598/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/blend.cpp.obj
+[599/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/approx.cpp.obj
+[600/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/canny.cpp.obj
+[601/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/color.cpp.obj
+[602/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/clahe.cpp.obj
+[603/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/box_filter.dispatch.cpp.obj
+[604/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/color_hsv.dispatch.cpp.obj
+[605/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/contours_approx.cpp.obj
+[606/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/colormap.cpp.obj
+[607/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/contours_common.cpp.obj
+[608/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/color_rgb.dispatch.cpp.obj
+[609/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/convhull.cpp.obj
+[610/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/cornersubpix.cpp.obj
+[611/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/contours_link.cpp.obj
+[612/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/corner.cpp.obj
+[613/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/contours.cpp.obj
+[614/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/color_yuv.dispatch.cpp.obj
+[615/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/color_lab.cpp.obj
+[616/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/contours_new.cpp.obj
+[617/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/emd.cpp.obj
+[618/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/deriv.cpp.obj
+[619/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/distransform.cpp.obj
+[620/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/demosaicing.cpp.obj
+[621/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/emd_new.cpp.obj
+[622/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/featureselect.cpp.obj
+[623/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/drawing.cpp.obj
+[624/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/gabor.cpp.obj
+[625/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/generalized_hough.cpp.obj
+[626/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/hershey_fonts.cpp.obj
+[627/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/floodfill.cpp.obj
+[628/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/grabcut.cpp.obj
+[629/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/geometry.cpp.obj
+[630/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/linefit.cpp.obj
+[631/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/flann/src/miniflann.cpp.obj
+[632/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/main.cpp.obj
+[633/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/intersection.cpp.obj
+[634/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/intelligent_scissors.cpp.obj
+[635/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/hough.cpp.obj
+[636/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/lsd.cpp.obj
+[637/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/histogram.cpp.obj
+[638/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/matchcontours.cpp.obj
+[639/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/moments.cpp.obj
+[640/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/min_enclosing_triangle.cpp.obj
+[641/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/phasecorr.cpp.obj
+[642/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/filter.dispatch.cpp.obj
+[643/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/median_blur.dispatch.cpp.obj
+[644/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/rotcalipers.cpp.obj
+[645/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/segmentation.cpp.obj
+[646/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/samplers.cpp.obj
+[647/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/pyramids.cpp.obj
+[648/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/shapedescr.cpp.obj
+[649/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/subdivision2d.cpp.obj
+[650/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/spatialgradient.cpp.obj
+[651/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/connectedcomponents.cpp.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/imgproc/src/connectedcomponents.cpp:224:12: warning: unused function template 'find' [-Wunused-template]
+
+  224 |     LabelT find(LabelT *P, LabelT i){
+
+      |            ^~~~
+
+1 warning generated.
+
+[652/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/templmatch.cpp.obj
+[653/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/stackblur.cpp.obj
+[654/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/tables.cpp.obj
+[655/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/opencl_kernels_imgproc.cpp.obj
+[656/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/utils.cpp.obj
+[657/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/morph.dispatch.cpp.obj
+[658/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/sumpixels.dispatch.cpp.obj
+[659/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/ml/src/ann_mlp.cpp.obj
+[660/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/ml/src/boost.cpp.obj
+[661/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/resize.cpp.obj
+[662/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/thresh.cpp.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/imgproc/src/thresh.cpp:83:13: warning: unused function template 'threshGeneric' [-Wunused-template]
+
+   83 | static void threshGeneric(Size roi, const T* src, size_t src_step, T* dst,
+
+      |             ^~~~~~~~~~~~~
+
+1 warning generated.
+
+[663/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/ml/src/gbt.cpp.obj
+[664/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/ml/src/inner_functions.cpp.obj
+[665/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/imgwarp.cpp.obj
+[666/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/ml/src/em.cpp.obj
+[667/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/ml/src/lr.cpp.obj
+[668/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/ml/src/kdtree.cpp.obj
+[669/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/ml/src/data.cpp.obj
+[670/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgproc/src/smooth.dispatch.cpp.obj
+[671/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/ml/src/knearest.cpp.obj
+[672/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/ml/src/nbayes.cpp.obj
+[673/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/ml/src/rtrees.cpp.obj
+[674/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/ml/src/svmsgd.cpp.obj
+[675/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/ml/src/testset.cpp.obj
+[676/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/photo/src/denoise_tvl1.cpp.obj
+[677/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/ml/src/svm.cpp.obj
+[678/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/photo/src/align.cpp.obj
+[679/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/photo/src/calibrate.cpp.obj
+[680/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/photo/src/hdr_common.cpp.obj
+[681/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/photo/src/contrast_preserve.cpp.obj
+[682/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/opencl_kernels_photo.cpp.obj
+[683/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/photo/src/denoising.cuda.cpp.obj
+[684/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/ml/src/tree.cpp.obj
+[685/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/photo/src/merge.cpp.obj
+[686/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/photo/src/seamless_cloning.cpp.obj
+[687/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/photo/src/npr.cpp.obj
+[688/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/photo/src/tonemap.cpp.obj
+[689/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/photo/src/seamless_cloning_impl.cpp.obj
+[690/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/photo/src/inpaint.cpp.obj
+[691/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/misc/onnx/opencv-onnx.pb.cc.obj
+[692/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/misc/tensorflow/tensor_shape.pb.cc.obj
+[693/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/misc/tensorflow/attr_value.pb.cc.obj
+[694/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/misc/tensorflow/tensor.pb.cc.obj
+[695/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/misc/tensorflow/versions.pb.cc.obj
+[696/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/misc/tensorflow/graph.pb.cc.obj
+[697/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/misc/tensorflow/function.pb.cc.obj
+[698/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/misc/tensorflow/types.pb.cc.obj
+[699/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/misc/tensorflow/op_def.pb.cc.obj
+[700/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/dnn.cpp.obj
+[701/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/darknet/darknet_importer.cpp.obj
+[702/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/debug_utils.cpp.obj
+[703/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/dnn_read.cpp.obj
+[704/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/photo/src/denoising.cpp.obj
+[705/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/dnn_params.cpp.obj
+[706/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/darknet/darknet_io.cpp.obj
+[707/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/caffe/caffe_shrinker.cpp.obj
+[708/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/backend.cpp.obj
+[709/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/caffe/caffe_io.cpp.obj
+[710/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/int8layers/convolution_layer.cpp.obj
+[711/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/dnn_utils.cpp.obj
+[712/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/graph_simplifier.cpp.obj
+[713/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/ie_ngraph.cpp.obj
+[714/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/halide_scheduler.cpp.obj
+[715/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/int8layers/elementwise_layers.cpp.obj
+[716/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/init.cpp.obj
+[717/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/int8layers/batch_norm_layer.cpp.obj
+[718/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/misc/caffe/opencv-caffe.pb.cc.obj
+[719/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/caffe/caffe_importer.cpp.obj
+[720/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/int8layers/fully_connected_layer.cpp.obj
+[721/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/int8layers/eltwise_layer.cpp.obj
+[722/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/int8layers/pooling_layer.cpp.obj
+[723/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/int8layers/scale_layer.cpp.obj
+[724/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/int8layers/softmax_layer.cpp.obj
+[725/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/int8layers/quantization_utils.cpp.obj
+[726/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layer.cpp.obj
+[727/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layer_factory.cpp.obj
+[728/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/int8layers/layers_rvp052.cpp.obj
+[729/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/accum_layer.cpp.obj
+[730/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/arg_layer.cpp.obj
+[731/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/concat_layer.cpp.obj
+[732/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/attention_layer.cpp.obj
+[733/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/blank_layer.cpp.obj
+[734/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/batch_norm_layer.cpp.obj
+[735/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/const_layer.cpp.obj
+[736/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/cpu_kernels/conv_winograd_f63.cpp.obj
+[737/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/cpu_kernels/conv_depthwise.cpp.obj
+[738/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/convolution_layer.cpp.obj
+[739/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/correlation_layer.cpp.obj
+[740/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/cpu_kernels/fast_gemm.cpp.obj
+[741/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/cpu_kernels/fast_norm.cpp.obj
+[742/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/cpu_kernels/convolution.cpp.obj
+[743/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/cpu_kernels/softmax.cpp.obj
+[744/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/cumsum_layer.cpp.obj
+[745/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/crop_and_resize_layer.cpp.obj
+[746/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/expand_layer.cpp.obj
+[747/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/gather_layer.cpp.obj
+[748/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/eltwise_layer.cpp.obj
+[749/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/flow_warp_layer.cpp.obj
+[750/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/flatten_layer.cpp.obj
+[751/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/fully_connected_layer.cpp.obj
+[752/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/detection_output_layer.cpp.obj
+[753/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/group_norm_layer.cpp.obj
+[754/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/gather_elements_layer.cpp.obj
+[755/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/einsum_layer.cpp.obj
+[756/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/gemm_layer.cpp.obj
+[757/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/instance_norm_layer.cpp.obj
+[758/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/layer_norm.cpp.obj
+[759/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/elementwise_layers.cpp.obj
+[760/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/max_unpooling_layer.cpp.obj
+[761/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/layers_common.cpp.obj
+[762/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/matmul_layer.cpp.obj
+[763/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/mvn_layer.cpp.obj
+[764/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/lrn_layer.cpp.obj
+[765/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/not_implemented_layer.cpp.obj
+[766/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/permute_layer.cpp.obj
+[767/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/padding_layer.cpp.obj
+[768/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/prior_box_layer.cpp.obj
+[769/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/reorg_layer.cpp.obj
+[770/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/pooling_layer.cpp.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/dnn/src/layers/pooling_layer.cpp:1188:30: warning: virtual method 'initMaxPoolingHalide' is inside a 'final' class and can never be overridden [-Wunnecessary-virtual-specifier]
+ 1188 |     virtual Ptr<BackendNode> initMaxPoolingHalide(const std::vector<Ptr<BackendWrapper> > &inputs)
+      |                              ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/dnn/src/layers/pooling_layer.cpp:1245:30: warning: virtual method 'initAvePoolingHalide' is inside a 'final' class and can never be overridden [-Wunnecessary-virtual-specifier]
+
+ 1245 |     virtual Ptr<BackendNode> initAvePoolingHalide(const std::vector<Ptr<BackendWrapper> > &inputs)
+
+      |                              ^
+
+2 warnings generated.
+
+[771/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/normalize_bbox_layer.cpp.obj
+[772/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/reshape_layer.cpp.obj
+[773/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/nary_eltwise_layers.cpp.obj
+[774/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/proposal_layer.cpp.obj
+[775/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/shuffle_channel_layer.cpp.obj
+[776/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/scale_layer.cpp.obj
+[777/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/region_layer.cpp.obj
+[778/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/recurrent_layers.cpp.obj
+[779/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/resize_layer.cpp.obj
+[780/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/slice_layer.cpp.obj
+[781/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/scatter_layer.cpp.obj
+[782/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/scatterND_layer.cpp.obj
+[783/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/softmax_layer.cpp.obj
+[784/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/tile_layer.cpp.obj
+[785/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/split_layer.cpp.obj
+[786/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/reduce_layer.cpp.obj
+[787/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/net_cann.cpp.obj
+[788/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/legacy_backend.cpp.obj
+[789/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/net.cpp.obj
+[790/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/net_impl_backend.cpp.obj
+[791/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/net_openvino.cpp.obj
+[792/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/op_cann.cpp.obj
+[793/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/net_impl_fuse.cpp.obj
+[794/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/nms.cpp.obj
+[795/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/model.cpp.obj
+[796/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/net_quantization.cpp.obj
+[797/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/op_cuda.cpp.obj
+[798/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/op_vkcom.cpp.obj
+[799/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/onnx/onnx_graph_simplifier.cpp.obj
+[800/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/op_inf_engine.cpp.obj
+[801/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/op_webnn.cpp.obj
+[802/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/net_impl.cpp.obj
+[803/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/op_timvx.cpp.obj
+[804/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/registry.cpp.obj
+[805/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/op_halide.cpp.obj
+[806/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/torch/THDiskFile.cpp.obj
+[807/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/torch/THFile.cpp.obj
+[808/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/tensorflow/tf_io.cpp.obj
+[809/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/shader/conv_1x1_fast_spv.cpp.obj
+[810/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/tensorflow/tf_graph_simplifier.cpp.obj
+[811/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/torch/torch_importer.cpp.obj
+[812/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/torch/THGeneral.cpp.obj
+[813/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/shader/conv_implicit_gemm_spv.cpp.obj
+[814/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/shader/gemm_spv.cpp.obj
+[815/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/onnx/onnx_importer.cpp.obj
+[816/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/shader/conv_depthwise_3x3_spv.cpp.obj
+[817/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/shader/nary_eltwise_binary_forward_spv.cpp.obj
+[818/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/src/buffer.cpp.obj
+[819/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/shader/spv_shader.cpp.obj
+[820/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/shader/conv_depthwise_spv.cpp.obj
+[821/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/src/fence.cpp.obj
+[822/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/src/context.cpp.obj
+[823/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/tensorflow/tf_importer.cpp.obj
+[824/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/src/command.cpp.obj
+[825/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/tflite/tflite_importer.cpp.obj
+[826/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/src/internal.cpp.obj
+[827/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/src/op_conv.cpp.obj
+[828/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/src/op_base.cpp.obj
+[829/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/vulkan/vk_functions.cpp.obj
+[830/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/src/op_matmul.cpp.obj
+[831/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/src/op_naryEltwise.cpp.obj
+[832/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/agast.cpp.obj
+[833/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/src/pipeline.cpp.obj
+[834/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/src/tensor.cpp.obj
+[835/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/affine_feature.cpp.obj
+[836/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/akaze.cpp.obj
+[837/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/dynamic.cpp.obj
+[838/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/bagofwords.cpp.obj
+[839/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/draw.cpp.obj
+[840/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/agast_score.cpp.obj
+[841/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/blobdetector.cpp.obj
+[842/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/evaluation.cpp.obj
+[843/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/feature2d.cpp.obj
+[844/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/fast.cpp.obj
+[845/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/fast_score.cpp.obj
+[846/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/brisk.cpp.obj
+[847/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/vkcom/vulkan/vk_loader.cpp.obj
+[848/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/gftt.cpp.obj
+[849/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/kaze/fed.cpp.obj
+[850/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/kaze.cpp.obj
+[851/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/kaze/KAZEFeatures.cpp.obj
+[852/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/keypoint.cpp.obj
+[853/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/kaze/nldiffusion_functions.cpp.obj
+[854/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/main.cpp.obj
+[855/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/opencl_kernels_features2d.cpp.obj
+[856/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/mser.cpp.obj
+[857/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/kaze/AKAZEFeatures.cpp.obj
+[858/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/orb.cpp.obj
+[859/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/matchers.cpp.obj
+[860/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/features2d/src/sift.dispatch.cpp.obj
+[861/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/grfmt_avif.cpp.obj
+[862/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/grfmt_base.cpp.obj
+[863/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/utils.cpp.obj
+[864/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/grfmt_bmp.cpp.obj
+[865/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/grfmt_gdal.cpp.obj
+[866/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/grfmt_hdr.cpp.obj
+[867/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/loadsave.cpp.obj
+[868/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/grfmt_jpeg2000.cpp.obj
+[869/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/grfmt_gdcm.cpp.obj
+[870/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/grfmt_exr.cpp.obj
+[871/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/grfmt_jpeg.cpp.obj
+[872/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/grfmt_pam.cpp.obj
+[873/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/grfmt_pfm.cpp.obj
+[874/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/grfmt_png.cpp.obj
+[875/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/grfmt_jpeg2000_openjpeg.cpp.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/imgcodecs/src/grfmt_jpeg2000_openjpeg.cpp:186:33: warning: unused function template 'operator+' [-Wunused-template]
+
+  186 | inline ChannelsIterator<Traits> operator+(typename Traits::difference_type n, const ChannelsIterator<Traits>& it)
+
+      |                                 ^~~~~~~~
+
+1 warning generated.
+
+[876/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/grfmt_pxm.cpp.obj
+[877/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/grfmt_spng.cpp.obj
+[878/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/grfmt_sunras.cpp.obj
+[879/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/bitstrm.cpp.obj
+[880/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/grfmt_webp.cpp.obj
+[881/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/grfmt_tiff.cpp.obj
+[882/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/rgbe.cpp.obj
+[883/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/imgcodecs/src/exif.cpp.obj
+[884/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/videoio/src/videoio_c.cpp.obj
+[885/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/videoio/src/container_avi.cpp.obj
+[886/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/videoio/src/videoio_registry.cpp.obj
+In file included from D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/videoio_registry.cpp:14:
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src\cap_dshow.hpp:33:18: warning: 'isOpened' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+   33 |     virtual bool isOpened() const;
+      |                  ^
+
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src\cap_interface.hpp:220:18: note: overridden virtual function is here
+
+  220 |     virtual bool isOpened() const = 0;
+
+      |                  ^
+
+1 warning generated.
+
+[887/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/videoio/src/cap_mjpeg_decoder.cpp.obj
+[888/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/videoio/src/backend_static.cpp.obj
+[889/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/videoio/src/cap_images.cpp.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_images.cpp:385:18: warning: virtual method 'open' is inside a 'final' class and can never be overridden [-Wunnecessary-virtual-specifier]
+  385 |     virtual bool open( const char* _filename );
+      |                  ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_images.cpp:386:18: warning: virtual method 'close' is inside a 'final' class and can never be overridden [-Wunnecessary-virtual-specifier]
+  386 |     virtual void close();
+      |                  ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_images.cpp:387:18: warning: virtual method 'setProperty' is inside a 'final' class and can never be overridden [-Wunnecessary-virtual-specifier]
+  387 |     virtual bool setProperty( int, double ); // FIXIT doesn't work: IVideoWriter interface only!
+
+      |                  ^
+
+3 warnings generated.
+
+[890/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/videoio/src/cap_mjpeg_encoder.cpp.obj
+[891/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/videoio/src/cap.cpp.obj
+[892/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/videoio/src/cap_obsensor_capture.cpp.obj
+[893/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/videoio/src/backend_plugin.cpp.obj
+[894/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/ap3p.cpp.obj
+[895/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/videoio/src/cap_dshow.cpp.obj
+In file included from D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_dshow.cpp:45:
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src\cap_dshow.hpp:33:18: warning: 'isOpened' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+   33 |     virtual bool isOpened() const;
+      |                  ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src\cap_interface.hpp:220:18: note: overridden virtual function is here
+  220 |     virtual bool isOpened() const = 0;
+      |                  ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_dshow.cpp:905:9: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+  905 |     int i = 0;
+      |         ^
+
+2 warnings generated.
+
+[896/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/videoio/src/cap_obsensor/obsensor_uvc_stream_channel.cpp.obj
+[897/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/checkchessboard.cpp.obj
+[898/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/epnp.cpp.obj
+[899/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/compat_ptsetreg.cpp.obj
+[900/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/videoio/src/cap_obsensor/obsensor_stream_channel_msmf.cpp.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_obsensor/obsensor_stream_channel_msmf.cpp:265:20: warning: function previously declared with an explicit exception specification redeclared with an implicit exception specification [-Wimplicit-exception-spec-mismatch]
+  265 | MSMFStreamChannel::~MSMFStreamChannel()
+      |                    ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_obsensor\obsensor_stream_channel_msmf.hpp:133:13: note: previous declaration is here
+  133 |     virtual ~MSMFStreamChannel() noexcept;
+      |             ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_obsensor/obsensor_stream_channel_msmf.cpp:437:17: warning: missing field 'dwOffset' initializer [-Wmissing-field-initializers]
+  437 |         {nullptr},
+      |                 ^
+
+2 warnings generated.
+
+[901/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/calibration_handeye.cpp.obj
+[902/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/fundam.cpp.obj
+[903/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/calibration.cpp.obj
+[904/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/homography_decomp.cpp.obj
+[905/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/levmarq.cpp.obj
+[906/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/circlesgrid.cpp.obj
+[907/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/main.cpp.obj
+[908/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/fisheye.cpp.obj
+[909/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/ippe.cpp.obj
+[910/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/polynom_solver.cpp.obj
+[911/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/p3p.cpp.obj
+[912/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/videoio/src/cap_msmf.cpp.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_msmf.cpp:207:23: warning: missing field 'Data2' initializer [-Wmissing-field-initializers]
+  207 |         majorType({ 0 }),//MFMediaType_Video
+      |                       ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_msmf.cpp:208:21: warning: missing field 'Data2' initializer [-Wmissing-field-initializers]
+  208 |         subType({ 0 })
+      |                     ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_msmf.cpp:195:9: warning: field 'Type' will be initialized after field 'width' [-Wreorder-ctor]
+  195 |         Type(pType),
+      |         ^~~~~~~~~~~
+      |         width(0)
+  196 |         width(0), height(0),
+      |         ~~~~~~~~  ~~~~~~~~~
+      |         height(0) stride(0)
+  197 |         stride(0),
+      |         ~~~~~~~~~
+      |         isFixedSize(true)
+  198 |         isFixedSize(true),
+      |         ~~~~~~~~~~~~~~~~~
+      |         frameRateNum(1)
+  199 |         frameRateNum(1), frameRateDenom(1),
+      |         ~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~~~~
+      |         frameRateDenom(1)aspectRatioNum(1)
+  200 |         aspectRatioNum(1), aspectRatioDenom(1),
+      |         ~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~~~~~~
+      |         aspectRatioDenom(1)sampleSize(0)
+  201 |         sampleSize(0),
+      |         ~~~~~~~~~~~~~
+      |         interlaceMode(0)
+  202 |         interlaceMode(0),
+      |         ~~~~~~~~~~~~~~~~
+      |         bit_per_sample(0)
+  203 |         bit_per_sample(0),
+      |         ~~~~~~~~~~~~~~~~~
+      |         nChannels(0)
+  204 |         nChannels(0),
+      |         ~~~~~~~~~~~~
+      |         nAvgBytesPerSec(0)
+  205 |         nAvgBytesPerSec(0),
+      |         ~~~~~~~~~~~~~~~~~~
+      |         nSamplesPerSec(0)
+  206 |         nSamplesPerSec(0),
+      |         ~~~~~~~~~~~~~~~~~
+      |         majorType({ 0 })
+  207 |         majorType({ 0 }),//MFMediaType_Video
+      |         ~~~~~~~~~~~~~~~~
+      |         subType({ 0 })
+  208 |         subType({ 0 })
+      |         ~~~~~~~~~~~~~~
+      |         Type(pType)
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_msmf.cpp:428:17: warning: missing field 'dwOffset' initializer [-Wmissing-field-initializers]
+  428 |             { 0 },
+      |                 ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_msmf.cpp:1202:27: warning: '&&' within '||' [-Wlogical-op-parentheses]
+ 1202 |     if (videoStream != -1 && audioStream != -1 || videoStream == -1 && audioStream == -1)
+      |         ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~ ~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_msmf.cpp:1202:27: note: place parentheses around the '&&' expression to silence this warning
+ 1202 |     if (videoStream != -1 && audioStream != -1 || videoStream == -1 && audioStream == -1)
+      |                           ^
+      |         (                                     )
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_msmf.cpp:1202:69: warning: '&&' within '||' [-Wlogical-op-parentheses]
+ 1202 |     if (videoStream != -1 && audioStream != -1 || videoStream == -1 && audioStream == -1)
+      |                                                ~~ ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_msmf.cpp:1202:69: note: place parentheses around the '&&' expression to silence this warning
+ 1202 |     if (videoStream != -1 && audioStream != -1 || videoStream == -1 && audioStream == -1)
+      |                                                                     ^                   
+      |                                                   (                                     )
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_msmf.cpp:1359:25: warning: overlapping comparisons always evaluate to true [-Wtautological-overlap-compare]
+ 1359 |         if (value == -1 || value > -1)
+      |             ~~~~~~~~~~~~^~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_msmf.cpp:1544:59: warning: '&&' within '||' [-Wlogical-op-parentheses]
+ 1544 |     if (!audioSamples.empty() || !bufferAudioData.empty() && aEOS)
+      |                               ~~ ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_msmf.cpp:1544:59: note: place parentheses around the '&&' expression to silence this warning
+ 1544 |     if (!audioSamples.empty() || !bufferAudioData.empty() && aEOS)
+      |                                                           ^      
+      |                                  (                               )
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_msmf.cpp:1588:23: warning: '&&' within '||' [-Wlogical-op-parentheses]
+ 1588 |         if (lastFrame && !syncLastFrame || aEOS && !vEOS)
+      |             ~~~~~~~~~~^~~~~~~~~~~~~~~~~ ~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_msmf.cpp:1588:23: note: place parentheses around the '&&' expression to silence this warning
+ 1588 |         if (lastFrame && !syncLastFrame || aEOS && !vEOS)
+      |                       ^
+      |             (                          )
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_msmf.cpp:1588:49: warning: '&&' within '||' [-Wlogical-op-parentheses]
+ 1588 |         if (lastFrame && !syncLastFrame || aEOS && !vEOS)
+      |                                         ~~ ~~~~~^~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_msmf.cpp:1588:49: note: place parentheses around the '&&' expression to silence this warning
+ 1588 |         if (lastFrame && !syncLastFrame || aEOS && !vEOS)
+      |                                                 ^       
+      |                                            (            )
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_msmf.cpp:2404:18: warning: 'write' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+ 2404 |     virtual void write(cv::InputArray);
+      |                  ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src\cap_interface.hpp:231:18: note: overridden virtual function is here
+  231 |     virtual void write(InputArray) = 0;
+      |                  ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_msmf.cpp:2407:18: warning: 'setProperty' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+ 2407 |     virtual bool setProperty(int, double) { return false; }
+      |                  ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src\cap_interface.hpp:229:18: note: overridden virtual function is here
+  229 |     virtual bool setProperty(int, double) { return false; }
+      |                  ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_msmf.cpp:2408:18: warning: 'isOpened' overrides a member function but is not marked 'override' [-Winconsistent-missing-override]
+ 2408 |     virtual bool isOpened() const { return initiated; }
+      |                  ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src\cap_interface.hpp:230:18: note: overridden virtual function is here
+
+  230 |     virtual bool isOpened() const = 0;
+
+      |                  ^
+
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/videoio/src/cap_msmf.cpp:2420:12: warning: private field 'frameSize' is not used [-Wunused-private-field]
+
+ 2420 |     UINT32 frameSize;
+
+      |            ^
+
+14 warnings generated.
+
+[913/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/calibinit.cpp.obj
+[914/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/posit.cpp.obj
+[915/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/quadsubpix.cpp.obj
+[916/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/ptsetreg.cpp.obj
+[917/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/five-point.cpp.obj
+[918/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/dls.cpp.obj
+[919/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/sqpnp.cpp.obj
+[920/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/chessboard.cpp.obj
+[921/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/rho.cpp.obj
+[922/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/upnp.cpp.obj
+[923/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/triangulate.cpp.obj
+[924/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/usac/bundle.cpp.obj
+[925/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/usac/dls_solver.cpp.obj
+[926/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/stereosgbm.cpp.obj
+[927/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/solvepnp.cpp.obj
+[928/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/undistort.dispatch.cpp.obj
+[929/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/usac/gamma_values.cpp.obj
+[930/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/usac/essential_solver.cpp.obj
+[931/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/usac/estimator.cpp.obj
+[932/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/usac/degeneracy.cpp.obj
+[933/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/usac/quality.cpp.obj
+[934/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/stereobm.cpp.obj
+[935/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/usac/fundamental_solver.cpp.obj
+[936/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/opencl_kernels_calib3d.cpp.obj
+[937/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/usac/sampler.cpp.obj
+[938/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/usac/local_optimization.cpp.obj
+[939/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/usac/homography_solver.cpp.obj
+[940/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/usac/pnp_solver.cpp.obj
+[941/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/highgui/src/roiSelector.cpp.obj
+[942/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/usac/utils.cpp.obj
+[943/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/usac/termination.cpp.obj
+[944/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/calib3d/src/usac/ransac_solvers.cpp.obj
+[945/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/aruco/apriltag/zmaxheap.cpp.obj
+[946/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/aruco/apriltag/apriltag_quad_thresh.cpp.obj
+[947/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/highgui/src/backend.cpp.obj
+[948/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/aruco/aruco_dictionary.cpp.obj
+[949/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/barcode_decoder/abs_decoder.cpp.obj
+[950/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/barcode_decoder/common/utils.cpp.obj
+[951/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/highgui/src/window.cpp.obj
+[952/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/aruco/aruco_utils.cpp.obj
+[953/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/barcode_decoder/ean13_decoder.cpp.obj
+[954/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/aruco/aruco_board.cpp.obj
+[955/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/barcode_decoder/common/hybrid_binarizer.cpp.obj
+[956/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/barcode.cpp.obj
+[957/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/aruco/charuco_detector.cpp.obj
+[958/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/barcode_decoder/common/super_scale.cpp.obj
+[959/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/barcode_decoder/upcean_decoder.cpp.obj
+[960/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/aruco/aruco_detector.cpp.obj
+[961/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/barcode_decoder/ean8_decoder.cpp.obj
+[962/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/highgui/src/window_w32.cpp.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:527:5: warning: unused variable 'cvFuncName' [-Wunused-variable]
+  527 |     CV_FUNCNAME("cvGetWindowRect_W32");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/core/include\opencv2/core/core_c.h:2674:13: note: expanded from macro 'CV_FUNCNAME'
+ 2674 | static char cvFuncName[] = Name
+      |             ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:546:21: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+  546 |     RECT rect = { 0 };
+      |                     ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:556:5: warning: unused variable 'cvFuncName' [-Wunused-variable]
+  556 |     CV_FUNCNAME("cvGetModeWindow_W32");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/core/include\opencv2/core/core_c.h:2674:13: note: expanded from macro 'CV_FUNCNAME'
+ 2674 | static char cvFuncName[] = Name
+      |             ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:574:5: warning: unused variable 'cvFuncName' [-Wunused-variable]
+  574 |     CV_FUNCNAME("cvSetModeWindow_W32");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/core/include\opencv2/core/core_c.h:2674:13: note: expanded from macro 'CV_FUNCNAME'
+ 2674 | static char cvFuncName[] = Name
+      |             ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:614:29: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+  614 |             RECT rect = { 0 };
+      |                             ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:828:5: warning: unused variable 'cvFuncName' [-Wunused-variable]
+  828 |     CV_FUNCNAME("cvSetCloseCallback");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/core/include\opencv2/core/core_c.h:2674:13: note: expanded from macro 'CV_FUNCNAME'
+ 2674 | static char cvFuncName[] = Name
+      |             ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:848:5: warning: unused variable 'cvFuncName' [-Wunused-variable]
+  848 |     CV_FUNCNAME("cvGetRatioWindow_W32");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/core/include\opencv2/core/core_c.h:2674:13: note: expanded from macro 'CV_FUNCNAME'
+ 2674 | static char cvFuncName[] = Name
+      |             ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:892:5: warning: unused variable 'cvFuncName' [-Wunused-variable]
+  892 |     CV_FUNCNAME("cvGetPropVisible_W32");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/core/include\opencv2/core/core_c.h:2674:13: note: expanded from macro 'CV_FUNCNAME'
+ 2674 | static char cvFuncName[] = Name
+      |             ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1023:5: warning: unused variable 'cvFuncName' [-Wunused-variable]
+ 1023 |     CV_FUNCNAME("cvNamedWindow");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/core/include\opencv2/core/core_c.h:2674:13: note: expanded from macro 'CV_FUNCNAME'
+ 2674 | static char cvFuncName[] = Name
+      |             ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1252:5: warning: unused variable 'cvFuncName' [-Wunused-variable]
+ 1252 |     CV_FUNCNAME("cvDestroyWindow");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/core/include\opencv2/core/core_c.h:2674:13: note: expanded from macro 'CV_FUNCNAME'
+ 2674 | static char cvFuncName[] = Name
+      |             ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1287:22: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 1287 |     RECT crect = { 0 }, trect = { 0 }, rect = { 0 };
+      |                      ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1287:37: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 1287 |     RECT crect = { 0 }, trect = { 0 }, rect = { 0 };
+      |                                     ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1287:51: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 1287 |     RECT crect = { 0 }, trect = { 0 }, rect = { 0 };
+      |                                                   ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1339:21: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 1339 |     RECT rect = { 0 };
+      |                     ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1351:28: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 1351 |             RECT rmw = { 0 }, rw = icvCalcWindowRect(&window);
+      |                            ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1374:5: warning: unused variable 'cvFuncName' [-Wunused-variable]
+ 1374 |     CV_FUNCNAME("cvShowImage");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/core/include\opencv2/core/core_c.h:2674:13: note: expanded from macro 'CV_FUNCNAME'
+ 2674 | static char cvFuncName[] = Name
+      |             ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1464:5: warning: unused variable 'cvFuncName' [-Wunused-variable]
+ 1464 |     CV_FUNCNAME("cvResizeWindow");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/core/include\opencv2/core/core_c.h:2674:13: note: expanded from macro 'CV_FUNCNAME'
+ 2674 | static char cvFuncName[] = Name
+      |             ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1480:20: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 1480 |     RECT rmw = { 0 }, rw = { 0 }, rect = { 0 };
+      |                    ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1480:32: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 1480 |     RECT rmw = { 0 }, rw = { 0 }, rect = { 0 };
+      |                                ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1480:46: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 1480 |     RECT rmw = { 0 }, rw = { 0 }, rect = { 0 };
+      |                                              ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1506:5: warning: unused variable 'cvFuncName' [-Wunused-variable]
+ 1506 |     CV_FUNCNAME("cvMoveWindow");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/core/include\opencv2/core/core_c.h:2674:13: note: expanded from macro 'CV_FUNCNAME'
+ 2674 | static char cvFuncName[] = Name
+      |             ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1522:21: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 1522 |     RECT rect = { 0 };
+      |                     ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1554:29: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 1554 |             RECT rect = { 0 };
+      |                             ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1577:33: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 1577 |                 RECT rect = { 0 };
+      |                                 ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1593:27: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 1593 |           RECT rect = { 0 };
+      |                           ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1644:27: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 1644 |           RECT rect = { 0 };
+      |                           ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1671:27: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 1671 |             RECT cr = { 0 }, tr = { 0 }, wrc = { 0 };
+      |                           ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1671:39: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 1671 |             RECT cr = { 0 }, tr = { 0 }, wrc = { 0 };
+      |                                       ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1671:52: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 1671 |             RECT cr = { 0 }, tr = { 0 }, wrc = { 0 };
+      |                                                    ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1856:33: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 1856 |                 RECT rect = { 0 };
+      |                                 ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1917:33: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 1917 |                 RECT rect = { 0 };
+      |                                 ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:1789:22: warning: left operand of comma operator has no effect [-Wunused-value]
+ 1789 |             } while (0,0); // (0,0) instead of (0) to avoid MSVC compiler warning C4127: "conditional expression is constant"
+      |                      ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:2077:33: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 2077 |                 RECT rect = { 0 };
+      |                                 ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:2346:5: warning: unused variable 'cvFuncName' [-Wunused-variable]
+ 2346 |     CV_FUNCNAME("icvCreateTrackbar");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/core/include\opencv2/core/core_c.h:2674:13: note: expanded from macro 'CV_FUNCNAME'
+ 2674 | static char cvFuncName[] = Name
+      |             ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:2451:21: warning: missing field 'top' initializer [-Wmissing-field-initializers]
+ 2451 |     RECT rect = { 0 };
+      |                     ^
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:2534:5: warning: unused variable 'cvFuncName' [-Wunused-variable]
+ 2534 |     CV_FUNCNAME("cvSetMouseCallback");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/core/include\opencv2/core/core_c.h:2674:13: note: expanded from macro 'CV_FUNCNAME'
+ 2674 | static char cvFuncName[] = Name
+      |             ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:2552:5: warning: unused variable 'cvFuncName' [-Wunused-variable]
+ 2552 |     CV_FUNCNAME("cvGetTrackbarPos");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/core/include\opencv2/core/core_c.h:2674:13: note: expanded from macro 'CV_FUNCNAME'
+ 2674 | static char cvFuncName[] = Name
+      |             ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:2573:5: warning: unused variable 'cvFuncName' [-Wunused-variable]
+ 2573 |     CV_FUNCNAME("cvSetTrackbarPos");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/core/include\opencv2/core/core_c.h:2674:13: note: expanded from macro 'CV_FUNCNAME'
+ 2674 | static char cvFuncName[] = Name
+      |             ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:2603:5: warning: unused variable 'cvFuncName' [-Wunused-variable]
+ 2603 |     CV_FUNCNAME("cvSetTrackbarMax");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/core/include\opencv2/core/core_c.h:2674:13: note: expanded from macro 'CV_FUNCNAME'
+ 2674 | static char cvFuncName[] = Name
+      |             ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:2632:5: warning: unused variable 'cvFuncName' [-Wunused-variable]
+ 2632 |     CV_FUNCNAME("cvSetTrackbarMin");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/core/include\opencv2/core/core_c.h:2674:13: note: expanded from macro 'CV_FUNCNAME'
+ 2674 | static char cvFuncName[] = Name
+      |             ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:2661:5: warning: unused variable 'cvFuncName' [-Wunused-variable]
+ 2661 |     CV_FUNCNAME("cvGetWindowHandle");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/core/include\opencv2/core/core_c.h:2674:13: note: expanded from macro 'CV_FUNCNAME'
+ 2674 | static char cvFuncName[] = Name
+      |             ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:2678:5: warning: unused variable 'cvFuncName' [-Wunused-variable]
+ 2678 |     CV_FUNCNAME("cvGetWindowName");
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/core/include\opencv2/core/core_c.h:2674:13: note: expanded from macro 'CV_FUNCNAME'
+ 2674 | static char cvFuncName[] = Name
+      |             ^~~~~~~~~~
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/modules/highgui/src/window_w32.cpp:2767:17: warning: enumeration value 'WND_PROP_OPENGL' not handled in switch [-Wswitch]
+
+ 2767 |         switch ((WindowPropertyFlags)prop)
+
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~
+
+43 warnings generated.
+
+[963/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/barcode_detector/bardetect.cpp.obj
+[964/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/detection_based_tracker.cpp.obj
+[965/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/cascadedetect_convert.cpp.obj
+[966/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/face_recognize.cpp.obj
+[967/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/graphical_code_detector.cpp.obj
+[968/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/opencl_kernels_objdetect.cpp.obj
+[969/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/face_detect.cpp.obj
+[970/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/cascadedetect.cpp.obj
+[971/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/hog.cpp.obj
+[972/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/main.cpp.obj
+[973/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/qrcode_encoder.cpp.obj
+[974/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/opencl_kernels_stitching.cpp.obj
+[975/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/bgfg_gaussmix2.cpp.obj
+[976/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/stitching/src/blenders.cpp.obj
+[977/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/bgfg_KNN.cpp.obj
+[978/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/camshift.cpp.obj
+[979/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/objdetect/src/qrcode.cpp.obj
+[980/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/stitching/src/timelapsers.cpp.obj
+[981/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/stitching/src/stitcher.cpp.obj
+[982/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/kalman.cpp.obj
+[983/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/stitching/src/autocalib.cpp.obj
+[984/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/stitching/src/motion_estimators.cpp.obj
+[985/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/stitching/src/matchers.cpp.obj
+[986/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/stitching/src/camera.cpp.obj
+[987/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/ecc.cpp.obj
+[988/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/stitching/src/util.cpp.obj
+[989/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/stitching/src/warpers.cpp.obj
+[990/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/dis_flow.cpp.obj
+[991/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/stitching/src/seam_finders.cpp.obj
+[992/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/stitching/src/warpers_cuda.cpp.obj
+[993/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/optical_flow_io.cpp.obj
+[994/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/optflowgf.cpp.obj
+[995/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/lkpyramid.cpp.obj
+[996/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/stitching/src/exposure_compensate.cpp.obj
+[997/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/tracking/detail/tracker_model.cpp.obj
+[998/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/tracking/detail/tracker_sampler_algorithm.cpp.obj
+[999/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/tracking/detail/tracker_feature.cpp.obj
+[1000/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/tracking/detail/tracker_mil_state.cpp.obj
+[1001/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/tracking/detail/tracker_feature_set.cpp.obj
+[1002/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/tracking/detail/tracker_mil_model.cpp.obj
+[1003/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/tracking/detail/tracker_sampler.cpp.obj
+[1004/1040] Building RC object modules/world/CMakeFiles/opencv_world.dir/vs_version.rc.res
+Microsoft (R) Windows (R) Resource Compiler Version 10.0.10011.16384
+
+
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+
+
+[1005/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/tracking/detail/tracker_state_estimator.cpp.obj
+[1006/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/tracking/tracker.cpp.obj
+[1007/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/tracking/detail/tracking_online_mil.cpp.obj
+[1008/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/tracking/tracker_dasiamrpn.cpp.obj
+[1009/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/tracking/detail/tracking_feature.cpp.obj
+[1010/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/tracking/tracker_goturn.cpp.obj
+[1011/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/tracking/tracker_nano.cpp.obj
+[1012/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/opencl_kernels_video.cpp.obj
+[1013/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/tracking/tracker_mil.cpp.obj
+[1014/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/src/world_init.cpp.obj
+[1015/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/tracking/tracker_vit.cpp.obj
+[1016/1040] Building CXX object apps/interactive-calibration/CMakeFiles/opencv_interactive-calibration.dir/calibPipeline.cpp.obj
+[1017/1040] Building CXX object apps/annotation/CMakeFiles/opencv_annotation.dir/opencv_annotation.cpp.obj
+[1018/1040] Building CXX object apps/interactive-calibration/CMakeFiles/opencv_interactive-calibration.dir/rotationConverters.cpp.obj
+[1019/1040] Building CXX object apps/interactive-calibration/CMakeFiles/opencv_interactive-calibration.dir/parametersController.cpp.obj
+[1020/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/video/src/variational_refinement.cpp.obj
+[1021/1040] Building CXX object apps/visualisation/CMakeFiles/opencv_visualisation.dir/opencv_visualisation.cpp.obj
+[1022/1040] Building CXX object apps/interactive-calibration/CMakeFiles/opencv_interactive-calibration.dir/frameProcessor.cpp.obj
+[1023/1040] Building CXX object apps/interactive-calibration/CMakeFiles/opencv_interactive-calibration.dir/main.cpp.obj
+[1024/1040] Building CXX object apps/interactive-calibration/CMakeFiles/opencv_interactive-calibration.dir/calibController.cpp.obj
+D:/action-runner-OpenCV/_work/OpenCV-perf-tests/OpenCV-perf-tests/.work/llvm-custom-39129486630/custom-source/apps/interactive-calibration/calibController.cpp:304:52: warning: 'localtime' is deprecated: This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details. [-Wdeprecated-declarations]
+  304 |                 strftime(buf, sizeof(buf)-1, "%c", localtime(&rawtime));
+      |                                                    ^
+C:\Program Files (x86)\Windows Kits\10\\Include\10.0.26100.0\ucrt\time.h:524:9: note: 'localtime' has been explicitly marked deprecated here
+  524 |         _CRT_INSECURE_DEPRECATE(localtime_s)
+      |         ^
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:368:55: note: expanded from macro '_CRT_INSECURE_DEPRECATE'
+  368 |         #define _CRT_INSECURE_DEPRECATE(_Replacement) _CRT_DEPRECATE_TEXT(    \
+      |                                                       ^
+
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\include\vcruntime.h:358:47: note: expanded from macro '_CRT_DEPRECATE_TEXT'
+
+  358 | #define _CRT_DEPRECATE_TEXT(_Text) __declspec(deprecated(_Text))
+
+      |                                               ^
+
+1 warning generated.
+
+[1025/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/layers/cpu_kernels/fast_gemm_kernels.neon.cpp.obj
+[1026/1040] Building CXX object apps/version/CMakeFiles/opencv_version_win32.dir/opencv_version.cpp.obj
+[1027/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/layers/cpu_kernels/conv_block.neon.cpp.obj
+[1028/1040] Building CXX object apps/version/CMakeFiles/opencv_version.dir/opencv_version.cpp.obj
+[1029/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/__/dnn/src/layers/cpu_kernels/conv_winograd_f63.neon.cpp.obj
+[1030/1040] Building CXX object apps/model-diagnostics/CMakeFiles/opencv_model_diagnostics.dir/model_diagnostics.cpp.obj
+[1031/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/layers/cpu_kernels/conv_block.neon_fp16.cpp.obj
+[1032/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/matmul.neon_dotprod.cpp.obj
+[1033/1040] Building CXX object modules/world/CMakeFiles/opencv_world.dir/layers/cpu_kernels/conv_winograd_f63.neon_fp16.cpp.obj
+[1034/1040] Linking CXX shared library bin\opencv_world4100.dll
+lld-link: warning: ignoring unknown argument '--gc-sections'
+
+[1035/1040] Linking CXX executable bin\opencv_annotation.exe
+lld-link: warning: ignoring unknown argument '--gc-sections'
+
+[1036/1040] Linking CXX executable bin\opencv_visualisation.exe
+lld-link: warning: ignoring unknown argument '--gc-sections'
+
+[1037/1040] Linking CXX executable bin\opencv_interactive-calibration.exe
+lld-link: warning: ignoring unknown argument '--gc-sections'
+
+[1038/1040] Linking CXX executable bin\opencv_version.exe
+lld-link: warning: ignoring unknown argument '--gc-sections'
+
+[1039/1040] Linking CXX executable bin\opencv_version_win32.exe
+lld-link: warning: ignoring unknown argument '--gc-sections'
+
+[1040/1040] Linking CXX executable bin\opencv_model_diagnostics.exe
+lld-link: warning: ignoring unknown argument '--gc-sections'
+

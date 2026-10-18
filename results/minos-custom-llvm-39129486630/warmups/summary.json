@@ -1,0 +1,34 @@
+{
+  "stock_warmup": {
+    "count": 1,
+    "median_seconds": 65.2407,
+    "min_seconds": 65.2407,
+    "max_seconds": 65.2407,
+    "runs": [
+      {
+        "directory": "20261018_140159_269_stock_warmup",
+        "build_seconds": 65.2407,
+        "clean_seconds": 0.1702,
+        "install_seconds": 0.4171,
+        "cpu_seconds": 1040.1875
+      }
+    ],
+    "median_cpu_seconds": 1040.1875
+  },
+  "custom_warmup": {
+    "count": 1,
+    "median_seconds": 58.4284,
+    "min_seconds": 58.4284,
+    "max_seconds": 58.4284,
+    "runs": [
+      {
+        "directory": "20261018_140340_488_custom_warmup",
+        "build_seconds": 58.4284,
+        "clean_seconds": 0.1723,
+        "install_seconds": 0.4491,
+        "cpu_seconds": 918.796875
+      }
+    ],
+    "median_cpu_seconds": 918.796875
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "installer_name": "LLVM-24.0.0-woa64_PGO_LTO.msi",
+  "installer_sha256": "D02E9DE11B93324340851191F758DB182C8ACEE5235C820AFCE7A66B30CAFF36",
+  "signature_status": "NotSigned",
+  "extraction": "Windows Installer administrative image; product not installed",
+  "stock": {
+    "root": "D:\\action-runner-OpenCV\\_work\\OpenCV-perf-tests\\OpenCV-perf-tests\\.tools\\clang+llvm-23.1.3-aarch64-pc-windows-msvc",
+    "c": "D:\\action-runner-OpenCV\\_work\\OpenCV-perf-tests\\OpenCV-perf-tests\\.tools\\clang+llvm-23.1.3-aarch64-pc-windows-msvc\\bin\\clang.exe",
+    "cxx": "D:\\action-runner-OpenCV\\_work\\OpenCV-perf-tests\\OpenCV-perf-tests\\.tools\\clang+llvm-23.1.3-aarch64-pc-windows-msvc\\bin\\clang++.exe",
+    "linker": "D:\\action-runner-OpenCV\\_work\\OpenCV-perf-tests\\OpenCV-perf-tests\\.tools\\clang+llvm-23.1.3-aarch64-pc-windows-msvc\\bin\\lld-link.exe",
+    "ar": "D:\\action-runner-OpenCV\\_work\\OpenCV-perf-tests\\OpenCV-perf-tests\\.tools\\clang+llvm-23.1.3-aarch64-pc-windows-msvc\\bin\\llvm-ar.exe",
+    "ranlib": "D:\\action-runner-OpenCV\\_work\\OpenCV-perf-tests\\OpenCV-perf-tests\\.tools\\clang+llvm-23.1.3-aarch64-pc-windows-msvc\\bin\\llvm-ranlib.exe",
+    "version": "23.1.3",
+    "target": "aarch64-pc-windows-msvc",
+    "version_output": "clang version 23.1.3 (https://github.com/llvm/llvm-project 0d261d1ca552c95a8f007e061c787ac7132fbcbc)\nTarget: aarch64-pc-windows-msvc\nThread model: posix\nInstalledDir: D:\\action-runner-OpenCV\\_work\\OpenCV-perf-tests\\OpenCV-perf-tests\\.tools\\clang+llvm-23.1.3-aarch64-pc-windows-msvc\\bin\nBuild config: +alloc:rpmalloc",
+    "c_sha256": "EDA503F44C4E64122E081F977E64D3DD7354E3C19C2522D3A7994D1CD9EF2286",
+    "cxx_sha256": "EDA503F44C4E64122E081F977E64D3DD7354E3C19C2522D3A7994D1CD9EF2286",
+    "linker_sha256": "11004809F73375FB5DEEFDC5AE95F4CB1D0558E303411D04000845CA4069642F",
+    "ar_sha256": "E4141CD797EE8178F7960D4B5854AEFF44B91CE5FA02A83C29783FCEC662FF0B",
+    "ranlib_sha256": "E4141CD797EE8178F7960D4B5854AEFF44B91CE5FA02A83C29783FCEC662FF0B"
+  },
+  "custom": {
+    "root": "D:\\action-runner-OpenCV\\_work\\OpenCV-perf-tests\\OpenCV-perf-tests\\.tools\\llvm-custom-39129486630\\PFiles64\\LLVM",
+    "c": "D:\\action-runner-OpenCV\\_work\\OpenCV-perf-tests\\OpenCV-perf-tests\\.tools\\llvm-custom-39129486630\\PFiles64\\LLVM\\bin\\clang.exe",
+    "cxx": "D:\\action-runner-OpenCV\\_work\\OpenCV-perf-tests\\OpenCV-perf-tests\\.tools\\llvm-custom-39129486630\\PFiles64\\LLVM\\bin\\clang++.exe",
+    "linker": "D:\\action-runner-OpenCV\\_work\\OpenCV-perf-tests\\OpenCV-perf-tests\\.tools\\llvm-custom-39129486630\\PFiles64\\LLVM\\bin\\lld-link.exe",
+    "ar": "D:\\action-runner-OpenCV\\_work\\OpenCV-perf-tests\\OpenCV-perf-tests\\.tools\\llvm-custom-39129486630\\PFiles64\\LLVM\\bin\\llvm-ar.exe",
+    "ranlib": "D:\\action-runner-OpenCV\\_work\\OpenCV-perf-tests\\OpenCV-perf-tests\\.tools\\llvm-custom-39129486630\\PFiles64\\LLVM\\bin\\llvm-ranlib.exe",
+    "version": "24.0.0git",
+    "target": "aarch64-pc-windows-msvc",
+    "version_output": "clang version 24.0.0git (https://github.com/marcpems/llvm-project d32de3d7996815fc47a94d264bf42f1fad76d9df)\nTarget: aarch64-pc-windows-msvc\nThread model: posix\nInstalledDir: D:\\action-runner-OpenCV\\_work\\OpenCV-perf-tests\\OpenCV-perf-tests\\.tools\\llvm-custom-39129486630\\PFiles64\\LLVM\\bin\nBuild config: +alloc:rpmalloc",
+    "c_sha256": "A083F258693BABA51708FE1F5B121407362F38D476E839506B12BB6C268DABFB",
+    "cxx_sha256": "A083F258693BABA51708FE1F5B121407362F38D476E839506B12BB6C268DABFB",
+    "linker_sha256": "E0E73E63AD07EC29F6F41D808D6023B05C7E302163011A21739D9BD8203027F8",
+    "ar_sha256": "EC245F9147BB8C8E54B88626E089BB7E7955225A02ED25D31B537EFFD7B3EF6A",
+    "ranlib_sha256": "EC245F9147BB8C8E54B88626E089BB7E7955225A02ED25D31B537EFFD7B3EF6A"
+  },
+  "github_run_id": "39129486630",
+  "github_commit": "6419332860b4937724cffa006dfb083bf0ff3e01",
+  "attribution": "Comparison of LLVM packages/versions. PGO/LTO-only attribution requires a matched LLVM 24 source/build without those optimizations.",
+  "warning_policy": "Disable OpenCV auto-addition of -Wno-stringop-overread for both compilers; stock does not support it. No optimization/code-generation flags changed."
+}
