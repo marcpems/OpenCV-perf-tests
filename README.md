@@ -6,6 +6,9 @@ with local measurements and build-cost analysis. This compiles **OpenCV 4.10.0**
 `BUILD_PERF_TESTS=OFF`; a separate, opt-in runtime screen compares the resulting
 libraries without changing the build-time workload.
 
+**Start here: [Combined investigation report — findings, exact MSBuild proposal,
+MSVC follow-ups and runtime limits (18 October 2026)](docs/INVESTIGATION_REPORT.md).**
+
 **[Timing results and recommendations](docs/ANALYSIS.md)** |
 **[Matched 12 vs default 14 jobs study](docs/NINJA_PARALLELISM.md)** |
 **[Native ARM64 Clang experiment](docs/CLANG_EXPERIMENT.md)** |
