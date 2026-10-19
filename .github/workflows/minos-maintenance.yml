@@ -1,0 +1,34 @@
+name: Minos investigation maintenance
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: minos-opencv-validation
+  cancel-in-progress: false
+
+jobs:
+  inventory:
+    runs-on: [self-hosted, Windows, ARM64, Marcpe-d4]
+    timeout-minutes: 20
+    steps:
+      - name: Verify requested runner
+        shell: pwsh
+        run: |
+          if ($env:RUNNER_NAME -ine 'MARCPE-D4') { throw 'Unexpected runner' }
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+          clean: false
+      - name: Inventory investigation disk usage
+        shell: pwsh
+        run: python .\scripts\maintain_minos_runner.py
+      - name: Publish maintenance inventory
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: minos-maintenance-${{ github.run_id }}
+          path: .work/maintenance-${{ github.run_id }}.json
+          if-no-files-found: error
