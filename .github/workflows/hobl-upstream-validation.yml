@@ -1,0 +1,34 @@
+name: Exact HOBL shared-cap validation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: minos-opencv-validation
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: [self-hosted, Windows, ARM64, Marcpe-d4]
+    timeout-minutes: 100
+    steps:
+      - name: Verify requested runner
+        shell: pwsh
+        run: |
+          if ($env:RUNNER_NAME -ine 'MARCPE-D4') { throw 'Unexpected runner' }
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+          clean: false
+      - name: Validate exact baseline and candidate scripts
+        shell: pwsh
+        run: .\scripts\run_hobl_upstream_validation.ps1
+      - name: Publish validated text evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: hobl-upstream-${{ github.run_id }}
+          path: results/hobl-upstream-${{ github.run_id }}
+          if-no-files-found: error

@@ -1,0 +1,103 @@
+From 5e42dc8a6251015155fa5329dea7e7518ffb0cc8 Mon Sep 17 00:00:00 2001
+From: marcpems <20582938+marcpems@users.noreply.github.com>
+Date: Mon, 19 Oct 2026 16:18:50 +0100
+Subject: [PATCH] Use shared-cap MSBuild scheduling for Windows OpenCV builds
+
+Keep build inputs and timing unchanged; refresh the run script on prepared DUTs without reinstalling tools.
+
+Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>
+---
+ scenarios/windows/opencv_build/README.md            | 13 +++++++++++--
+ scenarios/windows/opencv_build/opencv_build.py      |  5 ++++-
+ .../opencv_build_resources/opencv_build_run.ps1     | 12 +++++++++---
+ 3 files changed, 24 insertions(+), 6 deletions(-)
+
+diff --git a/scenarios/windows/opencv_build/README.md b/scenarios/windows/opencv_build/README.md
+index 00a2828..efe1b54 100644
+--- a/scenarios/windows/opencv_build/README.md
++++ b/scenarios/windows/opencv_build/README.md
+@@ -25,8 +25,11 @@ cmake -S .. -B . -G "Visual Studio 17 2022" -DBUILD_opencv_world=ON `
+   -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DWITH_PYTHON=OFF
+ 
+ # Timed workload
+-cmake --build . --config Release
+-cmake --build . --target INSTALL --config Release
++$jobs = [Environment]::ProcessorCount
++$msbuildArgs = @('/p:MultiProcCL=true', "/p:MultiProcMaxCount=$jobs",
++  '/p:EnforceProcessCountAcrossBuilds=true', '/nr:false')
++cmake --build . --config Release --parallel $jobs -- @msbuildArgs
++cmake --build . --target INSTALL --config Release -- @msbuildArgs
+ ```
+ 
+ ## Notes
+@@ -34,3 +37,9 @@ cmake --build . --target INSTALL --config Release
+ - The CMake flags above are representative — see
+   `opencv_build_resources/opencv_build_prep.ps1` for the exact configuration HOBL uses.
+ - Default: 1 loop. Works on x64 and ARM64.
++- MSBuild uses the available logical processor count for project parallelism and
++  a shared compiler-process cap across worker nodes. This is not a total thread
++  limit. Clean and install use the same scheduler; worker-node reuse is disabled.
++- Scheduling changes the Windows build-time baseline, not the source, features,
++  compiler or timed phase. Re-baseline when adopting this change.
++- Cached prep refreshes only the run script; no toolchain reinstallation is needed.
+diff --git a/scenarios/windows/opencv_build/opencv_build.py b/scenarios/windows/opencv_build/opencv_build.py
+index d361a46..78eba94 100644
+--- a/scenarios/windows/opencv_build/opencv_build.py
++++ b/scenarios/windows/opencv_build/opencv_build.py
+@@ -43,6 +43,10 @@ class OpencvBuild(core.app_scenario.Scenario):
+             finally:
+                 self._copy_data_from_remote(self.result_dir)
+             self.createPrepStatusControlFile(self.prep_version)
++        else:
++            # Refresh run-only changes without reinstalling shared tools.
++            self._upload(f"scenarios\\windows\\{self.module}\\{self.resources}\\{self.module}_run.ps1",
++                         self.target, check_modified=False)
+ 
+         # Call base class setUp() to dump config, call tool callbacks, and start measurment
+         core.app_scenario.Scenario.setUp(self)
+@@ -66,4 +70,3 @@ class OpencvBuild(core.app_scenario.Scenario):
+             self._kill("pwsh.exe")
+         except:
+             pass
+-
+diff --git a/scenarios/windows/opencv_build/opencv_build_resources/opencv_build_run.ps1 b/scenarios/windows/opencv_build/opencv_build_resources/opencv_build_run.ps1
+index 20fafaa..393a28f 100644
+--- a/scenarios/windows/opencv_build/opencv_build_resources/opencv_build_run.ps1
++++ b/scenarios/windows/opencv_build/opencv_build_resources/opencv_build_run.ps1
+@@ -129,8 +129,14 @@ $logDir = Split-Path $logFile -Parent
+ $cleanLog = "$logDir\opencv_build_clean.log"
+ $buildLog = "$logDir\opencv_build_build.log"
+ $installLog = "$logDir\opencv_build_install.log"
++$buildJobs = [Environment]::ProcessorCount
++$msbuildArgs = @(
++    '/p:MultiProcCL=true', "/p:MultiProcMaxCount=$buildJobs",
++    '/p:EnforceProcessCountAcrossBuilds=true', '/nr:false'
++)
++"MSBuild project and shared compiler limit: $buildJobs" | log
+ "Clean output: $cleanLog" | log
+-cmake --build . --target clean --config Release *> $cleanLog
++cmake --build . --target clean --config Release -- @msbuildArgs *> $cleanLog
+ check($lastexitcode)
+ 
+ $time = Get-Date -Format "HH:mm:ss"
+@@ -140,7 +146,7 @@ Write-RunPhaseMarker "phase.run_prep.end"
+ Write-RunPhaseMarker "phase.run_build.start"
+ 
+ $buildDuration = Measure-Command {
+-    cmake --build . --config Release *> $buildLog
++    cmake --build . --config Release --parallel $buildJobs -- @msbuildArgs *> $buildLog
+ }
+ if ($lastexitcode -ne 0) {
+     " ERROR - cmake build failed. See $buildLog for details." | log
+@@ -158,7 +164,7 @@ $time = Get-Date -Format "HH:mm:ss"
+ $time = Get-Date -Format "HH:mm:ss"
+ "$time - Build OpenCV Install Project" | log
+ "Install output: $installLog" | log
+-cmake --build . --target INSTALL --config Release *> $installLog
++cmake --build . --target INSTALL --config Release -- @msbuildArgs *> $installLog
+ if ($lastexitcode -ne 0) {
+     " ERROR - cmake INSTALL failed. See $installLog for details." | log
+     Exit 1
+-- 
+2.55.0.vfs.0.10
+
