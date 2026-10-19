@@ -1,0 +1,23 @@
+Found cmake: 
+16:51:40 - Clean build files
+Clean output: D:\action-runner-OpenCV\_work\OpenCV-perf-tests\OpenCV-perf-tests\.work\hobl-upstream-39278104684\runs\baseline_3\opencv_build_clean.log
+16:51:41 - Build OpenCV Project
+Build output: D:\action-runner-OpenCV\_work\OpenCV-perf-tests\OpenCV-perf-tests\.work\hobl-upstream-39278104684\runs\baseline_3\opencv_build_build.log
+16:54:17 - OpenCV build completed in 156.19s
+16:54:17 - Build OpenCV Install Project
+Install output: D:\action-runner-OpenCV\_work\OpenCV-perf-tests\OpenCV-perf-tests\.work\hobl-upstream-39278104684\runs\baseline_3\opencv_build_install.log
+16:54:20 - OpenCV completed building
+16:54:20 - Confirm build by running opencv_version.exe
+4.10.0
+
+========================================
+OpenCV Build Metrics Summary
+========================================
+Build Time:       156.19s
+Architecture:     ARM64
+Scenario Runtime: 156.19s
+========================================
+Metrics saved to: D:\action-runner-OpenCV\_work\OpenCV-perf-tests\OpenCV-perf-tests\.work\hobl-upstream-39278104684\runs\baseline_3\opencv_build_results.csv
+Creating trace file with header: D:\action-runner-OpenCV\_work\OpenCV-perf-tests\OpenCV-perf-tests\.work\hobl-upstream-39278104684\runs\baseline_3\opencv_build_results.trace
+Appending build time to trace file: D:\action-runner-OpenCV\_work\OpenCV-perf-tests\OpenCV-perf-tests\.work\hobl-upstream-39278104684\runs\baseline_3\opencv_build_results.trace
+-- opencv_build_run completed (ARM64 version)

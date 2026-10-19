@@ -1,0 +1,36 @@
+{
+  "build_seconds": 156.19,
+  "compile_command_records": 1015,
+  "commands_sha256": "5987bca19480e26ecf7481dfc1891c87bd21c136c73ddbea62032d04c61fdfee",
+  "image": {
+    "sha256": "ddd15c6d44389243eaa25f468596d2faae03ac4fb44a6de80cb40c6b6d4a69be",
+    "machine": "0xaa64",
+    "sections": {
+      ".text": {
+        "raw_bytes": 23636992,
+        "sha256": "4a83bbacc62fb236010e0781a0fa3057f0fa8fcdeb27db95124c1c3e130cb6a4"
+      },
+      ".rdata": {
+        "raw_bytes": 9085440,
+        "sha256": "14b2f63833f5bb8f59b373d76a1132f0bd965e19c2b37ee701fb5ec2aa1b4920"
+      },
+      ".data": {
+        "raw_bytes": 431104,
+        "sha256": "2a77e10e7efb281756ab56c4cb7309c344e3acf9eca416ff7d784dffe9bad60d"
+      },
+      ".pdata": {
+        "raw_bytes": 1385472,
+        "sha256": "d9d1b43db2b7e23d45461d22586b2bbd6331a583c70d0a556b757964e943d2b4"
+      },
+      ".rsrc": {
+        "raw_bytes": 1536,
+        "sha256": "d796feac666c91ff0ff9d66da688dcb5ea2e2280d01bb16ee08d4bdc4d5b9363"
+      },
+      ".reloc": {
+        "raw_bytes": 93696,
+        "sha256": "a545f2bd36abe2b65f740e25814c918d274d6c944010156f6412853c0b3f5976"
+      }
+    }
+  },
+  "install_preserved_outputs": true
+}

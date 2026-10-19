@@ -2,6 +2,11 @@
 
 **18 October 2026 — consolidated findings and delivery plan**
 
+**19 October update:** the [minimal three-file HOBL patch and exact-script
+validation](HOBL_SHARED_CAP_PR.md) measured **155.730 -> 108.205 s (30.52%)**
+on Minos. This is a separate study, not a replacement for the historical tables.
+Upstream publication remains blocked by GitHub organization SSO.
+
 ## Executive summary
 
 - **Prioritize shared-budget MSBuild delivery.** Against the original command,
@@ -218,9 +223,11 @@ Full interpretation: [Surface](RUNTIME_SCREENING.md), [Minos](MINOS_RESULTS.md).
 
 ## Decisions and limits
 
-1. **Keep the original HOBL-score path.** Offer shared-cap as a labeled,
-   reversible option; keep normal integration/correctness gates. Do not add
-   savings from alternative configurations together.
+1. **Coordinate HOBL re-baselining.** The current minimal upstream candidate
+   changes Windows scheduling by default; preserve the original revision for
+   comparisons and rollback, and keep normal integration/correctness gates.
+   The standalone benchmark still offers both schedules. Do not add savings
+   from alternative configurations together.
 2. **Do not mandate Ninja or a universal core-count cap.** Ninja is useful on
    Surface, but its incremental Minos advantage over shared MSBuild is unproven.
    A compiler-process cap is not a total-thread cap.
@@ -285,7 +292,14 @@ command records**, and **peak 12 compilers across all workers**.
 [Shared-cap trace evidence](../results/msbuild-shared-20261015/comparison.json).
 Changing scheduling preserves work, not process structure or aggregate CPU.
 
-### Proposed upstream HOBL patch — not applied
+### Current upstream candidate and earlier proposal
+
+The [current three-file patch](HOBL_SHARED_CAP_PR.md) supersedes the opt-in
+interface below: it uses the process-visible CPU count, changes scheduling by
+default, refreshes only the run script on cached-prep DUTs and updates the README.
+Exact-script validation passed on Minos; the upstream PR is not yet opened.
+The earlier proposal below is retained as investigation history, **not the
+patch to submit**.
 
 Paths below were checked against HOBL
 [`05896ef511054a705d2216ffe8cf67f66cea3fe0`](https://github.com/microsoft/HOBL/tree/05896ef511054a705d2216ffe8cf67f66cea3fe0).

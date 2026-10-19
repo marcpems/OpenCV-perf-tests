@@ -1,0 +1,67 @@
+[
+  {
+    "native_seconds": 1.048236,
+    "before_install": null,
+    "arguments": [
+      "--build",
+      ".",
+      "--target",
+      "clean",
+      "--config",
+      "Release",
+      "--",
+      "/p:MultiProcCL=true",
+      "/p:MultiProcMaxCount=20",
+      "/p:EnforceProcessCountAcrossBuilds=true",
+      "/nr:false"
+    ],
+    "after_install": null,
+    "exit_code": 0
+  },
+  {
+    "native_seconds": 107.343938,
+    "before_install": null,
+    "arguments": [
+      "--build",
+      ".",
+      "--config",
+      "Release",
+      "--parallel",
+      20,
+      "--",
+      "/p:MultiProcCL=true",
+      "/p:MultiProcMaxCount=20",
+      "/p:EnforceProcessCountAcrossBuilds=true",
+      "/nr:false"
+    ],
+    "after_install": null,
+    "exit_code": 0
+  },
+  {
+    "native_seconds": 2.33021,
+    "before_install": {
+      "objects_sha256": "591A0DD25BD85A74A01B0C5F384ED93421F2F645651E94E24D142D59EED35F3A",
+      "dll_sha256": "8E6A0FB3B04826691023F72EBEE30A766138063FD4D6A8816C0CF9F6516F6615",
+      "objects": 1017
+    },
+    "arguments": [
+      "--build",
+      ".",
+      "--target",
+      "INSTALL",
+      "--config",
+      "Release",
+      "--",
+      "/p:MultiProcCL=true",
+      "/p:MultiProcMaxCount=20",
+      "/p:EnforceProcessCountAcrossBuilds=true",
+      "/nr:false"
+    ],
+    "after_install": {
+      "objects_sha256": "591A0DD25BD85A74A01B0C5F384ED93421F2F645651E94E24D142D59EED35F3A",
+      "dll_sha256": "8E6A0FB3B04826691023F72EBEE30A766138063FD4D6A8816C0CF9F6516F6615",
+      "objects": 1017
+    },
+    "exit_code": 0
+  }
+]

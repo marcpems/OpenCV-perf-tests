@@ -17,6 +17,7 @@ MSVC follow-ups and runtime limits (18 October 2026)](docs/INVESTIGATION_REPORT.
 **[LLVM vs MSVC: CPU time and WPR/ETL investigation](docs/CPU_ETL_ANALYSIS.md)** |
 **[MSBuild serial-tail investigation and scheduler experiment](docs/MSBUILD_SERIAL_TAIL.md)** |
 **[MSBuild project + shared-compiler parallelism](docs/MSBUILD_SHARED_PARALLELISM.md)** |
+**[Minimal HOBL upstream patch: exact-script validation saves 30.52%](docs/HOBL_SHARED_CAP_PR.md)** |
 **[Fresh five-configuration rerun after device change](docs/FIVE_CONFIGURATION_RERUN.md)** |
 **[Compiler gap: native execution, microbenchmarks and source patterns](docs/COMPILER_GAP_INVESTIGATION.md)** |
 **[Targeted runtime comparison of the resulting OpenCV libraries](docs/RUNTIME_SCREENING.md)** |

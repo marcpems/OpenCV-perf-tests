@@ -1,0 +1,50 @@
+[
+  {
+    "native_seconds": 1.0392819,
+    "arguments": [
+      "--build",
+      ".",
+      "--target",
+      "clean",
+      "--config",
+      "Release"
+    ],
+    "exit_code": 0,
+    "before_install": null,
+    "after_install": null
+  },
+  {
+    "native_seconds": 155.5207787,
+    "arguments": [
+      "--build",
+      ".",
+      "--config",
+      "Release"
+    ],
+    "exit_code": 0,
+    "before_install": null,
+    "after_install": null
+  },
+  {
+    "native_seconds": 2.2679404,
+    "arguments": [
+      "--build",
+      ".",
+      "--target",
+      "INSTALL",
+      "--config",
+      "Release"
+    ],
+    "exit_code": 0,
+    "before_install": {
+      "objects_sha256": "32F9D50AB77870C66B491E40AC9AD691E166F62E57AD75C62A30EF141950B868",
+      "objects": 1017,
+      "dll_sha256": "C59208B183CF15F9C2123E272F71A001A0BE5CB386597787E68C82D6030AA05A"
+    },
+    "after_install": {
+      "objects_sha256": "32F9D50AB77870C66B491E40AC9AD691E166F62E57AD75C62A30EF141950B868",
+      "objects": 1017,
+      "dll_sha256": "C59208B183CF15F9C2123E272F71A001A0BE5CB386597787E68C82D6030AA05A"
+    }
+  }
+]

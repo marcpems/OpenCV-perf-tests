@@ -1,0 +1,32 @@
+{
+  "status": "succeeded",
+  "hobl_base": "3baa2ab25837ac6a0f766f1c7401f1e74c5110ae",
+  "github_run_id": "39278104684",
+  "evidence_commit": "271371aa96271a4c49ff36b626c5956bb15f072d",
+  "jobs": 20,
+  "order": [
+    "baseline",
+    "shared",
+    "shared",
+    "baseline",
+    "shared",
+    "baseline",
+    "baseline",
+    "shared"
+  ],
+  "warmups_per_variant": 1,
+  "warmups_excluded": true,
+  "pause_seconds": 30,
+  "completed_labels": [
+    "baseline_warmup",
+    "shared_warmup",
+    "baseline_1",
+    "shared_1",
+    "shared_2",
+    "baseline_2",
+    "shared_3",
+    "baseline_3",
+    "baseline_4",
+    "shared_4"
+  ]
+}
