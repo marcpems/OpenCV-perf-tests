@@ -47,6 +47,7 @@ foreach ($variant in @('baseline','shared')) {
 }
 & python "$PSScriptRoot\validate_hobl_shared_cap.py" $hobl
 if ($LASTEXITCODE) { throw ' ERROR - Host lifecycle validation failed.' }
+& "$PSScriptRoot\test_hobl_command_arguments.ps1" -HoblRoot $hobl
 & git -C $seed worktree add --detach "$work\volume\opencv" $script:Config.opencv_commit
 if ($LASTEXITCODE) { throw ' ERROR - Isolated OpenCV worktree creation failed.' }
 $occupied = @([IO.Directory]::GetLogicalDrives() | ForEach-Object { $_.Substring(0,1) })
@@ -98,7 +99,8 @@ try {
     $frozen = @{}
     foreach ($file in @(Get-ChildItem $build -Recurse -File -Include *.vcxproj,*.props,*.targets,*.sln) +
             @(Get-Item "$build\CMakeCache.txt", "$build\cvconfig.h", "$build\opencv2\opencv_modules.hpp",
-                $compiler, $cmake, $patch,
+                $compiler, $cmake, $patch, "$PSScriptRoot\invoke_hobl_validation.ps1",
+                "$PSScriptRoot\run_hobl_upstream_validation.ps1", "$PSScriptRoot\collect_hobl_validation.py",
                 "$work\volume\hobl_bin\baseline\opencv_build_run.ps1",
                 "$work\volume\hobl_bin\shared\opencv_build_run.ps1")) {
         $frozen[$file.FullName] = (Get-FileHash -LiteralPath $file.FullName).Hash
@@ -114,7 +116,7 @@ try {
         memory_gib = [math]::Round((Get-CimInstance Win32_ComputerSystem).TotalPhysicalMemory / 1GB, 2)
         frozen_sha256 = $frozen
         scope = 'Exact upstream baseline/patched run scripts; configure arguments extracted unchanged from prep. Installer and RPC orchestration not executed.'
-        resolver = 'Same process-local cmake forwarding function for both scripts; pinned portable CMake, no machine/user PATH change. CMake arguments and native duration recorded; HOBL CSV remains the primary timing.'
+        resolver = 'Same process-local cmake forwarding function for both scripts; pinned portable CMake, no machine/user PATH change. Restores native -- consumed by PowerShell function binding. CMake arguments and native duration recorded; HOBL CSV remains the primary timing.'
     } | ConvertTo-Json -Depth 8 | Set-Content "$work\provenance.json"
     $labels = @('baseline_warmup','shared_warmup')
     $counts = @{ baseline = 0; shared = 0 }

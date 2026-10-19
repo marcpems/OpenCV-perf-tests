@@ -1,5 +1,8 @@
 import json
+import os
 from pathlib import Path
+import shutil
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -65,6 +68,64 @@ class HoblEvidenceTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "incomplete or failed"):
             collector.export(self.root, self.root / "export")
         self.assertFalse((self.root / "export").exists())
+
+
+@unittest.skipUnless(os.name == "nt" and shutil.which("pwsh"), "Native Windows PowerShell")
+class HoblForwardingTests(unittest.TestCase):
+    def test_native_separator_and_exit_code_forwarding(self):
+        wrapper = Path(__file__).resolve().parents[1] / "scripts" / "invoke_hobl_validation.ps1"
+        with tempfile.TemporaryDirectory(prefix="hobl forwarding ") as temporary:
+            root = Path(temporary)
+            build = root / "build"
+            (build / "bin" / "Release").mkdir(parents=True)
+            (build / "bin" / "Release" / "opencv_world4100.dll").write_bytes(b"test fixture")
+            cmake = root / "cmake.cmd"
+            cmake.write_text("@echo off\necho %*\nexit /b 0\n")
+            for shared in (False, True):
+                with self.subTest(shared=shared):
+                    output = root / str(shared)
+                    output.mkdir()
+                    script = root / "run.ps1"
+                    properties = (
+                        " -- /p:MultiProcCL=true /p:MultiProcMaxCount=20 "
+                        "/p:EnforceProcessCountAcrossBuilds=true /nr:false"
+                    ) if shared else ""
+                    script.write_text(
+                        'param([string]$logFile)\n'
+                        f'cmake --build . --target clean --config Release{properties}\n'
+                        'if ($LASTEXITCODE) { exit 1 }\n'
+                        f'cmake --build . --config Release{properties}\n'
+                        'if ($LASTEXITCODE) { exit 1 }\n'
+                        f'cmake --build . --target INSTALL --config Release{properties}\n'
+                        'if ($LASTEXITCODE) { exit 1 }\nexit 0\n'
+                    )
+                    result = subprocess.run(
+                        ["pwsh", "-NoProfile", "-File", str(wrapper), "-Script", str(script),
+                         "-CMake", str(cmake), "-Build", str(build), "-Output", str(output)],
+                        text=True, capture_output=True,
+                    )
+                    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+                    calls = collector.read_json(output / "cmake-calls.json")
+                    self.assertEqual(len(calls), 3)
+                    for call in calls:
+                        self.assertEqual(call["arguments"].count("--"), int(shared))
+                        if shared:
+                            self.assertEqual(
+                                call["arguments"][call["arguments"].index("--") + 1],
+                                "/p:MultiProcCL=true",
+                            )
+                    if shared:
+                        self.assertIn("-- /p:MultiProcCL=true", result.stdout)
+            failed = root / "failed"
+            failed.mkdir()
+            cmake.write_text("@echo off\nexit /b 17\n")
+            result = subprocess.run(
+                ["pwsh", "-NoProfile", "-File", str(wrapper), "-Script", str(script),
+                 "-CMake", str(cmake), "-Build", str(build), "-Output", str(failed)],
+                text=True, capture_output=True,
+            )
+            self.assertNotEqual(result.returncode, 0)
+            self.assertEqual(collector.read_json(failed / "cmake-calls.json")[0]["exit_code"], 17)
 
 
 if __name__ == "__main__":

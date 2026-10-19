@@ -23,6 +23,12 @@ function global:Get-HoblBuildOutputs {
 # HOBL refreshes PATH; resolve the pinned portable CMake without changing machine/user PATH.
 function global:cmake {
     $arguments = @($args)
+    # PowerShell consumes -- for functions; restore CMake's native-tool separator.
+    $nativeStart = [Array]::IndexOf($arguments, '/p:MultiProcCL=true')
+    if ($nativeStart -gt 0) {
+        $arguments = @($arguments[0..($nativeStart - 1)]) + @('--') +
+            @($arguments[$nativeStart..($arguments.Count - 1)])
+    }
     $install = $arguments -contains 'INSTALL'
     $before = if ($install) { Get-HoblBuildOutputs } else { $null }
     $clock = [Diagnostics.Stopwatch]::StartNew()
