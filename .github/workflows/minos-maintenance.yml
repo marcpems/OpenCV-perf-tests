@@ -2,6 +2,15 @@ name: Minos investigation maintenance
 
 on:
   workflow_dispatch:
+    inputs:
+      apply:
+        description: Delete only the fixed targets from a previously inspected inventory
+        type: boolean
+        default: false
+      approved_plan_sha256:
+        description: Exact plan fingerprint from a successful inventory
+        type: string
+        default: ''
 
 permissions:
   contents: read
@@ -23,10 +32,30 @@ jobs:
         with:
           persist-credentials: false
           clean: false
-      - name: Inventory investigation disk usage
+      - name: Refuse cleanup while build tools are active
+        if: inputs.apply
         shell: pwsh
-        run: python .\scripts\maintain_minos_runner.py
+        run: |
+          $active = @(Get-Process | Where-Object {
+            $_.ProcessName -match '^(cl|clang|clang\+\+|clang-cl|link|lld-link|ninja|cmake|MSBuild|screen_.+|opencv_perf_.+)$'
+          })
+          if ($active.Count) {
+            $active | Select-Object Id, ProcessName | Format-Table
+            throw 'Build or runtime tools are active; nothing deleted'
+          }
+      - name: Inventory or clean fixed investigation artifacts
+        shell: pwsh
+        env:
+          APPLY_CLEANUP: ${{ inputs.apply }}
+          APPROVED_PLAN: ${{ inputs.approved_plan_sha256 }}
+        run: |
+          $arguments = @('.\scripts\maintain_minos_runner.py')
+          if ($env:APPLY_CLEANUP -eq 'true') {
+            $arguments += @('--apply', '--approved-plan-sha256', $env:APPROVED_PLAN)
+          }
+          python @arguments
       - name: Publish maintenance inventory
+        if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: minos-maintenance-${{ github.run_id }}

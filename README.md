@@ -25,6 +25,16 @@ MSVC follow-ups and runtime limits (18 October 2026)](docs/INVESTIGATION_REPORT.
 **[Custom LLVM comparison: 10.23% less build time](docs/CUSTOM_LLVM_COMPARISON.md)** |
 **[HOBL survey, equivalence and measurement methodology](docs/METHODOLOGY.md)**
 
+The manual **Minos investigation maintenance** workflow inventories this
+investigation's runner checkout by default. Cleanup requires the exact fingerprint
+from an inspected inventory and removes only the fixed, completed build directories,
+redundant downloads and failed-run LLVM extraction listed in
+[`maintain_minos_runner.py`](scripts/maintain_minos_runner.py).
+It preserves sources, results, measurement logs, frozen runtime binaries/harness,
+installed toolchains and the original custom MSI. Deleted build trees require setup
+before another build; frozen runtime diagnostics remain available. The workflow
+shares the benchmark concurrency lock and refuses cleanup while build tools run.
+
 The baseline preserves HOBL's clean -> timed Release build -> install -> version-check
 sequence and all 23 CMake definitions. `scenario_runtime` and `build_time` are the
 build-only wall time in seconds; configuration, cleaning and installation are excluded.
